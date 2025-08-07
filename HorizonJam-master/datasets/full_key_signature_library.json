@@ -1,0 +1,1042 @@
+[
+  {
+    "key": "C major",
+    "chords": [
+      {
+        "name": "C",
+        "type": "maj",
+        "pitch_class": 0
+      },
+      {
+        "name": "Dm",
+        "type": "min",
+        "pitch_class": 2
+      },
+      {
+        "name": "Em",
+        "type": "min",
+        "pitch_class": 4
+      },
+      {
+        "name": "F",
+        "type": "maj",
+        "pitch_class": 5
+      },
+      {
+        "name": "G",
+        "type": "maj",
+        "pitch_class": 7
+      },
+      {
+        "name": "Am",
+        "type": "min",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bdim",
+        "type": "dim",
+        "pitch_class": 11
+      }
+    ]
+  },
+  {
+    "key": "G major",
+    "chords": [
+      {
+        "name": "G",
+        "type": "maj",
+        "pitch_class": 7
+      },
+      {
+        "name": "Am",
+        "type": "min",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bm",
+        "type": "min",
+        "pitch_class": 11
+      },
+      {
+        "name": "C",
+        "type": "maj",
+        "pitch_class": 0
+      },
+      {
+        "name": "D",
+        "type": "maj",
+        "pitch_class": 2
+      },
+      {
+        "name": "Em",
+        "type": "min",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#dim",
+        "type": "dim",
+        "pitch_class": 6
+      }
+    ]
+  },
+  {
+    "key": "D major",
+    "chords": [
+      {
+        "name": "D",
+        "type": "maj",
+        "pitch_class": 2
+      },
+      {
+        "name": "Em",
+        "type": "min",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#m",
+        "type": "min",
+        "pitch_class": 6
+      },
+      {
+        "name": "G",
+        "type": "maj",
+        "pitch_class": 7
+      },
+      {
+        "name": "A",
+        "type": "maj",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bm",
+        "type": "min",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#dim",
+        "type": "dim",
+        "pitch_class": 1
+      }
+    ]
+  },
+  {
+    "key": "A major",
+    "chords": [
+      {
+        "name": "A",
+        "type": "maj",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bm",
+        "type": "min",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#m",
+        "type": "min",
+        "pitch_class": 1
+      },
+      {
+        "name": "D",
+        "type": "maj",
+        "pitch_class": 2
+      },
+      {
+        "name": "E",
+        "type": "maj",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#m",
+        "type": "min",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#dim",
+        "type": "dim",
+        "pitch_class": 8
+      }
+    ]
+  },
+  {
+    "key": "E major",
+    "chords": [
+      {
+        "name": "E",
+        "type": "maj",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#m",
+        "type": "min",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#m",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "A",
+        "type": "maj",
+        "pitch_class": 9
+      },
+      {
+        "name": "B",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#m",
+        "type": "min",
+        "pitch_class": 1
+      },
+      {
+        "name": "D#dim",
+        "type": "dim",
+        "pitch_class": 3
+      }
+    ]
+  },
+  {
+    "key": "B major",
+    "chords": [
+      {
+        "name": "B",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#m",
+        "type": "min",
+        "pitch_class": 1
+      },
+      {
+        "name": "D#m",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "E",
+        "type": "maj",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#m",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "A#dim",
+        "type": "dim",
+        "pitch_class": 10
+      }
+    ]
+  },
+  {
+    "key": "F# major",
+    "chords": [
+      {
+        "name": "F#",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#m",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "A#m",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "B",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#",
+        "type": "maj",
+        "pitch_class": 1
+      },
+      {
+        "name": "D#m",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "E#dim",
+        "type": "dim",
+        "pitch_class": 5
+      }
+    ]
+  },
+  {
+    "key": "F major",
+    "chords": [
+      {
+        "name": "F",
+        "type": "maj",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gm",
+        "type": "min",
+        "pitch_class": 7
+      },
+      {
+        "name": "Am",
+        "type": "min",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bb",
+        "type": "maj",
+        "pitch_class": 10
+      },
+      {
+        "name": "C",
+        "type": "maj",
+        "pitch_class": 0
+      },
+      {
+        "name": "Dm",
+        "type": "min",
+        "pitch_class": 2
+      },
+      {
+        "name": "Edim",
+        "type": "dim",
+        "pitch_class": 4
+      }
+    ]
+  },
+  {
+    "key": "Bb major",
+    "chords": [
+      {
+        "name": "Bb",
+        "type": "maj",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cm",
+        "type": "min",
+        "pitch_class": 0
+      },
+      {
+        "name": "Dm",
+        "type": "min",
+        "pitch_class": 2
+      },
+      {
+        "name": "Eb",
+        "type": "maj",
+        "pitch_class": 3
+      },
+      {
+        "name": "F",
+        "type": "maj",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gm",
+        "type": "min",
+        "pitch_class": 7
+      },
+      {
+        "name": "Adim",
+        "type": "dim",
+        "pitch_class": 9
+      }
+    ]
+  },
+  {
+    "key": "Eb major",
+    "chords": [
+      {
+        "name": "Eb",
+        "type": "maj",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fm",
+        "type": "min",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gm",
+        "type": "min",
+        "pitch_class": 7
+      },
+      {
+        "name": "Ab",
+        "type": "maj",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bb",
+        "type": "maj",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cm",
+        "type": "min",
+        "pitch_class": 0
+      },
+      {
+        "name": "Ddim",
+        "type": "dim",
+        "pitch_class": 2
+      }
+    ]
+  },
+  {
+    "key": "Ab major",
+    "chords": [
+      {
+        "name": "Ab",
+        "type": "maj",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bbm",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cm",
+        "type": "min",
+        "pitch_class": 0
+      },
+      {
+        "name": "Db",
+        "type": "maj",
+        "pitch_class": 1
+      },
+      {
+        "name": "Eb",
+        "type": "maj",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fm",
+        "type": "min",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gdim",
+        "type": "dim",
+        "pitch_class": 7
+      }
+    ]
+  },
+  {
+    "key": "Db major",
+    "chords": [
+      {
+        "name": "Db",
+        "type": "maj",
+        "pitch_class": 1
+      },
+      {
+        "name": "Ebm",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fm",
+        "type": "min",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gb",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "Ab",
+        "type": "maj",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bbm",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cdim",
+        "type": "dim",
+        "pitch_class": 0
+      }
+    ]
+  },
+  {
+    "key": "Gb major",
+    "chords": [
+      {
+        "name": "Gb",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "Abm",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bbm",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cb",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "Db",
+        "type": "maj",
+        "pitch_class": 1
+      },
+      {
+        "name": "Ebm",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fdim",
+        "type": "dim",
+        "pitch_class": 5
+      }
+    ]
+  },
+  {
+    "key": "A minor",
+    "chords": [
+      {
+        "name": "Am",
+        "type": "min",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bdim",
+        "type": "dim",
+        "pitch_class": 11
+      },
+      {
+        "name": "C",
+        "type": "maj",
+        "pitch_class": 0
+      },
+      {
+        "name": "Dm",
+        "type": "min",
+        "pitch_class": 2
+      },
+      {
+        "name": "Em",
+        "type": "min",
+        "pitch_class": 4
+      },
+      {
+        "name": "F",
+        "type": "maj",
+        "pitch_class": 5
+      },
+      {
+        "name": "G",
+        "type": "maj",
+        "pitch_class": 7
+      }
+    ]
+  },
+  {
+    "key": "E minor",
+    "chords": [
+      {
+        "name": "Em",
+        "type": "min",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#dim",
+        "type": "dim",
+        "pitch_class": 6
+      },
+      {
+        "name": "G",
+        "type": "maj",
+        "pitch_class": 7
+      },
+      {
+        "name": "Am",
+        "type": "min",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bm",
+        "type": "min",
+        "pitch_class": 11
+      },
+      {
+        "name": "C",
+        "type": "maj",
+        "pitch_class": 0
+      },
+      {
+        "name": "D",
+        "type": "maj",
+        "pitch_class": 2
+      }
+    ]
+  },
+  {
+    "key": "B minor",
+    "chords": [
+      {
+        "name": "Bm",
+        "type": "min",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#dim",
+        "type": "dim",
+        "pitch_class": 1
+      },
+      {
+        "name": "D",
+        "type": "maj",
+        "pitch_class": 2
+      },
+      {
+        "name": "Em",
+        "type": "min",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#m",
+        "type": "min",
+        "pitch_class": 6
+      },
+      {
+        "name": "G",
+        "type": "maj",
+        "pitch_class": 7
+      },
+      {
+        "name": "A",
+        "type": "maj",
+        "pitch_class": 9
+      }
+    ]
+  },
+  {
+    "key": "F# minor",
+    "chords": [
+      {
+        "name": "F#m",
+        "type": "min",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#dim",
+        "type": "dim",
+        "pitch_class": 8
+      },
+      {
+        "name": "A",
+        "type": "maj",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bm",
+        "type": "min",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#m",
+        "type": "min",
+        "pitch_class": 1
+      },
+      {
+        "name": "D",
+        "type": "maj",
+        "pitch_class": 2
+      },
+      {
+        "name": "E",
+        "type": "maj",
+        "pitch_class": 4
+      }
+    ]
+  },
+  {
+    "key": "C# minor",
+    "chords": [
+      {
+        "name": "C#m",
+        "type": "min",
+        "pitch_class": 1
+      },
+      {
+        "name": "D#dim",
+        "type": "dim",
+        "pitch_class": 3
+      },
+      {
+        "name": "E",
+        "type": "maj",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#m",
+        "type": "min",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#m",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "A",
+        "type": "maj",
+        "pitch_class": 9
+      },
+      {
+        "name": "B",
+        "type": "maj",
+        "pitch_class": 11
+      }
+    ]
+  },
+  {
+    "key": "G# minor",
+    "chords": [
+      {
+        "name": "G#m",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "A#dim",
+        "type": "dim",
+        "pitch_class": 10
+      },
+      {
+        "name": "B",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#m",
+        "type": "min",
+        "pitch_class": 1
+      },
+      {
+        "name": "D#m",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "E",
+        "type": "maj",
+        "pitch_class": 4
+      },
+      {
+        "name": "F#",
+        "type": "maj",
+        "pitch_class": 6
+      }
+    ]
+  },
+  {
+    "key": "D# minor",
+    "chords": [
+      {
+        "name": "D#m",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "E#dim",
+        "type": "dim",
+        "pitch_class": 5
+      },
+      {
+        "name": "F#",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "G#m",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "A#m",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "B",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "C#",
+        "type": "maj",
+        "pitch_class": 1
+      }
+    ]
+  },
+  {
+    "key": "D minor",
+    "chords": [
+      {
+        "name": "Dm",
+        "type": "min",
+        "pitch_class": 2
+      },
+      {
+        "name": "Edim",
+        "type": "dim",
+        "pitch_class": 4
+      },
+      {
+        "name": "F",
+        "type": "maj",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gm",
+        "type": "min",
+        "pitch_class": 7
+      },
+      {
+        "name": "Am",
+        "type": "min",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bb",
+        "type": "maj",
+        "pitch_class": 10
+      },
+      {
+        "name": "C",
+        "type": "maj",
+        "pitch_class": 0
+      }
+    ]
+  },
+  {
+    "key": "G minor",
+    "chords": [
+      {
+        "name": "Gm",
+        "type": "min",
+        "pitch_class": 7
+      },
+      {
+        "name": "Adim",
+        "type": "dim",
+        "pitch_class": 9
+      },
+      {
+        "name": "Bb",
+        "type": "maj",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cm",
+        "type": "min",
+        "pitch_class": 0
+      },
+      {
+        "name": "Dm",
+        "type": "min",
+        "pitch_class": 2
+      },
+      {
+        "name": "Eb",
+        "type": "maj",
+        "pitch_class": 3
+      },
+      {
+        "name": "F",
+        "type": "maj",
+        "pitch_class": 5
+      }
+    ]
+  },
+  {
+    "key": "C minor",
+    "chords": [
+      {
+        "name": "Cm",
+        "type": "min",
+        "pitch_class": 0
+      },
+      {
+        "name": "Ddim",
+        "type": "dim",
+        "pitch_class": 2
+      },
+      {
+        "name": "Eb",
+        "type": "maj",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fm",
+        "type": "min",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gm",
+        "type": "min",
+        "pitch_class": 7
+      },
+      {
+        "name": "Ab",
+        "type": "maj",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bb",
+        "type": "maj",
+        "pitch_class": 10
+      }
+    ]
+  },
+  {
+    "key": "F minor",
+    "chords": [
+      {
+        "name": "Fm",
+        "type": "min",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gdim",
+        "type": "dim",
+        "pitch_class": 7
+      },
+      {
+        "name": "Ab",
+        "type": "maj",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bbm",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cm",
+        "type": "min",
+        "pitch_class": 0
+      },
+      {
+        "name": "Db",
+        "type": "maj",
+        "pitch_class": 1
+      },
+      {
+        "name": "Eb",
+        "type": "maj",
+        "pitch_class": 3
+      }
+    ]
+  },
+  {
+    "key": "Bb minor",
+    "chords": [
+      {
+        "name": "Bbm",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cdim",
+        "type": "dim",
+        "pitch_class": 0
+      },
+      {
+        "name": "Db",
+        "type": "maj",
+        "pitch_class": 1
+      },
+      {
+        "name": "Ebm",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fm",
+        "type": "min",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gb",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "Ab",
+        "type": "maj",
+        "pitch_class": 8
+      }
+    ]
+  },
+  {
+    "key": "Eb minor",
+    "chords": [
+      {
+        "name": "Ebm",
+        "type": "min",
+        "pitch_class": 3
+      },
+      {
+        "name": "Fdim",
+        "type": "dim",
+        "pitch_class": 5
+      },
+      {
+        "name": "Gb",
+        "type": "maj",
+        "pitch_class": 6
+      },
+      {
+        "name": "Abm",
+        "type": "min",
+        "pitch_class": 8
+      },
+      {
+        "name": "Bbm",
+        "type": "min",
+        "pitch_class": 10
+      },
+      {
+        "name": "Cb",
+        "type": "maj",
+        "pitch_class": 11
+      },
+      {
+        "name": "Db",
+        "type": "maj",
+        "pitch_class": 1
+      }
+    ]
+  }
+]

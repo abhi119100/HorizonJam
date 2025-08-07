@@ -1,0 +1,4230 @@
+{
+  "success": [
+    {
+      "chord": "C",
+      "notation": "032010",
+      "fret_positions": [
+        3,
+        20,
+        10,
+        0,
+        0,
+        0
+      ],
+      "file": "C_1.png"
+    },
+    {
+      "chord": "C",
+      "notation": "x35553",
+      "fret_positions": [
+        -1,
+        35,
+        55,
+        3,
+        0,
+        0
+      ],
+      "file": "C_2.png"
+    },
+    {
+      "chord": "C",
+      "notation": "8-10-10-9-8-8",
+      "fret_positions": [
+        81,
+        1,
+        9,
+        88,
+        0,
+        0
+      ],
+      "file": "C_3.png"
+    },
+    {
+      "chord": "Cm",
+      "notation": "x35543",
+      "fret_positions": [
+        -1,
+        35,
+        54,
+        3,
+        0,
+        0
+      ],
+      "file": "Cm_1.png"
+    },
+    {
+      "chord": "Cm",
+      "notation": "8-10-10-8-8-8",
+      "fret_positions": [
+        81,
+        1,
+        8,
+        88,
+        0,
+        0
+      ],
+      "file": "Cm_2.png"
+    },
+    {
+      "chord": "C7",
+      "notation": "x32310",
+      "fret_positions": [
+        -1,
+        32,
+        31,
+        0,
+        0,
+        0
+      ],
+      "file": "C7_1.png"
+    },
+    {
+      "chord": "C7",
+      "notation": "8-10-8-9-8-8",
+      "fret_positions": [
+        81,
+        8,
+        98,
+        8,
+        0,
+        0
+      ],
+      "file": "C7_2.png"
+    },
+    {
+      "chord": "C5",
+      "notation": "x355xx",
+      "fret_positions": [
+        -1,
+        35,
+        5,
+        -1,
+        -1,
+        0
+      ],
+      "file": "C5_1.png"
+    },
+    {
+      "chord": "C5",
+      "notation": "3-5-5-x-x-x",
+      "fret_positions": [
+        35,
+        5,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "C5_2.png"
+    },
+    {
+      "chord": "Cdim",
+      "notation": "xx1212",
+      "fret_positions": [
+        -1,
+        -1,
+        12,
+        12,
+        0,
+        0
+      ],
+      "file": "Cdim_1.png"
+    },
+    {
+      "chord": "Cdim",
+      "notation": "x-3-4-2-4-2",
+      "fret_positions": [
+        -1,
+        34,
+        24,
+        2,
+        0,
+        0
+      ],
+      "file": "Cdim_2.png"
+    },
+    {
+      "chord": "Cdim7",
+      "notation": "xx1212",
+      "fret_positions": [
+        -1,
+        -1,
+        12,
+        12,
+        0,
+        0
+      ],
+      "file": "Cdim7_1.png"
+    },
+    {
+      "chord": "Cdim7",
+      "notation": "x-3-4-2-4-2",
+      "fret_positions": [
+        -1,
+        34,
+        24,
+        2,
+        0,
+        0
+      ],
+      "file": "Cdim7_2.png"
+    },
+    {
+      "chord": "Caug",
+      "notation": "x32110",
+      "fret_positions": [
+        -1,
+        32,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Caug_1.png"
+    },
+    {
+      "chord": "Caug",
+      "notation": "x-3-2-1-1-0",
+      "fret_positions": [
+        -1,
+        32,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Caug_2.png"
+    },
+    {
+      "chord": "Csus2",
+      "notation": "x30010",
+      "fret_positions": [
+        -1,
+        30,
+        1,
+        0,
+        0,
+        0
+      ],
+      "file": "Csus2_1.png"
+    },
+    {
+      "chord": "Csus2",
+      "notation": "x-3-0-0-3-3",
+      "fret_positions": [
+        -1,
+        30,
+        3,
+        3,
+        0,
+        0
+      ],
+      "file": "Csus2_2.png"
+    },
+    {
+      "chord": "Csus4",
+      "notation": "x33011",
+      "fret_positions": [
+        -1,
+        33,
+        1,
+        1,
+        0,
+        0
+      ],
+      "file": "Csus4_1.png"
+    },
+    {
+      "chord": "Csus4",
+      "notation": "x-3-3-0-1-1",
+      "fret_positions": [
+        -1,
+        33,
+        1,
+        1,
+        0,
+        0
+      ],
+      "file": "Csus4_2.png"
+    },
+    {
+      "chord": "Cmaj7",
+      "notation": "x32000",
+      "fret_positions": [
+        -1,
+        32,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Cmaj7_1.png"
+    },
+    {
+      "chord": "Cmaj7",
+      "notation": "8-10-9-9-8-8",
+      "fret_positions": [
+        81,
+        9,
+        98,
+        8,
+        0,
+        0
+      ],
+      "file": "Cmaj7_2.png"
+    },
+    {
+      "chord": "Cm7",
+      "notation": "x35343",
+      "fret_positions": [
+        -1,
+        35,
+        34,
+        3,
+        0,
+        0
+      ],
+      "file": "Cm7_1.png"
+    },
+    {
+      "chord": "Cm7",
+      "notation": "8-10-8-8-8-8",
+      "fret_positions": [
+        81,
+        8,
+        88,
+        8,
+        0,
+        0
+      ],
+      "file": "Cm7_2.png"
+    },
+    {
+      "chord": "C7sus4",
+      "notation": "x33011",
+      "fret_positions": [
+        -1,
+        33,
+        1,
+        1,
+        0,
+        0
+      ],
+      "file": "C7sus4_1.png"
+    },
+    {
+      "chord": "C7sus4",
+      "notation": "x-3-3-3-1-1",
+      "fret_positions": [
+        -1,
+        33,
+        31,
+        1,
+        0,
+        0
+      ],
+      "file": "C7sus4_2.png"
+    },
+    {
+      "chord": "Cadd9",
+      "notation": "x32030",
+      "fret_positions": [
+        -1,
+        32,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Cadd9_1.png"
+    },
+    {
+      "chord": "Cadd9",
+      "notation": "x-3-2-0-3-0",
+      "fret_positions": [
+        -1,
+        32,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Cadd9_2.png"
+    },
+    {
+      "chord": "C#",
+      "notation": "x46664",
+      "fret_positions": [
+        -1,
+        46,
+        66,
+        4,
+        0,
+        0
+      ],
+      "file": "Csharp_1.png"
+    },
+    {
+      "chord": "C#",
+      "notation": "9-11-11-10-9-9",
+      "fret_positions": [
+        91,
+        11,
+        11,
+        9,
+        9,
+        0
+      ],
+      "file": "Csharp_2.png"
+    },
+    {
+      "chord": "C#m",
+      "notation": "x46654",
+      "fret_positions": [
+        -1,
+        46,
+        65,
+        4,
+        0,
+        0
+      ],
+      "file": "Csharpm_1.png"
+    },
+    {
+      "chord": "C#m",
+      "notation": "9-11-11-9-9-9",
+      "fret_positions": [
+        91,
+        11,
+        19,
+        99,
+        0,
+        0
+      ],
+      "file": "Csharpm_2.png"
+    },
+    {
+      "chord": "C#7",
+      "notation": "x45464",
+      "fret_positions": [
+        -1,
+        45,
+        46,
+        4,
+        0,
+        0
+      ],
+      "file": "Csharp7_1.png"
+    },
+    {
+      "chord": "C#7",
+      "notation": "9-11-9-10-9-9",
+      "fret_positions": [
+        91,
+        19,
+        10,
+        99,
+        0,
+        0
+      ],
+      "file": "Csharp7_2.png"
+    },
+    {
+      "chord": "C#5",
+      "notation": "x466xx",
+      "fret_positions": [
+        -1,
+        46,
+        6,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Csharp5_1.png"
+    },
+    {
+      "chord": "C#5",
+      "notation": "4-6-6-x-x-x",
+      "fret_positions": [
+        46,
+        6,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Csharp5_2.png"
+    },
+    {
+      "chord": "C#dim",
+      "notation": "xx2323",
+      "fret_positions": [
+        -1,
+        -1,
+        23,
+        23,
+        0,
+        0
+      ],
+      "file": "Csharpdim_1.png"
+    },
+    {
+      "chord": "C#dim",
+      "notation": "x-4-5-3-5-3",
+      "fret_positions": [
+        -1,
+        45,
+        35,
+        3,
+        0,
+        0
+      ],
+      "file": "Csharpdim_2.png"
+    },
+    {
+      "chord": "C#dim7",
+      "notation": "xx2323",
+      "fret_positions": [
+        -1,
+        -1,
+        23,
+        23,
+        0,
+        0
+      ],
+      "file": "Csharpdim7_1.png"
+    },
+    {
+      "chord": "C#dim7",
+      "notation": "x-4-5-3-5-3",
+      "fret_positions": [
+        -1,
+        45,
+        35,
+        3,
+        0,
+        0
+      ],
+      "file": "Csharpdim7_2.png"
+    },
+    {
+      "chord": "C#aug",
+      "notation": "x43221",
+      "fret_positions": [
+        -1,
+        43,
+        22,
+        1,
+        0,
+        0
+      ],
+      "file": "Csharpaug_1.png"
+    },
+    {
+      "chord": "C#aug",
+      "notation": "x-4-3-2-2-1",
+      "fret_positions": [
+        -1,
+        43,
+        22,
+        1,
+        0,
+        0
+      ],
+      "file": "Csharpaug_2.png"
+    },
+    {
+      "chord": "C#sus2",
+      "notation": "x41121",
+      "fret_positions": [
+        -1,
+        41,
+        12,
+        1,
+        0,
+        0
+      ],
+      "file": "Csharpsus2_1.png"
+    },
+    {
+      "chord": "C#sus2",
+      "notation": "x-4-1-1-4-4",
+      "fret_positions": [
+        -1,
+        41,
+        14,
+        4,
+        0,
+        0
+      ],
+      "file": "Csharpsus2_2.png"
+    },
+    {
+      "chord": "C#sus4",
+      "notation": "x44122",
+      "fret_positions": [
+        -1,
+        44,
+        12,
+        2,
+        0,
+        0
+      ],
+      "file": "Csharpsus4_1.png"
+    },
+    {
+      "chord": "C#sus4",
+      "notation": "x-4-4-1-2-2",
+      "fret_positions": [
+        -1,
+        44,
+        12,
+        2,
+        0,
+        0
+      ],
+      "file": "Csharpsus4_2.png"
+    },
+    {
+      "chord": "C#maj7",
+      "notation": "x46564",
+      "fret_positions": [
+        -1,
+        46,
+        56,
+        4,
+        0,
+        0
+      ],
+      "file": "Csharpmaj7_1.png"
+    },
+    {
+      "chord": "C#maj7",
+      "notation": "9-11-10-10-9-9",
+      "fret_positions": [
+        91,
+        11,
+        1,
+        9,
+        9,
+        0
+      ],
+      "file": "Csharpmaj7_2.png"
+    },
+    {
+      "chord": "C#m7",
+      "notation": "x46454",
+      "fret_positions": [
+        -1,
+        46,
+        45,
+        4,
+        0,
+        0
+      ],
+      "file": "Csharpm7_1.png"
+    },
+    {
+      "chord": "C#m7",
+      "notation": "9-11-9-9-9-9",
+      "fret_positions": [
+        91,
+        19,
+        99,
+        9,
+        0,
+        0
+      ],
+      "file": "Csharpm7_2.png"
+    },
+    {
+      "chord": "Db",
+      "notation": "x46664",
+      "fret_positions": [
+        -1,
+        46,
+        66,
+        4,
+        0,
+        0
+      ],
+      "file": "Db_1.png"
+    },
+    {
+      "chord": "Db",
+      "notation": "9-11-11-10-9-9",
+      "fret_positions": [
+        91,
+        11,
+        11,
+        9,
+        9,
+        0
+      ],
+      "file": "Db_2.png"
+    },
+    {
+      "chord": "Dbm",
+      "notation": "x46654",
+      "fret_positions": [
+        -1,
+        46,
+        65,
+        4,
+        0,
+        0
+      ],
+      "file": "Dbm_1.png"
+    },
+    {
+      "chord": "Dbm",
+      "notation": "9-11-11-9-9-9",
+      "fret_positions": [
+        91,
+        11,
+        19,
+        99,
+        0,
+        0
+      ],
+      "file": "Dbm_2.png"
+    },
+    {
+      "chord": "D",
+      "notation": "xx0232",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        32,
+        0,
+        0
+      ],
+      "file": "D_1.png"
+    },
+    {
+      "chord": "D",
+      "notation": "x57775",
+      "fret_positions": [
+        -1,
+        57,
+        77,
+        5,
+        0,
+        0
+      ],
+      "file": "D_2.png"
+    },
+    {
+      "chord": "D",
+      "notation": "10-12-12-11-10-10",
+      "fret_positions": [
+        10,
+        12,
+        12,
+        11,
+        10,
+        10
+      ],
+      "file": "D_3.png"
+    },
+    {
+      "chord": "Dm",
+      "notation": "xx0231",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        31,
+        0,
+        0
+      ],
+      "file": "Dm_1.png"
+    },
+    {
+      "chord": "Dm",
+      "notation": "x57765",
+      "fret_positions": [
+        -1,
+        57,
+        76,
+        5,
+        0,
+        0
+      ],
+      "file": "Dm_2.png"
+    },
+    {
+      "chord": "Dm",
+      "notation": "10-12-12-10-10-10",
+      "fret_positions": [
+        10,
+        12,
+        12,
+        10,
+        10,
+        10
+      ],
+      "file": "Dm_3.png"
+    },
+    {
+      "chord": "D7",
+      "notation": "xx0212",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        12,
+        0,
+        0
+      ],
+      "file": "D7_1.png"
+    },
+    {
+      "chord": "D7",
+      "notation": "x-5-7-5-7-5",
+      "fret_positions": [
+        -1,
+        57,
+        57,
+        5,
+        0,
+        0
+      ],
+      "file": "D7_2.png"
+    },
+    {
+      "chord": "D5",
+      "notation": "xx023x",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        3,
+        -1,
+        0
+      ],
+      "file": "D5_1.png"
+    },
+    {
+      "chord": "D5",
+      "notation": "5-7-7-x-x-x",
+      "fret_positions": [
+        57,
+        7,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "D5_2.png"
+    },
+    {
+      "chord": "Ddim",
+      "notation": "xx0101",
+      "fret_positions": [
+        -1,
+        -1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "file": "Ddim_1.png"
+    },
+    {
+      "chord": "Ddim",
+      "notation": "x-5-6-4-6-4",
+      "fret_positions": [
+        -1,
+        56,
+        46,
+        4,
+        0,
+        0
+      ],
+      "file": "Ddim_2.png"
+    },
+    {
+      "chord": "Ddim7",
+      "notation": "xx0101",
+      "fret_positions": [
+        -1,
+        -1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "file": "Ddim7_1.png"
+    },
+    {
+      "chord": "Ddim7",
+      "notation": "x-5-6-4-6-4",
+      "fret_positions": [
+        -1,
+        56,
+        46,
+        4,
+        0,
+        0
+      ],
+      "file": "Ddim7_2.png"
+    },
+    {
+      "chord": "Daug",
+      "notation": "xx0332",
+      "fret_positions": [
+        -1,
+        -1,
+        3,
+        32,
+        0,
+        0
+      ],
+      "file": "Daug_1.png"
+    },
+    {
+      "chord": "Daug",
+      "notation": "x-x-0-3-3-2",
+      "fret_positions": [
+        -1,
+        -1,
+        3,
+        32,
+        0,
+        0
+      ],
+      "file": "Daug_2.png"
+    },
+    {
+      "chord": "Dsus2",
+      "notation": "xx0230",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        30,
+        0,
+        0
+      ],
+      "file": "Dsus2_1.png"
+    },
+    {
+      "chord": "Dsus2",
+      "notation": "x-5-7-7-5-5",
+      "fret_positions": [
+        -1,
+        57,
+        75,
+        5,
+        0,
+        0
+      ],
+      "file": "Dsus2_2.png"
+    },
+    {
+      "chord": "Dsus4",
+      "notation": "xx0233",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        33,
+        0,
+        0
+      ],
+      "file": "Dsus4_1.png"
+    },
+    {
+      "chord": "Dsus4",
+      "notation": "x-5-7-7-6-5",
+      "fret_positions": [
+        -1,
+        57,
+        76,
+        5,
+        0,
+        0
+      ],
+      "file": "Dsus4_2.png"
+    },
+    {
+      "chord": "Dmaj7",
+      "notation": "xx0222",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        22,
+        0,
+        0
+      ],
+      "file": "Dmaj7_1.png"
+    },
+    {
+      "chord": "Dmaj7",
+      "notation": "10-12-11-11-10-10",
+      "fret_positions": [
+        10,
+        12,
+        11,
+        11,
+        10,
+        10
+      ],
+      "file": "Dmaj7_2.png"
+    },
+    {
+      "chord": "Dm7",
+      "notation": "xx0211",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        11,
+        0,
+        0
+      ],
+      "file": "Dm7_1.png"
+    },
+    {
+      "chord": "Dm7",
+      "notation": "x-5-7-5-6-5",
+      "fret_positions": [
+        -1,
+        57,
+        56,
+        5,
+        0,
+        0
+      ],
+      "file": "Dm7_2.png"
+    },
+    {
+      "chord": "D7sus4",
+      "notation": "xx0213",
+      "fret_positions": [
+        -1,
+        -1,
+        2,
+        13,
+        0,
+        0
+      ],
+      "file": "D7sus4_1.png"
+    },
+    {
+      "chord": "D7sus4",
+      "notation": "x-5-7-5-6-5",
+      "fret_positions": [
+        -1,
+        57,
+        56,
+        5,
+        0,
+        0
+      ],
+      "file": "D7sus4_2.png"
+    },
+    {
+      "chord": "Dadd9",
+      "notation": "x54030",
+      "fret_positions": [
+        -1,
+        54,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Dadd9_1.png"
+    },
+    {
+      "chord": "Dadd9",
+      "notation": "x-5-4-0-3-0",
+      "fret_positions": [
+        -1,
+        54,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Dadd9_2.png"
+    },
+    {
+      "chord": "D#",
+      "notation": "xx1343",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        43,
+        0,
+        0
+      ],
+      "file": "Dsharp_1.png"
+    },
+    {
+      "chord": "D#",
+      "notation": "x68886",
+      "fret_positions": [
+        -1,
+        68,
+        88,
+        6,
+        0,
+        0
+      ],
+      "file": "Dsharp_2.png"
+    },
+    {
+      "chord": "D#",
+      "notation": "11-13-13-12-11-11",
+      "fret_positions": [
+        11,
+        13,
+        13,
+        12,
+        11,
+        11
+      ],
+      "file": "Dsharp_3.png"
+    },
+    {
+      "chord": "D#m",
+      "notation": "xx1342",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        42,
+        0,
+        0
+      ],
+      "file": "Dsharpm_1.png"
+    },
+    {
+      "chord": "D#m",
+      "notation": "x68876",
+      "fret_positions": [
+        -1,
+        68,
+        87,
+        6,
+        0,
+        0
+      ],
+      "file": "Dsharpm_2.png"
+    },
+    {
+      "chord": "D#m",
+      "notation": "11-13-13-11-11-11",
+      "fret_positions": [
+        11,
+        13,
+        13,
+        11,
+        11,
+        11
+      ],
+      "file": "Dsharpm_3.png"
+    },
+    {
+      "chord": "D#7",
+      "notation": "xx1323",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        23,
+        0,
+        0
+      ],
+      "file": "Dsharp7_1.png"
+    },
+    {
+      "chord": "D#7",
+      "notation": "x-6-8-6-8-6",
+      "fret_positions": [
+        -1,
+        68,
+        68,
+        6,
+        0,
+        0
+      ],
+      "file": "Dsharp7_2.png"
+    },
+    {
+      "chord": "D#5",
+      "notation": "xx134x",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        4,
+        -1,
+        0
+      ],
+      "file": "Dsharp5_1.png"
+    },
+    {
+      "chord": "D#5",
+      "notation": "6-8-8-x-x-x",
+      "fret_positions": [
+        68,
+        8,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Dsharp5_2.png"
+    },
+    {
+      "chord": "D#dim",
+      "notation": "xx1212",
+      "fret_positions": [
+        -1,
+        -1,
+        12,
+        12,
+        0,
+        0
+      ],
+      "file": "Dsharpdim_1.png"
+    },
+    {
+      "chord": "D#dim",
+      "notation": "x-6-7-5-7-5",
+      "fret_positions": [
+        -1,
+        67,
+        57,
+        5,
+        0,
+        0
+      ],
+      "file": "Dsharpdim_2.png"
+    },
+    {
+      "chord": "D#aug",
+      "notation": "xx1003",
+      "fret_positions": [
+        -1,
+        -1,
+        10,
+        3,
+        0,
+        0
+      ],
+      "file": "Dsharpaug_1.png"
+    },
+    {
+      "chord": "D#aug",
+      "notation": "x-x-1-0-0-3",
+      "fret_positions": [
+        -1,
+        -1,
+        10,
+        3,
+        0,
+        0
+      ],
+      "file": "Dsharpaug_2.png"
+    },
+    {
+      "chord": "D#sus2",
+      "notation": "xx1341",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        41,
+        0,
+        0
+      ],
+      "file": "Dsharpsus2_1.png"
+    },
+    {
+      "chord": "D#sus2",
+      "notation": "x-6-8-8-6-6",
+      "fret_positions": [
+        -1,
+        68,
+        86,
+        6,
+        0,
+        0
+      ],
+      "file": "Dsharpsus2_2.png"
+    },
+    {
+      "chord": "D#sus4",
+      "notation": "xx1344",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        44,
+        0,
+        0
+      ],
+      "file": "Dsharpsus4_1.png"
+    },
+    {
+      "chord": "D#sus4",
+      "notation": "x-6-8-8-7-6",
+      "fret_positions": [
+        -1,
+        68,
+        87,
+        6,
+        0,
+        0
+      ],
+      "file": "Dsharpsus4_2.png"
+    },
+    {
+      "chord": "D#maj7",
+      "notation": "xx1333",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        33,
+        0,
+        0
+      ],
+      "file": "Dsharpmaj7_1.png"
+    },
+    {
+      "chord": "D#maj7",
+      "notation": "11-13-12-12-11-11",
+      "fret_positions": [
+        11,
+        13,
+        12,
+        12,
+        11,
+        11
+      ],
+      "file": "Dsharpmaj7_2.png"
+    },
+    {
+      "chord": "D#m7",
+      "notation": "xx1322",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        22,
+        0,
+        0
+      ],
+      "file": "Dsharpm7_1.png"
+    },
+    {
+      "chord": "D#m7",
+      "notation": "x-6-8-6-7-6",
+      "fret_positions": [
+        -1,
+        68,
+        67,
+        6,
+        0,
+        0
+      ],
+      "file": "Dsharpm7_2.png"
+    },
+    {
+      "chord": "Eb",
+      "notation": "xx1343",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        43,
+        0,
+        0
+      ],
+      "file": "Eb_1.png"
+    },
+    {
+      "chord": "Eb",
+      "notation": "x68886",
+      "fret_positions": [
+        -1,
+        68,
+        88,
+        6,
+        0,
+        0
+      ],
+      "file": "Eb_2.png"
+    },
+    {
+      "chord": "Ebm",
+      "notation": "xx1342",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        42,
+        0,
+        0
+      ],
+      "file": "Ebm_1.png"
+    },
+    {
+      "chord": "Ebm",
+      "notation": "x68876",
+      "fret_positions": [
+        -1,
+        68,
+        87,
+        6,
+        0,
+        0
+      ],
+      "file": "Ebm_2.png"
+    },
+    {
+      "chord": "E",
+      "notation": "022100",
+      "fret_positions": [
+        2,
+        21,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "E_1.png"
+    },
+    {
+      "chord": "E",
+      "notation": "779997",
+      "fret_positions": [
+        77,
+        99,
+        97,
+        0,
+        0,
+        0
+      ],
+      "file": "E_2.png"
+    },
+    {
+      "chord": "E",
+      "notation": "12-14-14-13-12-12",
+      "fret_positions": [
+        12,
+        14,
+        14,
+        13,
+        12,
+        12
+      ],
+      "file": "E_3.png"
+    },
+    {
+      "chord": "Em",
+      "notation": "022000",
+      "fret_positions": [
+        2,
+        20,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Em_1.png"
+    },
+    {
+      "chord": "Em",
+      "notation": "779987",
+      "fret_positions": [
+        77,
+        99,
+        87,
+        0,
+        0,
+        0
+      ],
+      "file": "Em_2.png"
+    },
+    {
+      "chord": "Em",
+      "notation": "12-14-14-12-12-12",
+      "fret_positions": [
+        12,
+        14,
+        14,
+        12,
+        12,
+        12
+      ],
+      "file": "Em_3.png"
+    },
+    {
+      "chord": "E7",
+      "notation": "020100",
+      "fret_positions": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "E7_1.png"
+    },
+    {
+      "chord": "E7",
+      "notation": "779797",
+      "fret_positions": [
+        77,
+        97,
+        97,
+        0,
+        0,
+        0
+      ],
+      "file": "E7_2.png"
+    },
+    {
+      "chord": "E5",
+      "notation": "022xxx",
+      "fret_positions": [
+        2,
+        2,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "E5_1.png"
+    },
+    {
+      "chord": "E5",
+      "notation": "7-9-9-x-x-x",
+      "fret_positions": [
+        79,
+        9,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "E5_2.png"
+    },
+    {
+      "chord": "Edim",
+      "notation": "xx2323",
+      "fret_positions": [
+        -1,
+        -1,
+        23,
+        23,
+        0,
+        0
+      ],
+      "file": "Edim_1.png"
+    },
+    {
+      "chord": "Edim",
+      "notation": "x-7-8-6-8-6",
+      "fret_positions": [
+        -1,
+        78,
+        68,
+        6,
+        0,
+        0
+      ],
+      "file": "Edim_2.png"
+    },
+    {
+      "chord": "Edim7",
+      "notation": "xx2323",
+      "fret_positions": [
+        -1,
+        -1,
+        23,
+        23,
+        0,
+        0
+      ],
+      "file": "Edim7_1.png"
+    },
+    {
+      "chord": "Edim7",
+      "notation": "x-7-8-6-8-6",
+      "fret_positions": [
+        -1,
+        78,
+        68,
+        6,
+        0,
+        0
+      ],
+      "file": "Edim7_2.png"
+    },
+    {
+      "chord": "Eaug",
+      "notation": "032110",
+      "fret_positions": [
+        3,
+        21,
+        10,
+        0,
+        0,
+        0
+      ],
+      "file": "Eaug_1.png"
+    },
+    {
+      "chord": "Eaug",
+      "notation": "0-3-2-1-1-0",
+      "fret_positions": [
+        3,
+        21,
+        10,
+        0,
+        0,
+        0
+      ],
+      "file": "Eaug_2.png"
+    },
+    {
+      "chord": "Esus2",
+      "notation": "024400",
+      "fret_positions": [
+        2,
+        44,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Esus2_1.png"
+    },
+    {
+      "chord": "Esus2",
+      "notation": "x-7-9-9-7-7",
+      "fret_positions": [
+        -1,
+        79,
+        97,
+        7,
+        0,
+        0
+      ],
+      "file": "Esus2_2.png"
+    },
+    {
+      "chord": "Esus4",
+      "notation": "022200",
+      "fret_positions": [
+        2,
+        22,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Esus4_1.png"
+    },
+    {
+      "chord": "Esus4",
+      "notation": "x-7-9-9-9-7",
+      "fret_positions": [
+        -1,
+        79,
+        99,
+        7,
+        0,
+        0
+      ],
+      "file": "Esus4_2.png"
+    },
+    {
+      "chord": "Emaj7",
+      "notation": "021100",
+      "fret_positions": [
+        2,
+        11,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Emaj7_1.png"
+    },
+    {
+      "chord": "Emaj7",
+      "notation": "12-14-13-13-12-12",
+      "fret_positions": [
+        12,
+        14,
+        13,
+        13,
+        12,
+        12
+      ],
+      "file": "Emaj7_2.png"
+    },
+    {
+      "chord": "Em7",
+      "notation": "020000",
+      "fret_positions": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Em7_1.png"
+    },
+    {
+      "chord": "Em7",
+      "notation": "7-7-9-7-8-7",
+      "fret_positions": [
+        77,
+        97,
+        87,
+        0,
+        0,
+        0
+      ],
+      "file": "Em7_2.png"
+    },
+    {
+      "chord": "E7sus4",
+      "notation": "020200",
+      "fret_positions": [
+        2,
+        2,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "E7sus4_1.png"
+    },
+    {
+      "chord": "E7sus4",
+      "notation": "x-7-9-7-9-7",
+      "fret_positions": [
+        -1,
+        79,
+        79,
+        7,
+        0,
+        0
+      ],
+      "file": "E7sus4_2.png"
+    },
+    {
+      "chord": "Eadd9",
+      "notation": "024100",
+      "fret_positions": [
+        2,
+        41,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Eadd9_1.png"
+    },
+    {
+      "chord": "Eadd9",
+      "notation": "0-2-4-1-0-0",
+      "fret_positions": [
+        2,
+        41,
+        0,
+        0,
+        0,
+        0
+      ],
+      "file": "Eadd9_2.png"
+    },
+    {
+      "chord": "F",
+      "notation": "133211",
+      "fret_positions": [
+        13,
+        32,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "F_1.png"
+    },
+    {
+      "chord": "F",
+      "notation": "xx3211",
+      "fret_positions": [
+        -1,
+        -1,
+        32,
+        11,
+        0,
+        0
+      ],
+      "file": "F_2.png"
+    },
+    {
+      "chord": "F",
+      "notation": "1-3-3-2-1-1",
+      "fret_positions": [
+        13,
+        32,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "F_3.png"
+    },
+    {
+      "chord": "Fm",
+      "notation": "133111",
+      "fret_positions": [
+        13,
+        31,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Fm_1.png"
+    },
+    {
+      "chord": "Fm",
+      "notation": "xx3111",
+      "fret_positions": [
+        -1,
+        -1,
+        31,
+        11,
+        0,
+        0
+      ],
+      "file": "Fm_2.png"
+    },
+    {
+      "chord": "Fm",
+      "notation": "1-3-3-1-1-1",
+      "fret_positions": [
+        13,
+        31,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Fm_3.png"
+    },
+    {
+      "chord": "F7",
+      "notation": "131211",
+      "fret_positions": [
+        13,
+        12,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "F7_1.png"
+    },
+    {
+      "chord": "F7",
+      "notation": "xx1211",
+      "fret_positions": [
+        -1,
+        -1,
+        12,
+        11,
+        0,
+        0
+      ],
+      "file": "F7_2.png"
+    },
+    {
+      "chord": "F5",
+      "notation": "133xxx",
+      "fret_positions": [
+        13,
+        3,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "F5_1.png"
+    },
+    {
+      "chord": "F5",
+      "notation": "1-3-3-x-x-x",
+      "fret_positions": [
+        13,
+        3,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "F5_2.png"
+    },
+    {
+      "chord": "Fdim",
+      "notation": "xx3434",
+      "fret_positions": [
+        -1,
+        -1,
+        34,
+        34,
+        0,
+        0
+      ],
+      "file": "Fdim_1.png"
+    },
+    {
+      "chord": "Fdim",
+      "notation": "x-x-3-4-3-4",
+      "fret_positions": [
+        -1,
+        -1,
+        34,
+        34,
+        0,
+        0
+      ],
+      "file": "Fdim_2.png"
+    },
+    {
+      "chord": "Fdim7",
+      "notation": "xx3434",
+      "fret_positions": [
+        -1,
+        -1,
+        34,
+        34,
+        0,
+        0
+      ],
+      "file": "Fdim7_1.png"
+    },
+    {
+      "chord": "Fdim7",
+      "notation": "x-x-3-4-3-4",
+      "fret_positions": [
+        -1,
+        -1,
+        34,
+        34,
+        0,
+        0
+      ],
+      "file": "Fdim7_2.png"
+    },
+    {
+      "chord": "Faug",
+      "notation": "xx3221",
+      "fret_positions": [
+        -1,
+        -1,
+        32,
+        21,
+        0,
+        0
+      ],
+      "file": "Faug_1.png"
+    },
+    {
+      "chord": "Faug",
+      "notation": "x-x-3-2-2-1",
+      "fret_positions": [
+        -1,
+        -1,
+        32,
+        21,
+        0,
+        0
+      ],
+      "file": "Faug_2.png"
+    },
+    {
+      "chord": "Fsus2",
+      "notation": "133011",
+      "fret_positions": [
+        13,
+        30,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsus2_1.png"
+    },
+    {
+      "chord": "Fsus2",
+      "notation": "x-x-3-0-1-1",
+      "fret_positions": [
+        -1,
+        -1,
+        30,
+        11,
+        0,
+        0
+      ],
+      "file": "Fsus2_2.png"
+    },
+    {
+      "chord": "Fsus4",
+      "notation": "133311",
+      "fret_positions": [
+        13,
+        33,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsus4_1.png"
+    },
+    {
+      "chord": "Fsus4",
+      "notation": "x-x-3-3-1-1",
+      "fret_positions": [
+        -1,
+        -1,
+        33,
+        11,
+        0,
+        0
+      ],
+      "file": "Fsus4_2.png"
+    },
+    {
+      "chord": "Fmaj7",
+      "notation": "xx3210",
+      "fret_positions": [
+        -1,
+        -1,
+        32,
+        10,
+        0,
+        0
+      ],
+      "file": "Fmaj7_1.png"
+    },
+    {
+      "chord": "Fmaj7",
+      "notation": "1-3-2-2-1-1",
+      "fret_positions": [
+        13,
+        22,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Fmaj7_2.png"
+    },
+    {
+      "chord": "Fm7",
+      "notation": "131111",
+      "fret_positions": [
+        13,
+        11,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "Fm7_1.png"
+    },
+    {
+      "chord": "Fm7",
+      "notation": "x-x-1-1-1-1",
+      "fret_positions": [
+        -1,
+        -1,
+        11,
+        11,
+        0,
+        0
+      ],
+      "file": "Fm7_2.png"
+    },
+    {
+      "chord": "F7sus4",
+      "notation": "131311",
+      "fret_positions": [
+        13,
+        13,
+        11,
+        0,
+        0,
+        0
+      ],
+      "file": "F7sus4_1.png"
+    },
+    {
+      "chord": "F7sus4",
+      "notation": "x-x-1-3-1-1",
+      "fret_positions": [
+        -1,
+        -1,
+        13,
+        11,
+        0,
+        0
+      ],
+      "file": "F7sus4_2.png"
+    },
+    {
+      "chord": "Fadd9",
+      "notation": "xx3213",
+      "fret_positions": [
+        -1,
+        -1,
+        32,
+        13,
+        0,
+        0
+      ],
+      "file": "Fadd9_1.png"
+    },
+    {
+      "chord": "Fadd9",
+      "notation": "x-x-3-2-1-3",
+      "fret_positions": [
+        -1,
+        -1,
+        32,
+        13,
+        0,
+        0
+      ],
+      "file": "Fadd9_2.png"
+    },
+    {
+      "chord": "F#",
+      "notation": "244322",
+      "fret_positions": [
+        24,
+        43,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharp_1.png"
+    },
+    {
+      "chord": "F#",
+      "notation": "xx4322",
+      "fret_positions": [
+        -1,
+        -1,
+        43,
+        22,
+        0,
+        0
+      ],
+      "file": "Fsharp_2.png"
+    },
+    {
+      "chord": "F#",
+      "notation": "2-4-4-3-2-2",
+      "fret_positions": [
+        24,
+        43,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharp_3.png"
+    },
+    {
+      "chord": "F#m",
+      "notation": "244222",
+      "fret_positions": [
+        24,
+        42,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharpm_1.png"
+    },
+    {
+      "chord": "F#m",
+      "notation": "xx4222",
+      "fret_positions": [
+        -1,
+        -1,
+        42,
+        22,
+        0,
+        0
+      ],
+      "file": "Fsharpm_2.png"
+    },
+    {
+      "chord": "F#m",
+      "notation": "2-4-4-2-2-2",
+      "fret_positions": [
+        24,
+        42,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharpm_3.png"
+    },
+    {
+      "chord": "F#7",
+      "notation": "242322",
+      "fret_positions": [
+        24,
+        23,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharp7_1.png"
+    },
+    {
+      "chord": "F#7",
+      "notation": "xx2322",
+      "fret_positions": [
+        -1,
+        -1,
+        23,
+        22,
+        0,
+        0
+      ],
+      "file": "Fsharp7_2.png"
+    },
+    {
+      "chord": "F#5",
+      "notation": "244xxx",
+      "fret_positions": [
+        24,
+        4,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Fsharp5_1.png"
+    },
+    {
+      "chord": "F#5",
+      "notation": "2-4-4-x-x-x",
+      "fret_positions": [
+        24,
+        4,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Fsharp5_2.png"
+    },
+    {
+      "chord": "F#dim",
+      "notation": "xx4545",
+      "fret_positions": [
+        -1,
+        -1,
+        45,
+        45,
+        0,
+        0
+      ],
+      "file": "Fsharpdim_1.png"
+    },
+    {
+      "chord": "F#dim",
+      "notation": "x-x-4-5-4-5",
+      "fret_positions": [
+        -1,
+        -1,
+        45,
+        45,
+        0,
+        0
+      ],
+      "file": "Fsharpdim_2.png"
+    },
+    {
+      "chord": "F#aug",
+      "notation": "xx4332",
+      "fret_positions": [
+        -1,
+        -1,
+        43,
+        32,
+        0,
+        0
+      ],
+      "file": "Fsharpaug_1.png"
+    },
+    {
+      "chord": "F#aug",
+      "notation": "x-x-4-3-3-2",
+      "fret_positions": [
+        -1,
+        -1,
+        43,
+        32,
+        0,
+        0
+      ],
+      "file": "Fsharpaug_2.png"
+    },
+    {
+      "chord": "F#sus2",
+      "notation": "244122",
+      "fret_positions": [
+        24,
+        41,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharpsus2_1.png"
+    },
+    {
+      "chord": "F#sus2",
+      "notation": "x-x-4-1-2-2",
+      "fret_positions": [
+        -1,
+        -1,
+        41,
+        22,
+        0,
+        0
+      ],
+      "file": "Fsharpsus2_2.png"
+    },
+    {
+      "chord": "F#sus4",
+      "notation": "244422",
+      "fret_positions": [
+        24,
+        44,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharpsus4_1.png"
+    },
+    {
+      "chord": "F#sus4",
+      "notation": "x-x-4-4-2-2",
+      "fret_positions": [
+        -1,
+        -1,
+        44,
+        22,
+        0,
+        0
+      ],
+      "file": "Fsharpsus4_2.png"
+    },
+    {
+      "chord": "F#maj7",
+      "notation": "xx4321",
+      "fret_positions": [
+        -1,
+        -1,
+        43,
+        21,
+        0,
+        0
+      ],
+      "file": "Fsharpmaj7_1.png"
+    },
+    {
+      "chord": "F#maj7",
+      "notation": "2-4-3-3-2-2",
+      "fret_positions": [
+        24,
+        33,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharpmaj7_2.png"
+    },
+    {
+      "chord": "F#m7",
+      "notation": "242222",
+      "fret_positions": [
+        24,
+        22,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Fsharpm7_1.png"
+    },
+    {
+      "chord": "F#m7",
+      "notation": "x-x-2-2-2-2",
+      "fret_positions": [
+        -1,
+        -1,
+        22,
+        22,
+        0,
+        0
+      ],
+      "file": "Fsharpm7_2.png"
+    },
+    {
+      "chord": "Gb",
+      "notation": "244322",
+      "fret_positions": [
+        24,
+        43,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Gb_1.png"
+    },
+    {
+      "chord": "Gb",
+      "notation": "xx4322",
+      "fret_positions": [
+        -1,
+        -1,
+        43,
+        22,
+        0,
+        0
+      ],
+      "file": "Gb_2.png"
+    },
+    {
+      "chord": "Gbm",
+      "notation": "244222",
+      "fret_positions": [
+        24,
+        42,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "Gbm_1.png"
+    },
+    {
+      "chord": "Gbm",
+      "notation": "xx4222",
+      "fret_positions": [
+        -1,
+        -1,
+        42,
+        22,
+        0,
+        0
+      ],
+      "file": "Gbm_2.png"
+    },
+    {
+      "chord": "G",
+      "notation": "320003",
+      "fret_positions": [
+        32,
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "G_1.png"
+    },
+    {
+      "chord": "G",
+      "notation": "355433",
+      "fret_positions": [
+        35,
+        54,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "G_2.png"
+    },
+    {
+      "chord": "G",
+      "notation": "3-5-5-4-3-3",
+      "fret_positions": [
+        35,
+        54,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "G_3.png"
+    },
+    {
+      "chord": "Gm",
+      "notation": "355333",
+      "fret_positions": [
+        35,
+        53,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "Gm_1.png"
+    },
+    {
+      "chord": "Gm",
+      "notation": "xx5333",
+      "fret_positions": [
+        -1,
+        -1,
+        53,
+        33,
+        0,
+        0
+      ],
+      "file": "Gm_2.png"
+    },
+    {
+      "chord": "Gm",
+      "notation": "3-5-5-3-3-3",
+      "fret_positions": [
+        35,
+        53,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "Gm_3.png"
+    },
+    {
+      "chord": "G7",
+      "notation": "320001",
+      "fret_positions": [
+        32,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "file": "G7_1.png"
+    },
+    {
+      "chord": "G7",
+      "notation": "353433",
+      "fret_positions": [
+        35,
+        34,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "G7_2.png"
+    },
+    {
+      "chord": "G5",
+      "notation": "355xxx",
+      "fret_positions": [
+        35,
+        5,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "G5_1.png"
+    },
+    {
+      "chord": "G5",
+      "notation": "3-5-5-x-x-x",
+      "fret_positions": [
+        35,
+        5,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "G5_2.png"
+    },
+    {
+      "chord": "Gdim",
+      "notation": "xx5656",
+      "fret_positions": [
+        -1,
+        -1,
+        56,
+        56,
+        0,
+        0
+      ],
+      "file": "Gdim_1.png"
+    },
+    {
+      "chord": "Gdim",
+      "notation": "x-x-5-6-5-6",
+      "fret_positions": [
+        -1,
+        -1,
+        56,
+        56,
+        0,
+        0
+      ],
+      "file": "Gdim_2.png"
+    },
+    {
+      "chord": "Gdim7",
+      "notation": "xx5656",
+      "fret_positions": [
+        -1,
+        -1,
+        56,
+        56,
+        0,
+        0
+      ],
+      "file": "Gdim7_1.png"
+    },
+    {
+      "chord": "Gdim7",
+      "notation": "x-x-5-6-5-6",
+      "fret_positions": [
+        -1,
+        -1,
+        56,
+        56,
+        0,
+        0
+      ],
+      "file": "Gdim7_2.png"
+    },
+    {
+      "chord": "Gaug",
+      "notation": "321003",
+      "fret_positions": [
+        32,
+        10,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Gaug_1.png"
+    },
+    {
+      "chord": "Gaug",
+      "notation": "3-2-1-0-0-3",
+      "fret_positions": [
+        32,
+        10,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Gaug_2.png"
+    },
+    {
+      "chord": "Gsus2",
+      "notation": "300033",
+      "fret_positions": [
+        30,
+        0,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsus2_1.png"
+    },
+    {
+      "chord": "Gsus2",
+      "notation": "x-x-5-2-3-3",
+      "fret_positions": [
+        -1,
+        -1,
+        52,
+        33,
+        0,
+        0
+      ],
+      "file": "Gsus2_2.png"
+    },
+    {
+      "chord": "Gsus4",
+      "notation": "320013",
+      "fret_positions": [
+        32,
+        0,
+        13,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsus4_1.png"
+    },
+    {
+      "chord": "Gsus4",
+      "notation": "x-x-5-5-3-3",
+      "fret_positions": [
+        -1,
+        -1,
+        55,
+        33,
+        0,
+        0
+      ],
+      "file": "Gsus4_2.png"
+    },
+    {
+      "chord": "Gmaj7",
+      "notation": "320002",
+      "fret_positions": [
+        32,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "file": "Gmaj7_1.png"
+    },
+    {
+      "chord": "Gmaj7",
+      "notation": "3-5-4-4-3-3",
+      "fret_positions": [
+        35,
+        44,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "Gmaj7_2.png"
+    },
+    {
+      "chord": "Gm7",
+      "notation": "353333",
+      "fret_positions": [
+        35,
+        33,
+        33,
+        0,
+        0,
+        0
+      ],
+      "file": "Gm7_1.png"
+    },
+    {
+      "chord": "Gm7",
+      "notation": "x-x-3-3-3-3",
+      "fret_positions": [
+        -1,
+        -1,
+        33,
+        33,
+        0,
+        0
+      ],
+      "file": "Gm7_2.png"
+    },
+    {
+      "chord": "G7sus4",
+      "notation": "330013",
+      "fret_positions": [
+        33,
+        0,
+        13,
+        0,
+        0,
+        0
+      ],
+      "file": "G7sus4_1.png"
+    },
+    {
+      "chord": "G7sus4",
+      "notation": "x-x-3-0-1-3",
+      "fret_positions": [
+        -1,
+        -1,
+        30,
+        13,
+        0,
+        0
+      ],
+      "file": "G7sus4_2.png"
+    },
+    {
+      "chord": "Gadd9",
+      "notation": "300203",
+      "fret_positions": [
+        30,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Gadd9_1.png"
+    },
+    {
+      "chord": "Gadd9",
+      "notation": "3-0-0-2-0-3",
+      "fret_positions": [
+        30,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "Gadd9_2.png"
+    },
+    {
+      "chord": "G#",
+      "notation": "466544",
+      "fret_positions": [
+        46,
+        65,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharp_1.png"
+    },
+    {
+      "chord": "G#",
+      "notation": "xx6544",
+      "fret_positions": [
+        -1,
+        -1,
+        65,
+        44,
+        0,
+        0
+      ],
+      "file": "Gsharp_2.png"
+    },
+    {
+      "chord": "G#",
+      "notation": "4-6-6-5-4-4",
+      "fret_positions": [
+        46,
+        65,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharp_3.png"
+    },
+    {
+      "chord": "G#m",
+      "notation": "466444",
+      "fret_positions": [
+        46,
+        64,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpm_1.png"
+    },
+    {
+      "chord": "G#m",
+      "notation": "xx6444",
+      "fret_positions": [
+        -1,
+        -1,
+        64,
+        44,
+        0,
+        0
+      ],
+      "file": "Gsharpm_2.png"
+    },
+    {
+      "chord": "G#m",
+      "notation": "4-6-6-4-4-4",
+      "fret_positions": [
+        46,
+        64,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpm_3.png"
+    },
+    {
+      "chord": "G#7",
+      "notation": "464544",
+      "fret_positions": [
+        46,
+        45,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharp7_1.png"
+    },
+    {
+      "chord": "G#7",
+      "notation": "xx4544",
+      "fret_positions": [
+        -1,
+        -1,
+        45,
+        44,
+        0,
+        0
+      ],
+      "file": "Gsharp7_2.png"
+    },
+    {
+      "chord": "G#5",
+      "notation": "466xxx",
+      "fret_positions": [
+        46,
+        6,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Gsharp5_1.png"
+    },
+    {
+      "chord": "G#5",
+      "notation": "4-6-6-x-x-x",
+      "fret_positions": [
+        46,
+        6,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Gsharp5_2.png"
+    },
+    {
+      "chord": "G#dim",
+      "notation": "xx6767",
+      "fret_positions": [
+        -1,
+        -1,
+        67,
+        67,
+        0,
+        0
+      ],
+      "file": "Gsharpdim_1.png"
+    },
+    {
+      "chord": "G#dim",
+      "notation": "x-x-6-7-6-7",
+      "fret_positions": [
+        -1,
+        -1,
+        67,
+        67,
+        0,
+        0
+      ],
+      "file": "Gsharpdim_2.png"
+    },
+    {
+      "chord": "G#aug",
+      "notation": "432114",
+      "fret_positions": [
+        43,
+        21,
+        14,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpaug_1.png"
+    },
+    {
+      "chord": "G#aug",
+      "notation": "4-3-2-1-1-4",
+      "fret_positions": [
+        43,
+        21,
+        14,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpaug_2.png"
+    },
+    {
+      "chord": "G#sus2",
+      "notation": "466144",
+      "fret_positions": [
+        46,
+        61,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpsus2_1.png"
+    },
+    {
+      "chord": "G#sus2",
+      "notation": "x-x-6-3-4-4",
+      "fret_positions": [
+        -1,
+        -1,
+        63,
+        44,
+        0,
+        0
+      ],
+      "file": "Gsharpsus2_2.png"
+    },
+    {
+      "chord": "G#sus4",
+      "notation": "466644",
+      "fret_positions": [
+        46,
+        66,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpsus4_1.png"
+    },
+    {
+      "chord": "G#sus4",
+      "notation": "x-x-6-6-4-4",
+      "fret_positions": [
+        -1,
+        -1,
+        66,
+        44,
+        0,
+        0
+      ],
+      "file": "Gsharpsus4_2.png"
+    },
+    {
+      "chord": "G#maj7",
+      "notation": "xx6543",
+      "fret_positions": [
+        -1,
+        -1,
+        65,
+        43,
+        0,
+        0
+      ],
+      "file": "Gsharpmaj7_1.png"
+    },
+    {
+      "chord": "G#maj7",
+      "notation": "4-6-5-5-4-4",
+      "fret_positions": [
+        46,
+        55,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpmaj7_2.png"
+    },
+    {
+      "chord": "G#m7",
+      "notation": "464444",
+      "fret_positions": [
+        46,
+        44,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Gsharpm7_1.png"
+    },
+    {
+      "chord": "G#m7",
+      "notation": "x-x-4-4-4-4",
+      "fret_positions": [
+        -1,
+        -1,
+        44,
+        44,
+        0,
+        0
+      ],
+      "file": "Gsharpm7_2.png"
+    },
+    {
+      "chord": "Ab",
+      "notation": "466544",
+      "fret_positions": [
+        46,
+        65,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Ab_1.png"
+    },
+    {
+      "chord": "Ab",
+      "notation": "xx6544",
+      "fret_positions": [
+        -1,
+        -1,
+        65,
+        44,
+        0,
+        0
+      ],
+      "file": "Ab_2.png"
+    },
+    {
+      "chord": "Abm",
+      "notation": "466444",
+      "fret_positions": [
+        46,
+        64,
+        44,
+        0,
+        0,
+        0
+      ],
+      "file": "Abm_1.png"
+    },
+    {
+      "chord": "Abm",
+      "notation": "xx6444",
+      "fret_positions": [
+        -1,
+        -1,
+        64,
+        44,
+        0,
+        0
+      ],
+      "file": "Abm_2.png"
+    },
+    {
+      "chord": "A",
+      "notation": "x02220",
+      "fret_positions": [
+        -1,
+        2,
+        22,
+        0,
+        0,
+        0
+      ],
+      "file": "A_1.png"
+    },
+    {
+      "chord": "A",
+      "notation": "577655",
+      "fret_positions": [
+        57,
+        76,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "A_2.png"
+    },
+    {
+      "chord": "A",
+      "notation": "5-7-7-6-5-5",
+      "fret_positions": [
+        57,
+        76,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "A_3.png"
+    },
+    {
+      "chord": "Am",
+      "notation": "x02210",
+      "fret_positions": [
+        -1,
+        2,
+        21,
+        0,
+        0,
+        0
+      ],
+      "file": "Am_1.png"
+    },
+    {
+      "chord": "Am",
+      "notation": "577555",
+      "fret_positions": [
+        57,
+        75,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "Am_2.png"
+    },
+    {
+      "chord": "Am",
+      "notation": "5-7-7-5-5-5",
+      "fret_positions": [
+        57,
+        75,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "Am_3.png"
+    },
+    {
+      "chord": "A7",
+      "notation": "x02020",
+      "fret_positions": [
+        -1,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "file": "A7_1.png"
+    },
+    {
+      "chord": "A7",
+      "notation": "575655",
+      "fret_positions": [
+        57,
+        56,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "A7_2.png"
+    },
+    {
+      "chord": "A5",
+      "notation": "x022xx",
+      "fret_positions": [
+        -1,
+        2,
+        2,
+        -1,
+        -1,
+        0
+      ],
+      "file": "A5_1.png"
+    },
+    {
+      "chord": "A5",
+      "notation": "5-7-7-x-x-x",
+      "fret_positions": [
+        57,
+        7,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "A5_2.png"
+    },
+    {
+      "chord": "Adim",
+      "notation": "xx7878",
+      "fret_positions": [
+        -1,
+        -1,
+        78,
+        78,
+        0,
+        0
+      ],
+      "file": "Adim_1.png"
+    },
+    {
+      "chord": "Adim",
+      "notation": "x-x-7-8-7-8",
+      "fret_positions": [
+        -1,
+        -1,
+        78,
+        78,
+        0,
+        0
+      ],
+      "file": "Adim_2.png"
+    },
+    {
+      "chord": "Adim7",
+      "notation": "xx7878",
+      "fret_positions": [
+        -1,
+        -1,
+        78,
+        78,
+        0,
+        0
+      ],
+      "file": "Adim7_1.png"
+    },
+    {
+      "chord": "Adim7",
+      "notation": "x-x-7-8-7-8",
+      "fret_positions": [
+        -1,
+        -1,
+        78,
+        78,
+        0,
+        0
+      ],
+      "file": "Adim7_2.png"
+    },
+    {
+      "chord": "Aaug",
+      "notation": "x03221",
+      "fret_positions": [
+        -1,
+        3,
+        22,
+        1,
+        0,
+        0
+      ],
+      "file": "Aaug_1.png"
+    },
+    {
+      "chord": "Aaug",
+      "notation": "x-0-3-2-2-1",
+      "fret_positions": [
+        -1,
+        3,
+        22,
+        1,
+        0,
+        0
+      ],
+      "file": "Aaug_2.png"
+    },
+    {
+      "chord": "Asus2",
+      "notation": "x02200",
+      "fret_positions": [
+        -1,
+        2,
+        20,
+        0,
+        0,
+        0
+      ],
+      "file": "Asus2_1.png"
+    },
+    {
+      "chord": "Asus2",
+      "notation": "x-x-7-4-5-5",
+      "fret_positions": [
+        -1,
+        -1,
+        74,
+        55,
+        0,
+        0
+      ],
+      "file": "Asus2_2.png"
+    },
+    {
+      "chord": "Asus4",
+      "notation": "x02230",
+      "fret_positions": [
+        -1,
+        2,
+        23,
+        0,
+        0,
+        0
+      ],
+      "file": "Asus4_1.png"
+    },
+    {
+      "chord": "Asus4",
+      "notation": "x-x-7-7-5-5",
+      "fret_positions": [
+        -1,
+        -1,
+        77,
+        55,
+        0,
+        0
+      ],
+      "file": "Asus4_2.png"
+    },
+    {
+      "chord": "Amaj7",
+      "notation": "x02120",
+      "fret_positions": [
+        -1,
+        2,
+        12,
+        0,
+        0,
+        0
+      ],
+      "file": "Amaj7_1.png"
+    },
+    {
+      "chord": "Amaj7",
+      "notation": "5-7-6-6-5-5",
+      "fret_positions": [
+        57,
+        66,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "Amaj7_2.png"
+    },
+    {
+      "chord": "Am7",
+      "notation": "x02010",
+      "fret_positions": [
+        -1,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "file": "Am7_1.png"
+    },
+    {
+      "chord": "Am7",
+      "notation": "5-7-5-5-5-5",
+      "fret_positions": [
+        57,
+        55,
+        55,
+        0,
+        0,
+        0
+      ],
+      "file": "Am7_2.png"
+    },
+    {
+      "chord": "A7sus4",
+      "notation": "x02030",
+      "fret_positions": [
+        -1,
+        2,
+        3,
+        0,
+        0,
+        0
+      ],
+      "file": "A7sus4_1.png"
+    },
+    {
+      "chord": "A7sus4",
+      "notation": "x-x-5-0-3-0",
+      "fret_positions": [
+        -1,
+        -1,
+        50,
+        30,
+        0,
+        0
+      ],
+      "file": "A7sus4_2.png"
+    },
+    {
+      "chord": "Aadd9",
+      "notation": "x02420",
+      "fret_positions": [
+        -1,
+        2,
+        42,
+        0,
+        0,
+        0
+      ],
+      "file": "Aadd9_1.png"
+    },
+    {
+      "chord": "Aadd9",
+      "notation": "x-0-2-4-2-0",
+      "fret_positions": [
+        -1,
+        2,
+        42,
+        0,
+        0,
+        0
+      ],
+      "file": "Aadd9_2.png"
+    },
+    {
+      "chord": "A#",
+      "notation": "x13331",
+      "fret_positions": [
+        -1,
+        13,
+        33,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharp_1.png"
+    },
+    {
+      "chord": "A#",
+      "notation": "688766",
+      "fret_positions": [
+        68,
+        87,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharp_2.png"
+    },
+    {
+      "chord": "A#",
+      "notation": "6-8-8-7-6-6",
+      "fret_positions": [
+        68,
+        87,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharp_3.png"
+    },
+    {
+      "chord": "A#m",
+      "notation": "x13321",
+      "fret_positions": [
+        -1,
+        13,
+        32,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharpm_1.png"
+    },
+    {
+      "chord": "A#m",
+      "notation": "688666",
+      "fret_positions": [
+        68,
+        86,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharpm_2.png"
+    },
+    {
+      "chord": "A#m",
+      "notation": "6-8-8-6-6-6",
+      "fret_positions": [
+        68,
+        86,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharpm_3.png"
+    },
+    {
+      "chord": "A#7",
+      "notation": "x13131",
+      "fret_positions": [
+        -1,
+        13,
+        13,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharp7_1.png"
+    },
+    {
+      "chord": "A#7",
+      "notation": "686766",
+      "fret_positions": [
+        68,
+        67,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharp7_2.png"
+    },
+    {
+      "chord": "A#5",
+      "notation": "x133xx",
+      "fret_positions": [
+        -1,
+        13,
+        3,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Asharp5_1.png"
+    },
+    {
+      "chord": "A#5",
+      "notation": "6-8-8-x-x-x",
+      "fret_positions": [
+        68,
+        8,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "Asharp5_2.png"
+    },
+    {
+      "chord": "A#dim",
+      "notation": "xx8989",
+      "fret_positions": [
+        -1,
+        -1,
+        89,
+        89,
+        0,
+        0
+      ],
+      "file": "Asharpdim_1.png"
+    },
+    {
+      "chord": "A#dim",
+      "notation": "x-x-8-9-8-9",
+      "fret_positions": [
+        -1,
+        -1,
+        89,
+        89,
+        0,
+        0
+      ],
+      "file": "Asharpdim_2.png"
+    },
+    {
+      "chord": "A#aug",
+      "notation": "x14332",
+      "fret_positions": [
+        -1,
+        14,
+        33,
+        2,
+        0,
+        0
+      ],
+      "file": "Asharpaug_1.png"
+    },
+    {
+      "chord": "A#aug",
+      "notation": "x-1-4-3-3-2",
+      "fret_positions": [
+        -1,
+        14,
+        33,
+        2,
+        0,
+        0
+      ],
+      "file": "Asharpaug_2.png"
+    },
+    {
+      "chord": "A#sus2",
+      "notation": "x13311",
+      "fret_positions": [
+        -1,
+        13,
+        31,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharpsus2_1.png"
+    },
+    {
+      "chord": "A#sus2",
+      "notation": "x-x-8-5-6-6",
+      "fret_positions": [
+        -1,
+        -1,
+        85,
+        66,
+        0,
+        0
+      ],
+      "file": "Asharpsus2_2.png"
+    },
+    {
+      "chord": "A#sus4",
+      "notation": "x13341",
+      "fret_positions": [
+        -1,
+        13,
+        34,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharpsus4_1.png"
+    },
+    {
+      "chord": "A#sus4",
+      "notation": "x-x-8-8-6-6",
+      "fret_positions": [
+        -1,
+        -1,
+        88,
+        66,
+        0,
+        0
+      ],
+      "file": "Asharpsus4_2.png"
+    },
+    {
+      "chord": "A#maj7",
+      "notation": "x13231",
+      "fret_positions": [
+        -1,
+        13,
+        23,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharpmaj7_1.png"
+    },
+    {
+      "chord": "A#maj7",
+      "notation": "6-8-7-7-6-6",
+      "fret_positions": [
+        68,
+        77,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharpmaj7_2.png"
+    },
+    {
+      "chord": "A#m7",
+      "notation": "x13121",
+      "fret_positions": [
+        -1,
+        13,
+        12,
+        1,
+        0,
+        0
+      ],
+      "file": "Asharpm7_1.png"
+    },
+    {
+      "chord": "A#m7",
+      "notation": "6-8-6-6-6-6",
+      "fret_positions": [
+        68,
+        66,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Asharpm7_2.png"
+    },
+    {
+      "chord": "Bb",
+      "notation": "x13331",
+      "fret_positions": [
+        -1,
+        13,
+        33,
+        1,
+        0,
+        0
+      ],
+      "file": "Bb_1.png"
+    },
+    {
+      "chord": "Bb",
+      "notation": "688766",
+      "fret_positions": [
+        68,
+        87,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Bb_2.png"
+    },
+    {
+      "chord": "Bbm",
+      "notation": "x13321",
+      "fret_positions": [
+        -1,
+        13,
+        32,
+        1,
+        0,
+        0
+      ],
+      "file": "Bbm_1.png"
+    },
+    {
+      "chord": "Bbm",
+      "notation": "688666",
+      "fret_positions": [
+        68,
+        86,
+        66,
+        0,
+        0,
+        0
+      ],
+      "file": "Bbm_2.png"
+    },
+    {
+      "chord": "B",
+      "notation": "x24442",
+      "fret_positions": [
+        -1,
+        24,
+        44,
+        2,
+        0,
+        0
+      ],
+      "file": "B_1.png"
+    },
+    {
+      "chord": "B",
+      "notation": "799877",
+      "fret_positions": [
+        79,
+        98,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "B_2.png"
+    },
+    {
+      "chord": "B",
+      "notation": "7-9-9-8-7-7",
+      "fret_positions": [
+        79,
+        98,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "B_3.png"
+    },
+    {
+      "chord": "Bm",
+      "notation": "x24432",
+      "fret_positions": [
+        -1,
+        24,
+        43,
+        2,
+        0,
+        0
+      ],
+      "file": "Bm_1.png"
+    },
+    {
+      "chord": "Bm",
+      "notation": "799777",
+      "fret_positions": [
+        79,
+        97,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "Bm_2.png"
+    },
+    {
+      "chord": "Bm",
+      "notation": "7-9-9-7-7-7",
+      "fret_positions": [
+        79,
+        97,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "Bm_3.png"
+    },
+    {
+      "chord": "B7",
+      "notation": "x21202",
+      "fret_positions": [
+        -1,
+        21,
+        20,
+        2,
+        0,
+        0
+      ],
+      "file": "B7_1.png"
+    },
+    {
+      "chord": "B7",
+      "notation": "797877",
+      "fret_positions": [
+        79,
+        78,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "B7_2.png"
+    },
+    {
+      "chord": "B5",
+      "notation": "x244xx",
+      "fret_positions": [
+        -1,
+        24,
+        4,
+        -1,
+        -1,
+        0
+      ],
+      "file": "B5_1.png"
+    },
+    {
+      "chord": "B5",
+      "notation": "7-9-9-x-x-x",
+      "fret_positions": [
+        79,
+        9,
+        -1,
+        -1,
+        -1,
+        0
+      ],
+      "file": "B5_2.png"
+    },
+    {
+      "chord": "Bdim",
+      "notation": "xx9101010",
+      "fret_positions": [
+        -1,
+        -1,
+        91,
+        1,
+        1,
+        0
+      ],
+      "file": "Bdim_1.png"
+    },
+    {
+      "chord": "Bdim",
+      "notation": "x-x-9-10-9-10",
+      "fret_positions": [
+        -1,
+        -1,
+        91,
+        9,
+        10,
+        0
+      ],
+      "file": "Bdim_2.png"
+    },
+    {
+      "chord": "Bdim7",
+      "notation": "xx9101010",
+      "fret_positions": [
+        -1,
+        -1,
+        91,
+        1,
+        1,
+        0
+      ],
+      "file": "Bdim7_1.png"
+    },
+    {
+      "chord": "Bdim7",
+      "notation": "x-x-9-10-9-10",
+      "fret_positions": [
+        -1,
+        -1,
+        91,
+        9,
+        10,
+        0
+      ],
+      "file": "Bdim7_2.png"
+    },
+    {
+      "chord": "Baug",
+      "notation": "x25443",
+      "fret_positions": [
+        -1,
+        25,
+        44,
+        3,
+        0,
+        0
+      ],
+      "file": "Baug_1.png"
+    },
+    {
+      "chord": "Baug",
+      "notation": "x-2-5-4-4-3",
+      "fret_positions": [
+        -1,
+        25,
+        44,
+        3,
+        0,
+        0
+      ],
+      "file": "Baug_2.png"
+    },
+    {
+      "chord": "Bsus2",
+      "notation": "x24422",
+      "fret_positions": [
+        -1,
+        24,
+        42,
+        2,
+        0,
+        0
+      ],
+      "file": "Bsus2_1.png"
+    },
+    {
+      "chord": "Bsus2",
+      "notation": "x-x-9-6-7-7",
+      "fret_positions": [
+        -1,
+        -1,
+        96,
+        77,
+        0,
+        0
+      ],
+      "file": "Bsus2_2.png"
+    },
+    {
+      "chord": "Bsus4",
+      "notation": "x24452",
+      "fret_positions": [
+        -1,
+        24,
+        45,
+        2,
+        0,
+        0
+      ],
+      "file": "Bsus4_1.png"
+    },
+    {
+      "chord": "Bsus4",
+      "notation": "x-x-9-9-7-7",
+      "fret_positions": [
+        -1,
+        -1,
+        99,
+        77,
+        0,
+        0
+      ],
+      "file": "Bsus4_2.png"
+    },
+    {
+      "chord": "Bmaj7",
+      "notation": "x24342",
+      "fret_positions": [
+        -1,
+        24,
+        34,
+        2,
+        0,
+        0
+      ],
+      "file": "Bmaj7_1.png"
+    },
+    {
+      "chord": "Bmaj7",
+      "notation": "7-9-8-8-7-7",
+      "fret_positions": [
+        79,
+        88,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "Bmaj7_2.png"
+    },
+    {
+      "chord": "Bm7",
+      "notation": "x24232",
+      "fret_positions": [
+        -1,
+        24,
+        23,
+        2,
+        0,
+        0
+      ],
+      "file": "Bm7_1.png"
+    },
+    {
+      "chord": "Bm7",
+      "notation": "7-9-7-7-7-7",
+      "fret_positions": [
+        79,
+        77,
+        77,
+        0,
+        0,
+        0
+      ],
+      "file": "Bm7_2.png"
+    },
+    {
+      "chord": "B7sus4",
+      "notation": "x24252",
+      "fret_positions": [
+        -1,
+        24,
+        25,
+        2,
+        0,
+        0
+      ],
+      "file": "B7sus4_1.png"
+    },
+    {
+      "chord": "B7sus4",
+      "notation": "x-x-7-0-5-2",
+      "fret_positions": [
+        -1,
+        -1,
+        70,
+        52,
+        0,
+        0
+      ],
+      "file": "B7sus4_2.png"
+    },
+    {
+      "chord": "Badd9",
+      "notation": "x24422",
+      "fret_positions": [
+        -1,
+        24,
+        42,
+        2,
+        0,
+        0
+      ],
+      "file": "Badd9_1.png"
+    },
+    {
+      "chord": "Badd9",
+      "notation": "x-2-4-4-2-2",
+      "fret_positions": [
+        -1,
+        24,
+        42,
+        2,
+        0,
+        0
+      ],
+      "file": "Badd9_2.png"
+    }
+  ],
+  "failed": []
+}

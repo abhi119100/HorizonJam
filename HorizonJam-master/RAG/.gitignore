@@ -1,0 +1,18 @@
+#.venv/
+#.env/
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+
+# Environment files
+.env
+
+# Others
+*.log
+.ipynb_checkpoints/
+
+music_rag_data/
+scraper.log
+scraped_data/
+guitar_resources_text_chunks/

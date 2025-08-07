@@ -1,0 +1,39 @@
+{
+  "annotations": [
+    {
+      "song_id": "RWC_POP_001",
+      "title": "Unknown Pop Song 1",
+      "chord_labels": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "chord": "C:maj"
+        },
+        {
+          "start": 2.0,
+          "end": 4.0,
+          "chord": "Am:min"
+        },
+        {
+          "start": 4.0,
+          "end": 6.0,
+          "chord": "F:maj"
+        },
+        {
+          "start": 6.0,
+          "end": 8.0,
+          "chord": "G:maj"
+        }
+      ],
+      "key": "C:major",
+      "annotator": "NYU_student_1",
+      "verified_by": "NYU_student_2"
+    }
+  ],
+  "metadata": {
+    "total_songs": 100,
+    "source": "RWC_Popular_Music_Database",
+    "annotation_method": "manual_expert",
+    "format": "Harte_notation"
+  }
+}

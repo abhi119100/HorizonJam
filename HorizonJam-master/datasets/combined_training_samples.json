@@ -1,0 +1,159 @@
+{
+  "samples": [
+    {
+      "source": "chordonomicon",
+      "detected_chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "C"
+      ],
+      "ground_truth_chords": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "C"
+      ],
+      "metadata": {
+        "artist": "The Beatles",
+        "title": "Let It Be",
+        "key": "C major",
+        "genre": "rock",
+        "bpm": 76,
+        "structure": {
+          "verse": [
+            "C",
+            "G",
+            "Am",
+            "F"
+          ],
+          "chorus": [
+            "C",
+            "G",
+            "F",
+            "C"
+          ]
+        }
+      },
+      "accuracy_metrics": {
+        "accuracy": 1.0
+      },
+      "features": [
+        8,
+        4,
+        7,
+        1,
+        0,
+        2,
+        1,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "source": "chordonomicon",
+      "detected_chords": [
+        "Am",
+        "F",
+        "C",
+        "G"
+      ],
+      "ground_truth_chords": [
+        "Am",
+        "F",
+        "C",
+        "G"
+      ],
+      "metadata": {
+        "artist": "Ed Sheeran",
+        "title": "Shape of You",
+        "key": "A minor",
+        "genre": "pop",
+        "bpm": 96,
+        "structure": {
+          "verse": [
+            "Am",
+            "F",
+            "C",
+            "G"
+          ],
+          "chorus": [
+            "Am",
+            "F",
+            "C",
+            "G"
+          ]
+        }
+      },
+      "accuracy_metrics": {
+        "accuracy": 1.0
+      },
+      "features": [
+        4,
+        4,
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        0
+      ]
+    },
+    {
+      "source": "rwc_pop",
+      "detected_chords": [
+        "C:maj",
+        "Am:min",
+        "F:maj",
+        "G:maj"
+      ],
+      "ground_truth_chords": [
+        "C:maj",
+        "Am:min",
+        "F:maj",
+        "G:maj"
+      ],
+      "metadata": {
+        "song_id": "RWC_POP_001",
+        "title": "Unknown Pop Song 1",
+        "key": "C:major",
+        "annotator": "NYU_student_1",
+        "verified_by": "NYU_student_2"
+      },
+      "accuracy_metrics": {
+        "accuracy": 1.0
+      },
+      "features": [
+        4,
+        4,
+        3,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "metadata": {
+    "total_samples": 3,
+    "sources": [
+      "chordonomicon",
+      "rwc_pop"
+    ],
+    "created_at": "C:\\Users\\abhij\\Downloads\\singleguitar\\HorizonJam-master"
+  }
+}

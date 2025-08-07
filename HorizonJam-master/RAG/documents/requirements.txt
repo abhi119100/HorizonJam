@@ -1,0 +1,17 @@
+requests
+beautifulsoup4
+lxml  # parser for BeautifulSoup (recommended)
+openai
+tiktoken
+chromadb
+playwright
+pdfplumber
+music21
+#pyguitar
+pretty_midi
+pandas
+matplotlib.pyplot
+matplotlib.patches
+numpy
+Pillow
+requests
