@@ -1,0 +1,68 @@
+{
+  "songs": [
+    {
+      "artist": "The Beatles",
+      "title": "Let It Be",
+      "chord_progression": [
+        "C",
+        "G",
+        "Am",
+        "F",
+        "C",
+        "G",
+        "F",
+        "C"
+      ],
+      "structure": {
+        "verse": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "chorus": [
+          "C",
+          "G",
+          "F",
+          "C"
+        ]
+      },
+      "key": "C major",
+      "genre": "rock",
+      "bpm": 76
+    },
+    {
+      "artist": "Ed Sheeran",
+      "title": "Shape of You",
+      "chord_progression": [
+        "Am",
+        "F",
+        "C",
+        "G"
+      ],
+      "structure": {
+        "verse": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "chorus": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ]
+      },
+      "key": "A minor",
+      "genre": "pop",
+      "bpm": 96
+    }
+  ],
+  "metadata": {
+    "total_songs": 1000,
+    "source": "CHORDONOMICON",
+    "format": "Harte_syntax",
+    "quality": "expert_curated"
+  }
+}

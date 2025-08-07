@@ -1,0 +1,89 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run linter
+      run: npm run lint --if-present
+    
+    - name: Run tests
+      run: npm test --if-present
+    
+    - name: Check TypeScript
+      run: npm run type-check --if-present
+
+  build-web:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Setup Expo CLI
+      run: npm install -g expo-cli
+    
+    - name: Build for web
+      run: expo build:web
+    
+    - name: Upload web build artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: web-build
+        path: web-build/
+
+  build-mobile:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Setup Expo CLI
+      run: npm install -g expo-cli
+    
+    - name: Login to Expo
+      run: expo login -u ${{ secrets.EXPO_USERNAME }} -p ${{ secrets.EXPO_PASSWORD }}
+      if: ${{ secrets.EXPO_USERNAME && secrets.EXPO_PASSWORD }}
+    
+    - name: Publish to Expo
+      run: expo publish
+      if: ${{ secrets.EXPO_USERNAME && secrets.EXPO_PASSWORD }}

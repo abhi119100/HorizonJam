@@ -1,0 +1,118 @@
+[
+  {
+    "sample_id": "gp__0",
+    "audio_file": "gp_",
+    "timestamp": 0,
+    "detected_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "E",
+        "timestamp": 0.5,
+        "end_time": 1.0,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "Gm7",
+        "timestamp": 1.0,
+        "end_time": 1.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      }
+    ],
+    "ground_truth_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "E",
+        "timestamp": 0.5,
+        "end_time": 1.0,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "Gm7",
+        "timestamp": 1.0,
+        "end_time": 1.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      }
+    ],
+    "features": {
+      "source": "guitar_pro",
+      "chord_count": 3,
+      "unique_chords": 3,
+      "tempo": 120,
+      "progression_length": 3
+    },
+    "metadata": {
+      "source": "guitar_pro",
+      "title": "",
+      "tempo": 120,
+      "chord_types": [
+        "Gm7",
+        "C",
+        "E"
+      ]
+    },
+    "accuracy_metrics": {
+      "accuracy": 1.0,
+      "matches": 3,
+      "total_compared": 3
+    }
+  },
+  {
+    "sample_id": "gp_Demo_for_Guitar_Pro_5_1",
+    "audio_file": "gp_Demo for Guitar Pro 5",
+    "timestamp": 1,
+    "detected_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.36363636363636365,
+        "duration": 0.36363636363636365,
+        "confidence": 1.0
+      }
+    ],
+    "ground_truth_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.36363636363636365,
+        "duration": 0.36363636363636365,
+        "confidence": 1.0
+      }
+    ],
+    "features": {
+      "source": "guitar_pro",
+      "chord_count": 1,
+      "unique_chords": 1,
+      "tempo": 165,
+      "progression_length": 1
+    },
+    "metadata": {
+      "source": "guitar_pro",
+      "title": "Demo for Guitar Pro 5",
+      "tempo": 165,
+      "chord_types": [
+        "C"
+      ]
+    },
+    "accuracy_metrics": {
+      "accuracy": 1.0,
+      "matches": 1,
+      "total_compared": 1
+    }
+  }
+]

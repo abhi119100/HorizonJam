@@ -1,0 +1,5 @@
+.venv
+.env
+scraper.log
+scraped_data
+guitar_resources_text_chunks

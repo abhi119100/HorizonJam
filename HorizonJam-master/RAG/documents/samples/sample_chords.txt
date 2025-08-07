@@ -1,0 +1,11 @@
+TITLE: Let It Be
+ARTIST: The Beatles
+KEY: C Major
+
+Verse:
+C - G - Am - F
+C - G - F - Em - Dm - C
+
+Chorus:
+Am - G - F - C
+G - F - Em - Dm - C

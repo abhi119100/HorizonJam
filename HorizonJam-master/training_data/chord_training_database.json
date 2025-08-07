@@ -1,0 +1,883 @@
+[
+  {
+    "sample_id": "sample_1753845390_0",
+    "audio_file": "tests/test11.mid",
+    "timestamp": 1753845390.329962,
+    "detected_chords": [
+      {
+        "timestamp": 1.1402898550724638,
+        "end_time": 5.701449275362319,
+        "duration": 4.561159420289855,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 5.701449275362319,
+        "end_time": 6.271594202898551,
+        "duration": 0.5701449275362318,
+        "chord": "B",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 6.271594202898551,
+        "end_time": 10.262608695652174,
+        "duration": 3.9910144927536235,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 7.0,
+        "end_time": 7.5,
+        "duration": 0.5,
+        "chord": "Perfect Fifth",
+        "notes": [
+          "B2",
+          "F#3"
+        ],
+        "midi_pitches": [
+          47,
+          54
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 7.75,
+        "end_time": 8.0,
+        "duration": 0.25,
+        "chord": "Perfect Octave",
+        "notes": [
+          "B4",
+          "B3"
+        ],
+        "midi_pitches": [
+          71,
+          59
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 8.0,
+        "end_time": 8.5,
+        "duration": 0.5,
+        "chord": "Perfect Octave",
+        "notes": [
+          "B4",
+          "B3"
+        ],
+        "midi_pitches": [
+          71,
+          59
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 10.262608695652174,
+        "end_time": 10.832753623188406,
+        "duration": 0.5701449275362318,
+        "chord": "B",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 10.832753623188406,
+        "end_time": 11.402898550724638,
+        "duration": 0.5701449275362318,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 11.0,
+        "end_time": 11.25,
+        "duration": 0.25,
+        "chord": "incomplete major-seventh chord",
+        "notes": [
+          "B4",
+          "E-6",
+          "E4"
+        ],
+        "midi_pitches": [
+          71,
+          87,
+          64
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "E"
+      },
+      {
+        "timestamp": 11.97304347826087,
+        "end_time": 13.113333333333333,
+        "duration": 1.1402898550724636,
+        "chord": "E",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 13.113333333333333,
+        "end_time": 17.104347826086958,
+        "duration": 3.9910144927536244,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 14.5,
+        "end_time": 16.0,
+        "duration": 1.5,
+        "chord": "Perfect Fourth",
+        "notes": [
+          "B3",
+          "E4"
+        ],
+        "midi_pitches": [
+          59,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 16.0,
+        "end_time": 16.166666666666668,
+        "duration": 0.16666666666666666,
+        "chord": "Perfect Fourth",
+        "notes": [
+          "B3",
+          "E4"
+        ],
+        "midi_pitches": [
+          59,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 16.333333333333332,
+        "end_time": 17.083333333333332,
+        "duration": 0.75,
+        "chord": "Perfect Octave",
+        "notes": [
+          "B3",
+          "B4"
+        ],
+        "midi_pitches": [
+          59,
+          71
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 17.104347826086958,
+        "end_time": 17.67449275362319,
+        "duration": 0.5701449275362336,
+        "chord": "B",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 17.67449275362319,
+        "end_time": 18.215625,
+        "duration": 0.541132246376808,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 26.5,
+        "end_time": 27.25,
+        "duration": 0.75,
+        "chord": "Perfect Twelfth",
+        "notes": [
+          "B5",
+          "E4"
+        ],
+        "midi_pitches": [
+          83,
+          64
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "E"
+      },
+      {
+        "timestamp": 27.75,
+        "end_time": 28.0,
+        "duration": 0.25,
+        "chord": "quartal trichord",
+        "notes": [
+          "F#4",
+          "B3",
+          "B4",
+          "E4"
+        ],
+        "midi_pitches": [
+          66,
+          59,
+          71,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 28.0,
+        "end_time": 28.416666666666668,
+        "duration": 0.4166666666666667,
+        "chord": "quartal trichord",
+        "notes": [
+          "F#4",
+          "B3",
+          "B4",
+          "E4"
+        ],
+        "midi_pitches": [
+          66,
+          59,
+          71,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 28.5,
+        "end_time": 28.833333333333332,
+        "duration": 0.3333333333333333,
+        "chord": "multiple octaves",
+        "notes": [
+          "B5",
+          "B4",
+          "B3"
+        ],
+        "midi_pitches": [
+          83,
+          71,
+          59
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 33.25,
+        "end_time": 33.5,
+        "duration": 0.25,
+        "chord": "Perfect Fourth",
+        "notes": [
+          "E4",
+          "B3"
+        ],
+        "midi_pitches": [
+          64,
+          59
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      }
+    ],
+    "ground_truth_chords": [
+      {
+        "timestamp": 1.1402898550724638,
+        "end_time": 5.701449275362319,
+        "duration": 4.561159420289855,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 5.701449275362319,
+        "end_time": 6.271594202898551,
+        "duration": 0.5701449275362318,
+        "chord": "B",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 6.271594202898551,
+        "end_time": 10.262608695652174,
+        "duration": 3.9910144927536235,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 7.0,
+        "end_time": 7.5,
+        "duration": 0.5,
+        "chord": "Perfect Fifth",
+        "notes": [
+          "B2",
+          "F#3"
+        ],
+        "midi_pitches": [
+          47,
+          54
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 7.75,
+        "end_time": 8.0,
+        "duration": 0.25,
+        "chord": "Perfect Octave",
+        "notes": [
+          "B4",
+          "B3"
+        ],
+        "midi_pitches": [
+          71,
+          59
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 8.0,
+        "end_time": 8.5,
+        "duration": 0.5,
+        "chord": "Perfect Octave",
+        "notes": [
+          "B4",
+          "B3"
+        ],
+        "midi_pitches": [
+          71,
+          59
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 10.262608695652174,
+        "end_time": 10.832753623188406,
+        "duration": 0.5701449275362318,
+        "chord": "B",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 10.832753623188406,
+        "end_time": 11.402898550724638,
+        "duration": 0.5701449275362318,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 11.0,
+        "end_time": 11.25,
+        "duration": 0.25,
+        "chord": "incomplete major-seventh chord",
+        "notes": [
+          "B4",
+          "E-6",
+          "E4"
+        ],
+        "midi_pitches": [
+          71,
+          87,
+          64
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "E"
+      },
+      {
+        "timestamp": 11.97304347826087,
+        "end_time": 13.113333333333333,
+        "duration": 1.1402898550724636,
+        "chord": "E",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 13.113333333333333,
+        "end_time": 17.104347826086958,
+        "duration": 3.9910144927536244,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 14.5,
+        "end_time": 16.0,
+        "duration": 1.5,
+        "chord": "Perfect Fourth",
+        "notes": [
+          "B3",
+          "E4"
+        ],
+        "midi_pitches": [
+          59,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 16.0,
+        "end_time": 16.166666666666668,
+        "duration": 0.16666666666666666,
+        "chord": "Perfect Fourth",
+        "notes": [
+          "B3",
+          "E4"
+        ],
+        "midi_pitches": [
+          59,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 16.333333333333332,
+        "end_time": 17.083333333333332,
+        "duration": 0.75,
+        "chord": "Perfect Octave",
+        "notes": [
+          "B3",
+          "B4"
+        ],
+        "midi_pitches": [
+          59,
+          71
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 17.104347826086958,
+        "end_time": 17.67449275362319,
+        "duration": 0.5701449275362336,
+        "chord": "B",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 17.67449275362319,
+        "end_time": 18.215625,
+        "duration": 0.541132246376808,
+        "chord": "Esus2",
+        "notes": [],
+        "confidence": 1.0,
+        "midi_pitches": []
+      },
+      {
+        "timestamp": 26.5,
+        "end_time": 27.25,
+        "duration": 0.75,
+        "chord": "Perfect Twelfth",
+        "notes": [
+          "B5",
+          "E4"
+        ],
+        "midi_pitches": [
+          83,
+          64
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "E"
+      },
+      {
+        "timestamp": 27.75,
+        "end_time": 28.0,
+        "duration": 0.25,
+        "chord": "quartal trichord",
+        "notes": [
+          "F#4",
+          "B3",
+          "B4",
+          "E4"
+        ],
+        "midi_pitches": [
+          66,
+          59,
+          71,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 28.0,
+        "end_time": 28.416666666666668,
+        "duration": 0.4166666666666667,
+        "chord": "quartal trichord",
+        "notes": [
+          "F#4",
+          "B3",
+          "B4",
+          "E4"
+        ],
+        "midi_pitches": [
+          66,
+          59,
+          71,
+          64
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 28.5,
+        "end_time": 28.833333333333332,
+        "duration": 0.3333333333333333,
+        "chord": "multiple octaves",
+        "notes": [
+          "B5",
+          "B4",
+          "B3"
+        ],
+        "midi_pitches": [
+          83,
+          71,
+          59
+        ],
+        "inversion": 0,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      },
+      {
+        "timestamp": 33.25,
+        "end_time": 33.5,
+        "duration": 0.25,
+        "chord": "Perfect Fourth",
+        "notes": [
+          "E4",
+          "B3"
+        ],
+        "midi_pitches": [
+          64,
+          59
+        ],
+        "inversion": 2,
+        "confidence": 0.95,
+        "quality": "other",
+        "bass_note": "B"
+      }
+    ],
+    "features": {
+      "midi_stats": {
+        "total_duration": 18.215625,
+        "num_instruments": 1,
+        "total_notes": 77
+      },
+      "timing_features": {
+        "avg_note_duration": 0.40714285714285714,
+        "std_note_duration": 0.2728349545092823,
+        "note_density": 4.2271401612626525,
+        "avg_velocity": 55.01298701298701,
+        "std_velocity": 11.082328868774628
+      },
+      "pitch_features": {
+        "pitch_range": 56,
+        "avg_pitch": 65.06493506493507,
+        "std_pitch": 9.227763954132445,
+        "unique_pitches": 14
+      },
+      "harmonic_features": {
+        "num_time_windows": 14,
+        "avg_notes_per_window": 5.5,
+        "chord_complexity_scores": [
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          3,
+          2,
+          2,
+          3,
+          1
+        ],
+        "interval_patterns": [
+          0,
+          5,
+          0,
+          7,
+          0,
+          1,
+          19,
+          7,
+          5,
+          0,
+          0,
+          5,
+          7,
+          12,
+          5,
+          0,
+          7,
+          16,
+          12,
+          0,
+          5,
+          0,
+          5,
+          0,
+          7,
+          7,
+          4,
+          1,
+          0,
+          7,
+          28,
+          0,
+          4,
+          0,
+          0,
+          7,
+          5,
+          0,
+          5,
+          0,
+          2,
+          5,
+          5,
+          7,
+          7,
+          0,
+          5,
+          7,
+          0,
+          12,
+          0,
+          0,
+          12,
+          5,
+          12,
+          0,
+          4,
+          0,
+          0,
+          1,
+          11,
+          0,
+          12
+        ],
+        "avg_chord_complexity": 2.5,
+        "std_chord_complexity": 0.6267831705280087,
+        "common_intervals": {
+          "most_common_interval": 0,
+          "interval_distribution": {
+            "0": 36.507936507936506,
+            "5": 19.047619047619047,
+            "7": 17.46031746031746,
+            "1": 4.761904761904762,
+            "19": 1.5873015873015872,
+            "12": 9.523809523809524,
+            "16": 1.5873015873015872,
+            "4": 4.761904761904762,
+            "28": 1.5873015873015872,
+            "2": 1.5873015873015872,
+            "11": 1.5873015873015872
+          }
+        }
+      },
+      "file_info": {
+        "filename": "test11.mid",
+        "file_size": 735,
+        "file_type": ".mid"
+      }
+    },
+    "metadata": {
+      "instrument": "guitar"
+    },
+    "accuracy_metrics": {
+      "accuracy": 1.0,
+      "matches": 21,
+      "total_compared": 21,
+      "detected_count": 21,
+      "ground_truth_count": 21
+    }
+  },
+  {
+    "sample_id": "gp__0",
+    "audio_file": "gp_",
+    "timestamp": 0,
+    "detected_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "E",
+        "timestamp": 0.5,
+        "end_time": 1.0,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "Gm7",
+        "timestamp": 1.0,
+        "end_time": 1.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      }
+    ],
+    "ground_truth_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "E",
+        "timestamp": 0.5,
+        "end_time": 1.0,
+        "duration": 0.5,
+        "confidence": 1.0
+      },
+      {
+        "chord": "Gm7",
+        "timestamp": 1.0,
+        "end_time": 1.5,
+        "duration": 0.5,
+        "confidence": 1.0
+      }
+    ],
+    "features": {
+      "source": "guitar_pro",
+      "chord_count": 3,
+      "unique_chords": 3,
+      "tempo": 120,
+      "progression_length": 3
+    },
+    "metadata": {
+      "source": "guitar_pro",
+      "title": "",
+      "tempo": 120,
+      "chord_types": [
+        "Gm7",
+        "C",
+        "E"
+      ]
+    },
+    "accuracy_metrics": {
+      "accuracy": 1.0,
+      "matches": 3,
+      "total_compared": 3
+    }
+  },
+  {
+    "sample_id": "gp_Demo_for_Guitar_Pro_5_1",
+    "audio_file": "gp_Demo for Guitar Pro 5",
+    "timestamp": 1,
+    "detected_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.36363636363636365,
+        "duration": 0.36363636363636365,
+        "confidence": 1.0
+      }
+    ],
+    "ground_truth_chords": [
+      {
+        "chord": "C",
+        "timestamp": 0.0,
+        "end_time": 0.36363636363636365,
+        "duration": 0.36363636363636365,
+        "confidence": 1.0
+      }
+    ],
+    "features": {
+      "source": "guitar_pro",
+      "chord_count": 1,
+      "unique_chords": 1,
+      "tempo": 165,
+      "progression_length": 1
+    },
+    "metadata": {
+      "source": "guitar_pro",
+      "title": "Demo for Guitar Pro 5",
+      "tempo": 165,
+      "chord_types": [
+        "C"
+      ]
+    },
+    "accuracy_metrics": {
+      "accuracy": 1.0,
+      "matches": 1,
+      "total_compared": 1
+    }
+  }
+]
