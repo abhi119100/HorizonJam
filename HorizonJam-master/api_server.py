@@ -214,3 +214,5 @@ async def rag_query(query: RAGQuery):
                 "response": "I encountered an error while processing your question. Please try rephrasing or ask a different question."
             }
         )
+from kyutai_tts_api import router as kyutai_tts_router
+app.include_router(kyutai_tts_router)

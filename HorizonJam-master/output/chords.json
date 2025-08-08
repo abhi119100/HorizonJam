@@ -2,95 +2,167 @@
   "source": "guitar_audio",
   "chords": [
     {
-      "timestamp": 0.07546485260770974,
-      "end_time": 0.44117913832199535,
-      "duration": 0.3657142857142856,
-      "chord": "G",
+      "timestamp": 0.064,
+      "end_time": 0.4053333333333333,
+      "duration": 0.3413333333333333,
+      "chord": "Bsus4",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 0.47600907029478456,
-      "end_time": 2.06657596371882,
-      "duration": 1.5905668934240356,
-      "chord": "D",
+      "timestamp": 0.384,
+      "end_time": 0.768,
+      "duration": 0.384,
+      "chord": "E",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 2.089795918367347,
-      "end_time": 2.4729251700680264,
-      "duration": 0.38312925170067924,
-      "chord": "G",
+      "timestamp": 0.672,
+      "end_time": 1.5573333333333332,
+      "duration": 0.8853333333333332,
+      "chord": "Bsus4",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 2.391655328798186,
-      "end_time": 3.285623582766439,
-      "duration": 0.8939682539682527,
-      "chord": "D",
+      "timestamp": 1.552,
+      "end_time": 1.952,
+      "duration": 0.3999999999999999,
+      "chord": "E",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 3.2798185941043085,
-      "end_time": 3.691972789115645,
-      "duration": 0.41215419501133654,
-      "chord": "Dsus4",
+      "timestamp": 1.952,
+      "end_time": 2.7626666666666666,
+      "duration": 0.8106666666666666,
+      "chord": "B",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 3.599092970521542,
-      "end_time": 4.911020408163264,
-      "duration": 1.3119274376417218,
-      "chord": "A",
+      "timestamp": 2.7413333333333334,
+      "end_time": 3.616,
+      "duration": 0.8746666666666667,
+      "chord": "E",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 4.887800453514739,
-      "end_time": 5.723718820861676,
-      "duration": 0.8359183673469373,
-      "chord": "D",
+      "timestamp": 3.541333333333333,
+      "end_time": 4.042666666666666,
+      "duration": 0.5013333333333332,
+      "chord": "Bsus4",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 5.688888888888889,
-      "end_time": 6.130068027210882,
-      "duration": 0.44117913832199296,
-      "chord": "Dsus4",
+      "timestamp": 4.010666666666666,
+      "end_time": 4.448,
+      "duration": 0.437333333333334,
+      "chord": "Esus4",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 6.130068027210882,
-      "end_time": 7.349115646258501,
-      "duration": 1.2190476190476192,
-      "chord": "A",
+      "timestamp": 4.426666666666667,
+      "end_time": 5.685333333333333,
+      "duration": 1.2586666666666666,
+      "chord": "E",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     },
     {
-      "timestamp": 7.3723356009070296,
-      "end_time": 8.974512471655325,
-      "duration": 1.6021768707482957,
-      "chord": "C",
+      "timestamp": 5.674666666666667,
+      "end_time": 6.528,
+      "duration": 0.8533333333333326,
+      "chord": "Bsus4",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 6.517333333333333,
+      "end_time": 6.944,
+      "duration": 0.42666666666666675,
+      "chord": "E",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 6.917333333333334,
+      "end_time": 7.36,
+      "duration": 0.44266666666666676,
+      "chord": "Bsus4",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 7.333333333333333,
+      "end_time": 8.192,
+      "duration": 0.8586666666666671,
+      "chord": "E",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 8.192,
+      "end_time": 8.618666666666666,
+      "duration": 0.42666666666666586,
+      "chord": "Bsus4",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 8.602666666666668,
+      "end_time": 9.845333333333333,
+      "duration": 1.2426666666666648,
+      "chord": "B",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 9.834666666666667,
+      "end_time": 11.52,
+      "duration": 1.6853333333333325,
+      "chord": "Esus4",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 11.424,
+      "end_time": 12.352,
+      "duration": 0.9280000000000008,
+      "chord": "E",
+      "notes": [],
+      "confidence": 1.0,
+      "midi_pitches": []
+    },
+    {
+      "timestamp": 12.256,
+      "end_time": 13.184,
+      "duration": 0.927999999999999,
+      "chord": "Bsus4",
       "notes": [],
       "confidence": 1.0,
       "midi_pitches": []
     }
   ],
-  "total_chords": 10
+  "total_chords": 18
 }

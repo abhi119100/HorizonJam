@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Moshi-ka TTS Test</title>
+</head>
+<body>
+    <h1>Local Moshi-ka TTS WebSocket Test</h1>
+    <input type="text" id="textInput" placeholder="Enter text to synthesize" style="width: 300px;">
+    <button onclick="sendText()">Send to TTS</button>
+    <div id="status">Ready</div>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:8000/ws/tts");
+        let audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        let source;
+
+        ws.onmessage = async (evt) => {
+            if (evt.data === "[END]") {
+                document.getElementById('status').innerText = 'Audio generation complete';
+                return;
+            }
+            const arrayBuf = await evt.data.arrayBuffer();
+            audioCtx.decodeAudioData(arrayBuf, (buf) => {
+                source = audioCtx.createBufferSource();
+                source.buffer = buf;
+                source.connect(audioCtx.destination);
+                source.start();
+            });
+        };
+
+        ws.onopen = () => {
+            document.getElementById('status').innerText = 'WebSocket connected';
+        };
+
+        ws.onerror = (error) => {
+            document.getElementById('status').innerText = 'WebSocket error: ' + error;
+        };
+
+        function sendText() {
+            const text = document.getElementById('textInput').value;
+            if (text.trim()) {
+                document.getElementById('status').innerText = 'Generating audio...';
+                ws.send(text);
+            }
+        }
+
+        // Allow Enter key to send text
+        document.getElementById('textInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendText();
+            }
+        });
+    </script>
+</body>
+</html>
