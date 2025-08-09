@@ -47,3 +47,6 @@ output_test/
 # ChromaDB
 RAG/enhanced_chroma_store/
 chroma.sqlite3
+HorizonJam-master/models/
+HorizonJam-master/basicpitch_env/
+*.large_file_extension
