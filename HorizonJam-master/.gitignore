@@ -77,3 +77,5 @@ temp/
 
 # Audio processing cache
 .librosa_cache/ 
+node_modules/
+HorizonJam-master/RAG/unified_chroma_store/
