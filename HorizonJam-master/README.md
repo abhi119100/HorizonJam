@@ -1,3 +1,23 @@
+## TTS Environment Setup (.env)
+
+Create a `.env` file in `HorizonJam-master` to configure TTS:
+
+```
+# Required to locate local Kyutai Moshi model files
+MOSHI_MODEL_DIR=C:\\models\\kyutai
+
+# Optional: enable OpenAI fallback when Moshi is unavailable
+TTS_ALLOW_OPENAI_FALLBACK=0
+
+# Only needed if fallback is enabled
+# OPENAI_API_KEY=sk-...
+```
+
+Moshi directory must contain:
+- `model.safetensors`
+- `tokenizer-e351c8d8-checkpoint125.safetensors`
+- `tokenizer_spm_32k_3.model`
+
 # HorizonJam 🎵
 
 **Advanced Audio-to-MIDI and Chord Analysis Toolkit**

@@ -29,14 +29,12 @@ async def ws_tts(websocket: WebSocket):
                     json={"text": text},
                     headers={"accept": "audio/wav"}
                 ) as resp:
-                    # Collect all audio data first
-                    audio_data = b""
+                    # Forward audio chunks to the client as they arrive
+                    total = 0
                     async for chunk in resp.content.iter_chunked(2048):
-                        audio_data += chunk
-                    
-                    # Send complete audio file as one message
-                    print(f"Sending complete audio data: {len(audio_data)} bytes")
-                    await websocket.send_bytes(audio_data)
+                        total += len(chunk)
+                        await websocket.send_bytes(chunk)
+                    print(f"Streamed audio data: {total} bytes")
             await websocket.send_text("[END]")
     except WebSocketDisconnect:
         print("WebSocket disconnected")

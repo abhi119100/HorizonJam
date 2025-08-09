@@ -3,10 +3,14 @@ import torch
 import soundfile as sf
 import numpy as np
 from pathlib import Path
+from dotenv import load_dotenv
 import io
 import sys
 import os
 import tempfile
+
+# Load environment variables from project .env if present
+load_dotenv()
 
 # Add the moshi package to the path
 sys.path.insert(0, str(Path(__file__).parent / "moshi" / "moshi"))
@@ -23,8 +27,9 @@ def _load_moshi_tts_model():
             from moshi.models import loaders
             from moshi.models.tts import TTSModel
             
-            # Load the models from the local directory
-            model_dir = Path(__file__).parent / "models" / "kyutai"
+            # Load the models from the local directory or override via env var
+            env_dir = os.environ.get("MOSHI_MODEL_DIR")
+            model_dir = Path(env_dir) if env_dir else (Path(__file__).parent / "models" / "kyutai")
             
             if model_dir.exists():
                 print(f"Loading Moshi from local directory: {model_dir}")

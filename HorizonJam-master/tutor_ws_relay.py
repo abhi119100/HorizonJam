@@ -84,24 +84,24 @@ class TutorWebSocketManager:
             print(f"Client {client_id} disconnected")
             
     async def send_text_chunk(self, client_id: str, text: str):
-        """Send text chunk to client for TTS processing."""
+        """Generate TTS for a text chunk and send as a single playable WAV blob."""
         if client_id in self.active_connections:
             try:
-                # Send text to TTS server and get audio
-                tts_response = requests.post(
-                    TTS_SERVER_URL,
-                    json={"text": text},
-                    headers={"Accept": "audio/wav"},
-                    timeout=30
-                )
-                
-                if tts_response.status_code == 200:
-                    # Send audio data to WebSocket client
-                    await self.active_connections[client_id].send_bytes(tts_response.content)
-                    print(f"Sent TTS audio for: {text[:50]}...")
-                else:
-                    print(f"TTS server error: {tts_response.status_code}")
-                    
+                import aiohttp
+                async with aiohttp.ClientSession() as session:
+                    async with session.post(
+                        TTS_SERVER_URL,
+                        json={"text": text},
+                        headers={"Accept": "audio/wav"}
+                    ) as resp:
+                        if resp.status != 200:
+                            print(f"TTS server error: {resp.status}")
+                            return
+                        data = bytearray()
+                        async for chunk in resp.content.iter_chunked(65536):
+                            data.extend(chunk)
+                        await self.active_connections[client_id].send_bytes(bytes(data))
+                        print(f"Sent TTS WAV ({len(data)} bytes) for: {text[:50]}...")
             except Exception as e:
                 print(f"Error sending TTS audio: {e}")
                 
@@ -167,15 +167,15 @@ class TutorWebSocketManager:
                 "message": "Generating tutoring explanation with live TTS..."
             })
             
-            # Create callback function for streaming TTS and text display
+            # Create callback function for streaming text display (TTS disabled to prevent overlapping audio)
             async def tts_callback(text_chunk: str):
                 # Send text chunk for display
                 await self.send_message(client_id, {
                     "type": "text_chunk",
                     "text": text_chunk
                 })
-                # Send audio for TTS
-                await self.send_text_chunk(client_id, text_chunk)
+                # TTS disabled to prevent multiple overlapping audio streams
+                # await self.send_text_chunk(client_id, text_chunk)
                 
             # Generate streaming tutoring response
             full_response = self.tutor.stream_rag_tutoring(
@@ -190,6 +190,10 @@ class TutorWebSocketManager:
                 "type": "complete",
                 "full_response": full_response
             })
+            
+            # Send single TTS for complete response (to avoid overlapping audio)
+            if full_response and full_response.strip():
+                await self.send_text_chunk(client_id, full_response.strip())
             
             print(f"✅ Completed streaming analysis for client {client_id}")
             

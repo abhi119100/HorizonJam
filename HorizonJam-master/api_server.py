@@ -56,7 +56,7 @@ async def analyze_audio(
     file: UploadFile = File(...),
     confidence: float = Query(0.3),
     min_duration: float = Query(0.05),
-    enable_tts: bool = Query(True),
+    enable_tts: bool = Query(False),
     question: Optional[str] = Query(None)
 ):
     """Analyze audio using the improved ChordAI tutor with conversational responses."""
