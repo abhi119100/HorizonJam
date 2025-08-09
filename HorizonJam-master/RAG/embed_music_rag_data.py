@@ -253,7 +253,9 @@ class MusicRAGEmbedder:
     
     def embed_all_music_data(self):
         """Embed all available music data files"""
-        music_data_dir = "documents/music_rag_data"
+        # Get the directory relative to the script location
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        music_data_dir = os.path.join(script_dir, "music_rag_data")
         all_documents = []
         
         # Process each JSON file
