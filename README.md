@@ -13,6 +13,27 @@ benchmark, complementarity, product-suitability, and activation gates.
 Start with [the v3 release baseline](docs/releases/V3_BASELINE.md) and the
 [detector tournament research entrypoint](research/detector_tournament/README.md).
 
+## Publication and Production Track
+
+HorizonJam now follows a publication-first path from the frozen v3 baseline.
+The current drafts and gates are collected in the
+[publication workspace](docs/publication/README.md):
+
+| Artifact | Current state |
+|---|---|
+| [Research abstract](docs/publication/ABSTRACT.md) | first evidence-bounded draft complete |
+| [Systems-paper draft](docs/publication/PAPER_DRAFT.md) | venue-neutral draft complete; empirical study incomplete |
+| [Open-source architecture post](docs/publication/OPEN_SOURCE_POST.md) | first public-facing draft complete |
+| [Competitive and related-work landscape](docs/publication/COMPETITIVE_LANDSCAPE.md) | primary-source snapshot dated 2026-08-30 |
+| [Publication-to-production roadmap](docs/publication/PUBLICATION_TO_PRODUCTION.md) | gated web and App Store sequence defined |
+
+The repository is publicly visible but does not yet contain an explicit
+`LICENSE`. Do not describe the release as open source until a license and the
+code, model, corpus, dataset, and artifact provenance review are complete. The
+paper frames HorizonJam as an inspectable evidence-to-tutoring system; it does
+not claim first-mover status, state-of-the-art real-audio accuracy, calibrated
+confidence, or improved learning outcomes.
+
 **An open architecture for turning a musician's recording into chord analysis, grounded instruction, and spoken feedback.**
 
 > Project status: research prototype and local web application. HorizonJam is not yet ready for a public production deployment or an App Store release. This document tracks the work required to publish the architecture, write the paper, open-source the repository, and release the product.

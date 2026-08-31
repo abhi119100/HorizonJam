@@ -9,10 +9,11 @@ Evidence labels:
 
 ## Current Milestone
 
-`VERIFIED` HorizonJam v3 research baseline is frozen and hash-archived. `PLANNED` Multi-Source Harmonic Detection Tournament Gate 1 is now specified as a research-only line; no external package/model is installed and no production detector is changed.
+`VERIFIED` HorizonJam v3 research baseline is frozen and hash-archived. `VERIFIED` a publication-first workspace now separates implemented v3 claims, planned multi-source research, competitive positioning, and production/App Store gates. `PLANNED` Multi-Source Harmonic Detection Tournament Gate 1 remains a research-only line; no external package/model is installed and no production detector is changed.
 
 ## Verified Working
 
+- `VERIFIED` `docs/publication/` contains an evidence-bounded abstract, venue-neutral systems-paper draft, open-source architecture post, primary-source competitive/related-work snapshot, and publication-to-production roadmap. The drafts explicitly withhold real-musician accuracy, calibrated-confidence, pedagogy, learning-outcome, and production-readiness claims.
 - `VERIFIED` the sanitized v3 source archive contains 642 manifest-tracked files and passes full entry/hash/forbidden-path verification. Archive SHA-256: `66010af1a89f0c455fa12378905caaf72b485e574455943cf9ca24c37613810b`.
 - `VERIFIED` provider-backed upload -> WebSocket analysis -> GPT tutoring -> sentence TTS passed on `tests/audio/pop.wav`: 2 chord events (`A - E`), 8 text chunks totaling 785 characters, 8 WAV chunks totaling 2,302,552 bytes, and a completion event.
 - `VERIFIED` active OpenAI tutor, Chroma embedding, and TTS clients share a Windows-system-root TLS factory. It keeps `CERT_REQUIRED` and hostname verification enabled while relaxing only Python 3.13 strict-extension enforcement for a locally trusted issuer.
@@ -144,12 +145,12 @@ Do not expose the current services directly to the public internet.
 
 ## Top Next Actions
 
-1. Run tournament Gate 1 artifact-level audits for BasicPitch, Librosa DSP, and LV-Chordia without installing into the v3 environment.
-2. Implement the research harness and first-wave adapters only after environment/model acquisition review.
+1. Review authorship, target venue, abstract scope, and the publication claim ledger; select an explicit repository license before calling the project open source.
+2. Remove or exclude non-release environments, build output, vector databases, and unaudited artifacts; add dependency locks, CI, citation, notices, contribution, and security files.
 3. Build owned/licensed Real Performance Demo Pack cases before any real-audio accuracy claim.
-4. Fix repository-root static serving and replace client-provided paths with opaque, session-bound upload IDs before deployment.
-5. Establish Git, a repository license, dependency locks, CI, and provenance/security scans before public release.
+4. Run tournament Gate 1 artifact-level audits for BasicPitch, Librosa DSP, and LV-Chordia without installing into the v3 environment, then implement only the approved first-wave adapters.
+5. Fix repository-root static serving, client-provided paths, upload isolation/limits/cleanup, authentication, quotas, and deletion before a private web alpha.
 
 ## Last Verified
 
-2026-08-30, active modules compiled and `python -m unittest discover -v` passed 40 tests with three documented expected failures immediately before the v3 freeze. The sanitized archive then passed complete 642-file hash and forbidden-path verification. The subsequent tournament work added research specifications and ADR 005 only; no external dependency, model, dataset, or production detector change was introduced. No real-musician accuracy or default-activation claim is supported. Git metadata was absent.
+2026-08-30, active modules compiled and `python -m unittest discover -v` passed 40 tests with three documented expected failures immediately before the v3 freeze. The sanitized archive then passed complete 642-file hash and forbidden-path verification. The subsequent tournament work added research specifications and ADR 005 only; no external dependency, model, dataset, or production detector change was introduced. The publication-first drafts were then cross-checked against source, reports, local links, and 21 resolving primary/platform references. No real-musician accuracy or default-activation claim is supported.

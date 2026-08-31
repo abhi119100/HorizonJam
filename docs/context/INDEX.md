@@ -16,6 +16,7 @@ This is the canonical entrypoint for project knowledge. Retrieve the smallest re
 | Work on deployment, privacy, or security | [SECURITY.md](SECURITY.md) | backend/TTS trust boundaries and config | `security-review` |
 | Plan modernization or release order | [MODERNIZATION.md](MODERNIZATION.md), [STATUS.md](../../STATUS.md) | affected graph and evidence | `repo-orientation` |
 | Research external or fused detectors | [research/detector_tournament](../../research/detector_tournament/README.md), [EVALUATION.md](EVALUATION.md) | tournament matrix/specification; production boundary remains unchanged | `detector-change`, `evaluation` |
+| Write the article, paper, open-source release, or App Store plan | [publication workspace](../publication/README.md), [EVALUATION.md](EVALUATION.md), [SECURITY.md](SECURITY.md) | claim ledger, primary sources, release artifacts, production gates | `repo-orientation`, `evaluation`, `security-review` |
 
 ## Canonical Documents
 
@@ -25,6 +26,8 @@ This is the canonical entrypoint for project knowledge. Retrieve the smallest re
 - [EVALUATION.md](EVALUATION.md): L0-L7 coverage, commands, claims supported, and missing evidence.
 - [SECURITY.md](SECURITY.md): trust boundaries, verified release blockers, audio/privacy handling.
 - [MODERNIZATION.md](MODERNIZATION.md): code/document discrepancies, risks, prerequisites, and proposed sequence.
+- [publication workspace](../publication/README.md): article, paper, market
+  research, claim boundaries, and publication-to-production plan.
 - [STATUS.md](../../STATUS.md): current verified state only.
 - [decisions](../decisions): durable architectural rationale.
 
