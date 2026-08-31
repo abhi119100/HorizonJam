@@ -9,10 +9,11 @@ Evidence labels:
 
 ## Current Milestone
 
-`VERIFIED` HorizonJam v3 research baseline: Phase 2 Evidence-Grounded Tutor v1, the sanctioned normalized detector boundary, opt-in `rule_jaccard`, and Single-WAV Analysis Performance Gate v1 are preserved as the frozen baseline before multi-source harmonic-detector research.
+`VERIFIED` HorizonJam v3 research baseline is frozen and hash-archived. `PLANNED` Multi-Source Harmonic Detection Tournament Gate 1 is now specified as a research-only line; no external package/model is installed and no production detector is changed.
 
 ## Verified Working
 
+- `VERIFIED` the sanitized v3 source archive contains 642 manifest-tracked files and passes full entry/hash/forbidden-path verification. Archive SHA-256: `66010af1a89f0c455fa12378905caaf72b485e574455943cf9ca24c37613810b`.
 - `VERIFIED` provider-backed upload -> WebSocket analysis -> GPT tutoring -> sentence TTS passed on `tests/audio/pop.wav`: 2 chord events (`A - E`), 8 text chunks totaling 785 characters, 8 WAV chunks totaling 2,302,552 bytes, and a completion event.
 - `VERIFIED` active OpenAI tutor, Chroma embedding, and TTS clients share a Windows-system-root TLS factory. It keeps `CERT_REQUIRED` and hostname verification enabled while relaxing only Python 3.13 strict-extension enforcement for a locally trusted issuer.
 - `VERIFIED` Advanced Chord Scorer Forensics v1 records all 85 ranked candidates and reconciled score components for every one of the 96 complete oracle cases. It runs offline in about 1.4 seconds and produces deterministic JSON and Markdown artifacts.
@@ -131,6 +132,7 @@ Do not expose the current services directly to the public internet.
 - `VERIFIED` normalized chord events are the detector/application interchange target.
 - `VERIFIED` TTS is optional to the written tutor experience.
 - `VERIFIED` canonical agent context lives in agent-neutral repository documents; vendor files are adapters.
+- `VERIFIED` ADR 005 freezes v3 and requires external detector feasibility, baseline, complementarity, fusion, product, and activation gates. Tournament adapters remain subprocess-isolated and cannot bypass `detection.run_detection()` for production.
 
 ## Open Questions
 
@@ -142,13 +144,12 @@ Do not expose the current services directly to the public internet.
 
 ## Top Next Actions
 
-1. Fix repository-root static serving and replace client-provided paths with opaque, session-bound upload IDs.
-2. Add focused tests for detection normalization and the HTTP/WebSocket contract.
-3. Add HTTP/browser automation and provider-backed staging E2E around the versioned evidence contract.
-4. Build licensed real-audio and expert-labeled retrieval/tutor evaluation sets before making paper-quality claims.
-5. Audit dependencies, secrets, corpus provenance, and data licensing; then establish Git, CI, and a real license.
+1. Run tournament Gate 1 artifact-level audits for BasicPitch, Librosa DSP, and LV-Chordia without installing into the v3 environment.
+2. Implement the research harness and first-wave adapters only after environment/model acquisition review.
+3. Build owned/licensed Real Performance Demo Pack cases before any real-audio accuracy claim.
+4. Fix repository-root static serving and replace client-provided paths with opaque, session-bound upload IDs before deployment.
+5. Establish Git, a repository license, dependency locks, CI, and provenance/security scans before public release.
 
 ## Last Verified
 
-2026-08-30, `python -m unittest discover -v` passed 40 tests with three documented expected failures; active modules compiled; the 40-song post-transcription detector benchmark reproduced its accepted metrics; and the controlled real-WAV runtime gate completed with exact pre/post note, model-output, and chord-event hashes. No real-musician accuracy or default-activation claim is supported. Git metadata was absent.
-
+2026-08-30, active modules compiled and `python -m unittest discover -v` passed 40 tests with three documented expected failures immediately before the v3 freeze. The sanitized archive then passed complete 642-file hash and forbidden-path verification. The subsequent tournament work added research specifications and ADR 005 only; no external dependency, model, dataset, or production detector change was introduced. No real-musician accuracy or default-activation claim is supported. Git metadata was absent.

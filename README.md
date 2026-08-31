@@ -10,6 +10,9 @@ The next research line is a multi-source harmonic-detection tournament. It is
 research-only until external technologies pass licensing, feasibility,
 benchmark, complementarity, product-suitability, and activation gates.
 
+Start with [the v3 release baseline](docs/releases/V3_BASELINE.md) and the
+[detector tournament research entrypoint](research/detector_tournament/README.md).
+
 **An open architecture for turning a musician's recording into chord analysis, grounded instruction, and spoken feedback.**
 
 > Project status: research prototype and local web application. HorizonJam is not yet ready for a public production deployment or an App Store release. This document tracks the work required to publish the architecture, write the paper, open-source the repository, and release the product.
@@ -515,32 +518,32 @@ Moshi directory must contain:
 - `tokenizer-e351c8d8-checkpoint125.safetensors`
 - `tokenizer_spm_32k_3.model`
 
-# HorizonJam ????
+# HorizonJam 🎵
 
 **Advanced Audio-to-MIDI and Chord Analysis Toolkit**
 
 HorizonJam is a comprehensive Python toolkit for converting audio files to MIDI and analyzing musical chord progressions. It combines state-of-the-art audio processing libraries with intelligent chord detection algorithms.
 
-## ???? High-Accuracy Modular Pipeline
+## 🆕 High-Accuracy Modular Pipeline
 
 **New**: Enhanced modular pipeline with configurable parameters, automatic cleanup, and improved accuracy for guitar recordings.
 
-## ???? Features
+## 🚀 Features
 
 - **Audio-to-MIDI Conversion**: High-accuracy pitch detection using CREPE + Librosa
 - **Chord Analysis**: Intelligent chord progression detection from MIDI files
-- **Integrated Pipeline**: Seamless audio ??? MIDI ??? chords workflow
+- **Integrated Pipeline**: Seamless audio → MIDI → chords workflow
 - **Multiple Algorithms**: Support for both CREPE (high accuracy) and Librosa (fallback)
 - **Comprehensive Analysis**: Key detection, chord timing, and musical insights
 - **Flexible Configuration**: Customizable parameters for different musical styles
 
-## ???? Requirements
+## 📋 Requirements
 
 - Python 3.8+
 - Audio files: `.wav`, `.mp3`, `.flac`, `.m4a`
 - Output: MIDI files (`.mid`) and chord analysis
 
-## ??????? Installation
+## 🛠️ Installation
 
 ### 1. Clone the Repository
 ```bash
@@ -574,7 +577,7 @@ pip install crepe tensorflow
 pip install librosa pretty_midi music21 setuptools crepe tensorflow
 ```
 
-## ???? New Modular Pipeline Usage
+## 🆕 New Modular Pipeline Usage
 
 ### High-Accuracy Pipeline
 
@@ -601,7 +604,7 @@ python run_pipeline.py input.wav -o output/ \
 - **JSON Export**: Structured output with metadata
 - **Chord Progression**: Simple progression string output
 
-## ???? Legacy Usage (Still Available)
+## 🎵 Legacy Usage (Still Available)
 
 ### 1. Audio-to-MIDI Conversion
 
@@ -645,15 +648,15 @@ python midi_to_chords.py "your_file.mid" auto
 
 #### Output Example:
 ```
-???? CHORD PROGRESSION SUMMARY
+🎼 CHORD PROGRESSION SUMMARY
 ==================================================
-[00:00 - 00:02] ??? G
-[00:02 - 00:04] ??? C  
-[00:04 - 00:06] ??? D
-[00:06 - 00:08] ??? G
+[00:00 - 00:02] → G
+[00:02 - 00:04] → C  
+[00:04 - 00:06] → D
+[00:06 - 00:08] → G
 
-???? Detected Key: G major
-???? Found 4 distinct chord events
+🔑 Detected Key: G major
+🎯 Found 4 distinct chord events
 ```
 
 ### 3. Complete Audio-to-Chords Pipeline
@@ -674,13 +677,13 @@ python audio_to_chords_pipeline.py "audio.wav" --keep-midi
 ```
 
 #### Pipeline Features:
-- Automatic audio ??? MIDI ??? chords conversion
+- Automatic audio → MIDI → chords conversion
 - Intelligent window size detection
 - Key signature analysis
 - Chord event detection
 - Performance timing analysis
 
-## ???? Core Files
+## 📁 Core Files
 
 ### New Modular Pipeline
 - **`run_pipeline.py`** - Main high-accuracy pipeline CLI
@@ -703,7 +706,7 @@ python audio_to_chords_pipeline.py "audio.wav" --keep-midi
 - **`algorithm_accuracy_analysis.md`** - Technical analysis
 - **`tests/`** - Test audio and MIDI files
 
-## ??????? Advanced Configuration
+## 🎛️ Advanced Configuration
 
 ### Audio-to-MIDI Settings
 
@@ -732,7 +735,7 @@ chord_progression, chord_events = analyze_midi_chords("file.mid")
 chord_progression, chord_events = analyze_midi_chords("file.mid", window_size=1.5)
 ```
 
-## ???? High-Accuracy Parameter Guide
+## 🎯 High-Accuracy Parameter Guide
 
 ### BasicPitch Parameters
 - `--min-note-len`: Minimum note duration (0.02-0.1s, default: 0.05)
@@ -759,7 +762,7 @@ python run_pipeline.py audio.wav --min-note-len 0.08 --confidence 0.4
 python run_pipeline.py audio.wav --chord-window 0.08 --chord-confidence 0.3
 ```
 
-## ???? Testing & Validation
+## 🧪 Testing & Validation
 
 ### Run Accuracy Tests
 ```bash
@@ -772,7 +775,7 @@ python test_accuracy.py
 python test_accuracy.py --compare-modes
 ```
 
-## ???? Troubleshooting
+## 🔧 Troubleshooting
 
 ### Common Issues
 
@@ -804,7 +807,7 @@ pip install setuptools
 - **For guitar/piano**: Use confidence 0.3-0.5
 - **For vocals**: Use confidence 0.4-0.7
 
-## ???? Example Workflow
+## 📊 Example Workflow
 
 ```bash
 # 1. Convert audio to MIDI
@@ -817,7 +820,7 @@ python midi_to_chords.py "song_transcribed.mid"
 python audio_to_chords_pipeline.py "song.wav"
 ```
 
-## ???? Supported Musical Content
+## 🎼 Supported Musical Content
 
 ### Works Best With:
 - Piano recordings
@@ -832,7 +835,7 @@ python audio_to_chords_pipeline.py "song.wav"
 - Very noisy recordings
 - Extremely fast passages
 
-## ???? Contributing
+## 🤝 Contributing
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -840,24 +843,23 @@ python audio_to_chords_pipeline.py "song.wav"
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## ???? License
+## 📄 License
 
 This project is open source. Feel free to use, modify, and distribute.
 
-## ???? Acknowledgments
+## 🙏 Acknowledgments
 
 - **Librosa** - Audio analysis library
 - **pretty_midi** - MIDI file handling
 - **CREPE** - High-accuracy pitch detection
 - **music21** - Music analysis toolkit
 
-## ???? Support
+## 📞 Support
 
-- ???? **Issues**: [GitHub Issues](https://github.com/abhi119100/HorizonJam/issues)
-- ???? **Documentation**: See this README and code comments
-- ???? **Feature Requests**: Open an issue with enhancement label
+- 🐛 **Issues**: [GitHub Issues](https://github.com/abhi119100/HorizonJam/issues)
+- 📖 **Documentation**: See this README and code comments
+- 💡 **Feature Requests**: Open an issue with enhancement label
 
 ---
 
-**Made with ?????? for musicians and developers**
-
+**Made with ❤️ for musicians and developers**

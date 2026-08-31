@@ -15,6 +15,7 @@ This is the canonical entrypoint for project knowledge. Retrieve the smallest re
 | Run or interpret evaluations | [EVALUATION.md](EVALUATION.md) | `eval/`, `_evaluation.py`, `_e2e_smoke.py` | `evaluation` |
 | Work on deployment, privacy, or security | [SECURITY.md](SECURITY.md) | backend/TTS trust boundaries and config | `security-review` |
 | Plan modernization or release order | [MODERNIZATION.md](MODERNIZATION.md), [STATUS.md](../../STATUS.md) | affected graph and evidence | `repo-orientation` |
+| Research external or fused detectors | [research/detector_tournament](../../research/detector_tournament/README.md), [EVALUATION.md](EVALUATION.md) | tournament matrix/specification; production boundary remains unchanged | `detector-change`, `evaluation` |
 
 ## Canonical Documents
 
@@ -41,4 +42,3 @@ Use `VERIFIED`, `DOCUMENTED_NOT_REVERIFIED`, `INFERRED`, and `PLANNED` as define
 | Durable decision rationale | `docs/decisions/` |
 | Measurements | tests, `eval/report.*`, logs |
 | Historical implementation detail | `SESSION_HANDOFF.md`, `_archive/` |
-
