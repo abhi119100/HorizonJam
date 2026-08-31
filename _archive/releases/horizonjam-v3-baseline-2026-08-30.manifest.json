@@ -1,0 +1,3254 @@
+{
+    "schema_version":  "horizonjam-source-archive-v1",
+    "release":  "3.0.0-research-baseline",
+    "created_utc":  "2026-08-31T00:12:24.8797894Z",
+    "archive_name":  "horizonjam-v3-baseline-2026-08-30.zip",
+    "file_count":  642,
+    "total_uncompressed_bytes":  52126264,
+    "exclusions":  {
+                       "directory_names":  [
+                                               ".git",
+                                               ".next",
+                                               "__pycache__",
+                                               "node_modules"
+                                           ],
+                       "prefixes":  [
+                                        "_archive\\releases\\",
+                                        "RAG\\unified_chroma_store\\",
+                                        "unified_chroma_store\\",
+                                        "audio\\",
+                                        "output\\",
+                                        "output_improved\\"
+                                    ],
+                       "exact_paths":  [
+                                           ".env",
+                                           ".env.production",
+                                           "chord_analysis_output.json",
+                                           "hello_moshi.wav",
+                                           "results.json"
+                                       ],
+                       "extensions":  [
+                                          ".h5",
+                                          ".log",
+                                          ".onnx",
+                                          ".pb",
+                                          ".pkl",
+                                          ".pyc",
+                                          ".pyo",
+                                          ".tmp"
+                                      ],
+                       "rationale":  "Secrets, dependencies, caches, generated user output, unaudited stores, and model binaries are not distributable source."
+                   },
+    "files":  [
+                  {
+                      "path":  ".agents/skills/detector-change/agents/openai.yaml",
+                      "bytes":  224,
+                      "sha256":  "5f06773ef1ebefa437815415a10651cca301977052c17a53071be15c55429e87"
+                  },
+                  {
+                      "path":  ".agents/skills/detector-change/SKILL.md",
+                      "bytes":  1625,
+                      "sha256":  "afd626a00a2e3b36b45167579a3a9e6dd147be4cde6b73156e45f82eb7149cf1"
+                  },
+                  {
+                      "path":  ".agents/skills/evaluation/agents/openai.yaml",
+                      "bytes":  217,
+                      "sha256":  "239d135d19148d73c545760dfc8f1faae418f463dea126495ff5e146a2c47619"
+                  },
+                  {
+                      "path":  ".agents/skills/evaluation/SKILL.md",
+                      "bytes":  1537,
+                      "sha256":  "bf112bb1af2f121765056f7cf90a9b29ff8397858e5dbfef9135da19707e017a"
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-e2e/agents/openai.yaml",
+                      "bytes":  202,
+                      "sha256":  "d0421766741ca2383b55319edd58b879cdb31f9caf249682bdd3efcdc20ae285"
+                  },
+                  {
+                      "path":  ".agents/skills/frontend-e2e/SKILL.md",
+                      "bytes":  1542,
+                      "sha256":  "b1f987f7832ec41e92838a31ee5bb26b80a8b867c38914babd5630c4cd9b7983"
+                  },
+                  {
+                      "path":  ".agents/skills/rag-change/agents/openai.yaml",
+                      "bytes":  212,
+                      "sha256":  "32a91c94e93ba5b0ac5cd637a63fc1e0cb79d39a57f5e9a37f6848aec3efe12a"
+                  },
+                  {
+                      "path":  ".agents/skills/rag-change/SKILL.md",
+                      "bytes":  1608,
+                      "sha256":  "af27d66d05e7e5d645e7aa6d9f7dc0219e19b9e8ea89dc9aaeb52e6a0517d773"
+                  },
+                  {
+                      "path":  ".agents/skills/repo-orientation/agents/openai.yaml",
+                      "bytes":  234,
+                      "sha256":  "05f44c4639620bbc27b3c5b0cd5098e53a3bf18868e5980322aa0dc063805a78"
+                  },
+                  {
+                      "path":  ".agents/skills/repo-orientation/SKILL.md",
+                      "bytes":  1364,
+                      "sha256":  "8e435ecb756126452513ab66f834dcc05b9c98e2e6520cf95d757137e8b91671"
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/agents/openai.yaml",
+                      "bytes":  221,
+                      "sha256":  "75a931523cde6af4ba5e7d12fad161a266d8cec1a0e80dc1a16d3fb38d001e6d"
+                  },
+                  {
+                      "path":  ".agents/skills/security-review/SKILL.md",
+                      "bytes":  1707,
+                      "sha256":  "49c6e837686bccc11ecf763dde3379cca7d0ec865d0b11d3dbef07bd48164b8e"
+                  },
+                  {
+                      "path":  ".agents/skills/tutor-change/agents/openai.yaml",
+                      "bytes":  217,
+                      "sha256":  "6027fd0ead4c5d7bcb2cd0f4774698a72b09fc48f72048b6ce2bb38a8e57ac4f"
+                  },
+                  {
+                      "path":  ".agents/skills/tutor-change/SKILL.md",
+                      "bytes":  1515,
+                      "sha256":  "fd4338a1f8a6a566e86aacf62b039801a201e04ba64ca44e1f129cb36a8d9c1f"
+                  },
+                  {
+                      "path":  ".env.example",
+                      "bytes":  1078,
+                      "sha256":  "6d1dc69783246e84fa6fbe481da0c637602c39938da3d1a7fdbec8977740ae15"
+                  },
+                  {
+                      "path":  ".gitignore",
+                      "bytes":  1128,
+                      "sha256":  "0ef877235f8e609e751dde39ad1b3caafbc043fb0c55da46b7f59c69411ec4c4"
+                  },
+                  {
+                      "path":  "_archive/docs/algorithm_accuracy_analysis.md",
+                      "bytes":  4572,
+                      "sha256":  "0ca6c02e10e9461cef256ddd4f98ba3c5c15fce488284bdf1dfad9de7bc67c8e"
+                  },
+                  {
+                      "path":  "_archive/docs/NOISE_FILTERING_README.md",
+                      "bytes":  2936,
+                      "sha256":  "664ffa9130e9a1d633133bd92ca925ea0e7c0c4f0d0fab895464181245a711eb"
+                  },
+                  {
+                      "path":  "_archive/docs/outer_README.md",
+                      "bytes":  6565,
+                      "sha256":  "7f9c0b168bd62fd907a888b6f26da9e5210fc2bf39ce74f67a8d45d129167921"
+                  },
+                  {
+                      "path":  "_archive/docs/TTS_IMPLEMENTATION_README.md",
+                      "bytes":  6374,
+                      "sha256":  "b54f0879b185a0d597b662c949f3c2f62fd57a80f42a43938cfefe18874d93c8"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/audio_input.py",
+                      "bytes":  684,
+                      "sha256":  "313a4746a0ced63772eb5d14c5efb2b4aa6fea9c835bf19e746d7d3fc2d3ae3a"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/convert_output_to_json.py",
+                      "bytes":  8842,
+                      "sha256":  "f085d0547f0b6d13d9257baa84cbf401fc6d074bcd879de5f009777475e9cfb6"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/fast_tts_core.py",
+                      "bytes":  4572,
+                      "sha256":  "34398eca9ae79efb0193f4a665934459c00f1df41ddf73b444b7f4de44c80217"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/initializer.py",
+                      "bytes":  10735,
+                      "sha256":  "a1bc547520dca0d70daade5aedaefb5d40d45c1e1fad319737a457c8158ba01f"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/json_exporter.py",
+                      "bytes":  1836,
+                      "sha256":  "910c334af1ba2e21fad17c6a52a31efd1f016d4a175e58f15c31c86cff530203"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/preprocessing.py",
+                      "bytes":  855,
+                      "sha256":  "111318147b6d46e0712b5b4b6e1c0075733687276b876d4c5cfc350f4860331e"
+                  },
+                  {
+                      "path":  "_archive/inner_originals/ws_relay.py",
+                      "bytes":  1500,
+                      "sha256":  "66195d84dc8f650cb2d829592e1673fd244e252b6a08da7d35e008b87122acde"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/Amaj.mid",
+                      "bytes":  844,
+                      "sha256":  "d74bde96e2d640c9a70a8c405af7f6bc09fbeffe4aa201f635a5ca2425628582"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/analyze_basicpitch_results.py",
+                      "bytes":  8241,
+                      "sha256":  "5e37171a586efcee09c8985db9a3bed26e6c1ed7d68b617dd67b910e39bb5a45"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/audio_to_chords_pipeline.py",
+                      "bytes":  11145,
+                      "sha256":  "2bde1f2daf090bed1f49406d809014c0da4b30fed9f9614e0780d54390433d61"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/audio_to_rag_pipeline.py",
+                      "bytes":  18331,
+                      "sha256":  "da14dad57bc1b11ae44baac6f2e90dbbfdd25ce7e067fa93a36e8643b7ebc460"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/Bmaj.mid",
+                      "bytes":  252,
+                      "sha256":  "a6127af26da9b44b68cfcb339163b1cc8dac19d9154b434e420dad34a82ce9f0"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/check_models.py",
+                      "bytes":  2962,
+                      "sha256":  "5cb9b3ed8c156f752d48da5ec2c643de993b46aae1f2a664694fbeca68bc6291"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/check_rag_status.py",
+                      "bytes":  2132,
+                      "sha256":  "092e5cbb5125820ab431eea97435ca0c28291ebdb5f34e2ac393ff89bf293684"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/chordai_test.py",
+                      "bytes":  13807,
+                      "sha256":  "a30cde425b5f9699020c9a6c338990e497a248af434aae68157cbeddf7d1cb62"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/count_json_entries.py",
+                      "bytes":  576,
+                      "sha256":  "39bf28b329f86001efcbe11a92b70bf625c70967e4e734445b45988dfe033080"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/embed_enhanced_music_data.py",
+                      "bytes":  10233,
+                      "sha256":  "d5203e1460ea2b8cff273a72657ee5f2bbd3c155e96dde8987edc351f547a4b0"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/embed_music_rag_data.py",
+                      "bytes":  10500,
+                      "sha256":  "a5bb0a60c7be5fc36db327693ca5b3a5cc512277db4d67e69632a1376b24d045"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/example_pipeline_usage.py",
+                      "bytes":  2720,
+                      "sha256":  "007b2cfc395e460384b9ec562ee1b4aec60ed86ddd3cd0464468a9e3f4a64ee7"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/fixed_chord_tabs.py",
+                      "bytes":  3300,
+                      "sha256":  "43a47ab887b84761abf727953980b3a3748f12fa82c89570835146cc3dc43c41"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/Fmaj.mid",
+                      "bytes":  297,
+                      "sha256":  "3bab6aacd5b35a8b9bbe54369d033572a644939f018b9f7ce4aca070154cad2e"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/midi_to_chords.py",
+                      "bytes":  35531,
+                      "sha256":  "5fe7d66268772cd78446b7dce442e1647c8bdfd9c8e2725d1fc997edb4a7e52e"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/rag_music_tutor.py",
+                      "bytes":  20269,
+                      "sha256":  "c500f8db97375b47d3a8014deac2529174747c66dfd5b1256337db11ea073796"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/run_transcription_benchmark.py",
+                      "bytes":  5606,
+                      "sha256":  "43fbf928bc879039472f3925b354188def5520ee8263da12555ec64f7872c07b"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/streamlit_app.py",
+                      "bytes":  42722,
+                      "sha256":  "a7af4d66fa8a8ca3e40ecab0623d1e5f440d252e01ab0141b5e45b6c2654bb9b"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/test_tts_api.py",
+                      "bytes":  3182,
+                      "sha256":  "e65365153fcea007cce4d12fabc93bb40c4575c85aea5a6b4e2c5ddb7e5c16d8"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/test1.mid",
+                      "bytes":  217,
+                      "sha256":  "93fb0521a852661b783ed9347bc3b1bafdec5f7bc39aa3a3276b012bf4b08666"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/test2.mid",
+                      "bytes":  418,
+                      "sha256":  "329d989373ede5a866a0063e67f8cbd0d533278db3b08f0fb2b7b3b08c7325e2"
+                  },
+                  {
+                      "path":  "_archive/outer_originals/universal_audio_to_midi.py",
+                      "bytes":  13264,
+                      "sha256":  "1c943b74e67dc4f34988a1a757fcdf1bec5c9cd74359b9693f7ea9790fddcf13"
+                  },
+                  {
+                      "path":  "_e2e_smoke.py",
+                      "bytes":  3076,
+                      "sha256":  "575d19d0adbd593f1fa4c1c96b771d0eb6157e8a7d875e95473505098b7679e5"
+                  },
+                  {
+                      "path":  "_evaluation.py",
+                      "bytes":  13238,
+                      "sha256":  "2c83bc744d39dcd93ac5c5274d117815e8d6c216608ae6e8c80c7a765e50d6ae"
+                  },
+                  {
+                      "path":  "AGENTS.md",
+                      "bytes":  2843,
+                      "sha256":  "234c1c37902a5248d0b9f41d159899fa566eee6ea03f56c72c29015a3f3d6bf2"
+                  },
+                  {
+                      "path":  "analyze_key_ties.py",
+                      "bytes":  8167,
+                      "sha256":  "80767dfa56011a812918d7a303f6d2f280e5859a1fc680e823d3265c982e9f84"
+                  },
+                  {
+                      "path":  "api_server.py",
+                      "bytes":  8478,
+                      "sha256":  "49e5ceeadfd66f7bd6ebe6ee91b204718589f3167f34071d8274b41632cd259f"
+                  },
+                  {
+                      "path":  "chord_detection.py",
+                      "bytes":  8470,
+                      "sha256":  "72f2fd0064c9cebdffc6d8a9e29d4988a108a40048e057f7f47a554c9df5665b"
+                  },
+                  {
+                      "path":  "chordai_gpt_tutor.py",
+                      "bytes":  64377,
+                      "sha256":  "5d9b8454c33a7dbe05cd091fd2de7293503cbeeff2b0bf5383531335483a1838"
+                  },
+                  {
+                      "path":  "datasets/all_parsed_gp_data copy.json",
+                      "bytes":  463989,
+                      "sha256":  "8d9ae41b8333f24becbb91dfde8fbc5fc228b87f8316c1928dc8f508a8884f29"
+                  },
+                  {
+                      "path":  "datasets/all_parsed_gp_data.json",
+                      "bytes":  463989,
+                      "sha256":  "8d9ae41b8333f24becbb91dfde8fbc5fc228b87f8316c1928dc8f508a8884f29"
+                  },
+                  {
+                      "path":  "datasets/chordonomicon_sample.json",
+                      "bytes":  1080,
+                      "sha256":  "4e34128cbd39460bdbe6590ad8392fc24fd9c583dc136442d5c16867e4687096"
+                  },
+                  {
+                      "path":  "datasets/combined_training_samples.json",
+                      "bytes":  2615,
+                      "sha256":  "d42a95fb890513247174c33222b713964ca1da805dc9167126a17b3d90a90853"
+                  },
+                  {
+                      "path":  "datasets/full_key_signature_library.json",
+                      "bytes":  17290,
+                      "sha256":  "0da095e9abd8be1732ba84e5020e16ffbcf0e2cd2b7a431429d503b2ecbdff80"
+                  },
+                  {
+                      "path":  "datasets/rwc_chord_annotations.json",
+                      "bytes":  775,
+                      "sha256":  "6c6b57a45aec8ad1b2653acbd3ea0db342a03d85cfc463bb538dc52fca0efeb4"
+                  },
+                  {
+                      "path":  "detection.py",
+                      "bytes":  14582,
+                      "sha256":  "fafc8899a70bad9ee63c41f63ac9ded5989edde913c3d0ebcde4fbe28da2f86a"
+                  },
+                  {
+                      "path":  "docs/context/ARCHITECTURE.md",
+                      "bytes":  9603,
+                      "sha256":  "0c5fad43331f8861d880033ec76e7c9ba6ce0c09ca0feb2d85df779f23b60d7d"
+                  },
+                  {
+                      "path":  "docs/context/EVALUATION.md",
+                      "bytes":  13322,
+                      "sha256":  "c20c10de70373ba8bbe50d96c963f8a3c9e15e5b309a92df95bc6ae46a895a62"
+                  },
+                  {
+                      "path":  "docs/context/HARNESS.md",
+                      "bytes":  5788,
+                      "sha256":  "b8198b5b8f0b2967f334026c93fa94f7475de5d031ce056a17df114a515e6af3"
+                  },
+                  {
+                      "path":  "docs/context/INDEX.md",
+                      "bytes":  3255,
+                      "sha256":  "657fd89dc1a1a6d216ffdbf6b1c0731efc27c89e40da7f5c95c93a9b942753cf"
+                  },
+                  {
+                      "path":  "docs/context/MODERNIZATION.md",
+                      "bytes":  4479,
+                      "sha256":  "f15568358e207cbed5ffff29d3c347cdb43b075b51e0304296afe8b34c89b2c8"
+                  },
+                  {
+                      "path":  "docs/context/PRODUCT.md",
+                      "bytes":  3200,
+                      "sha256":  "15dd8785a6bbf1d67ac7f367e5218e79c56c0df25c191594381825baec407997"
+                  },
+                  {
+                      "path":  "docs/context/SECURITY.md",
+                      "bytes":  3521,
+                      "sha256":  "2e15ac601b9a52b6510fa027eeea5739cf6f62712fdd047dfa4d6588297d5df2"
+                  },
+                  {
+                      "path":  "docs/decisions/001-agent-neutral-context.md",
+                      "bytes":  777,
+                      "sha256":  "6f679f01dd3a7eb85074e8149a5107ab9638ac2cfc3bb22f04ca283befedaa18"
+                  },
+                  {
+                      "path":  "docs/decisions/002-detection-boundary.md",
+                      "bytes":  809,
+                      "sha256":  "1894ad8cec7749e1e6530ceb53b34cbc16fec4a996a94885c1d754ba2ae91a36"
+                  },
+                  {
+                      "path":  "docs/decisions/003-optional-tts.md",
+                      "bytes":  705,
+                      "sha256":  "ab9a3164e7242b2c5a6085d57d28045294facdfd95fc5e444ede8edcce20f80c"
+                  },
+                  {
+                      "path":  "docs/decisions/004-evidence-grounded-tutor.md",
+                      "bytes":  1366,
+                      "sha256":  "e2f76c1c2e72220f7e31d67873feff0b01ff36319f27c5ad7f0ed19598609f31"
+                  },
+                  {
+                      "path":  "docs/releases/V3_BASELINE.md",
+                      "bytes":  2074,
+                      "sha256":  "124d24373395a7232c89ca756fcb4a43a31ebe4e5f6fcf174f9e6f732c44dd7a"
+                  },
+                  {
+                      "path":  "eval/__init__.py",
+                      "bytes":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "eval/advanced_scorer_forensics.json",
+                      "bytes":  7395726,
+                      "sha256":  "7e7c29c90648b52da6e546ce89225a68c3e1d2b9d06b7fc1294a77e53389fd08"
+                  },
+                  {
+                      "path":  "eval/advanced_scorer_forensics.md",
+                      "bytes":  18150,
+                      "sha256":  "913a69a6f94d8e75ab440ff0094e310834a330914e2da242223b108e780ff9ab"
+                  },
+                  {
+                      "path":  "eval/analyze_advanced_scorer.py",
+                      "bytes":  30292,
+                      "sha256":  "8d40661e091085d529993bc8925e5036aee203551a29b37242b22bcbfe14a6f1"
+                  },
+                  {
+                      "path":  "eval/audio_path_benchmark.json",
+                      "bytes":  39352,
+                      "sha256":  "35f4bc0ffff5a25934a1d6a0a264adc49c08f624cd62836c7c6defdd35431219"
+                  },
+                  {
+                      "path":  "eval/audio_path_benchmark.md",
+                      "bytes":  1846,
+                      "sha256":  "c1ae6119e07a5bcd3812d1543b2248b884064bbd894466bef83c6078d04d2632"
+                  },
+                  {
+                      "path":  "eval/benchmark_audio_path.py",
+                      "bytes":  12855,
+                      "sha256":  "82757d84a1638b845b22fe7acb83c8dbb3070c52e2b175079c62c8f3ed15db93"
+                  },
+                  {
+                      "path":  "eval/compare_match_formulations.py",
+                      "bytes":  24707,
+                      "sha256":  "937941e5ab24b6a182068663c89e36abb9a152705a08ac8d632ffbb894355b8e"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/blues_A_major.lab",
+                      "bytes":  215,
+                      "sha256":  "ba3eb2432dedd1effc945330f64aad04086e53eb39778c9779e2544e746d43bc"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/blues_C_major.lab",
+                      "bytes":  215,
+                      "sha256":  "9f9392c9d3356e42ca04449d6e9accd685e567902cf87b6d2b13037ab5ac308e"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/blues_E_major.lab",
+                      "bytes":  215,
+                      "sha256":  "5cefbc6a651fdcd2951222adb8f43dd91b8924576c9ce28b5aeb30fff815adb5"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/blues_G_major.lab",
+                      "bytes":  215,
+                      "sha256":  "0710f523badbdfb12958055a005215b33cdc16a6cd9d082571753d602d561110"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/ii-V-I_A_major.lab",
+                      "bytes":  57,
+                      "sha256":  "3b76c622566d45a2bc65eaeafe086b06bef826450b97bfb5bab1585796c25d2f"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/ii-V-I_Bb_major.lab",
+                      "bytes":  58,
+                      "sha256":  "4031dbdad8204a05b7d7ae7b77195621cd8182e8f786a00cfec6e7967ebc6531"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/ii-V-I_C_major.lab",
+                      "bytes":  57,
+                      "sha256":  "430d210f9cf5fdcaa4e3ad823285aa8c7815b353095e96b9f9ed54092297d3cd"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/ii-V-I_D_major.lab",
+                      "bytes":  57,
+                      "sha256":  "cd1ac5f6acc2214ac88485b7c4b4bd3821947141cc0482c8e2be0f5c2f96aa5c"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/ii-V-I_F_major.lab",
+                      "bytes":  57,
+                      "sha256":  "76c018e9b97b534663776023717acfebfc82a557bbbbea7bbc746f99eb7684c8"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/ii-V-I_G_major.lab",
+                      "bytes":  57,
+                      "sha256":  "b4d1d65a4827ffb61eb2470553d1d60e305109376629faa14f59cf9c6d90bf40"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_A#_major.lab",
+                      "bytes":  79,
+                      "sha256":  "eec42dea2b5e85d453642077fe33fb6581f367a5384d03246dec06a3a08b192a"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_A#_minor.lab",
+                      "bytes":  79,
+                      "sha256":  "2b79bb2008d6a5c7b448c0ccbbc0be6de053acffed274c90097b373e1239753d"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_A_major.lab",
+                      "bytes":  76,
+                      "sha256":  "d742edf68e15d5279b65bc6396845d27319169f4c560d9e16bbfe77f82f5b8ad"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_A_minor.lab",
+                      "bytes":  76,
+                      "sha256":  "6fd504fb30624d56e816604e13bd1e699af70eadb8b6b5c59c290fc8cf039b2c"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_B_major.lab",
+                      "bytes":  77,
+                      "sha256":  "790c8c99efeeba43d1bb88de70d9267e65b94d178cc52dd1bdbe94b554aaaef2"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_B_minor.lab",
+                      "bytes":  77,
+                      "sha256":  "38fc43f4f7cd04a883075040280ac87aeff63d93dec90bef94c8a3299d9dab88"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_C#_major.lab",
+                      "bytes":  80,
+                      "sha256":  "b2e4b9d774cb1e64c7de23def0a670fd23ab1d743cfbed61a4c2fe03a13a3d67"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_C#_minor.lab",
+                      "bytes":  80,
+                      "sha256":  "005fedd7e8437930c7e80953d42a51ff87acc07c70ec72dee88b56fc0dc73d33"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_C_major.lab",
+                      "bytes":  76,
+                      "sha256":  "323d9bd26efc0bfe01ad41d1ed67ec040189effdd425316a87c03b5ae9343d3d"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_C_minor.lab",
+                      "bytes":  76,
+                      "sha256":  "6b03cffca97d58e25b954cad4365d1ba4d2188d9445e57bfb922a55f125500d1"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_D#_major.lab",
+                      "bytes":  80,
+                      "sha256":  "50f3a13715e7bf9a4ecbbf3641b67b430968239a37059ae1f2a40090f756f8aa"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_D#_minor.lab",
+                      "bytes":  80,
+                      "sha256":  "019352ab5e9fdebb7849d62a4d1c2a701da6ee1fb93bffa01ffd79eb3db1e221"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_D_major.lab",
+                      "bytes":  76,
+                      "sha256":  "be08a456ba69745d6d77e8b3581adaa07d722d818a856664f808d0ef2cc52379"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_D_minor.lab",
+                      "bytes":  76,
+                      "sha256":  "9bb610ee0a1ca0964125c439ac71f9aefec251eecba7f3047f616227b7fb7f33"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_E_major.lab",
+                      "bytes":  76,
+                      "sha256":  "5ca9532c26a9226217648b7d75efc201aec593c25f218001822a1e959de67a7d"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_E_minor.lab",
+                      "bytes":  76,
+                      "sha256":  "837035b46453e741f3febd7064c030297fa198675b1ccaab7c1e2d39e4f839f9"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_F#_major.lab",
+                      "bytes":  79,
+                      "sha256":  "e8dcf73d051e1108a2be3e0d2d79c5870e8748006e7c5981256d462ef0f2ba2c"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_F#_minor.lab",
+                      "bytes":  79,
+                      "sha256":  "669449cb17e3b6703fcb9743ffd8e3f48b2ea86b2b6a1350af7a367e304ee948"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_F_major.lab",
+                      "bytes":  77,
+                      "sha256":  "6e46127883adb4204e3d2aa7a45e0b266f9a396ab6a81d03e16f3db729127fa6"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_F_minor.lab",
+                      "bytes":  77,
+                      "sha256":  "780afcea5074a2d44d7e88da15212cb4097fcc0e6599e1799b2d94aef737e07e"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_G#_major.lab",
+                      "bytes":  80,
+                      "sha256":  "c01d95e0d9a6b7c59fe22ea7e12b00ef05cea94d2babdbb4273589cd6c7002c1"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_G#_minor.lab",
+                      "bytes":  80,
+                      "sha256":  "0fda5725f8d21c3024a229b0f9c97c2d47b4a29b623dd07ec3d35a6e0982f1ec"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/I-IV-V-I_G_major.lab",
+                      "bytes":  76,
+                      "sha256":  "700bf79c26f84afb579dba11916bdf66f38e024dcb048a05e1355b1876bb43f2"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/i-iv-V-i_G_minor.lab",
+                      "bytes":  76,
+                      "sha256":  "3b356401cfc7d6135f79eeeadaa0d6535efb8a94d84dcefa4f03a6e379596cfe"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/vi-IV-I-V_A_major.lab",
+                      "bytes":  77,
+                      "sha256":  "8fcd494be9aa27545dfa01c21669b5c0628049527c70c202338a62af5494a675"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/vi-IV-I-V_C_major.lab",
+                      "bytes":  76,
+                      "sha256":  "9186cacf05bfce0ab9f58988d74dff857bc1e22ab31bbe39dce16a12dcf9c704"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/vi-IV-I-V_D_major.lab",
+                      "bytes":  76,
+                      "sha256":  "06634dc1e8d2e1ce6d0861cbd9a1fda89a4b28c52ae3031d0f386e342119e7e2"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/vi-IV-I-V_E_major.lab",
+                      "bytes":  77,
+                      "sha256":  "5f1a76ff5d536039b4e5a6319459cfad96d11f10948b285138d25c52f01edb16"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/vi-IV-I-V_F_major.lab",
+                      "bytes":  77,
+                      "sha256":  "59c4b54d361621b7f6a7b25f9aab4b45ea462ba7a5a78688f4f0fc31b3d2d368"
+                  },
+                  {
+                      "path":  "eval/data/synth/labels/vi-IV-I-V_G_major.lab",
+                      "bytes":  76,
+                      "sha256":  "9a33105bae362bada4a4b72fcdd5107cea316d660351d040f99adba387cac7f0"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/blues_A_major.mid",
+                      "bytes":  357,
+                      "sha256":  "ffd10609003ffe3d917ce77ac13c204d247137afc0df46d53e69a7e4eb859913"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/blues_C_major.mid",
+                      "bytes":  357,
+                      "sha256":  "ee0cfac3c6ad8e9e6f961f671de4f9ce527715640b970493d6d16737c3f2b228"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/blues_E_major.mid",
+                      "bytes":  357,
+                      "sha256":  "b2b9f2ba707f29991b59bf38b739e0fd9bb5b1ca235991bdbe86d7807fa0d3c3"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/blues_G_major.mid",
+                      "bytes":  357,
+                      "sha256":  "3547d9740364e44879f38bdd9df8f513dad6fada852e48a6d9581d3a41e99d1c"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/ii-V-I_A_major.mid",
+                      "bytes":  132,
+                      "sha256":  "b09e93169b7beb7a11167c2f1eab323eae4d64d272650ec480c7e9264fc6dec1"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/ii-V-I_Bb_major.mid",
+                      "bytes":  132,
+                      "sha256":  "d8c00fc17d617f722040e634e7c2e1f253f2b68e7a6eed666ace6c657f7337b8"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/ii-V-I_C_major.mid",
+                      "bytes":  132,
+                      "sha256":  "81676127252362454e95af48fbb62a70ec8b6c8f875a649b50a5ff09a187a75f"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/ii-V-I_D_major.mid",
+                      "bytes":  132,
+                      "sha256":  "83b3de76fa4cc9ace86d3e0fc89e1b883908886ed118503da5a61961edad7047"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/ii-V-I_F_major.mid",
+                      "bytes":  132,
+                      "sha256":  "9b79b4f682c08f37fee80d1b916db2360faa5ec64d92a84470bdd4d2471024bc"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/ii-V-I_G_major.mid",
+                      "bytes":  132,
+                      "sha256":  "328cb6b4543db927ac5664fe81e48c8f27eb9948fda0bd65fdbe71fa39149f8d"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_A#_major.mid",
+                      "bytes":  133,
+                      "sha256":  "bad72d33c68be05dbed109290697aa3ab5b8fcfb538cf93e5aa7f24ad28039c0"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_A#_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "0a6ab038dd69c6f8b5d09920e8b65440275a8ef47d6f81067e0bfcedcbd85725"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_A_major.mid",
+                      "bytes":  133,
+                      "sha256":  "e2b0c59c68d56ba6d23cfb02a8f5e9a7938136845d83e2ee47d236f23ada9143"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_A_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "90b20a500f3a6d77712d4d4e1818cbe77e57bd931b19864a7ce81bc4caa247e7"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_B_major.mid",
+                      "bytes":  133,
+                      "sha256":  "8631f2161a0ea33d406437b85f5f456cf00c10e251fbd750c6076bb5dcf12496"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_B_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "80aaa92fc848dd6662c11f200de13279b9eea7fa5ae9a5b4f4d20a39f6428aa5"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_C#_major.mid",
+                      "bytes":  133,
+                      "sha256":  "0b76458e310937c8d0ecd18740af890f00d08a23497b73228d9b9c5b9b32c24a"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_C#_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "75e0408305275786cb84b6d60bce88ef03861284a1502735ae5c5a34a4a8931f"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_C_major.mid",
+                      "bytes":  133,
+                      "sha256":  "17c027e9f62aaf1f56bd61f25ffd7f62859fe33c5de69da893098522ad2efd4a"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_C_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "fb35247713980b9ebbc6cc1b534d97b3ea136cfa5c160d9ce5ff5daddccb41e9"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_D#_major.mid",
+                      "bytes":  133,
+                      "sha256":  "d8496e8467179b2197229cd439b0d316bae1994fa4d141a87055d3f6be48ad21"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_D#_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "c547ebe1313a0e3719d946dcfe3c506038b861180ef63c00372b6465727cb726"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_D_major.mid",
+                      "bytes":  133,
+                      "sha256":  "dea85b3db89132888c32440c2671499a1b5ddd600bd70c1d22e5c634dc7d9202"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_D_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "017140ef5aaccbcd78027f529ff58bae00fad2e8ba6899ecfc551243234ce689"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_E_major.mid",
+                      "bytes":  133,
+                      "sha256":  "92180a99b063ad0bf2d9129c5d54e35d176b801b2c19da70cbe0fc99b72f595e"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_E_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "e9a7e3f98d255653a5ca949143aa5af787ab447223b656218c9f7c0420589aec"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_F#_major.mid",
+                      "bytes":  133,
+                      "sha256":  "a0cbdb860613e322ec8f87842ac84c58c6e2c8f5572dcc5a612983eb5cf12c26"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_F#_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "fe91ae721b837f9fb487d40448450f0d13a3c4e86c638d4e2673b7bcc0f35f57"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_F_major.mid",
+                      "bytes":  133,
+                      "sha256":  "df47ba7306711f2efaaf150766b8a9fb8b21879476e9eed53a3c01efa3b7b1fa"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_F_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "79c8e36aad288cae0baf5d860184d3398e7327117054694fd86857d9d554eef2"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_G#_major.mid",
+                      "bytes":  133,
+                      "sha256":  "7d75db37620177e20da72683b578d7e5af03a0b8904980eb9ea3643cf0ada493"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_G#_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "0f5b081d19af21a4bdb6cc79422226c16772a7e55f6ae201ac13fdf2e81705bb"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/I-IV-V-I_G_major.mid",
+                      "bytes":  133,
+                      "sha256":  "62731fd227ca46bf499bb80bf6bb1bd50463ee2c3d98861e5bd4345b916cd91e"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/i-iv-V-i_G_minor.mid",
+                      "bytes":  133,
+                      "sha256":  "ec8bd1166df7ae03e069ec6ca47b7758e71e0550f5a71d6078724f09af0f48c6"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/vi-IV-I-V_A_major.mid",
+                      "bytes":  133,
+                      "sha256":  "f43bfd11cc0d9ab5f64df47d99e159506212f82c5e19327f07374f7f35630ceb"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/vi-IV-I-V_C_major.mid",
+                      "bytes":  133,
+                      "sha256":  "291f2eba7c83edfc7627ebcc0c467091d945387dca5b2f811ac1e711b4adf28b"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/vi-IV-I-V_D_major.mid",
+                      "bytes":  133,
+                      "sha256":  "9f26f13bf0d2b937c4eec8fa7b83896597ed98726dbb1ce973f32bf3ce795857"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/vi-IV-I-V_E_major.mid",
+                      "bytes":  133,
+                      "sha256":  "c658654be6f0e3427e72dae892f1fa67df6662ee4a0a76aa5eea210301a8a50b"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/vi-IV-I-V_F_major.mid",
+                      "bytes":  133,
+                      "sha256":  "3331efad7cc689e5b5afbaf424184b48777c4449ae07b58d71d4b24c79273818"
+                  },
+                  {
+                      "path":  "eval/data/synth/midi/vi-IV-I-V_G_major.mid",
+                      "bytes":  133,
+                      "sha256":  "c59873a82c2df8cafd7690191f525c72b09fc8f1eaa098bf15870131d03707b4"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/blues_A_major.wav",
+                      "bytes":  837944,
+                      "sha256":  "631b1ce36ea8e3d1774d1f0ee91d735b22f231cdd4032bbc5fe8ec80b1dbed94"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/blues_C_major.wav",
+                      "bytes":  837944,
+                      "sha256":  "3a9d04a55d38df6aec1b0b48f9121713ed26630de93efcf83370895b6b4f8417"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/blues_E_major.wav",
+                      "bytes":  837944,
+                      "sha256":  "95f38a9471371e42623a194d3139aca3600cc0df71c15b1c340c11dc860c916c"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/blues_G_major.wav",
+                      "bytes":  837944,
+                      "sha256":  "a3290c7613500ca25dbafee646e0136066f8ebfd020930257201d727b8028d94"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/ii-V-I_A_major.wav",
+                      "bytes":  308744,
+                      "sha256":  "02714a7d8d2e67160fcac0538e5736155e3e335aad87d9161a3a811c261af354"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/ii-V-I_Bb_major.wav",
+                      "bytes":  308744,
+                      "sha256":  "9845528794aff05db3ff44664996c4da7c122d614216b0346164c52ac982b095"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/ii-V-I_C_major.wav",
+                      "bytes":  308744,
+                      "sha256":  "b65a0ccbfb2ce025a2a56d993c8ff519fdef869f910ba4670e764fdc9701b6b8"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/ii-V-I_D_major.wav",
+                      "bytes":  308744,
+                      "sha256":  "fc9cd1338201d0fd2bf07319e2006e8cd0a4402fcd0adeb1ff3284fb1872a40f"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/ii-V-I_F_major.wav",
+                      "bytes":  308744,
+                      "sha256":  "70038fce891020069fb78a0c53bf7dfecfc71974037e452a2a8ae25eb4ae323d"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/ii-V-I_G_major.wav",
+                      "bytes":  308744,
+                      "sha256":  "0942bb528540c699077b6af34ab9c0784f3d937ce658feb9c7283bbc882076db"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_A#_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "4894e30b5d5f40ead14f2e5ca3665641ef251388bcf82f7dcbab187de63c9fea"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_A#_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "1f898a5274e5c38503f0f24edbed9e30b07d31908f16a31c7bd9a7820c3b9f63"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_A_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "f5bf813ca42a497a8bfa15f0fa5352d5614f5050a7bfbc72150fbc38513e7494"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_A_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "e075072eddbfeb631e4e2eb39914d3bdcb9666e2036a35c30a56fc0db5057195"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_B_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "1ed322cbe0d72225bb703dec8d27dac531e0ecd9bf8d2910f336761ae9a1f282"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_B_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "74ad679405028118ed235de75b184aa59fa85195eb8c43406a585df94e8c35a0"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_C#_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "74ea17dd9c55ade76880c69a254238af068b47d0f6cf4d84f05dab987a807837"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_C#_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "b274beac540c2079d5c9489b2c83428e6cea4035ed1c5e6cb7391aea710e4175"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_C_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "fa96cde40bb7152aabee7cf5e8958d76bc35298a14b3dc09d382d24d7d2829f4"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_C_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "921ed4e774c6fd054474bc021046db66aeeb0a1514974cf926a38f3ffc85f824"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_D#_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "c028eeb8a54ecdca639c1ce2ba9fad29d45b759dca482f13c7f8b9d6d9bb62cc"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_D#_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "52af99dfe313f82e453b95d845d6f50467eb98f57a57aa72fd40f4265b23183e"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_D_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "94d99f4ab18c40e664f995b8766f5ad41b28efc5ab02a1c8c1507f7a8366da72"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_D_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "ffb812a4eb3bf255462f56ed0c05e1bbaecedf08f0ce82faac8e8506c45d8ad4"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_E_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "ee4de0fef8160320a580d728465d2f82cf4d6b9f4030de9457a6ca44ede7d578"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_E_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "b73dd08e895930b1b6ff0596c45dd736593e23fadfeaf378fe232565cff25720"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_F#_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "286792518212189285a260bcc493a9df6769151370ca6579de14cfad490d00b8"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_F#_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "3ce13a5174b520198450b7933c429154d633d63f6952f0239cb39d484e1469ac"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_F_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "5ab79fdefd07384a73bd11511f6a7fb9292d280706cb6e84f9e33730a83d578c"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_F_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "ad72ec4a67797e1082a0433c1cf20be8dd4a5f1101fbd7bceba854f181b6ce1e"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_G#_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "e7662c3a4a69e89ee4f2edfd3d2299183507c3776195dfea63f94870f6fe913d"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_G#_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "d623361cb37afa0d62f59bc6894185cf5b8ba2e4c3730984aead07d9dc355db7"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/I-IV-V-I_G_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "b6c083880bbc1556af046fcdd6332e0ee13a6328b0e62656d9d83d20504dcc45"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/i-iv-V-i_G_minor.wav",
+                      "bytes":  396944,
+                      "sha256":  "1d7f29198aaca0faec2fc14bb47b83f52a14c348ab6fd736eaa4713f13220647"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/vi-IV-I-V_A_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "d7fb647e1c15f66f2eeb1fd80a1557e1e8ff78d7a77e10d3d964e9c8a1d81bbb"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/vi-IV-I-V_C_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "f34c30091c64423ccb08f58c4f28f400d92cc8c5fa5b63d620a7a35471b1192a"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/vi-IV-I-V_D_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "37a4dfd2216bf954a74707c5e5098073f858557b1d5b4798b3d4a8c71664946c"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/vi-IV-I-V_E_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "b71fa6aecb9498c8c84705cdd74ec3cd139218f39a87acb6eb7285088ea7cae0"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/vi-IV-I-V_F_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "00e108c6bcccc883c2e6ff0631c6d5242c92b80e0049a2514c5be2862012dcda"
+                  },
+                  {
+                      "path":  "eval/data/synth/wav/vi-IV-I-V_G_major.wav",
+                      "bytes":  396944,
+                      "sha256":  "20b5e7f883b248bc149b3825b7d89265a36d1deca53232d87d931c2e8d0e0aca"
+                  },
+                  {
+                      "path":  "eval/evaluate_chords.py",
+                      "bytes":  13818,
+                      "sha256":  "76a19cd8d8ef167c8529e65377d567efd5bee86d159824775b34512d4fce58fd"
+                  },
+                  {
+                      "path":  "eval/evaluate_jaccard_detector_path.py",
+                      "bytes":  7544,
+                      "sha256":  "e6490f8a56021c7f8c51a635a203c1f39e8cc6824594a8fd1ff4b9bd6b612df1"
+                  },
+                  {
+                      "path":  "eval/evaluate_oracle_classifier.py",
+                      "bytes":  22671,
+                      "sha256":  "19a7680e8dc93895568f51e0e02cc6e13d3782f6d9b28aecb78cff83f2cffa8a"
+                  },
+                  {
+                      "path":  "eval/evaluate_tutor_evidence.py",
+                      "bytes":  8348,
+                      "sha256":  "4d75418ca584f0ab0efa6ac6da488008910e2cd90f64115c207d2fb458815ef4"
+                  },
+                  {
+                      "path":  "eval/evidence_grounded_demos.json",
+                      "bytes":  5877,
+                      "sha256":  "a14b374cf860d1872054951ac5082cd0dc29ad1c711547bf194c7ed31ad08b75"
+                  },
+                  {
+                      "path":  "eval/jaccard_detector_path_report.json",
+                      "bytes":  77828,
+                      "sha256":  "cd7d2c253eb879834bdebfee57d95151c4f4df554a204705ba91af7fb48b0eb0"
+                  },
+                  {
+                      "path":  "eval/jaccard_detector_path_report.md",
+                      "bytes":  1073,
+                      "sha256":  "30152e5ce05f637bff85d4df714385cf276c63ce3d996974b705e6355ff88dd3"
+                  },
+                  {
+                      "path":  "eval/manual_mic_results.md",
+                      "bytes":  2948,
+                      "sha256":  "182639b2a16124f7bdf56925b104efe4ce0e1ed65cbfd92091a2a77fd423481b"
+                  },
+                  {
+                      "path":  "eval/manual_mic_test_plan.md",
+                      "bytes":  4323,
+                      "sha256":  "ef0905a4da361b41ecdd18f125d905a5a873d7157a67785d1e5b149f8153830f"
+                  },
+                  {
+                      "path":  "eval/match_formulation_report.json",
+                      "bytes":  13970846,
+                      "sha256":  "b8fd01bf0e98e7f6c2bb1c9cbe53fb3e333bd60f26e588244f8c085a194c3fa5"
+                  },
+                  {
+                      "path":  "eval/match_formulation_report.md",
+                      "bytes":  9633,
+                      "sha256":  "deafe8f00038c21c4136fb29f047a95e38c2da1e453ff381c0a6c30fd17d7d0c"
+                  },
+                  {
+                      "path":  "eval/oracle_classifier_report.json",
+                      "bytes":  982515,
+                      "sha256":  "09b71a7a97b03ded124057ad39c544af847d7707c5bceced1c4a429d189994c8"
+                  },
+                  {
+                      "path":  "eval/oracle_classifier_report.md",
+                      "bytes":  18153,
+                      "sha256":  "97296515ab46ee5ad5e77867a7d7c74e4d53de78de290f3503d14177d266d33a"
+                  },
+                  {
+                      "path":  "eval/README.md",
+                      "bytes":  4274,
+                      "sha256":  "c856c06faa18ce1b5b355b5351ba812693526824a6a623da4773eb95da66fe43"
+                  },
+                  {
+                      "path":  "eval/real_performance_demo_pack/manifest.json",
+                      "bytes":  100,
+                      "sha256":  "7a5bde4553f77c3c2e61b04f0eb46243c98176915d74e1b1d70e5c944ba2fdb0"
+                  },
+                  {
+                      "path":  "eval/real_performance_demo_pack/README.md",
+                      "bytes":  887,
+                      "sha256":  "41322e506b5c4c60a574e170fa8fb7635b57f6b4c714d5dddac76a39384ef726"
+                  },
+                  {
+                      "path":  "eval/report.json",
+                      "bytes":  123328,
+                      "sha256":  "f9d2e8fa05f3f42ebd5605a7c1eec0383c4c5a23042cea09cdbb015b93d80a48"
+                  },
+                  {
+                      "path":  "eval/report.md",
+                      "bytes":  4993,
+                      "sha256":  "1dba01a592d0a162a3080e3b2f9bbbc32baf0e2660598933eba1a03d4d44c34f"
+                  },
+                  {
+                      "path":  "eval/run_detector.py",
+                      "bytes":  7188,
+                      "sha256":  "add4993dbb2fddaace454bab8a099bfa851c4f17d6a73daf7fbf28e44e5c3fec"
+                  },
+                  {
+                      "path":  "eval/synth_dataset.py",
+                      "bytes":  7741,
+                      "sha256":  "abcf30fc43430ef985b52c08dfee8689bce1ac75cd1022e63de1d573736a90bb"
+                  },
+                  {
+                      "path":  "eval/synth_manifest.json",
+                      "bytes":  17226,
+                      "sha256":  "91a15037e781bf41031fa816ba93d58b7fb4914811659d1111a5ffa316585aa6"
+                  },
+                  {
+                      "path":  "eval/tutor_evidence_cases.json",
+                      "bytes":  9196,
+                      "sha256":  "572f472fd4164d70cc43e624717a4348dcbe9e8a6e869b7a37ba2bda104339ef"
+                  },
+                  {
+                      "path":  "eval/tutor_evidence_report.json",
+                      "bytes":  46498,
+                      "sha256":  "0f81fe0f7b2a7d9a2936190abb1c99c8e4daf371bf8e97e79e046199896b5c95"
+                  },
+                  {
+                      "path":  "eval/tutor_evidence_report.md",
+                      "bytes":  855,
+                      "sha256":  "b880f9f34b1eb7def5a2e776c3dcaa22997866463275690e7feecaba75760dc2"
+                  },
+                  {
+                      "path":  "kyutai_tts_api.py",
+                      "bytes":  983,
+                      "sha256":  "846b14661ac3d854786dc8a979851b4dc1a4d7b75bbb087264fd41cfba8be764"
+                  },
+                  {
+                      "path":  "moshika_core.py",
+                      "bytes":  5496,
+                      "sha256":  "f81e281dca3dd1e13e75fbbc36a147785d40a6a1d34013a686e4029bad3c05a3"
+                  },
+                  {
+                      "path":  "nextjs-frontend/next.config.js",
+                      "bytes":  262,
+                      "sha256":  "baab3cf44ac1344aea03d38b9882ef7c676c8b15e48442ed6961aff76cfbb7d8"
+                  },
+                  {
+                      "path":  "nextjs-frontend/pages/index.js",
+                      "bytes":  36015,
+                      "sha256":  "55c8bc273ad6bab8212709eaeb9ef21579852165a7af231876c260fbdf029f29"
+                  },
+                  {
+                      "path":  "package.json",
+                      "bytes":  162,
+                      "sha256":  "b2bdf679992d004744f0b59ca7705c6dd4f6fcd6e59318c7e3faa3dc3a1503e2"
+                  },
+                  {
+                      "path":  "package-lock.json",
+                      "bytes":  29898,
+                      "sha256":  "843696112e18ae7d5ace1ab0610eaa460e0b4d998a2b0d752c619e407eab9946"
+                  },
+                  {
+                      "path":  "RAG/.gitignore",
+                      "bytes":  205,
+                      "sha256":  "7e00f2581cce18b2a4e4460b9af895b1ea02c06ac5ccf5d79ac8d57da1ff51fb"
+                  },
+                  {
+                      "path":  "RAG/check_chroma_contents.py",
+                      "bytes":  179,
+                      "sha256":  "d8d92170ddf85058b3397dd24554fc1ec2b5c85f2d99e55faeb90b3e880a3c3b"
+                  },
+                  {
+                      "path":  "RAG/check_enhanced_chroma.py",
+                      "bytes":  669,
+                      "sha256":  "91fb945bba32c53b9c7dd495908dc46c99ab92a875cb5bb33c8af728539372bd"
+                  },
+                  {
+                      "path":  "RAG/check_unified_chroma.py",
+                      "bytes":  2458,
+                      "sha256":  "e39d2d5022dad9b4ee6d6eec7d58368c299ab37c536ca5d7320e71ae0efaaa83"
+                  },
+                  {
+                      "path":  "RAG/CHORD_RAG_README.md",
+                      "bytes":  10005,
+                      "sha256":  "f1073aa2c833a2f9511f4783d0499bc97449bc8fcb86ac7b248444b7b5ee5ce7"
+                  },
+                  {
+                      "path":  "RAG/documents/.gitignore",
+                      "bytes":  64,
+                      "sha256":  "664fcdcfe56254589b43f7d6fc1b6b028205118ab2d59710dc45c7a044600845"
+                  },
+                  {
+                      "path":  "RAG/documents/chord_visualizer.py",
+                      "bytes":  16637,
+                      "sha256":  "c03e8392a01da34a5140baf059d3b1e422450241314226f821819a034fa5d9a9"
+                  },
+                  {
+                      "path":  "RAG/documents/example_c_major.png",
+                      "bytes":  26230,
+                      "sha256":  "6d4c820f2ce63ec987282c58550db2995893e4dec48c60865c0442b8026af8be"
+                  },
+                  {
+                      "path":  "RAG/documents/parse_alphatex.js",
+                      "bytes":  4445,
+                      "sha256":  "4ac849585463b5f5d3a8422b539601d8fd82e775d69d8d01d244b587b29dc0e7"
+                  },
+                  {
+                      "path":  "RAG/documents/README.md",
+                      "bytes":  1528,
+                      "sha256":  "67a162d49e5d6cd54886615ddb33d7bd7d02e8db2399b33f20dd6d45940015ff"
+                  },
+                  {
+                      "path":  "RAG/documents/requirements.txt",
+                      "bytes":  213,
+                      "sha256":  "183c78b263a4c44bb1408a94aa381b6ecf5357633ce47c0d8bce6eb38b91b43c"
+                  },
+                  {
+                      "path":  "RAG/documents/samples/alphatab_sample.atx",
+                      "bytes":  102,
+                      "sha256":  "b9b10ff36d8d6ffc6935a60a952514936235442c6610bb85bea7b515b12a2136"
+                  },
+                  {
+                      "path":  "RAG/documents/samples/sample.gp3",
+                      "bytes":  7685,
+                      "sha256":  "98c7e6e0de435ba94f0b0c9b44f3218b8bd2e7df698d645c756eb34aa48edefe"
+                  },
+                  {
+                      "path":  "RAG/documents/samples/sample.mid",
+                      "bytes":  31365,
+                      "sha256":  "f6d44c16fe2896e98e176a8bf7b8f4d6e7c687db628bbfd123aa383dc720fb0f"
+                  },
+                  {
+                      "path":  "RAG/documents/samples/sample_chords.txt",
+                      "bytes":  140,
+                      "sha256":  "ba784142b63b1552c724ee3f3d7feace61009b2b4d8518d396df1f26a9476d31"
+                  },
+                  {
+                      "path":  "RAG/documents/samples/tab1.txt",
+                      "bytes":  300,
+                      "sha256":  "3630bd96fcdbe2c948e94ca4fad0bb6c646c8646a01788b69ea5cda358c56aad"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A_1.png",
+                      "bytes":  21222,
+                      "sha256":  "0ca043cf8f848a9868083cda267626f535d270ef8826ca3622f280220a5e077b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A_2.png",
+                      "bytes":  28529,
+                      "sha256":  "aed8bd699fab8db6d694b5bf956e2975ebd64f14c2cd4ffb45a61377ac5bed68"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A_3.png",
+                      "bytes":  28529,
+                      "sha256":  "aed8bd699fab8db6d694b5bf956e2975ebd64f14c2cd4ffb45a61377ac5bed68"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A5_1.png",
+                      "bytes":  22484,
+                      "sha256":  "63ef33b05a120530bdc4b876233fc1350f2939c2e7e3270bff5e29dc086f7ca9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A5_2.png",
+                      "bytes":  24144,
+                      "sha256":  "59eef9d176a4c66e9806225bb5f87db6ac1517f46b2d2b2b9f61152865f23508"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A7_1.png",
+                      "bytes":  22355,
+                      "sha256":  "f737e0bd92caf1cb292170c9c7b58fdaff63696a4ee41bc5f10e51e955c5909b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A7_2.png",
+                      "bytes":  32178,
+                      "sha256":  "71282b1f6a57f9bec8438ff2217eb52930300484fe070319f5e8d887ef975bcb"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A7sus4_1.png",
+                      "bytes":  26867,
+                      "sha256":  "76931d107c0d879b34c5e5763743eeaec7bdd8694252cbe80662422acd420f2e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/A7sus4_2.png",
+                      "bytes":  30844,
+                      "sha256":  "a909afcb702d77bcefbf43f37cf69b99f3a3801c77b76762a010ca4a216b062f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Aadd9_1.png",
+                      "bytes":  25457,
+                      "sha256":  "3397ae1ebe4980c47b1c03e24219042be2eb905ebde1c55a99331df040b0a8e4"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Aadd9_2.png",
+                      "bytes":  25457,
+                      "sha256":  "3397ae1ebe4980c47b1c03e24219042be2eb905ebde1c55a99331df040b0a8e4"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Aaug_1.png",
+                      "bytes":  25697,
+                      "sha256":  "f501dcdbc259a67ee1d3cf1a640205067115f4a6d5f687e81f3fc463ba7b950f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Aaug_2.png",
+                      "bytes":  25697,
+                      "sha256":  "f501dcdbc259a67ee1d3cf1a640205067115f4a6d5f687e81f3fc463ba7b950f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ab_1.png",
+                      "bytes":  29210,
+                      "sha256":  "479a4f6698e577ba95e45845910693d1a423c9bb356c9dd7acc9716790a938ab"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ab_2.png",
+                      "bytes":  26710,
+                      "sha256":  "4997eea31acc67fcbd218e166998e746cb2d6d976babbd31b5355521445d06c5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Abm_1.png",
+                      "bytes":  29972,
+                      "sha256":  "25bfb32a8cf7b96c62c70477f58e852fb0e1537128257adba847cb90645b8eed"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Abm_2.png",
+                      "bytes":  27451,
+                      "sha256":  "bcdb7b09f41aa08ef6192cd4d75d35a9cdbbc91184d0cfcfad3f4197d77a7aea"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Adim_1.png",
+                      "bytes":  30039,
+                      "sha256":  "e9b69d21026066aad1bb64dde016714f3aeb79a1d035e58edfd8f3faec2ed06e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Adim_2.png",
+                      "bytes":  30039,
+                      "sha256":  "e9b69d21026066aad1bb64dde016714f3aeb79a1d035e58edfd8f3faec2ed06e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Adim7_1.png",
+                      "bytes":  30747,
+                      "sha256":  "b303e1cda89b1ca99b8d55971a3d5f85c7c435e21ea9d93740b19c128721f37f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Adim7_2.png",
+                      "bytes":  30747,
+                      "sha256":  "b303e1cda89b1ca99b8d55971a3d5f85c7c435e21ea9d93740b19c128721f37f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Am_1.png",
+                      "bytes":  22052,
+                      "sha256":  "725a864270aaff53c1a7a73ab25b9b9edcf8b125a4a8408bddfb39e5a44719c9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Am_2.png",
+                      "bytes":  29371,
+                      "sha256":  "0f202da7ca85a2b1e4b8c888c41c81a76cf4d913f3fb4d27dd8e5a9cec3e9684"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Am_3.png",
+                      "bytes":  29371,
+                      "sha256":  "0f202da7ca85a2b1e4b8c888c41c81a76cf4d913f3fb4d27dd8e5a9cec3e9684"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Am7_1.png",
+                      "bytes":  24567,
+                      "sha256":  "fac4996960324e3eaf248aec75aae672ae846cf08ba8fb1cf85e6e1bc298ec0a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Am7_2.png",
+                      "bytes":  31745,
+                      "sha256":  "cb742747b5f9216c8532696f6df5d3c45cd7f23cac5e036ff2ea87dc2b157fa7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Amaj7_1.png",
+                      "bytes":  24073,
+                      "sha256":  "4cc8535c736eeecac84aa3999ea86cec8ecf69894406c1427e82cb4aa32af2b2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Amaj7_2.png",
+                      "bytes":  31381,
+                      "sha256":  "20fe0fd8a7ff9cfcbd3eef354c7b1f1e54874a57b41aec9b2cd7e20c94268b73"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp_1.png",
+                      "bytes":  21664,
+                      "sha256":  "02a81ca50358ea9e1c8c5669edb1261705e07188788c4e5a8eefe8cb1bc4dea2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp_2.png",
+                      "bytes":  30964,
+                      "sha256":  "ddf4c0f1c85facdb7b7dbc4ee673fcd752fd26bd96cf2667aa051b61efb2c8b4"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp_3.png",
+                      "bytes":  30964,
+                      "sha256":  "ddf4c0f1c85facdb7b7dbc4ee673fcd752fd26bd96cf2667aa051b61efb2c8b4"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp5_1.png",
+                      "bytes":  22764,
+                      "sha256":  "12f2197236d69e25f6ad09aa646fc1fe9f0ab9bd5cbd7ab1c60218ae95b85c71"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp5_2.png",
+                      "bytes":  26086,
+                      "sha256":  "f29bd0e29b07eac221cb39375d1c3955eba5acd6596a7c0daa0f1d6feefa9bfd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp7_1.png",
+                      "bytes":  22423,
+                      "sha256":  "be8415d373557b10cb9c686727f091fc2d92753c83ed2b2f4e3fbc6e5748763b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharp7_2.png",
+                      "bytes":  34480,
+                      "sha256":  "6676259881c794134e88252c4728d1b976205add3d842d6beb4f978b10c7a85a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpaug_1.png",
+                      "bytes":  24678,
+                      "sha256":  "f1e416ca738712558ff908daf264d1f18f24b86fcb0b962143f7e4bd5949702c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpaug_2.png",
+                      "bytes":  24678,
+                      "sha256":  "f1e416ca738712558ff908daf264d1f18f24b86fcb0b962143f7e4bd5949702c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpdim_1.png",
+                      "bytes":  31744,
+                      "sha256":  "69f8c9b3afee2aece050648d96de88fdbee05d04a72d703ddd745a09ab2164ad"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpdim_2.png",
+                      "bytes":  31744,
+                      "sha256":  "69f8c9b3afee2aece050648d96de88fdbee05d04a72d703ddd745a09ab2164ad"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpm_1.png",
+                      "bytes":  22517,
+                      "sha256":  "ddab36b1498ed02816a786ab43829e817fc443d98004bbb24eef756423b5cb84"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpm_2.png",
+                      "bytes":  31792,
+                      "sha256":  "c09062617ddd0b26f79edf3f196539b60d1bf29fe262d895fd427361290b12cc"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpm_3.png",
+                      "bytes":  31792,
+                      "sha256":  "c09062617ddd0b26f79edf3f196539b60d1bf29fe262d895fd427361290b12cc"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpm7_1.png",
+                      "bytes":  23197,
+                      "sha256":  "23176a29e221939db4e34d7be4db875b6ae92d7cd1c1569036f2195b917cc1af"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpm7_2.png",
+                      "bytes":  34125,
+                      "sha256":  "d844b1309408a1521aa161c332832fce4fcb8bebb116bbc87d1fffbdc47168ee"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpmaj7_1.png",
+                      "bytes":  24486,
+                      "sha256":  "443887bac1e405aacab8b4b59c38ffd020a93e7d2797104794b8d3f6112967d8"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpmaj7_2.png",
+                      "bytes":  33792,
+                      "sha256":  "7be644ef230a2a514c5d27825ee01a3c9c7afa41823168f1207d758bacaa47f6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpsus2_1.png",
+                      "bytes":  25304,
+                      "sha256":  "1e58a420df763048fdfdb52a440a79effcf8642bde2c53eada38e61c70beae28"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpsus2_2.png",
+                      "bytes":  31812,
+                      "sha256":  "fb48ff4869dacd1899475d48d0f60682a93c4ee9025e6017435d6fa5378fd5f9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpsus4_1.png",
+                      "bytes":  24898,
+                      "sha256":  "0811f5e7edaf878770dbc1b6f9aeed04198a05c42da32203b31997049a1ff7dc"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asharpsus4_2.png",
+                      "bytes":  31400,
+                      "sha256":  "de7cf9c81a4729c746993dabdf9b2abafce47d7aff0f606052ea7a41a4c7dd81"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asus2_1.png",
+                      "bytes":  24936,
+                      "sha256":  "a28a67fd637c6f0f453fe55b359c90e5d1b0b708633c9389e45ce792a53dff35"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asus2_2.png",
+                      "bytes":  29892,
+                      "sha256":  "6113b71a0aa50a1a1954123d9c485b846f76331afa15ef5eddf15c2693bb8ed2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asus4_1.png",
+                      "bytes":  24528,
+                      "sha256":  "ca3f197766ecf90541f6aa8ad8587424bf25db1219b9cf6273c316cbc00f391b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Asus4_2.png",
+                      "bytes":  29480,
+                      "sha256":  "37a365d144c7afcf51e68f72b45ce30558bb34b4156a760081bb0bf4e28a8a0e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B_1.png",
+                      "bytes":  20974,
+                      "sha256":  "0d816b4a452812538cf095348d4d92b629e6994db2457089e4a24b9d174e8798"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B_2.png",
+                      "bytes":  28134,
+                      "sha256":  "dfabd27a7a319a077b1bab566f0eaf988dd7dab5eea2e649f3114a8778c2389b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B_3.png",
+                      "bytes":  28134,
+                      "sha256":  "dfabd27a7a319a077b1bab566f0eaf988dd7dab5eea2e649f3114a8778c2389b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B5_1.png",
+                      "bytes":  21834,
+                      "sha256":  "abb7ee5f03e6a7b7889f0031c7773139636c43897e4f837268773a82e0e1a6c3"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B5_2.png",
+                      "bytes":  25008,
+                      "sha256":  "1ed66776d21ae78917c8f5797c8f3b6e8b96c4dc219d5f6434d580eec6db4c16"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B7_1.png",
+                      "bytes":  21730,
+                      "sha256":  "c715149bbd9bb5f636527d1b2dd9d3c450b56ab5a2a5e0bf80b95c56ffbb1ac1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B7_2.png",
+                      "bytes":  31723,
+                      "sha256":  "a8d006168c76af1a04caa217bc8513db377a550d0ed0f64091036e1fd04e7e3b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B7sus4_1.png",
+                      "bytes":  24768,
+                      "sha256":  "d579d5dd3fe385a8fcd1a468f92758cf4da514c0cda74e2b563a3ed6a0ef36dc"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/B7sus4_2.png",
+                      "bytes":  30138,
+                      "sha256":  "0fa915f0e5f62ac1af223945c6e490beef462505f7dee54aa995ff06998dc592"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Badd9_1.png",
+                      "bytes":  25242,
+                      "sha256":  "b8b267c28988adfd334da150b777899269424d5575a9eae6af1804812a27e074"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Badd9_2.png",
+                      "bytes":  25242,
+                      "sha256":  "b8b267c28988adfd334da150b777899269424d5575a9eae6af1804812a27e074"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Baug_1.png",
+                      "bytes":  23834,
+                      "sha256":  "0d51d2bba7492db9e21c6657dc806bbb0102888fa01e6df027b098f2ee181f76"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Baug_2.png",
+                      "bytes":  23834,
+                      "sha256":  "0d51d2bba7492db9e21c6657dc806bbb0102888fa01e6df027b098f2ee181f76"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bb_1.png",
+                      "bytes":  21961,
+                      "sha256":  "01a9e408160d612a0ac17a45b4f141896c1cb781c8145d0f29c04efde81810f2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bb_2.png",
+                      "bytes":  31253,
+                      "sha256":  "f367dbcc61fbe15edb5670686d035c65336f273b7f07b416217e4d29493fac17"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bbm_1.png",
+                      "bytes":  22752,
+                      "sha256":  "57e5249f26d4f044c0c8fd27e46644c7996862cc8d715550956f57eb6536958d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bbm_2.png",
+                      "bytes":  32018,
+                      "sha256":  "12a46287d79d50c97704ae50b325e5a6d8102003257b30281449ac3a75627281"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bdim_1.png",
+                      "bytes":  22951,
+                      "sha256":  "360e106710d7b1552d77de9c273f9a5f28f531d6675eb96cc006a45d4c36359e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bdim_2.png",
+                      "bytes":  28228,
+                      "sha256":  "9feee468aea7e2d8c247df2b813463fff8e9959b4c964c0ebce25594f8725603"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bdim7_1.png",
+                      "bytes":  23604,
+                      "sha256":  "fa7b077b6a8cb6fcee7cfbaa579851365e64547125e3e6acde8e26b3d2ca712a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bdim7_2.png",
+                      "bytes":  28882,
+                      "sha256":  "ff3c06cd729136935913d01d7eb3d9d2ae2de11e33b093a6055f9d923f738a53"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bm_1.png",
+                      "bytes":  21790,
+                      "sha256":  "04e072ad128886922bdd329ed0e93bbed21186465f4fc7175ae37e9149e245b6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bm_2.png",
+                      "bytes":  28949,
+                      "sha256":  "adf84212d75d3ec075f516ad17ffdb3998a64d3590add291b0e1f35025ce897d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bm_3.png",
+                      "bytes":  28949,
+                      "sha256":  "adf84212d75d3ec075f516ad17ffdb3998a64d3590add291b0e1f35025ce897d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bm7_1.png",
+                      "bytes":  22511,
+                      "sha256":  "9b72725130786e990a4d72966e757a44fd5a17b36f8bbf7b074c7e26298a6830"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bm7_2.png",
+                      "bytes":  31296,
+                      "sha256":  "46cd773a7168350042d5ec6f49d634eea64d85b0c027b219f27b051f1f59ade9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bmaj7_1.png",
+                      "bytes":  23825,
+                      "sha256":  "f3bb630dda4654befff6331197b148dde11d2b6d39f83a3538adcc4c6cb618bb"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bmaj7_2.png",
+                      "bytes":  30999,
+                      "sha256":  "1ba1daad0c007f5ec014b5a234884a447a1e9d5a5cd7ed73178bb487c9fe2641"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bsus2_1.png",
+                      "bytes":  24578,
+                      "sha256":  "94a3ec4da1e1b11791b6c1d7a55726bd6edc596292f71e9d6e481c0e4e54a4b0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bsus2_2.png",
+                      "bytes":  29176,
+                      "sha256":  "9e8c41eb7c37c736724f97a3ef4bc3864f599f48dab72ef24874f0dc77aeccc9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bsus4_1.png",
+                      "bytes":  24201,
+                      "sha256":  "b046a4e7651e21c0cdf66f51036e949c5472ee0b50053745c3b493547d13e850"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Bsus4_2.png",
+                      "bytes":  28799,
+                      "sha256":  "566376f462dd2f5688e27490dba316c6b762727d227cc34d6224502d4468fce0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C_1.png",
+                      "bytes":  20157,
+                      "sha256":  "6afd3eb9d63440cf6b6416eb431f3a6975606bdba62b71bd4c201c257104c613"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C_2.png",
+                      "bytes":  21280,
+                      "sha256":  "1a2e264a1a4cd975f8f4079c223d23cdfec94700337db57f555bf533eda6e389"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C_3.png",
+                      "bytes":  19907,
+                      "sha256":  "c84953c0e15ddeea596355fe0fc881905708406ba115c00fc2dae6a277b497af"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C5_1.png",
+                      "bytes":  24375,
+                      "sha256":  "f812e771723c1d30cfe99006f1db31f0fa34a650f89af2446a2c509b742b97f0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C5_2.png",
+                      "bytes":  24621,
+                      "sha256":  "8c4460e7857fa3f9aeb02bc6c29a013b8c5f62c9fda059a8cbbccdcb167b6b66"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C7_1.png",
+                      "bytes":  30771,
+                      "sha256":  "814af61e7b7d5ce0aaa7e625131934ce20eadf6fe7e92cf6683191180b9fd29d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C7_2.png",
+                      "bytes":  27100,
+                      "sha256":  "d75548df70efad2d4634393145792c241c48723fb02697f93e3bebe8adcc5c74"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C7sus4_1.png",
+                      "bytes":  25363,
+                      "sha256":  "e5cd8c9fe7902ab92d6c56cc5189d3bb4dbf8ac9230b17f8f27e97d008b073a8"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/C7sus4_2.png",
+                      "bytes":  24997,
+                      "sha256":  "7e2d1913796344b9fe9179735bde637163b273f8bd63513c8fafe3815eb4bfb6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cadd9_1.png",
+                      "bytes":  25654,
+                      "sha256":  "57b75e83350d63eeaafa1195022af8901e0bdcdc24c947ac07178be57c5d5015"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cadd9_2.png",
+                      "bytes":  25654,
+                      "sha256":  "57b75e83350d63eeaafa1195022af8901e0bdcdc24c947ac07178be57c5d5015"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Caug_1.png",
+                      "bytes":  29006,
+                      "sha256":  "4deba276ffec383d5888719b3b8b071a1a20caf789f3e5d121a17987ecae8543"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Caug_2.png",
+                      "bytes":  29006,
+                      "sha256":  "4deba276ffec383d5888719b3b8b071a1a20caf789f3e5d121a17987ecae8543"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cdim_1.png",
+                      "bytes":  29054,
+                      "sha256":  "d8bb1c2001b8ee578226b51f45c697ce417f1a6e96ffb0aa59e1a02f5ad1794b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cdim_2.png",
+                      "bytes":  23096,
+                      "sha256":  "68a3c43d5c5363e0ec18c88032617f771e97a793eae0a852875e482da3dae5ae"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cdim7_1.png",
+                      "bytes":  29695,
+                      "sha256":  "ab98ea67224bf1c382e9f958701636d2d70ba3697def636ffe546c75e175383c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cdim7_2.png",
+                      "bytes":  23751,
+                      "sha256":  "aabf32e8903078c5e307459f61bcb0c3f448f85cee17b92b550984a8de7c02b0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cm_1.png",
+                      "bytes":  22098,
+                      "sha256":  "22d730ce8094ab92d9413862e4db5fc1e995942a9a6a0b1354cbe4a3f58b1e1f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cm_2.png",
+                      "bytes":  20716,
+                      "sha256":  "df1d11c909e30f393389ded1c9dd7d9dbdf448b0a7ff07f28f78df68ff46ee7c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cm7_1.png",
+                      "bytes":  22806,
+                      "sha256":  "b80f7c98287d31d7588c21950d27041e757ef111c60ff43414f8c3ff9cb080d8"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cm7_2.png",
+                      "bytes":  27925,
+                      "sha256":  "197428a24718bd22e13d8be24a1d425d9ecb8a35a6010e7e76b901b7b600817f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cmaj7_1.png",
+                      "bytes":  32554,
+                      "sha256":  "a50d42d8eb01f6efdea09bdb5a6d048feaf1164e9e9e842e95db4fd652421417"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Cmaj7_2.png",
+                      "bytes":  30383,
+                      "sha256":  "31783baa504bf5c0a65ad0122760fd217199ff12562478694c1524a3a1662fa8"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharp_1.png",
+                      "bytes":  21912,
+                      "sha256":  "0903d72d9c9255ab107593a9888ca5dc0a25bed1dfd214a49c8def22b48d4a85"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharp_2.png",
+                      "bytes":  28445,
+                      "sha256":  "061e076e59a97fcb7a3873142630ba9bc05012eda7d01c4a3e9dfa018012be2c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharp5_1.png",
+                      "bytes":  25775,
+                      "sha256":  "74929d189be08a5335d95db75c9bbb5d3a4230e72ee5662dc68bb6f14b3eeb75"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharp5_2.png",
+                      "bytes":  25999,
+                      "sha256":  "a314c699b44e4d705e9c87abe1f026b22975641bfb64d95ca1bd6c2eb54ff157"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharp7_1.png",
+                      "bytes":  22634,
+                      "sha256":  "39c6fe1c4c89b25dcc8cd85b4b0bf594503444a25f677c367c890be97d531750"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharp7_2.png",
+                      "bytes":  25921,
+                      "sha256":  "01494889d3a625783c8eff364a9321b25615e04294e306bd356771f6ddac8a6a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpaug_1.png",
+                      "bytes":  24725,
+                      "sha256":  "ed11145d3c68853f0081a326578db02f99541a01617ae68d06d89d9eb4df2ffd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpaug_2.png",
+                      "bytes":  24725,
+                      "sha256":  "ed11145d3c68853f0081a326578db02f99541a01617ae68d06d89d9eb4df2ffd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpdim_1.png",
+                      "bytes":  30914,
+                      "sha256":  "657dbaaf79c914e0e652225b5e27b043c7df33cdca915fcfca375513b2c86b21"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpdim_2.png",
+                      "bytes":  23786,
+                      "sha256":  "3282a975ca3b4c3a4ffa205844b25eb7cbc83abce644a575caffdb1127a4394c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpdim7_1.png",
+                      "bytes":  31555,
+                      "sha256":  "18da09d5d1fd8e0cc58fbcf1ec9aef48ed2f239940ada7b5c21abeda3b777a13"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpdim7_2.png",
+                      "bytes":  24398,
+                      "sha256":  "5c72398c53d4327351026532a8ada523b5331cbbc8c94b44efa6c72912d7a330"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpm_1.png",
+                      "bytes":  22692,
+                      "sha256":  "4c8f87c754d74c0abeb423a18cbbdb80c74ab9fa2f9ab610935f59153ff8f97a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpm_2.png",
+                      "bytes":  24927,
+                      "sha256":  "3cd2e1fad0cb91075904ed782142e093d5240be6940717faad9471fddd0e195a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpm7_1.png",
+                      "bytes":  23384,
+                      "sha256":  "50c493cc037ae2334986e783b7e608e3896122e354fe7a929b8c79d404ea79e7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpm7_2.png",
+                      "bytes":  26823,
+                      "sha256":  "901135b6fc32b564a682ec1880e6f6f32ef08575bbb28ae57ff8a6d36e310be0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpmaj7_1.png",
+                      "bytes":  24633,
+                      "sha256":  "0d39d505a70968ce084248756f22861097f198bce8171147af961c43f9d04e59"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpmaj7_2.png",
+                      "bytes":  23029,
+                      "sha256":  "dd92c047be9c1046a0edf2e5732461763227ab816eff668e04275d9220d0c276"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpsus2_1.png",
+                      "bytes":  25324,
+                      "sha256":  "d538cdbc24f39428259783423d9f813196d1c1d45cf4f943cc627cd4cfda18c7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpsus2_2.png",
+                      "bytes":  25324,
+                      "sha256":  "3e15494bc870c68763f25bf441517a14fdc41dfa2be6b924237d35ef9a9e20e0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpsus4_1.png",
+                      "bytes":  25010,
+                      "sha256":  "1b214344f92315a12a8cf37467a8d0dbaf8b7f4b91154678e52b96c08467e304"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csharpsus4_2.png",
+                      "bytes":  25010,
+                      "sha256":  "1b214344f92315a12a8cf37467a8d0dbaf8b7f4b91154678e52b96c08467e304"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csus2_1.png",
+                      "bytes":  24937,
+                      "sha256":  "806b25bb57825b666feec42b987b74c04ee57f09600839e70fe3f48f6e739986"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csus2_2.png",
+                      "bytes":  25222,
+                      "sha256":  "93c554db44a2dad531ea8f75681884673ab6103221105da09e719ea1784e9794"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csus4_1.png",
+                      "bytes":  24760,
+                      "sha256":  "1cdea3f49627598589e3bb8cbc25a35666f31286af540f17212cb1adba8dc472"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Csus4_2.png",
+                      "bytes":  24760,
+                      "sha256":  "1cdea3f49627598589e3bb8cbc25a35666f31286af540f17212cb1adba8dc472"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D_1.png",
+                      "bytes":  21124,
+                      "sha256":  "a2f822b4e792dd2c82da20cce72605dcffdf8c72a9e9cae596b7202edad87a24"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D_2.png",
+                      "bytes":  25037,
+                      "sha256":  "24f2b5b252b78f4da29dd692465b25699b1cf75216222cd593b5321c5a90dabf"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D_3.png",
+                      "bytes":  27751,
+                      "sha256":  "b3808749b6e53f0f33aa1fd5e14ec1f07650eba97cff5ae2ac675ed035c766fd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D5_1.png",
+                      "bytes":  23832,
+                      "sha256":  "daeae362f3422afe0e5d2fa794586f4925e7570ee809cc701cb1d1871cb12cfd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D5_2.png",
+                      "bytes":  24036,
+                      "sha256":  "38e16f3b3167fd0460c62c9e9c096c41a6943a8512141a37bfca8895c38bf629"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D7_1.png",
+                      "bytes":  21847,
+                      "sha256":  "d7ae99e64d68d7018488f3abef3fb3fe7a8361ac1ba94d0d120efb21a792c3fb"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D7_2.png",
+                      "bytes":  25741,
+                      "sha256":  "ae48380782541c53f4c95b3238c48cfa2bc921bb7f69416a5f27375b47dda727"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D7sus4_1.png",
+                      "bytes":  24949,
+                      "sha256":  "42d79960405cc7e702e32515843cf992cfbf8f742c179e8511cd75f81dafc811"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/D7sus4_2.png",
+                      "bytes":  28764,
+                      "sha256":  "86292eecb9bee3c0cfab19c86f5d159badffbb46eb2eef75741bf7bfb2698d59"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dadd9_1.png",
+                      "bytes":  25396,
+                      "sha256":  "989ecd544fd9c796efe1e95ba8188d0b8250aa80295a29354470a302cc8ce2f2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dadd9_2.png",
+                      "bytes":  25396,
+                      "sha256":  "989ecd544fd9c796efe1e95ba8188d0b8250aa80295a29354470a302cc8ce2f2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Daug_1.png",
+                      "bytes":  24082,
+                      "sha256":  "067c307a244c90efeccbcb55ed01d30fcf2b8ba2d8bb0af4244b886859db7aec"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Daug_2.png",
+                      "bytes":  24082,
+                      "sha256":  "067c307a244c90efeccbcb55ed01d30fcf2b8ba2d8bb0af4244b886859db7aec"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Db_1.png",
+                      "bytes":  22016,
+                      "sha256":  "6d1d5ccdba1644f0918317af05fbbdb2454a9f4f90f700a70907e35ccb84dd0f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Db_2.png",
+                      "bytes":  28556,
+                      "sha256":  "1c0fa29eeb8598c67363ba40c0477a58884bf42aefd8309098b0b5cf1aacbd4a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dbm_1.png",
+                      "bytes":  22757,
+                      "sha256":  "c83d9d741844330d9fde01d13d1fa2fd88a83d43d7f4768e6b5b78800d3a400b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dbm_2.png",
+                      "bytes":  24986,
+                      "sha256":  "b3c177c8b75b6d7136d618990891bfd7275dd7d552050d36668bf6ac65379b70"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ddim_1.png",
+                      "bytes":  23279,
+                      "sha256":  "72b3c4fe36377168c66e1ee5b22d14adf75cd0ae3ddd2d5e6aad0a949f6210eb"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ddim_2.png",
+                      "bytes":  22793,
+                      "sha256":  "6aaac5720040ef7b9fac3c0adbdb6d70f778b52a89101996d5c2226979ef40b7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ddim7_1.png",
+                      "bytes":  23916,
+                      "sha256":  "34fb3296b7bd5b360b27621fa4bb62f06578dcba18006112613673c8210ea0b0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ddim7_2.png",
+                      "bytes":  23427,
+                      "sha256":  "68325146d47b99f6aa5193f86102008b5f11e60c0acebef7b22fa8e7af6eaf19"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dm_1.png",
+                      "bytes":  21958,
+                      "sha256":  "ede641a29d4f3d4b26663ccb0dd89e263456147198594d9c1f9398af573b3187"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dm_2.png",
+                      "bytes":  25841,
+                      "sha256":  "3b5da49091769ee1aeef0eee04bc5ca9643c95e609fd178d24ac9a9bd9af1c12"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dm_3.png",
+                      "bytes":  27778,
+                      "sha256":  "4fa3b27468bb1cebfc423f339377bab7f791a28b79b2edb20de0b77daa822c79"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dm7_1.png",
+                      "bytes":  22667,
+                      "sha256":  "94f25d3079233bd259404b690fc22bdd728aa4c4a3357f34d1813f56ea9b255b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dm7_2.png",
+                      "bytes":  26505,
+                      "sha256":  "6193e84a12b4a3fdde3ec9419fe30d2017f15f0c194f6fb2dc8544aefeb25276"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dmaj7_1.png",
+                      "bytes":  23923,
+                      "sha256":  "1b7d54b300e71931f9d3b4a5946564ca1674c61a47a05fa5e35424c6a4ba5603"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dmaj7_2.png",
+                      "bytes":  30508,
+                      "sha256":  "f16348bd0fbc936132ba7f7d2e4523e6a0836fb0ae91e6e3bfe24bbec11fefc3"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp_1.png",
+                      "bytes":  26460,
+                      "sha256":  "f220a7d5c3db09eb8d50eb01ca4df947bce95afcd7d17cd0d1a615d208607539"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp_2.png",
+                      "bytes":  26482,
+                      "sha256":  "21d14b48aebe616878d2c40fb102075ba94b23b998d59871c97005498eb35ad1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp_3.png",
+                      "bytes":  27774,
+                      "sha256":  "36fcd5a7c3aa2c5a2b7beef70680a1a7532f55b5e8f31b5309aba0b6f63911c9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp5_1.png",
+                      "bytes":  22754,
+                      "sha256":  "1960e13d1887d79baa479e84eb03bf6e742a9c644945548e6e4e8e168dd67257"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp5_2.png",
+                      "bytes":  26082,
+                      "sha256":  "3bdfd01ed3e35375a3cf938ae4a94303cebb247921d055e0a93688221b438af6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp7_1.png",
+                      "bytes":  27119,
+                      "sha256":  "985dce8fa935ce1d517050313d9f0c478c8897aa1d6bbae14bb5b9bf265a13b7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharp7_2.png",
+                      "bytes":  27141,
+                      "sha256":  "79c8054d6a2fff48e14daa8cb92096ac86af8591e19ba224e1164c21deac9f67"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpaug_1.png",
+                      "bytes":  24765,
+                      "sha256":  "11c8d742bdde2f828a011901b5e4435b81fb85cb5a33de18ad3a122bd3ea1893"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpaug_2.png",
+                      "bytes":  24765,
+                      "sha256":  "11c8d742bdde2f828a011901b5e4435b81fb85cb5a33de18ad3a122bd3ea1893"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpdim_1.png",
+                      "bytes":  29464,
+                      "sha256":  "2dd6aa19b04d282f21e7f80289e4212e51813fbf222353cfd2f126ff02d4a9e7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpdim_2.png",
+                      "bytes":  27438,
+                      "sha256":  "4f06483b799fe5c164c4ec40861eadc8be8295064bf1b91cead422ae2c9d9313"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpm_1.png",
+                      "bytes":  27224,
+                      "sha256":  "2b80b1f5947a25adf3f7138f14c387fcc2758fae0f3d460ae4bd3b50616389ea"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpm_2.png",
+                      "bytes":  27246,
+                      "sha256":  "ddb8d18f82a24f30f6f802918ac8845dd185d2455ef65c2884547c6e5af3f9de"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpm_3.png",
+                      "bytes":  27449,
+                      "sha256":  "562a7044f78395a1f6a7a8f7fcb889748f6493f1ae3c3f95cc9082203d5a463f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpm7_1.png",
+                      "bytes":  27899,
+                      "sha256":  "17e4da8db5cee74dbfb79ff3e4c917aedff11537d36f0f08ca5822ef1843d604"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpm7_2.png",
+                      "bytes":  27924,
+                      "sha256":  "62ba23b7d6c645347dddabc4868467b515e329aae5ed5fe2fed4056ba4de5d97"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpmaj7_1.png",
+                      "bytes":  29164,
+                      "sha256":  "97af469b9fe7138c0ba36b2d62a719b95712b0904d386dca7d075b26dd37e3b3"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpmaj7_2.png",
+                      "bytes":  30475,
+                      "sha256":  "492f14f8e18ea852d436ccc4411d3cd0b4f89f0a7e535d8bfd1a80ef5f1d91c1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpsus2_1.png",
+                      "bytes":  29842,
+                      "sha256":  "6781c39e5581fe82817d63d376fa8238290db988c708bfce9d4ac63d1dfe7184"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpsus2_2.png",
+                      "bytes":  29887,
+                      "sha256":  "f4fd6d655553f36e76bb6ee168effde299f1f61c7a80b4ad3abdb94db16baf1f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpsus4_1.png",
+                      "bytes":  29461,
+                      "sha256":  "50117e2c8ef16c39648c341bf146aa3c38d08eb92ab9925767c40f22c918299d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsharpsus4_2.png",
+                      "bytes":  29499,
+                      "sha256":  "9898ba6a894734a0613f83a085aa6b2adc8a2ccdd90bbf2627ffdff5f9821a49"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsus2_1.png",
+                      "bytes":  24779,
+                      "sha256":  "ab48b0b76b63a7b4591a8b4ef4999505427ae281087d28ebece3c5445a8f82b7"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsus2_2.png",
+                      "bytes":  28579,
+                      "sha256":  "0c95938e115e9a3d9b4577dac12fa0d7a3016540cdd8f0d3ccc8578a3793f4d2"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsus4_1.png",
+                      "bytes":  24418,
+                      "sha256":  "ca59ac3043e9e82f49b486441d4911790c9de393ed6327303319c10449a9c112"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Dsus4_2.png",
+                      "bytes":  28218,
+                      "sha256":  "4b40a487c25f5e9516c6acb46418ac83b5a687192cbf6a458479a4e1def4ac0b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E_1.png",
+                      "bytes":  18983,
+                      "sha256":  "d1cfa47a494d13165199333b14116d9d4063dac70a03e9fe32064afafd68f6c6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E_2.png",
+                      "bytes":  24536,
+                      "sha256":  "396236a660fe58698a239edcfdc97be964d3abbffc3faa956107d98ba815850d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E_3.png",
+                      "bytes":  26511,
+                      "sha256":  "8f2f8e5cba2eb6b7d4fb130121702762c8c3005f3e641d72e7823e87eb17d411"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E5_1.png",
+                      "bytes":  21392,
+                      "sha256":  "86af54dc4e21bb7a9d84e27129d88bb1d8ce60d69806dfc4816899adad4903a0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E5_2.png",
+                      "bytes":  24159,
+                      "sha256":  "ea9f1bb0b0a432cfd5621526becd64f674746ac1c1111368ca74c894fd414c26"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E7_1.png",
+                      "bytes":  21601,
+                      "sha256":  "281fb213d1cb93abbc74c635f898e98fe7e7ba56f43a7e1f4fface7dfef36f21"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E7_2.png",
+                      "bytes":  25354,
+                      "sha256":  "8c42249a3c924df087f6e985a3dc74b753f6825d0c8e0b07ef46bfb4c6cf8b28"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E7sus4_1.png",
+                      "bytes":  23536,
+                      "sha256":  "e6cd93ad42dcbb1fe3c88f41236ab34586f65a3a4b3bd595a58289a4b900fe80"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/E7sus4_2.png",
+                      "bytes":  27620,
+                      "sha256":  "5c53063bce32f8a2c266ebd5cd5b03efb332d2de71bf64a92a2da004356c7150"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Eadd9_1.png",
+                      "bytes":  23575,
+                      "sha256":  "5910dff35be53a05247160f2d33dad75ede58bd63bae782d3156b3884b1d72de"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Eadd9_2.png",
+                      "bytes":  23575,
+                      "sha256":  "5910dff35be53a05247160f2d33dad75ede58bd63bae782d3156b3884b1d72de"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Eaug_1.png",
+                      "bytes":  21993,
+                      "sha256":  "41e63ee48479641027b6884a1060c76ddc30d4291d0baf24af150b2c94cc0333"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Eaug_2.png",
+                      "bytes":  21993,
+                      "sha256":  "41e63ee48479641027b6884a1060c76ddc30d4291d0baf24af150b2c94cc0333"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Eb_1.png",
+                      "bytes":  25822,
+                      "sha256":  "1a20bed6779307849b629089e2e2fcf1644006c4e0d0efcb263368c739c117fd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Eb_2.png",
+                      "bytes":  25852,
+                      "sha256":  "f21fa1d66a06d90e572541e763a2889fb50a3e1e0f5a0f53064ba5ca27038d0b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ebm_1.png",
+                      "bytes":  26591,
+                      "sha256":  "ff09fe6bafba06d31aaf07aa165c0509f739a53de441ba55aa5bf69e6a4b750a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Ebm_2.png",
+                      "bytes":  26609,
+                      "sha256":  "4f1151650b1d3dbf171a1cbeddb83c7a7d1d5c17832e228d7c71f2dfe03efb89"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Edim_1.png",
+                      "bytes":  29141,
+                      "sha256":  "fba987cc25fee5e9e7d7fe17b8f188269fad637f8410f634d30ceccc49e7bf81"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Edim_2.png",
+                      "bytes":  26674,
+                      "sha256":  "5d65b6529bfabbc0b39981e20d8f2a4e126719b31c038297851d64d5024f62e1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Edim7_1.png",
+                      "bytes":  29814,
+                      "sha256":  "024af494d63407364d54e51db974079b3ba415030a6aa2fa1162795e55e0ea71"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Edim7_2.png",
+                      "bytes":  27326,
+                      "sha256":  "737248fdbfc036a047a806b5d70ec663fa17e598f2b435f3697c091fa02bd72b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Em_1.png",
+                      "bytes":  19942,
+                      "sha256":  "ced753cd094f7d07a7f997d1cd4792429795adee3061cb13c545625931841aa9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Em_2.png",
+                      "bytes":  25462,
+                      "sha256":  "1e834a7303b9aa8b63e293a6abfcacd8636b5e83cd9bb828221c2c32f8b5e6ed"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Em_3.png",
+                      "bytes":  26253,
+                      "sha256":  "c0d827a68555909afb5135fd6aed992fd1c705aa4fc76e81ccd8713bb2dba114"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Em7_1.png",
+                      "bytes":  20816,
+                      "sha256":  "012e10b82125457b1ff91ec2877b3e960fd9938e8cba4d17ead4e2ef24ca48fd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Em7_2.png",
+                      "bytes":  26172,
+                      "sha256":  "17fc695054c9ede150af067c3669d69b6bc46a8329e36cc465308cde82a0bfcc"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Emaj7_1.png",
+                      "bytes":  21997,
+                      "sha256":  "4bd8f03018590a1f7e06895a1c860e4c404943275dda2029210e6196cc6b2069"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Emaj7_2.png",
+                      "bytes":  29621,
+                      "sha256":  "9247d6ccd5144ff25ace4da91a320810ef987e110a8a95a0998cc34d50dc2b0a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Esus2_1.png",
+                      "bytes":  22891,
+                      "sha256":  "6c97c56cc131cf3a7bed57d27634a5625f78c20f777a8cf2af3cbe5f6a67abcd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Esus2_2.png",
+                      "bytes":  27371,
+                      "sha256":  "5f1856be63b634a8173dbcc8c62a136072288184c4a4685a92cdc46aaa617ff5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Esus4_1.png",
+                      "bytes":  22524,
+                      "sha256":  "b8b232dc0e5178d140c08a8d712ac5a6ac6138ae0e2e47b6fd3780d1d09e156c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Esus4_2.png",
+                      "bytes":  27007,
+                      "sha256":  "fc64e60e425ef445e2c4cb1f4bf9683cee8efe1aa6bd9bd2b2e232c1447345b3"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F_1.png",
+                      "bytes":  26015,
+                      "sha256":  "6b278f19c6f58a117d7ec54a1864fd3b063986457829747db3d16314dee923bd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F_2.png",
+                      "bytes":  23655,
+                      "sha256":  "eab0f16be15b04efc4cb2df3b10c8e49db78cc22e223e29a0a22a0780bbb5b8f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F_3.png",
+                      "bytes":  26015,
+                      "sha256":  "6b278f19c6f58a117d7ec54a1864fd3b063986457829747db3d16314dee923bd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F5_1.png",
+                      "bytes":  20968,
+                      "sha256":  "e005b15ab19e5cbaaeac94a2b77e7b2d1a01dab685390e4be74b925f76776d2f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F5_2.png",
+                      "bytes":  20968,
+                      "sha256":  "e005b15ab19e5cbaaeac94a2b77e7b2d1a01dab685390e4be74b925f76776d2f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F7_1.png",
+                      "bytes":  29196,
+                      "sha256":  "1bd1b3bff5ae72f9d4a40cbbc73d32773edae3eef5af4609d0c1ea1dc84aac19"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F7_2.png",
+                      "bytes":  26767,
+                      "sha256":  "ad83527f2e24f141c12c2699dc19017542bf2de9a34c57e97f7a1c8e58d8681a"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F7sus4_1.png",
+                      "bytes":  31775,
+                      "sha256":  "fda6a9ced5cd286332096c5a485c488e7f76f03d6187c8aa7b4e414143b16a50"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/F7sus4_2.png",
+                      "bytes":  30047,
+                      "sha256":  "e90642c6d1dd81d5230b107b43b5a12fae0db469c5b910b097f00f60fe0460cd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fadd9_1.png",
+                      "bytes":  29198,
+                      "sha256":  "43b568dbcebcb2654628483a3293d2d597c420ea5cfccb8c173358353482e663"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fadd9_2.png",
+                      "bytes":  29198,
+                      "sha256":  "43b568dbcebcb2654628483a3293d2d597c420ea5cfccb8c173358353482e663"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Faug_1.png",
+                      "bytes":  27580,
+                      "sha256":  "5dc0d05ff2435888ffc40552cf2b45e1f71250c3070b1c00084e8a8aae5cccb5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Faug_2.png",
+                      "bytes":  27580,
+                      "sha256":  "5dc0d05ff2435888ffc40552cf2b45e1f71250c3070b1c00084e8a8aae5cccb5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fdim_1.png",
+                      "bytes":  28688,
+                      "sha256":  "592ba4790430371b2c72dc4b161ac99e4838ba43152eb4482992b81566e9ff73"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fdim_2.png",
+                      "bytes":  28688,
+                      "sha256":  "592ba4790430371b2c72dc4b161ac99e4838ba43152eb4482992b81566e9ff73"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fdim7_1.png",
+                      "bytes":  29354,
+                      "sha256":  "70348cbcfdc23d3068ee66396067601d074e4d3ec886c9a8f51778bc3b3a1351"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fdim7_2.png",
+                      "bytes":  29354,
+                      "sha256":  "70348cbcfdc23d3068ee66396067601d074e4d3ec886c9a8f51778bc3b3a1351"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fm_1.png",
+                      "bytes":  26918,
+                      "sha256":  "8c9d7c7aeae8455c592c10a86db709ce9e38e6637ef54cde9bf154928695166e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fm_2.png",
+                      "bytes":  24574,
+                      "sha256":  "9c39fbe85d4b5892b5521ad15cfd80a3e207e24032d6873ddb65a9bbaa845a56"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fm_3.png",
+                      "bytes":  26918,
+                      "sha256":  "8c9d7c7aeae8455c592c10a86db709ce9e38e6637ef54cde9bf154928695166e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fm7_1.png",
+                      "bytes":  29227,
+                      "sha256":  "a0553d178d2a66a37de909f7e8759418b20a5a89c0b209a180134825379dd2f9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fm7_2.png",
+                      "bytes":  26734,
+                      "sha256":  "d00e974754d7f3b32899c3b946809b482ddebfc8cf923bf7854a541424111da1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fmaj7_1.png",
+                      "bytes":  27779,
+                      "sha256":  "62739f4ae39e2fcec66b069c3bfe9a4202e266655a3ea084c48d0f9872c46dea"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fmaj7_2.png",
+                      "bytes":  28905,
+                      "sha256":  "a105d637809369f11826c50a3453913280803ba684c54b2112f17df9a16217f0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp_1.png",
+                      "bytes":  28485,
+                      "sha256":  "2cb04a5df6e3643b703b1107c661fe9ccf0f82b4e2cb4e30952b14915d94eefd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp_2.png",
+                      "bytes":  26213,
+                      "sha256":  "b12e4fdd639c8b5d46adfce60e49709c2be8f93b59f635ef7fa1821f07606bc8"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp_3.png",
+                      "bytes":  28485,
+                      "sha256":  "2cb04a5df6e3643b703b1107c661fe9ccf0f82b4e2cb4e30952b14915d94eefd"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp5_1.png",
+                      "bytes":  21630,
+                      "sha256":  "03771fceb5dbd94f27f32d27b4b1901d95140027028daf0b9a494307cd2499ed"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp5_2.png",
+                      "bytes":  21630,
+                      "sha256":  "03771fceb5dbd94f27f32d27b4b1901d95140027028daf0b9a494307cd2499ed"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp7_1.png",
+                      "bytes":  32105,
+                      "sha256":  "6597e322e7d97fc61efc21f34c0fd47cc3053f47d1a4cbff51bf07876597f240"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharp7_2.png",
+                      "bytes":  29620,
+                      "sha256":  "c1a90b803baa71a2c35b0a1dea4dd2341a4a51852d2095280b1c1eb9f902aac6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpaug_1.png",
+                      "bytes":  29295,
+                      "sha256":  "e7e833fd1c6e8d5e80a820b7da28af255af453590ab92e0af2eaa87bc8a69af1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpaug_2.png",
+                      "bytes":  29295,
+                      "sha256":  "e7e833fd1c6e8d5e80a820b7da28af255af453590ab92e0af2eaa87bc8a69af1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpdim_1.png",
+                      "bytes":  28930,
+                      "sha256":  "54e5792d1199b5f17987f04ee365a71aa4bac441a985bc4599b37015e0d9fe67"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpdim_2.png",
+                      "bytes":  28930,
+                      "sha256":  "54e5792d1199b5f17987f04ee365a71aa4bac441a985bc4599b37015e0d9fe67"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpm_1.png",
+                      "bytes":  29382,
+                      "sha256":  "7f6bff3b4144546ce5f3cb0883f5bc414a24e9f465f80011d1be635dfffd7a42"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpm_2.png",
+                      "bytes":  27082,
+                      "sha256":  "17efd1fd171f06fafefb4085908d077d4c14e5bad7dba411bf490318eecbc987"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpm_3.png",
+                      "bytes":  29382,
+                      "sha256":  "7f6bff3b4144546ce5f3cb0883f5bc414a24e9f465f80011d1be635dfffd7a42"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpm7_1.png",
+                      "bytes":  31780,
+                      "sha256":  "9afafb1c644577f36a03d1e69a42b633062d12342c43a279ca61e4f9813d7585"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpm7_2.png",
+                      "bytes":  29268,
+                      "sha256":  "9ba84dd520e3ff1be724e1d411113d0d24e8e02391a73e87d8870174d351fb71"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpmaj7_1.png",
+                      "bytes":  28208,
+                      "sha256":  "29300cd063509647a3fbd2dfeb058e540dfd4adfac5d3b38a0a652f9c83efeb1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpmaj7_2.png",
+                      "bytes":  31433,
+                      "sha256":  "1ffe26959e1f75aabd82b1777c295f29548c4b198378df0c36d22281444306ae"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpsus2_1.png",
+                      "bytes":  32264,
+                      "sha256":  "0f78c3d74c285ccd321823a6a17a3dc09892f75ebbfd9d845e4f62c2a1eb7d91"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpsus2_2.png",
+                      "bytes":  29921,
+                      "sha256":  "1ce59e808ba213463e1e2f935e9229080ab3cf275c69e34a08d7502296eeaaad"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpsus4_1.png",
+                      "bytes":  31854,
+                      "sha256":  "f1a18b8bdffd956db1f1a7fd5981b021df3f11f2a1ee125772bc9d01fef39e3b"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsharpsus4_2.png",
+                      "bytes":  29512,
+                      "sha256":  "899af19f41e5cecf7d37c45fb8824f3c8d11159ad24603082e97602c0e56fbc6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsus2_1.png",
+                      "bytes":  29770,
+                      "sha256":  "3dd36688ad57627f74879dec4293c0ab8a49632d50974ae5686cd7802761e4c4"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsus2_2.png",
+                      "bytes":  27453,
+                      "sha256":  "7b77de7041c167a2e764a39a4f7126eea5f091cba58ed43d8ac9b94b52615ba3"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsus4_1.png",
+                      "bytes":  29396,
+                      "sha256":  "cf0da7645b340afa073ead6ef561b05e59f9952314d47e246a10a49861966c67"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Fsus4_2.png",
+                      "bytes":  27094,
+                      "sha256":  "024a66296fdc3586ef08cbd54f9cee9b57b5541443cc390649b9529bcae4ee70"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G_1.png",
+                      "bytes":  20454,
+                      "sha256":  "8c9198da20845d4d7d8dcfac69c664fc333be55ff8706152881b916729bd552d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G_2.png",
+                      "bytes":  29566,
+                      "sha256":  "fa29cc17c8a3281c4968bc35b8e39ddba380332b572d0df493de5d690369572d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G_3.png",
+                      "bytes":  29566,
+                      "sha256":  "fa29cc17c8a3281c4968bc35b8e39ddba380332b572d0df493de5d690369572d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G5_1.png",
+                      "bytes":  24697,
+                      "sha256":  "40bdd6eae1532084168dc579c5cae88abdf033554411ac300b30d27a2d7d8338"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G5_2.png",
+                      "bytes":  24697,
+                      "sha256":  "40bdd6eae1532084168dc579c5cae88abdf033554411ac300b30d27a2d7d8338"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G7_1.png",
+                      "bytes":  21148,
+                      "sha256":  "0ff2eae794b45fc19614ca4903920783e490341cdc12fbec5170aadd8b274bf5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G7_2.png",
+                      "bytes":  33032,
+                      "sha256":  "827e0d095d810ecf5930a8095afd6183bbcc6438e16e3b154554306c6c82e314"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G7sus4_1.png",
+                      "bytes":  30008,
+                      "sha256":  "7752d22368910c3dcfd841e9c7f8fbeabba14c4ee9a3ccbb843a12c9c91eab76"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/G7sus4_2.png",
+                      "bytes":  29840,
+                      "sha256":  "60395a6eaf274667103232705ea14ecf41afef526b269e4b849a1c1c4fece942"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gadd9_1.png",
+                      "bytes":  26248,
+                      "sha256":  "28cf0389282414f7c8eb43383f8f0dae51ac7ac7ab342922abfef056a13daad0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gadd9_2.png",
+                      "bytes":  26248,
+                      "sha256":  "28cf0389282414f7c8eb43383f8f0dae51ac7ac7ab342922abfef056a13daad0"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gaug_1.png",
+                      "bytes":  23030,
+                      "sha256":  "eeb403b9f3997b2f5e62f756d415aaa77e8a5bfbd82553371929bff183953e7e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gaug_2.png",
+                      "bytes":  23030,
+                      "sha256":  "eeb403b9f3997b2f5e62f756d415aaa77e8a5bfbd82553371929bff183953e7e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gb_1.png",
+                      "bytes":  30173,
+                      "sha256":  "3853d9ef29518a5c4c0292f932c0f3d6f2de67e5ddda3e0de022af2d8afb8288"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gb_2.png",
+                      "bytes":  27829,
+                      "sha256":  "db0474acecadbeb845ea8cb50f754b90f865032a2942ca93fcecd9632bc3ece8"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gbm_1.png",
+                      "bytes":  30910,
+                      "sha256":  "daead68b6c8d348eb0f3a0a48aa57843a338547be6184ec11ae999bf127ddc1f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gbm_2.png",
+                      "bytes":  28555,
+                      "sha256":  "360764d2e30ff4533e213245943e201213de161c74ad12106876c5ff5e420309"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gdim_1.png",
+                      "bytes":  30509,
+                      "sha256":  "3b326caf0e169b73d834cd144f97aae4b715f6c06962cd0b82b7c43b1d11be73"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gdim_2.png",
+                      "bytes":  30509,
+                      "sha256":  "3b326caf0e169b73d834cd144f97aae4b715f6c06962cd0b82b7c43b1d11be73"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gdim7_1.png",
+                      "bytes":  31160,
+                      "sha256":  "470be71d4c33afe6b92e257319acfa955a4e3e6f6e78197b18fb68c6ce296470"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gdim7_2.png",
+                      "bytes":  31160,
+                      "sha256":  "470be71d4c33afe6b92e257319acfa955a4e3e6f6e78197b18fb68c6ce296470"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gm_1.png",
+                      "bytes":  30369,
+                      "sha256":  "1bad46bfdec54f7374da54d20640fe654a73f91c6abf91b6094a48e0b4630f9c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gm_2.png",
+                      "bytes":  27966,
+                      "sha256":  "262f40e45936931bff8bf0afb5d39c39118a849d12c3b7ecac2b1b356870ef30"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gm_3.png",
+                      "bytes":  30369,
+                      "sha256":  "1bad46bfdec54f7374da54d20640fe654a73f91c6abf91b6094a48e0b4630f9c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gm7_1.png",
+                      "bytes":  32760,
+                      "sha256":  "cd69f2171623d2e03284a509dcef6ae005f920cd7d8a3c0757ae2ffcfd87cfa9"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gm7_2.png",
+                      "bytes":  30166,
+                      "sha256":  "47a124a4a9a12f1e5f31040a7c6ee331efd3318a7fb92c193c100e9fc4526181"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gmaj7_1.png",
+                      "bytes":  23310,
+                      "sha256":  "a9c2fc5ed4fffc065b4fa6f9883f7562208c877cecbfea6ba0c9ba167057b54e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gmaj7_2.png",
+                      "bytes":  32423,
+                      "sha256":  "ce81e3adfaff81c14add39e0d411aab54417e0d8a6ef0e1fcbee379cf005c505"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp_1.png",
+                      "bytes":  29200,
+                      "sha256":  "c230983b1b25169bded6dd1501b3afb292af05dc56ef4d727e27404e44cf76d1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp_2.png",
+                      "bytes":  26707,
+                      "sha256":  "9dd0a8a12d89f1335fbae2176f398bbf22be09481d7ca8cfdacc2da3806ccc26"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp_3.png",
+                      "bytes":  29200,
+                      "sha256":  "c230983b1b25169bded6dd1501b3afb292af05dc56ef4d727e27404e44cf76d1"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp5_1.png",
+                      "bytes":  26142,
+                      "sha256":  "0c8153aed070c1ed9a1ceb500115e6b4479ea84db60d250b6dc6211f1740e4e6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp5_2.png",
+                      "bytes":  26142,
+                      "sha256":  "0c8153aed070c1ed9a1ceb500115e6b4479ea84db60d250b6dc6211f1740e4e6"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp7_1.png",
+                      "bytes":  32538,
+                      "sha256":  "2c8f81f0c97e9aad91f457f022e2b838d03969aeaed6c05918a6b315d9ed885f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharp7_2.png",
+                      "bytes":  29843,
+                      "sha256":  "0307d15f22262acd195408301dbff969ecd3262b885f120d634c9c4eaaae5b85"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpaug_1.png",
+                      "bytes":  29048,
+                      "sha256":  "81d5c52c8ead22e0cf496b5c2f107a4da788e146022451c89e89a02da77a5db5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpaug_2.png",
+                      "bytes":  29048,
+                      "sha256":  "81d5c52c8ead22e0cf496b5c2f107a4da788e146022451c89e89a02da77a5db5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpdim_1.png",
+                      "bytes":  31017,
+                      "sha256":  "91da29365e91a3cf9e33cd034f70d5f6aa486b8401923096fa86adf1a0ee9cfa"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpdim_2.png",
+                      "bytes":  31017,
+                      "sha256":  "91da29365e91a3cf9e33cd034f70d5f6aa486b8401923096fa86adf1a0ee9cfa"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpm_1.png",
+                      "bytes":  29959,
+                      "sha256":  "9410cbceb4921f280a49a2b87f36bba6868483178c4fac33ea0cf70ba6a6d84c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpm_2.png",
+                      "bytes":  27436,
+                      "sha256":  "fec0438867021206a7d3041631b8cb8ba92628d4c8beda49c1b8c8578701a0f5"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpm_3.png",
+                      "bytes":  29959,
+                      "sha256":  "9410cbceb4921f280a49a2b87f36bba6868483178c4fac33ea0cf70ba6a6d84c"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpm7_1.png",
+                      "bytes":  32252,
+                      "sha256":  "039fcda7c6648ef349e853c0166e3b125a73cb6f4f98c182ef8da1ccf299df97"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpm7_2.png",
+                      "bytes":  29468,
+                      "sha256":  "e8f01b7c36cd51336284d4714a1af03571435f1a2ed392c1a10ca17ce1a8e01e"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpmaj7_1.png",
+                      "bytes":  29988,
+                      "sha256":  "33ab1e5626bdd8adea27d1a78f99606cbea68f501ece0d379e2fcc84041fd818"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpmaj7_2.png",
+                      "bytes":  31900,
+                      "sha256":  "71b6ee4dd9a51959fa0175ecc98823464956e558f990ed9221f411cee405ac8d"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpsus2_1.png",
+                      "bytes":  32632,
+                      "sha256":  "a0d76a960f1b51bcbc26adbb08d4c943a3e8ac934b0fcddb050dcc2febe28e9f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpsus2_2.png",
+                      "bytes":  30061,
+                      "sha256":  "22c015efa387bfe75a253c9595e1f4d716a570ae36fd75ad73669dd932951410"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpsus4_1.png",
+                      "bytes":  32319,
+                      "sha256":  "971d25545ea2a75e0a9f6d33993a603c2bd02a69f9992841b75bbc4aefc15429"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsharpsus4_2.png",
+                      "bytes":  29746,
+                      "sha256":  "a1a1227835f4e3b788f776963936317fcc7886b32b60ff8dada90b04f13bdc74"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsus2_1.png",
+                      "bytes":  33621,
+                      "sha256":  "073063be84b4236eef348e854fc9ce6aade0ebee24136c7d4cb7140624a783cf"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsus2_2.png",
+                      "bytes":  30703,
+                      "sha256":  "aad6b78e40fb99f4ec22863c2c8fa522c91a57dbc37792ebfcf876fdb9479b57"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsus4_1.png",
+                      "bytes":  29386,
+                      "sha256":  "fd371af4cfe7920f1b6cffc877016d8405023a5c38a21fa01455b23a1ccb7156"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/Gsus4_2.png",
+                      "bytes":  30341,
+                      "sha256":  "2b65e5dd2bbd5b678e8b36d69c0a1dc44e3ba169b6eafa6e2a83cb90527a033f"
+                  },
+                  {
+                      "path":  "RAG/documents/test_chord_diagrams/test_results.json",
+                      "bytes":  64186,
+                      "sha256":  "db4d018bbc9d0067e2c347f8294e345bea2d7a3efaea218c5f113c891fcdec37"
+                  },
+                  {
+                      "path":  "RAG/documents/web_scraper.py",
+                      "bytes":  59865,
+                      "sha256":  "7e436196f85a480b62db36b749a54ac0a7a76b9b9531340ed5f2a1bb6dabcc35"
+                  },
+                  {
+                      "path":  "RAG/embed_enhanced_music_data.py",
+                      "bytes":  15308,
+                      "sha256":  "f6b4030925d4165b1112cc5580b39b8faefd4951e74b40870042ea88006657c8"
+                  },
+                  {
+                      "path":  "RAG/embed_music_rag_data.py",
+                      "bytes":  13633,
+                      "sha256":  "4f1e6d2ea25e517e7d90738a762588ee193e8899b291d96a65b329452cd5a5b8"
+                  },
+                  {
+                      "path":  "RAG/ENHANCED_RAG_SUMMARY.md",
+                      "bytes":  3321,
+                      "sha256":  "40d137192eed633e6981eee8194b839d9c1393684d1f4d2f64c3613d53115e20"
+                  },
+                  {
+                      "path":  "RAG/parse_alphatex.js",
+                      "bytes":  4445,
+                      "sha256":  "4ac849585463b5f5d3a8422b539601d8fd82e775d69d8d01d244b587b29dc0e7"
+                  },
+                  {
+                      "path":  "RAG/README.md",
+                      "bytes":  1528,
+                      "sha256":  "67a162d49e5d6cd54886615ddb33d7bd7d02e8db2399b33f20dd6d45940015ff"
+                  },
+                  {
+                      "path":  "RAG/samples/alphatab_sample.atx",
+                      "bytes":  102,
+                      "sha256":  "b9b10ff36d8d6ffc6935a60a952514936235442c6610bb85bea7b515b12a2136"
+                  },
+                  {
+                      "path":  "RAG/samples/sample.gp3",
+                      "bytes":  7685,
+                      "sha256":  "98c7e6e0de435ba94f0b0c9b44f3218b8bd2e7df698d645c756eb34aa48edefe"
+                  },
+                  {
+                      "path":  "RAG/samples/sample.mid",
+                      "bytes":  31365,
+                      "sha256":  "f6d44c16fe2896e98e176a8bf7b8f4d6e7c687db628bbfd123aa383dc720fb0f"
+                  },
+                  {
+                      "path":  "RAG/samples/sample_chords.txt",
+                      "bytes":  140,
+                      "sha256":  "ba784142b63b1552c724ee3f3d7feace61009b2b4d8518d396df1f26a9476d31"
+                  },
+                  {
+                      "path":  "RAG/samples/tab1.txt",
+                      "bytes":  300,
+                      "sha256":  "3630bd96fcdbe2c948e94ca4fad0bb6c646c8646a01788b69ea5cda358c56aad"
+                  },
+                  {
+                      "path":  "RAG/scraped_data.json",
+                      "bytes":  167454,
+                      "sha256":  "a04d03c24d1c07dfda2803216c08e72da9714ebb52cdbb2b6f9fed085ac13ea1"
+                  },
+                  {
+                      "path":  "RAG/web_scraper.py",
+                      "bytes":  1442,
+                      "sha256":  "e167c32844c9c470df61fd12afc45ea8a5e42b7256403c254fee2514889e68e4"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  34820,
+                      "sha256":  "e15157b07041fb8d6da34662386971cce6d09eaae364e5e3479efea4f25e033f"
+                  },
+                  {
+                      "path":  "requirements.txt",
+                      "bytes":  551,
+                      "sha256":  "f4092346030790aec7985c1e7246e29422660de10e890735c65941299b067cfb"
+                  },
+                  {
+                      "path":  "run_pipeline.py",
+                      "bytes":  4824,
+                      "sha256":  "ad4f5c88a7855e65b929c348e5236920832e04d691da58c464a94be4e5deb262"
+                  },
+                  {
+                      "path":  "SESSION_HANDOFF.md",
+                      "bytes":  26502,
+                      "sha256":  "119d22e0cc3d2164419fa5e196397b8b59c678e11bdcec9243f7aa191a02cb40"
+                  },
+                  {
+                      "path":  "setup_moshika.py",
+                      "bytes":  2380,
+                      "sha256":  "326d2c60513a918d873c7dd2753b4acb4cef217bb51c686ef46699316f2117cf"
+                  },
+                  {
+                      "path":  "src/__init__.py",
+                      "bytes":  0,
+                      "sha256":  "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+                  },
+                  {
+                      "path":  "src/basic_pitch_runtime.py",
+                      "bytes":  8253,
+                      "sha256":  "6402065b9d84a3afc4b4e9a9fb0e1adc5eef03640270180db29284c274851ee0"
+                  },
+                  {
+                      "path":  "src/beat_grid_system.py",
+                      "bytes":  19159,
+                      "sha256":  "6718ea8ea1bd33a9aa0e90e37d747b4ebe3e69d7a5073d1a5550bff5b35ee331"
+                  },
+                  {
+                      "path":  "src/chord_detector.py",
+                      "bytes":  102117,
+                      "sha256":  "9aa3d0c8830f9e13e1adf6a4d997ded294d4c316a3ab5a7c3cca3eefca9f61b6"
+                  },
+                  {
+                      "path":  "src/chord_onset_detector.py",
+                      "bytes":  15411,
+                      "sha256":  "f86e5ab95361f00f00d59ad79eee27ab9f09c3cb1486e631007513d6368389fa"
+                  },
+                  {
+                      "path":  "src/gp_dataset_integration.py",
+                      "bytes":  19820,
+                      "sha256":  "c89995a64df0179c0164e82ab9cb989075c4e7db5a520f62f862f7443472da2c"
+                  },
+                  {
+                      "path":  "src/guitar_tab_generator.py",
+                      "bytes":  22860,
+                      "sha256":  "3f4a45c71ddbf3ea80ab79c4369a3a87203f9c6f990af23c93122cc5d2f4a843"
+                  },
+                  {
+                      "path":  "src/hybrid_chord_detector.py",
+                      "bytes":  19768,
+                      "sha256":  "8ca0ae670d45d1e0b50cd1770a6237060dd74a5dea1a0125a6ad5821d437ef3a"
+                  },
+                  {
+                      "path":  "src/midi_converter.py",
+                      "bytes":  4675,
+                      "sha256":  "871c56c967127082fdc3122300120363eda3764bac291a486baba56bc487f6a7"
+                  },
+                  {
+                      "path":  "src/ml_chord_trainer.py",
+                      "bytes":  19114,
+                      "sha256":  "22422eb0793049de2e1ae1230e94fff0e74ca0e8cd106be676f2c76171a2d73e"
+                  },
+                  {
+                      "path":  "src/musical_intelligence.py",
+                      "bytes":  16837,
+                      "sha256":  "ef7676917e62eb2ace16cbf36033ea8248ad60fdefddad78f7c4882a92cd6fdb"
+                  },
+                  {
+                      "path":  "src/pipeline.py",
+                      "bytes":  24004,
+                      "sha256":  "4b5929a70165957a13c24d8249c50f6f79c125b7ec49fb81fa0100691fa65914"
+                  },
+                  {
+                      "path":  "src/training_data_collector.py",
+                      "bytes":  20714,
+                      "sha256":  "feddf1e09fbfc315050d31d62488c544c6bb3348b50d0501d6ca722bdd2d22cf"
+                  },
+                  {
+                      "path":  "src/viterbi_smoothing.py",
+                      "bytes":  11867,
+                      "sha256":  "7ac5d1e43375cef71058dd0ff71f5cb75c1151c26a8e62005129906e51ea099c"
+                  },
+                  {
+                      "path":  "STATUS.md",
+                      "bytes":  18052,
+                      "sha256":  "a802a53e80c4b3122ca8a0f579e77ab5fc9cbb9e4114936c155ef8351b006087"
+                  },
+                  {
+                      "path":  "streamlit_app.py",
+                      "bytes":  12066,
+                      "sha256":  "fc7695077495e943204fb61201624037b488fe9bf20045df17b898db16a62dd6"
+                  },
+                  {
+                      "path":  "test_client.html",
+                      "bytes":  1808,
+                      "sha256":  "bd3e84c9eb2d254a40c199b803827f737232b0bacdfa1f4856b8190e91e5f03f"
+                  },
+                  {
+                      "path":  "test_moshi.py",
+                      "bytes":  262,
+                      "sha256":  "2774fd0d143891efbe9e851045f7f9e23f240f68cffedfeb3d97f2e17f35feea"
+                  },
+                  {
+                      "path":  "test_tts_api.py",
+                      "bytes":  3182,
+                      "sha256":  "e65365153fcea007cce4d12fabc93bb40c4575c85aea5a6b4e2c5ddb7e5c16d8"
+                  },
+                  {
+                      "path":  "tests/__init__.py",
+                      "bytes":  34,
+                      "sha256":  "57aa381bef95f31566e4b2657b2b95d064f380667e1eb1c9eeab70d6bac2afa3"
+                  },
+                  {
+                      "path":  "tests/audio/piano.wav",
+                      "bytes":  132344,
+                      "sha256":  "f7e1fe5fa681ef80c7ca1d2c58d1bb930d46e111fc0bf5f746a4b409f898dfc2"
+                  },
+                  {
+                      "path":  "tests/audio/pop.wav",
+                      "bytes":  132344,
+                      "sha256":  "a4850aea4c868ab9a3cba1be9a14f9965d74246d28e88b0cfbf15ee2d410310c"
+                  },
+                  {
+                      "path":  "tests/audio/rock.wav",
+                      "bytes":  132344,
+                      "sha256":  "8dcaa0849d27ee32df23de57c47e8034bf3956301dce73f6e96e4c30834cb54d"
+                  },
+                  {
+                      "path":  "tests/midi/basic_pitch_transcription.mid",
+                      "bytes":  634,
+                      "sha256":  "92cd9572a285673291826db3577b4e756c4d7499712d1e3ce71a34aa361df1b0"
+                  },
+                  {
+                      "path":  "tests/test_advanced_scorer_forensics.py",
+                      "bytes":  2549,
+                      "sha256":  "b4c6394e80c2a5315b828899577ea2c2a44bf0df9c911398376c510a8ef994f3"
+                  },
+                  {
+                      "path":  "tests/test_basic_pitch_runtime.py",
+                      "bytes":  2881,
+                      "sha256":  "a67aa51b38d88ca760f189f7e4fa98e7a909df9b1a9bd458fa758a232c54b062"
+                  },
+                  {
+                      "path":  "tests/test_detector_jaccard_experiment.py",
+                      "bytes":  3051,
+                      "sha256":  "f121917ec59dd45dd8d22a17fb483daf80a050789b44da8be9193d7a05c7177c"
+                  },
+                  {
+                      "path":  "tests/test_evidence_grounded_tutor.py",
+                      "bytes":  13298,
+                      "sha256":  "0b58f38875edb273a12bbca25ec72601d8477f3877fd01fc047a5d2bfcdb19b6"
+                  },
+                  {
+                      "path":  "tests/test_match_formulations.py",
+                      "bytes":  2632,
+                      "sha256":  "c402d628d825382a0361c0a0950790974f48b7e74f82e7f59e23cb21d8d90679"
+                  },
+                  {
+                      "path":  "tests/test_openai_client.py",
+                      "bytes":  1089,
+                      "sha256":  "6f70548a93d36b4e180dd58749a6470bdeee2627b9960db6462805109b4e2fff"
+                  },
+                  {
+                      "path":  "tests/test_oracle_classifier.py",
+                      "bytes":  2345,
+                      "sha256":  "9b5ee5632613cd9d08171dbdc85db41b42d2aadaa6e324155690cf127a523ee7"
+                  },
+                  {
+                      "path":  "tests/test11.mid",
+                      "bytes":  735,
+                      "sha256":  "7a5484bef038290f1e0f595cc832aa842721e8f7e22b27eeb0dc5f775f696412"
+                  },
+                  {
+                      "path":  "tools/create_v3_archive.ps1",
+                      "bytes":  4644,
+                      "sha256":  "8b7b0f4e7c04223f94e142df6e074c071cf2eddae6512c01ec152cf7e775f13f"
+                  },
+                  {
+                      "path":  "tools/verify_v3_archive.ps1",
+                      "bytes":  3099,
+                      "sha256":  "294da0b26e91660960d479d12bf23f6fd8736b26e3f679c1e98c3afc427b3a51"
+                  },
+                  {
+                      "path":  "training_data/all_parsed_gp_data.json",
+                      "bytes":  463989,
+                      "sha256":  "8d9ae41b8333f24becbb91dfde8fbc5fc228b87f8316c1928dc8f508a8884f29"
+                  },
+                  {
+                      "path":  "training_data/chord_training_database.json",
+                      "bytes":  18831,
+                      "sha256":  "0bb9cceec84838afbdab4ab9fbd9cc8d70f2525f0d29aef0212a504e9da3ac68"
+                  },
+                  {
+                      "path":  "training_data/gp_extracted_samples.json",
+                      "bytes":  2367,
+                      "sha256":  "ce00e06eb5fe0d736ac42a9007323c4b72e6734afee5b9207b6b2b63452b7970"
+                  },
+                  {
+                      "path":  "training_data/gp_training_samples.json",
+                      "bytes":  2,
+                      "sha256":  "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+                  },
+                  {
+                      "path":  "tts_server.py",
+                      "bytes":  2584,
+                      "sha256":  "da7f93975aead6d7950b9495ee9349d9ca078a8a120b79e65cc1bcde3adbb53b"
+                  },
+                  {
+                      "path":  "tutor_evidence.py",
+                      "bytes":  22440,
+                      "sha256":  "93e542cb681349474a323ee9418d06fb98e682120526f44bb4044ed0d573a9f0"
+                  },
+                  {
+                      "path":  "tutor_ws_relay.py",
+                      "bytes":  49696,
+                      "sha256":  "e37fe0a7f24006b6a15a2cffea56a4d93ab0cf9899a5a0e9d2d5586a6df61427"
+                  },
+                  {
+                      "path":  "unified_rag_system.py",
+                      "bytes":  33739,
+                      "sha256":  "30c8b89a34dfc83ea97bde8e0c194136e47087a1401295dc33b0c4d45f529690"
+                  },
+                  {
+                      "path":  "utils/__init__.py",
+                      "bytes":  47,
+                      "sha256":  "6c82d3b26840431020ed0d7414caed3ccb6b3f8dec16222d18cf6c8e440da414"
+                  },
+                  {
+                      "path":  "utils/log_silencer.py",
+                      "bytes":  3174,
+                      "sha256":  "22052795435d438411af5e11f2d04e6af013ae598d9fc0c6c2f6403e334a4c00"
+                  },
+                  {
+                      "path":  "utils/logging_config.py",
+                      "bytes":  2213,
+                      "sha256":  "12042d5f7a8e23e7d95347c3c543725871b1ac0e38f36a2488fd1eb6c05b1784"
+                  },
+                  {
+                      "path":  "utils/markdown_to_ssml.py",
+                      "bytes":  743,
+                      "sha256":  "83cdfcca368ef2640d52bb14132cd7dce0040d042857b30cde9600240f17aef5"
+                  },
+                  {
+                      "path":  "utils/openai_client.py",
+                      "bytes":  1574,
+                      "sha256":  "1dc32e416760a7c0e369e1d67f7b98ed6ec38f764515932a634fea9a6618e4c8"
+                  },
+                  {
+                      "path":  "utils/tts_openai.py",
+                      "bytes":  1475,
+                      "sha256":  "27735265ff644dbb7549fdb81aed6eb68e3771f98c1d32fe7cc26eddafc41c61"
+                  },
+                  {
+                      "path":  "VERSION",
+                      "bytes":  24,
+                      "sha256":  "365522bb9cfa6f12be6ba5628b192df7a15397b7a7f90b31cd2c8ab476f1e2fa"
+                  }
+              ]
+}

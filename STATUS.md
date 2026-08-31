@@ -1,4 +1,4 @@
-# HorizonJam Current Status
+# HorizonJam v3 Current Status
 
 Evidence labels:
 
@@ -9,7 +9,7 @@ Evidence labels:
 
 ## Current Milestone
 
-`VERIFIED` Phase 2 Evidence-Grounded Tutor v1: structured performance evidence, bounded retrieved text with provenance, deterministic context assembly, pre-delivery verification, and request-local debug traces are integrated into the active WebSocket tutor path.
+`VERIFIED` HorizonJam v3 research baseline: Phase 2 Evidence-Grounded Tutor v1, the sanctioned normalized detector boundary, opt-in `rule_jaccard`, and Single-WAV Analysis Performance Gate v1 are preserved as the frozen baseline before multi-source harmonic-detector research.
 
 ## Verified Working
 

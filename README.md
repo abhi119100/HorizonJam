@@ -1,4 +1,30 @@
-# HorizonJam v2.0
+# HorizonJam v3.0 Research Baseline
+
+HorizonJam v3 preserves the evidence-grounded tutor, sanctioned detector
+boundary, opt-in Jaccard research detector, and measured BasicPitch runtime
+gate developed during the v2 modernization work. The v2 plan and the original
+v1 documentation remain below as historical context; they have not been
+deleted or rewritten.
+
+The next research line is a multi-source harmonic-detection tournament. It is
+research-only until external technologies pass licensing, feasibility,
+benchmark, complementarity, product-suitability, and activation gates.
+
+**An open architecture for turning a musician's recording into chord analysis, grounded instruction, and spoken feedback.**
+
+> Project status: research prototype and local web application. HorizonJam is not yet ready for a public production deployment or an App Store release. This document tracks the work required to publish the architecture, write the paper, open-source the repository, and release the product.
+
+## The Idea
+
+HorizonJam is an AI-assisted music tutor. A musician records or uploads a short performance, asks a question, and receives:
+
+1. A transcription-oriented analysis of the audio.
+2. A timed chord progression and estimated musical key.
+3. Guitar chord shapes and other structured musical context.
+4. A retrieval-grounded tutoring response tailored to the performance.
+5. Optional spoken feedback through text-to-speech.
+
+The goal is not merely to label chords. HorizonJam connects signal processing, symbolic music analysis, retrieval-augmented generation (RAG), and a conversational interface into one inspectable pipeline. The architecture is deliberately modular so detectors, retrieval systems, language models, and speech engines can be evaluated or replaced independently.
 
 ## Why v2.0
 
