@@ -1,0 +1,4 @@
+interface:
+  display_name: "Frontend E2E"
+  short_description: "Verify recording upload streaming and TTS"
+  default_prompt: "Use $frontend-e2e to verify the HorizonJam browser workflow end to end."

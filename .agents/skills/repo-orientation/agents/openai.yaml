@@ -1,0 +1,4 @@
+interface:
+  display_name: "Repository Orientation"
+  short_description: "Find active HorizonJam paths and current evidence"
+  default_prompt: "Use $repo-orientation to identify the active path and relevant context for this task."

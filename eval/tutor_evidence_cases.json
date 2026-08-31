@@ -1,0 +1,151 @@
+{
+  "schema_version": "1.0",
+  "cases": [
+    {
+      "id": "grounded_theory",
+      "description": "High-confidence progression with relevant theory retrieval.",
+      "question": "Why does this G to C movement sound stable?",
+      "key": "G Major",
+      "events": [[0.0, 1.5, "G", 0.93], [1.5, 3.0, "C", 0.91]],
+      "warnings": [],
+      "retrieval": [{"id": "theory-1", "rank": 1, "source": "voice-leading.md", "score": 0.86, "content": "G and C share the note G. Common tones can make harmonic movement sound connected."}],
+      "mock_response": "G moving to C sounds connected because the shared G can remain stable while the other voices move.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "available", "selected_sources": ["voice-leading.md"], "uncertainty": false}
+    },
+    {
+      "id": "low_confidence_chord",
+      "description": "Low-confidence chord identification must remain conditional.",
+      "question": "What chord am I playing?",
+      "key": null,
+      "events": [[0.0, 1.0, "C", 0.25]],
+      "warnings": [],
+      "retrieval": [],
+      "mock_response": "You are playing C major.",
+      "expect": {"intent": "chord_identification", "retrieval_status": "no_results", "uncertainty": true, "repair": "added_uncertainty_caveat"}
+    },
+    {
+      "id": "unknown_confidence",
+      "description": "Missing confidence remains unknown rather than becoming high confidence.",
+      "question": "Why does this chord sound tense?",
+      "key": "A Minor",
+      "events": [[0.0, 2.0, "E7", null]],
+      "warnings": [],
+      "retrieval": [],
+      "mock_response": "E7 creates tension toward A minor.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "no_results", "uncertainty": true, "repair": "added_uncertainty_caveat"}
+    },
+    {
+      "id": "detector_warning",
+      "description": "Normalizer warning reaches assessment and response verification.",
+      "question": "Explain this progression.",
+      "key": "C Major",
+      "events": [[0.0, 1.0, "C", 0.88], [1.0, 2.0, "G", 0.87]],
+      "warnings": ["clamped 2 overlapping intervals"],
+      "retrieval": [],
+      "mock_response": "This is a C to G progression.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "no_results", "uncertainty": true, "repair": "added_uncertainty_caveat"}
+    },
+    {
+      "id": "dominant_seventh",
+      "description": "Dominant seventh evidence and knowledge remain explicit.",
+      "question": "What makes G7 want to resolve?",
+      "key": "C Major",
+      "events": [[0.0, 1.5, "G7", 0.78], [1.5, 3.0, "C", 0.90]],
+      "warnings": [],
+      "retrieval": [{"id": "dom7-1", "rank": 1, "source": "dominant-function.md", "score": 0.83, "content": "The tritone in a dominant seventh chord resolves inward to stable chord tones of the tonic."}],
+      "mock_response": "G7 likely pulls toward C because its tritone resolves into stable tones of the tonic.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "available", "selected_sources": ["dominant-function.md"], "uncertainty": false}
+    },
+    {
+      "id": "transposed_progression",
+      "description": "Transposed progression keeps event order and key.",
+      "question": "How does this progression function?",
+      "key": "F Major",
+      "events": [[0.0, 1.0, "F", 0.91], [1.0, 2.0, "Bb", 0.89], [2.0, 3.0, "C", 0.92]],
+      "warnings": [],
+      "retrieval": [{"id": "function-1", "rank": 1, "source": "functional-harmony.md", "score": 0.79, "content": "In a major key, I-IV-V establishes tonic, predominant, and dominant functions."}],
+      "mock_response": "In F major, F-Bb-C can outline tonic, predominant, and dominant functions.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "available", "selected_sources": ["functional-harmony.md"], "uncertainty": false}
+    },
+    {
+      "id": "guitar_technique",
+      "description": "Technique question routes retrieval toward guitar mechanics.",
+      "question": "How can I make these chord transitions smoother?",
+      "key": "G Major",
+      "events": [[0.0, 1.0, "G", 0.89], [1.0, 2.0, "C", 0.86]],
+      "warnings": [],
+      "retrieval": [{"id": "tech-1", "rank": 1, "source": "guitar-technique.md", "score": 0.84, "content": "For smoother guitar chord transitions, identify anchor fingers and move the remaining fingers together."}],
+      "mock_response": "Use an anchor finger where possible, then move the remaining fingers as one coordinated shape.",
+      "expect": {"intent": "guitar_technique", "retrieval_status": "available", "selected_sources": ["guitar-technique.md"], "uncertainty": false}
+    },
+    {
+      "id": "retrieval_required",
+      "description": "Question requires selected external knowledge content.",
+      "question": "What is voice leading and how does it apply here?",
+      "key": "G Major",
+      "events": [[0.0, 1.0, "G", 0.90], [1.0, 2.0, "C", 0.90]],
+      "warnings": [],
+      "retrieval": [{"id": "voice-2", "rank": 1, "source": "voice-leading.md", "score": 0.88, "content": "Voice leading describes how individual notes move between successive chords, favoring common tones and small intervals."}],
+      "mock_response": "Voice leading tracks each note between chords; here, keeping G while nearby tones move can connect the shapes.",
+      "expect": {"intent": "general_tutoring", "retrieval_status": "available", "selected_sources": ["voice-leading.md"], "uncertainty": false}
+    },
+    {
+      "id": "retrieval_pollution",
+      "description": "Irrelevant high-score candidate must not dominate selected evidence.",
+      "question": "How should I practice the G to C guitar change?",
+      "key": "G Major",
+      "events": [[0.0, 1.0, "G", 0.90], [1.0, 2.0, "C", 0.88]],
+      "warnings": [],
+      "retrieval": [
+        {"id": "noise-1", "rank": 1, "source": "cooking.txt", "score": 0.96, "content": "Tomato soup should be stored in a sealed container after cooling."},
+        {"id": "practice-1", "rank": 2, "source": "guitar-practice.md", "score": 0.72, "content": "Practice the G to C guitar change slowly, keeping any anchor finger close to the strings."}
+      ],
+      "mock_response": "Practice the G to C change slowly and keep useful anchor fingers close to the strings.",
+      "expect": {"intent": "guitar_technique", "retrieval_status": "available", "selected_sources": ["guitar-practice.md"], "rejected_sources": ["cooking.txt"], "uncertainty": false}
+    },
+    {
+      "id": "retrieval_miss",
+      "description": "No retrieval remains explicit and false grounding is removed.",
+      "question": "Why does this progression work?",
+      "key": "G Major",
+      "events": [[0.0, 1.0, "G", 0.90], [1.0, 2.0, "C", 0.90]],
+      "warnings": [],
+      "retrieval": [],
+      "mock_response": "According to the retrieved source, this is stable. You can still practice by listening to the shared tones.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "no_results", "uncertainty": false, "repair": "removed_false_retrieval_claim"}
+    },
+    {
+      "id": "user_contradiction",
+      "description": "User belief remains distinct from detector evidence.",
+      "question": "I know I am playing D major. Why does it sound wrong?",
+      "key": "G Major",
+      "events": [[0.0, 1.0, "G", 0.72], [1.0, 2.0, "C", 0.70]],
+      "warnings": [],
+      "retrieval": [],
+      "mock_response": "The detector suggests G to C, while your D-major expectation may indicate a tuning, fingering, or recognition mismatch.",
+      "expect": {"intent": "harmonic_function", "retrieval_status": "no_results", "uncertainty": false}
+    },
+    {
+      "id": "unsupported_request",
+      "description": "Tutor states when requested evidence is absent.",
+      "question": "What rhythm was the drummer playing?",
+      "key": "G Major",
+      "events": [[0.0, 1.0, "G", 0.87], [1.0, 2.0, "C", 0.86]],
+      "warnings": [],
+      "retrieval": [],
+      "mock_response": "The available evidence contains chord timing but no drum transcription, so I cannot identify the drummer's rhythm reliably.",
+      "expect": {"intent": "general_tutoring", "retrieval_status": "no_results", "uncertainty": false, "final_contains": "cannot identify"}
+    },
+    {
+      "id": "ambiguous_progression",
+      "description": "Medium-confidence relative-key evidence stays conditional.",
+      "question": "Is this C major or A minor?",
+      "key": "C Major",
+      "events": [[0.0, 1.0, "Am", 0.58], [1.0, 2.0, "F", 0.60], [2.0, 3.0, "C", 0.59], [3.0, 4.0, "G", 0.57]],
+      "warnings": ["relative-key ambiguity is not represented by the key estimator"],
+      "retrieval": [{"id": "relative-1", "rank": 1, "source": "relative-keys.md", "score": 0.81, "content": "Relative major and minor keys share the same key signature and many of the same chords; tonal center depends on emphasis and resolution."}],
+      "mock_response": "This may be heard in either relative key; listen for whether phrases settle on C or A minor before making a firm claim.",
+      "expect": {"intent": "general_tutoring", "retrieval_status": "available", "selected_sources": ["relative-keys.md"], "uncertainty": true}
+    }
+  ]
+}

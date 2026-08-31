@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Review"
+  short_description: "Audit HorizonJam public trust boundaries"
+  default_prompt: "Use $security-review to audit HorizonJam uploads paths secrets APIs and audio retention."

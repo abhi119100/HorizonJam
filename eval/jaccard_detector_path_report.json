@@ -1,0 +1,2835 @@
+{
+  "changed_variable": "simple classifier versus advanced scorer with Jaccard pitch-set match",
+  "command": "python eval/evaluate_jaccard_detector_path.py",
+  "dataset": {
+    "count": 40,
+    "source": "eval/synth_manifest.json",
+    "transcription": "paired synthetic MIDI injected at detection._wav_to_midi"
+  },
+  "decision_gate": {
+    "criteria": {
+      "activation_allowed": false,
+      "all_files_complete": true,
+      "bounded_regression_pass": true,
+      "root_majmin_mirex_regression_at_most": 0.02,
+      "sevenths_improves": true
+    },
+    "metric_deltas": {
+      "majmin": 0.1399999999999999,
+      "mirex": 0.03875000000000017,
+      "root": 0.05666666666666664,
+      "sevenths": 0.12541666666666657
+    },
+    "outcome": "A. ADVANCE_TO_REAL_AUDIO",
+    "reason": "Jaccard improves seventh scoring without a material post-transcription regression."
+  },
+  "evidence_level": "L2 harmony / post-transcription production detector path",
+  "frozen_controls": [
+    "MIDI fixtures and Harte labels",
+    "segmentation and windowing",
+    "bass and E-major preliminary key prior",
+    "candidate templates and non-match score terms",
+    "event grouping, smoothing, hybrid adapter, and normalization"
+  ],
+  "limitations": [
+    "BasicPitch is bypassed, so this does not measure L0/L1 or audio-recognition accuracy.",
+    "Synthetic MIDI and sine fixtures do not represent real musicians.",
+    "Diminished templates remain absent; confidence remains uncalibrated.",
+    "A successful gate advances the candidate to real-audio validation only."
+  ],
+  "per_song": {
+    "hybrid": {
+      "I-IV-V-I_A#_major": {
+        "confusions": [
+          [
+            "A#:maj->D:maj",
+            3.5999999999999996
+          ],
+          [
+            "D#:maj->D:maj",
+            1.2000000000000002
+          ],
+          [
+            "F:maj->D:min7",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.1499999999999999,
+          "overseg": 0.7499999999999999,
+          "root": 0.0,
+          "seg": 0.7,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_A_major": {
+        "confusions": [
+          [
+            "D:maj->F#:min7",
+            1.2000000000000002
+          ],
+          [
+            "E:maj->C#:min7",
+            1.1999999999999993
+          ],
+          [
+            "E:maj->B:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.6999999999999998,
+          "overseg": 0.7,
+          "root": 0.39999999999999997,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.39999999999999997,
+          "thirds_inv": 0.39999999999999997,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_B_major": {
+        "confusions": [
+          [
+            "E:maj->B:sus4",
+            1.2000000000000002
+          ],
+          [
+            "F#:maj->B:sus2",
+            1.1999999999999993
+          ],
+          [
+            "F#:maj->C#:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.49999999999999994,
+          "overseg": 0.7,
+          "root": 0.5,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.5,
+          "thirds_inv": 0.5,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_C#_major": {
+        "confusions": [
+          [
+            "C#:maj->F:maj",
+            3.1999999999999997
+          ],
+          [
+            "G#:maj->C:maj",
+            1.1999999999999993
+          ],
+          [
+            "G#:maj->F#:maj",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.25,
+          "majmin_inv": 0.25,
+          "mirex": 0.25,
+          "overseg": 0.7999999999999998,
+          "root": 0.25,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.25,
+          "sevenths_inv": 0.25,
+          "tetrads": 0.25,
+          "tetrads_inv": 0.25,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.25,
+          "triads_inv": 0.25,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_C_major": {
+        "confusions": [
+          [
+            "F:maj->A:min7",
+            1.2000000000000002
+          ],
+          [
+            "G:maj->E:min7",
+            1.1999999999999993
+          ],
+          [
+            "G:maj->D:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.6999999999999998,
+          "overseg": 0.7,
+          "root": 0.39999999999999997,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.39999999999999997,
+          "thirds_inv": 0.39999999999999997,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_D#_major": {
+        "confusions": [
+          [
+            "D#:maj->G:maj",
+            3.1999999999999997
+          ],
+          [
+            "G#:maj->C:maj",
+            2.0
+          ],
+          [
+            "A#:maj->D:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.7999999999999998,
+          "root": 0.0,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_D_major": {
+        "confusions": [
+          [
+            "G:maj->B:min7",
+            1.2000000000000002
+          ],
+          [
+            "A:maj->F#:min7",
+            1.1999999999999993
+          ],
+          [
+            "A:maj->E:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.6999999999999998,
+          "overseg": 0.7,
+          "root": 0.39999999999999997,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.39999999999999997,
+          "thirds_inv": 0.39999999999999997,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_E_major": {
+        "confusions": [
+          [
+            "A:maj->C#:min7",
+            1.2000000000000002
+          ],
+          [
+            "B:maj->B:sus4",
+            1.1999999999999993
+          ],
+          [
+            "B:maj->F#:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.5499999999999999,
+          "overseg": 0.7,
+          "root": 0.5499999999999998,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.5499999999999998,
+          "thirds_inv": 0.5499999999999998,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_F#_major": {
+        "confusions": [
+          [
+            "B:maj->B:sus2",
+            2.0
+          ],
+          [
+            "C#:maj->F#:maj",
+            1.1999999999999993
+          ],
+          [
+            "C#:maj->B:sus2",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.45,
+          "majmin_inv": 0.45,
+          "mirex": 0.45,
+          "overseg": 0.8499999999999999,
+          "root": 0.7,
+          "seg": 0.7,
+          "sevenths": 0.45,
+          "sevenths_inv": 0.45,
+          "tetrads": 0.45,
+          "tetrads_inv": 0.45,
+          "thirds": 0.7,
+          "thirds_inv": 0.7,
+          "triads": 0.45,
+          "triads_inv": 0.45,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_F_major": {
+        "confusions": [
+          [
+            "A#:maj->D:min7",
+            1.2000000000000002
+          ],
+          [
+            "C:maj->A:min7",
+            1.1999999999999993
+          ],
+          [
+            "C:maj->G:sus4",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.5999999999999999,
+          "overseg": 0.7,
+          "root": 0.39999999999999997,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.39999999999999997,
+          "thirds_inv": 0.39999999999999997,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_G#_major": {
+        "confusions": [
+          [
+            "G#:maj->C:maj",
+            4.0
+          ],
+          [
+            "C#:maj->C:maj",
+            1.2000000000000002
+          ],
+          [
+            "D#:maj->C:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.7999999999999999,
+          "root": 0.0,
+          "seg": 0.6000000000000001,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.6000000000000001
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_G_major": {
+        "confusions": [
+          [
+            "C:maj->E:min7",
+            1.2000000000000002
+          ],
+          [
+            "D:maj->B:min7",
+            1.1999999999999993
+          ],
+          [
+            "D:maj->A:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.6999999999999998,
+          "overseg": 0.7,
+          "root": 0.39999999999999997,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.39999999999999997,
+          "thirds_inv": 0.39999999999999997,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "blues_A_major": {
+        "confusions": [],
+        "events_count": 10,
+        "scores": {
+          "majmin": 0.6666666666666666,
+          "majmin_inv": 0.6666666666666666,
+          "mirex": 0.8666666666666663,
+          "overseg": 0.7666666666666666,
+          "root": 0.6833333333333331,
+          "seg": 0.7666666666666666,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.6666666666666666,
+          "thirds_inv": 0.6666666666666666,
+          "triads": 0.6666666666666666,
+          "triads_inv": 0.6666666666666666,
+          "underseg": 0.9000000000000004
+        },
+        "warnings_count": 2
+      },
+      "blues_C_major": {
+        "confusions": [],
+        "events_count": 10,
+        "scores": {
+          "majmin": 0.6666666666666666,
+          "majmin_inv": 0.6666666666666666,
+          "mirex": 0.8666666666666663,
+          "overseg": 0.7666666666666666,
+          "root": 0.6666666666666666,
+          "seg": 0.7666666666666666,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.6666666666666666,
+          "thirds_inv": 0.6666666666666666,
+          "triads": 0.6666666666666666,
+          "triads_inv": 0.6666666666666666,
+          "underseg": 0.9000000000000004
+        },
+        "warnings_count": 2
+      },
+      "blues_E_major": {
+        "confusions": [],
+        "events_count": 10,
+        "scores": {
+          "majmin": 0.6666666666666666,
+          "majmin_inv": 0.6666666666666666,
+          "mirex": 0.8666666666666663,
+          "overseg": 0.7666666666666666,
+          "root": 0.8166666666666663,
+          "seg": 0.7666666666666666,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.6666666666666666,
+          "thirds_inv": 0.6666666666666666,
+          "triads": 0.6666666666666666,
+          "triads_inv": 0.6666666666666666,
+          "underseg": 0.9000000000000004
+        },
+        "warnings_count": 2
+      },
+      "blues_G_major": {
+        "confusions": [],
+        "events_count": 10,
+        "scores": {
+          "majmin": 0.6666666666666666,
+          "majmin_inv": 0.6666666666666666,
+          "mirex": 0.8666666666666663,
+          "overseg": 0.7666666666666666,
+          "root": 0.6833333333333331,
+          "seg": 0.7666666666666666,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.6666666666666666,
+          "thirds_inv": 0.6666666666666666,
+          "triads": 0.6666666666666666,
+          "triads_inv": 0.6666666666666666,
+          "underseg": 0.9000000000000004
+        },
+        "warnings_count": 2
+      },
+      "i-iv-V-i_A#_minor": {
+        "confusions": [
+          [
+            "A#:min->F:maj",
+            3.6
+          ],
+          [
+            "D#:min->F#:maj",
+            1.2000000000000002
+          ],
+          [
+            "D#:min->F:maj",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.25,
+          "majmin_inv": 0.25,
+          "mirex": 0.25,
+          "overseg": 0.8500000000000001,
+          "root": 0.25,
+          "seg": 0.6000000000000001,
+          "sevenths": 0.25,
+          "sevenths_inv": 0.25,
+          "tetrads": 0.25,
+          "tetrads_inv": 0.25,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.25,
+          "triads_inv": 0.25,
+          "underseg": 0.6000000000000001
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_A_minor": {
+        "confusions": [
+          [
+            "E:maj->E:sus4",
+            2.0
+          ],
+          [
+            "D:min->D:min7",
+            1.2000000000000002
+          ],
+          [
+            "D:min->E:sus4",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.55,
+          "overseg": 0.8,
+          "root": 0.8,
+          "seg": 0.8,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.8,
+          "thirds_inv": 0.8,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_B_minor": {
+        "confusions": [
+          [
+            "E:min->E:min7",
+            1.2000000000000002
+          ],
+          [
+            "F#:maj->B:sus2",
+            1.1999999999999993
+          ],
+          [
+            "F#:maj->B:sus4",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.55,
+          "overseg": 0.7,
+          "root": 0.6000000000000001,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "i-iv-V-i_C#_minor": {
+        "confusions": [
+          [
+            "F#:min->F#:min7",
+            1.2000000000000002
+          ],
+          [
+            "G#:maj->C#:min",
+            1.1999999999999993
+          ],
+          [
+            "G#:maj->F#:min",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.7,
+          "majmin_inv": 0.7,
+          "mirex": 0.7,
+          "overseg": 0.75,
+          "root": 0.7,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.55,
+          "sevenths_inv": 0.55,
+          "tetrads": 0.55,
+          "tetrads_inv": 0.55,
+          "thirds": 0.7,
+          "thirds_inv": 0.7,
+          "triads": 0.7,
+          "triads_inv": 0.7,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_C_minor": {
+        "confusions": [
+          [
+            "C:min->C:maj",
+            3.1999999999999997
+          ],
+          [
+            "G:maj->G:sus4",
+            2.0
+          ],
+          [
+            "F:min->C:sus4",
+            1.2000000000000002
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.8,
+          "root": 0.7,
+          "seg": 0.8,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.8
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_D#_minor": {
+        "confusions": [
+          [
+            "D#:min->F#:maj",
+            3.6
+          ],
+          [
+            "G#:min->B:maj",
+            2.0
+          ],
+          [
+            "A#:maj->F#:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.8499999999999999,
+          "root": 0.0,
+          "seg": 0.7,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_D_minor": {
+        "confusions": [
+          [
+            "A:maj->A:sus4",
+            2.0
+          ],
+          [
+            "G:min->D:sus4",
+            1.2000000000000002
+          ],
+          [
+            "G:min->A:sus4",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.39999999999999997,
+          "majmin_inv": 0.39999999999999997,
+          "mirex": 0.39999999999999997,
+          "overseg": 0.8,
+          "root": 0.7,
+          "seg": 0.8,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.6499999999999999,
+          "thirds_inv": 0.6499999999999999,
+          "triads": 0.39999999999999997,
+          "triads_inv": 0.39999999999999997,
+          "underseg": 0.8
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_E_minor": {
+        "confusions": [
+          [
+            "B:maj->B:sus4",
+            2.0
+          ],
+          [
+            "A:min->A:min7",
+            1.2000000000000002
+          ],
+          [
+            "A:min->B:sus4",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.55,
+          "overseg": 0.8,
+          "root": 0.8,
+          "seg": 0.8,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.8,
+          "thirds_inv": 0.8,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_F#_minor": {
+        "confusions": [
+          [
+            "B:min->B:min7",
+            1.2000000000000002
+          ],
+          [
+            "C#:maj->F#:min",
+            1.1999999999999993
+          ],
+          [
+            "C#:maj->B:sus2",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.6000000000000001,
+          "majmin_inv": 0.6000000000000001,
+          "mirex": 0.6000000000000001,
+          "overseg": 0.75,
+          "root": 0.7,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.45,
+          "sevenths_inv": 0.45,
+          "tetrads": 0.45,
+          "tetrads_inv": 0.45,
+          "thirds": 0.6000000000000001,
+          "thirds_inv": 0.6000000000000001,
+          "triads": 0.6000000000000001,
+          "triads_inv": 0.6000000000000001,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_F_minor": {
+        "confusions": [
+          [
+            "F:min->C:maj",
+            3.5999999999999996
+          ],
+          [
+            "C:maj->C:sus4",
+            2.0
+          ],
+          [
+            "A#:min->C:maj",
+            1.2000000000000002
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.85,
+          "root": 0.25,
+          "seg": 0.7,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_G#_minor": {
+        "confusions": [
+          [
+            "G#:min->B:maj",
+            3.6
+          ],
+          [
+            "C#:min->C#:min7",
+            1.2000000000000002
+          ],
+          [
+            "D#:maj->B:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.25,
+          "majmin_inv": 0.25,
+          "mirex": 0.25,
+          "overseg": 0.75,
+          "root": 0.25,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.09999999999999998,
+          "sevenths_inv": 0.09999999999999998,
+          "tetrads": 0.09999999999999998,
+          "tetrads_inv": 0.09999999999999998,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.25,
+          "triads_inv": 0.25,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_G_minor": {
+        "confusions": [
+          [
+            "G:min->D:maj",
+            3.1999999999999997
+          ],
+          [
+            "D:maj->D:sus4",
+            2.0
+          ],
+          [
+            "C:min->G:sus4",
+            1.2000000000000002
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.8,
+          "root": 0.3,
+          "seg": 0.8,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.8
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_A_major": {
+        "confusions": [
+          [
+            "E:7->B:min7",
+            1.2000000000000002
+          ],
+          [
+            "A:maj7->A:maj",
+            1.1999999999999993
+          ],
+          [
+            "A:maj7->C#:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.5333333333333332,
+          "majmin_inv": 0.5333333333333332,
+          "mirex": 0.7999999999999999,
+          "overseg": 0.7333333333333332,
+          "root": 0.5333333333333332,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.3333333333333333,
+          "sevenths_inv": 0.3333333333333333,
+          "tetrads": 0.3333333333333333,
+          "tetrads_inv": 0.3333333333333333,
+          "thirds": 0.5333333333333332,
+          "thirds_inv": 0.5333333333333332,
+          "triads": 0.5333333333333332,
+          "triads_inv": 0.5333333333333332,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_Bb_major": {
+        "confusions": [
+          [
+            "C:min7->C:maj",
+            1.6
+          ],
+          [
+            "F:7->C:sus4",
+            1.2000000000000002
+          ],
+          [
+            "A#:maj7->D:min",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.46666666666666656,
+          "overseg": 0.6666666666666665,
+          "root": 0.3333333333333333,
+          "seg": 0.6666666666666665,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "ii-V-I_C_major": {
+        "confusions": [
+          [
+            "G:7->D:min7",
+            1.2000000000000002
+          ],
+          [
+            "C:maj7->C:maj",
+            1.1999999999999993
+          ],
+          [
+            "C:maj7->E:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.5333333333333332,
+          "majmin_inv": 0.5333333333333332,
+          "mirex": 0.7999999999999999,
+          "overseg": 0.7333333333333332,
+          "root": 0.5333333333333332,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.3333333333333333,
+          "sevenths_inv": 0.3333333333333333,
+          "tetrads": 0.3333333333333333,
+          "tetrads_inv": 0.3333333333333333,
+          "thirds": 0.5333333333333332,
+          "thirds_inv": 0.5333333333333332,
+          "triads": 0.5333333333333332,
+          "triads_inv": 0.5333333333333332,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_D_major": {
+        "confusions": [
+          [
+            "A:7->E:min7",
+            1.2000000000000002
+          ],
+          [
+            "D:maj7->D:maj",
+            1.1999999999999993
+          ],
+          [
+            "D:maj7->F#:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.5333333333333332,
+          "majmin_inv": 0.5333333333333332,
+          "mirex": 0.7999999999999999,
+          "overseg": 0.7333333333333332,
+          "root": 0.5333333333333332,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.3333333333333333,
+          "sevenths_inv": 0.3333333333333333,
+          "tetrads": 0.3333333333333333,
+          "tetrads_inv": 0.3333333333333333,
+          "thirds": 0.5333333333333332,
+          "thirds_inv": 0.5333333333333332,
+          "triads": 0.5333333333333332,
+          "triads_inv": 0.5333333333333332,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_F_major": {
+        "confusions": [
+          [
+            "G:min7->D:maj",
+            1.6
+          ],
+          [
+            "C:7->G:sus4",
+            1.2000000000000002
+          ],
+          [
+            "F:maj7->F:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.19999999999999987,
+          "majmin_inv": 0.19999999999999987,
+          "mirex": 0.46666666666666656,
+          "overseg": 0.6666666666666665,
+          "root": 0.2666666666666665,
+          "seg": 0.6666666666666665,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.19999999999999987,
+          "thirds_inv": 0.19999999999999987,
+          "triads": 0.19999999999999987,
+          "triads_inv": 0.19999999999999987,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "ii-V-I_G_major": {
+        "confusions": [
+          [
+            "D:7->A:min7",
+            1.2000000000000002
+          ],
+          [
+            "G:maj7->G:maj",
+            1.1999999999999993
+          ],
+          [
+            "G:maj7->B:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.5333333333333332,
+          "majmin_inv": 0.5333333333333332,
+          "mirex": 0.7999999999999999,
+          "overseg": 0.7333333333333332,
+          "root": 0.5333333333333332,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.3333333333333333,
+          "sevenths_inv": 0.3333333333333333,
+          "tetrads": 0.3333333333333333,
+          "tetrads_inv": 0.3333333333333333,
+          "thirds": 0.5333333333333332,
+          "thirds_inv": 0.5333333333333332,
+          "triads": 0.5333333333333332,
+          "triads_inv": 0.5333333333333332,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_A_major": {
+        "confusions": [
+          [
+            "A:maj->C#:min7",
+            1.1999999999999993
+          ],
+          [
+            "A:maj->F#:min7",
+            0.8000000000000007
+          ],
+          [
+            "D:maj->F#:min7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.7,
+          "root": 0.55,
+          "seg": 0.7,
+          "sevenths": 0.55,
+          "sevenths_inv": 0.55,
+          "tetrads": 0.55,
+          "tetrads_inv": 0.55,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "vi-IV-I-V_C_major": {
+        "confusions": [
+          [
+            "C:maj->E:min7",
+            1.1999999999999993
+          ],
+          [
+            "C:maj->A:min7",
+            0.8000000000000007
+          ],
+          [
+            "F:maj->A:min7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.7,
+          "root": 0.55,
+          "seg": 0.7,
+          "sevenths": 0.55,
+          "sevenths_inv": 0.55,
+          "tetrads": 0.55,
+          "tetrads_inv": 0.55,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "vi-IV-I-V_D_major": {
+        "confusions": [
+          [
+            "D:maj->F#:min7",
+            1.1999999999999993
+          ],
+          [
+            "D:maj->B:min7",
+            0.8000000000000007
+          ],
+          [
+            "G:maj->B:min7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.7,
+          "root": 0.55,
+          "seg": 0.7,
+          "sevenths": 0.55,
+          "sevenths_inv": 0.55,
+          "tetrads": 0.55,
+          "tetrads_inv": 0.55,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "vi-IV-I-V_E_major": {
+        "confusions": [
+          [
+            "E:maj->B:sus4",
+            1.1999999999999993
+          ],
+          [
+            "E:maj->C#:min7",
+            0.8000000000000007
+          ],
+          [
+            "A:maj->C#:min7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.6500000000000001,
+          "overseg": 0.7,
+          "root": 0.6000000000000001,
+          "seg": 0.7,
+          "sevenths": 0.55,
+          "sevenths_inv": 0.55,
+          "tetrads": 0.55,
+          "tetrads_inv": 0.55,
+          "thirds": 0.6000000000000001,
+          "thirds_inv": 0.6000000000000001,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "vi-IV-I-V_F_major": {
+        "confusions": [
+          [
+            "A#:maj->D:min",
+            1.2000000000000002
+          ],
+          [
+            "F:maj->A:min7",
+            1.1999999999999993
+          ],
+          [
+            "F:maj->D:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.44999999999999996,
+          "majmin_inv": 0.44999999999999996,
+          "mirex": 0.6000000000000001,
+          "overseg": 0.7499999999999999,
+          "root": 0.44999999999999996,
+          "seg": 0.7,
+          "sevenths": 0.44999999999999996,
+          "sevenths_inv": 0.44999999999999996,
+          "tetrads": 0.44999999999999996,
+          "tetrads_inv": 0.44999999999999996,
+          "thirds": 0.44999999999999996,
+          "thirds_inv": 0.44999999999999996,
+          "triads": 0.44999999999999996,
+          "triads_inv": 0.44999999999999996,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_G_major": {
+        "confusions": [
+          [
+            "G:maj->B:min7",
+            1.1999999999999993
+          ],
+          [
+            "G:maj->E:min7",
+            0.8000000000000007
+          ],
+          [
+            "C:maj->E:min7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.7,
+          "root": 0.55,
+          "seg": 0.7,
+          "sevenths": 0.55,
+          "sevenths_inv": 0.55,
+          "tetrads": 0.55,
+          "tetrads_inv": 0.55,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      }
+    },
+    "rule_jaccard": {
+      "I-IV-V-I_A#_major": {
+        "confusions": [
+          [
+            "A#:maj->A:maj",
+            3.1999999999999997
+          ],
+          [
+            "D#:maj->D:maj",
+            1.2000000000000002
+          ],
+          [
+            "F:maj->D:min7",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.2499999999999999,
+          "overseg": 0.7,
+          "root": 0.0,
+          "seg": 0.7,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_A_major": {
+        "confusions": [
+          [
+            "D:maj->D:maj7",
+            1.2000000000000002
+          ],
+          [
+            "E:maj->E:7",
+            0.8000000000000007
+          ],
+          [
+            "D:maj->E:7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.8,
+          "majmin_inv": 0.8,
+          "mirex": 0.8,
+          "overseg": 0.7,
+          "root": 0.8,
+          "seg": 0.7,
+          "sevenths": 0.5499999999999998,
+          "sevenths_inv": 0.5499999999999998,
+          "tetrads": 0.5499999999999998,
+          "tetrads_inv": 0.5499999999999998,
+          "thirds": 0.8,
+          "thirds_inv": 0.8,
+          "triads": 0.8,
+          "triads_inv": 0.8,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_B_major": {
+        "confusions": [
+          [
+            "F#:maj->D:maj",
+            1.1999999999999993
+          ],
+          [
+            "F#:maj->E:maj",
+            0.8000000000000007
+          ],
+          [
+            "B:maj->D:maj",
+            0.40000000000000036
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.6499999999999999,
+          "majmin_inv": 0.6499999999999999,
+          "mirex": 0.6499999999999999,
+          "overseg": 0.7999999999999998,
+          "root": 0.6499999999999999,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.6499999999999999,
+          "sevenths_inv": 0.6499999999999999,
+          "tetrads": 0.6499999999999999,
+          "tetrads_inv": 0.6499999999999999,
+          "thirds": 0.6499999999999999,
+          "thirds_inv": 0.6499999999999999,
+          "triads": 0.6499999999999999,
+          "triads_inv": 0.6499999999999999,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_C#_major": {
+        "confusions": [
+          [
+            "C#:maj->C:maj",
+            3.6
+          ],
+          [
+            "F#:maj->F:maj",
+            1.2000000000000002
+          ],
+          [
+            "G#:maj->C:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.75,
+          "root": 0.0,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_C_major": {
+        "confusions": [
+          [
+            "F:maj->F:maj7",
+            1.2000000000000002
+          ],
+          [
+            "G:maj->C:maj7",
+            1.1999999999999993
+          ],
+          [
+            "G:maj->D:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.6000000000000001,
+          "majmin_inv": 0.6000000000000001,
+          "mirex": 0.7,
+          "overseg": 0.7,
+          "root": 0.6000000000000001,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.6000000000000001,
+          "thirds_inv": 0.6000000000000001,
+          "triads": 0.6000000000000001,
+          "triads_inv": 0.6000000000000001,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_D#_major": {
+        "confusions": [
+          [
+            "D#:maj->D:maj",
+            3.6
+          ],
+          [
+            "G#:maj->C:min7",
+            1.2000000000000002
+          ],
+          [
+            "A#:maj->D:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.14999999999999997,
+          "overseg": 0.75,
+          "root": 0.0,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_D_major": {
+        "confusions": [
+          [
+            "G:maj->G:maj7",
+            1.2000000000000002
+          ],
+          [
+            "A:maj->D:maj7",
+            1.1999999999999993
+          ],
+          [
+            "A:maj->E:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.6000000000000001,
+          "majmin_inv": 0.6000000000000001,
+          "mirex": 0.7,
+          "overseg": 0.7,
+          "root": 0.6000000000000001,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.6000000000000001,
+          "thirds_inv": 0.6000000000000001,
+          "triads": 0.6000000000000001,
+          "triads_inv": 0.6000000000000001,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_E_major": {
+        "confusions": [
+          [
+            "A:maj->E:maj",
+            1.2000000000000002
+          ],
+          [
+            "B:maj->E:maj",
+            1.1999999999999993
+          ],
+          [
+            "B:maj->A:maj",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.6,
+          "majmin_inv": 0.6,
+          "mirex": 0.6,
+          "overseg": 0.7999999999999999,
+          "root": 0.6,
+          "seg": 0.6000000000000001,
+          "sevenths": 0.6,
+          "sevenths_inv": 0.6,
+          "tetrads": 0.6,
+          "tetrads_inv": 0.6,
+          "thirds": 0.6,
+          "thirds_inv": 0.6,
+          "triads": 0.6,
+          "triads_inv": 0.6,
+          "underseg": 0.6000000000000001
+        },
+        "warnings_count": 1
+      },
+      "I-IV-V-I_F#_major": {
+        "confusions": [
+          [
+            "F#:maj->F:maj",
+            3.6
+          ],
+          [
+            "B:maj->D:maj",
+            1.2000000000000002
+          ],
+          [
+            "C#:maj->F:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.75,
+          "root": 0.0,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_F_major": {
+        "confusions": [
+          [
+            "A#:maj->D:min7",
+            1.2000000000000002
+          ],
+          [
+            "C:maj->F:maj7",
+            1.1999999999999993
+          ],
+          [
+            "C:maj->C:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.6000000000000001,
+          "overseg": 0.7,
+          "root": 0.55,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_G#_major": {
+        "confusions": [
+          [
+            "G#:maj->G:maj",
+            3.1999999999999997
+          ],
+          [
+            "C#:maj->C:maj",
+            1.2000000000000002
+          ],
+          [
+            "D#:maj->C:min7",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.1499999999999999,
+          "overseg": 0.7,
+          "root": 0.0,
+          "seg": 0.7,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "I-IV-V-I_G_major": {
+        "confusions": [
+          [
+            "C:maj->C:maj7",
+            1.2000000000000002
+          ],
+          [
+            "D:maj->G:maj7",
+            1.1999999999999993
+          ],
+          [
+            "D:maj->D:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.7000000000000002,
+          "majmin_inv": 0.7000000000000002,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.7,
+          "root": 0.7000000000000002,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.7000000000000002,
+          "thirds_inv": 0.7000000000000002,
+          "triads": 0.7000000000000002,
+          "triads_inv": 0.7000000000000002,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "blues_A_major": {
+        "confusions": [],
+        "events_count": 7,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.7999999999999998,
+          "overseg": 0.8333333333333334,
+          "root": 0.7999999999999998,
+          "seg": 0.8333333333333334,
+          "sevenths": 0.7833333333333332,
+          "sevenths_inv": 0.7833333333333332,
+          "tetrads": 0.7833333333333332,
+          "tetrads_inv": 0.7833333333333332,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.8333333333333335
+        },
+        "warnings_count": 2
+      },
+      "blues_C_major": {
+        "confusions": [],
+        "events_count": 7,
+        "scores": {
+          "majmin": 0.8999999999999999,
+          "majmin_inv": 0.8999999999999999,
+          "mirex": 0.8999999999999999,
+          "overseg": 0.8999999999999999,
+          "root": 0.8999999999999999,
+          "seg": 0.8999999999999999,
+          "sevenths": 0.8999999999999999,
+          "sevenths_inv": 0.8999999999999999,
+          "tetrads": 0.8999999999999999,
+          "tetrads_inv": 0.8999999999999999,
+          "thirds": 0.8999999999999999,
+          "thirds_inv": 0.8999999999999999,
+          "triads": 0.8999999999999999,
+          "triads_inv": 0.8999999999999999,
+          "underseg": 0.9000000000000001
+        },
+        "warnings_count": 2
+      },
+      "blues_E_major": {
+        "confusions": [],
+        "events_count": 9,
+        "scores": {
+          "majmin": 0.8999999999999999,
+          "majmin_inv": 0.8999999999999999,
+          "mirex": 0.8999999999999999,
+          "overseg": 0.7999999999999998,
+          "root": 0.8999999999999999,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.6666666666666666,
+          "sevenths_inv": 0.6666666666666666,
+          "tetrads": 0.6666666666666666,
+          "tetrads_inv": 0.6666666666666666,
+          "thirds": 0.8999999999999999,
+          "thirds_inv": 0.8999999999999999,
+          "triads": 0.8999999999999999,
+          "triads_inv": 0.8999999999999999,
+          "underseg": 0.9000000000000001
+        },
+        "warnings_count": 2
+      },
+      "blues_G_major": {
+        "confusions": [],
+        "events_count": 6,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.7999999999999998,
+          "overseg": 0.8499999999999999,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999999,
+          "sevenths": 0.7999999999999998,
+          "sevenths_inv": 0.7999999999999998,
+          "tetrads": 0.7999999999999998,
+          "tetrads_inv": 0.7999999999999998,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999999
+        },
+        "warnings_count": 2
+      },
+      "i-iv-V-i_A#_minor": {
+        "confusions": [
+          [
+            "A#:min->A:maj",
+            3.1999999999999997
+          ],
+          [
+            "D#:min->D:maj",
+            1.2000000000000002
+          ],
+          [
+            "F:maj->F:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.25,
+          "majmin_inv": 0.25,
+          "mirex": 0.25,
+          "overseg": 0.7,
+          "root": 0.25,
+          "seg": 0.7,
+          "sevenths": 0.1499999999999999,
+          "sevenths_inv": 0.1499999999999999,
+          "tetrads": 0.1499999999999999,
+          "tetrads_inv": 0.1499999999999999,
+          "thirds": 0.25,
+          "thirds_inv": 0.25,
+          "triads": 0.25,
+          "triads_inv": 0.25,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "i-iv-V-i_A_minor": {
+        "confusions": [
+          [
+            "D:min->D:min7",
+            1.2000000000000002
+          ],
+          [
+            "E:maj->E:7",
+            0.8000000000000007
+          ],
+          [
+            "D:min->E:7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.8,
+          "majmin_inv": 0.8,
+          "mirex": 0.8,
+          "overseg": 0.7,
+          "root": 0.8,
+          "seg": 0.7,
+          "sevenths": 0.5499999999999998,
+          "sevenths_inv": 0.5499999999999998,
+          "tetrads": 0.5499999999999998,
+          "tetrads_inv": 0.5499999999999998,
+          "thirds": 0.8,
+          "thirds_inv": 0.8,
+          "triads": 0.8,
+          "triads_inv": 0.8,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "i-iv-V-i_B_minor": {
+        "confusions": [
+          [
+            "E:min->E:min7",
+            1.2000000000000002
+          ],
+          [
+            "F#:maj->F:maj",
+            1.1999999999999993
+          ],
+          [
+            "F#:maj->B:sus4",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.55,
+          "overseg": 0.7,
+          "root": 0.55,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "i-iv-V-i_C#_minor": {
+        "confusions": [
+          [
+            "C#:min->C:maj",
+            4.0
+          ],
+          [
+            "F#:min->C:maj",
+            1.2000000000000002
+          ],
+          [
+            "G#:maj->C:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.7999999999999999,
+          "root": 0.0,
+          "seg": 0.6000000000000001,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.6000000000000001
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_C_minor": {
+        "confusions": [
+          [
+            "F:min->F:min7",
+            1.2000000000000002
+          ],
+          [
+            "G:maj->C:min",
+            1.1999999999999993
+          ],
+          [
+            "G:maj->G:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.7000000000000002,
+          "majmin_inv": 0.7000000000000002,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.75,
+          "root": 0.7000000000000002,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.45,
+          "sevenths_inv": 0.45,
+          "tetrads": 0.45,
+          "tetrads_inv": 0.45,
+          "thirds": 0.7000000000000002,
+          "thirds_inv": 0.7000000000000002,
+          "triads": 0.7000000000000002,
+          "triads_inv": 0.7000000000000002,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_D#_minor": {
+        "confusions": [
+          [
+            "D#:min->D:maj",
+            3.6
+          ],
+          [
+            "G#:min->G:maj",
+            1.2000000000000002
+          ],
+          [
+            "A#:maj->D:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.75,
+          "root": 0.0,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_D_minor": {
+        "confusions": [
+          [
+            "G:min->G:min7",
+            1.2000000000000002
+          ],
+          [
+            "A:maj->D:min",
+            1.1999999999999993
+          ],
+          [
+            "A:maj->A:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.7000000000000002,
+          "majmin_inv": 0.7000000000000002,
+          "mirex": 0.7000000000000002,
+          "overseg": 0.75,
+          "root": 0.7000000000000002,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.45,
+          "sevenths_inv": 0.45,
+          "tetrads": 0.45,
+          "tetrads_inv": 0.45,
+          "thirds": 0.7000000000000002,
+          "thirds_inv": 0.7000000000000002,
+          "triads": 0.7000000000000002,
+          "triads_inv": 0.7000000000000002,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_E_minor": {
+        "confusions": [
+          [
+            "A:min->C:maj7",
+            1.2000000000000002
+          ],
+          [
+            "B:maj->E:min",
+            1.1999999999999993
+          ],
+          [
+            "B:maj->B:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.55,
+          "majmin_inv": 0.55,
+          "mirex": 0.6000000000000001,
+          "overseg": 0.75,
+          "root": 0.55,
+          "seg": 0.7000000000000002,
+          "sevenths": 0.45,
+          "sevenths_inv": 0.45,
+          "tetrads": 0.45,
+          "tetrads_inv": 0.45,
+          "thirds": 0.55,
+          "thirds_inv": 0.55,
+          "triads": 0.55,
+          "triads_inv": 0.55,
+          "underseg": 0.7000000000000002
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_F#_minor": {
+        "confusions": [
+          [
+            "F#:min->F:maj",
+            3.5999999999999996
+          ],
+          [
+            "C#:maj->C:maj",
+            2.0
+          ],
+          [
+            "B:min->F:maj",
+            1.2000000000000002
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.85,
+          "root": 0.0,
+          "seg": 0.7,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "i-iv-V-i_F_minor": {
+        "confusions": [
+          [
+            "A#:min->C:maj",
+            1.2000000000000002
+          ],
+          [
+            "C:maj->C:7",
+            0.8000000000000007
+          ],
+          [
+            "F:min->C:maj",
+            0.8000000000000003
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.6499999999999999,
+          "majmin_inv": 0.6499999999999999,
+          "mirex": 0.6499999999999999,
+          "overseg": 0.7,
+          "root": 0.6499999999999999,
+          "seg": 0.7,
+          "sevenths": 0.5499999999999998,
+          "sevenths_inv": 0.5499999999999998,
+          "tetrads": 0.5499999999999998,
+          "tetrads_inv": 0.5499999999999998,
+          "thirds": 0.6499999999999999,
+          "thirds_inv": 0.6499999999999999,
+          "triads": 0.6499999999999999,
+          "triads_inv": 0.6499999999999999,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "i-iv-V-i_G#_minor": {
+        "confusions": [
+          [
+            "G#:min->G:maj",
+            3.1999999999999997
+          ],
+          [
+            "C#:min->C:maj",
+            2.0
+          ],
+          [
+            "D#:maj->D:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.0,
+          "majmin_inv": 0.0,
+          "mirex": 0.0,
+          "overseg": 0.7999999999999998,
+          "root": 0.0,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.0,
+          "sevenths_inv": 0.0,
+          "tetrads": 0.0,
+          "tetrads_inv": 0.0,
+          "thirds": 0.0,
+          "thirds_inv": 0.0,
+          "triads": 0.0,
+          "triads_inv": 0.0,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 0
+      },
+      "i-iv-V-i_G_minor": {
+        "confusions": [
+          [
+            "C:min->C:min7",
+            1.2000000000000002
+          ],
+          [
+            "D:maj->D:7",
+            0.8000000000000007
+          ],
+          [
+            "C:min->D:7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.8,
+          "majmin_inv": 0.8,
+          "mirex": 0.8,
+          "overseg": 0.7,
+          "root": 0.8,
+          "seg": 0.7,
+          "sevenths": 0.5499999999999998,
+          "sevenths_inv": 0.5499999999999998,
+          "tetrads": 0.5499999999999998,
+          "tetrads_inv": 0.5499999999999998,
+          "thirds": 0.8,
+          "thirds_inv": 0.8,
+          "triads": 0.8,
+          "triads_inv": 0.8,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "ii-V-I_A_major": {
+        "confusions": [
+          [
+            "E:7->E:maj",
+            2.0
+          ],
+          [
+            "B:min7->B:min",
+            1.6
+          ],
+          [
+            "A:maj7->E:maj",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.7999999999999998,
+          "overseg": 0.7999999999999999,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999999,
+          "sevenths": 0.19999999999999987,
+          "sevenths_inv": 0.19999999999999987,
+          "tetrads": 0.19999999999999987,
+          "tetrads_inv": 0.19999999999999987,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999999
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_Bb_major": {
+        "confusions": [
+          [
+            "F:7->C:min7",
+            1.2000000000000002
+          ],
+          [
+            "A#:maj7->A:maj",
+            1.1999999999999993
+          ],
+          [
+            "A#:maj7->F:7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.4666666666666666,
+          "majmin_inv": 0.4666666666666666,
+          "mirex": 0.4666666666666666,
+          "overseg": 0.7333333333333332,
+          "root": 0.4666666666666666,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.4666666666666666,
+          "sevenths_inv": 0.4666666666666666,
+          "tetrads": 0.4666666666666666,
+          "tetrads_inv": 0.4666666666666666,
+          "thirds": 0.4666666666666666,
+          "thirds_inv": 0.4666666666666666,
+          "triads": 0.4666666666666666,
+          "triads_inv": 0.4666666666666666,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_C_major": {
+        "confusions": [
+          [
+            "G:7->D:min7",
+            1.2000000000000002
+          ],
+          [
+            "G:7->C:maj7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 2,
+        "scores": {
+          "majmin": 0.6666666666666666,
+          "majmin_inv": 0.6666666666666666,
+          "mirex": 0.6666666666666666,
+          "overseg": 0.8666666666666667,
+          "root": 0.6666666666666666,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.6666666666666666,
+          "sevenths_inv": 0.6666666666666666,
+          "tetrads": 0.6666666666666666,
+          "tetrads_inv": 0.6666666666666666,
+          "thirds": 0.6666666666666666,
+          "thirds_inv": 0.6666666666666666,
+          "triads": 0.6666666666666666,
+          "triads_inv": 0.6666666666666666,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_D_major": {
+        "confusions": [
+          [
+            "A:7->E:min7",
+            1.2000000000000002
+          ],
+          [
+            "A:7->D:maj7",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 2,
+        "scores": {
+          "majmin": 0.6666666666666666,
+          "majmin_inv": 0.6666666666666666,
+          "mirex": 0.6666666666666666,
+          "overseg": 0.8666666666666667,
+          "root": 0.6666666666666666,
+          "seg": 0.6666666666666667,
+          "sevenths": 0.6666666666666666,
+          "sevenths_inv": 0.6666666666666666,
+          "tetrads": 0.6666666666666666,
+          "tetrads_inv": 0.6666666666666666,
+          "thirds": 0.6666666666666666,
+          "thirds_inv": 0.6666666666666666,
+          "triads": 0.6666666666666666,
+          "triads_inv": 0.6666666666666666,
+          "underseg": 0.6666666666666667
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_F_major": {
+        "confusions": [
+          [
+            "F:maj7->C:7",
+            0.8000000000000007
+          ],
+          [
+            "G:min7->C:7",
+            0.3999999999999999
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.7999999999999998,
+          "overseg": 0.7999999999999999,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999999,
+          "sevenths": 0.7999999999999998,
+          "sevenths_inv": 0.7999999999999998,
+          "tetrads": 0.7999999999999998,
+          "tetrads_inv": 0.7999999999999998,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999999
+        },
+        "warnings_count": 1
+      },
+      "ii-V-I_G_major": {
+        "confusions": [
+          [
+            "G:maj7->D:7",
+            0.8000000000000007
+          ],
+          [
+            "A:min7->D:7",
+            0.3999999999999999
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.7999999999999998,
+          "overseg": 0.7999999999999999,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999999,
+          "sevenths": 0.7999999999999998,
+          "sevenths_inv": 0.7999999999999998,
+          "tetrads": 0.7999999999999998,
+          "tetrads_inv": 0.7999999999999998,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999999
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_A_major": {
+        "confusions": [
+          [
+            "D:maj->D:maj7",
+            2.0
+          ],
+          [
+            "F#:min->F:maj",
+            1.6
+          ],
+          [
+            "A:maj->E:maj",
+            1.1999999999999993
+          ]
+        ],
+        "events_count": 3,
+        "scores": {
+          "majmin": 0.5,
+          "majmin_inv": 0.5,
+          "mirex": 0.55,
+          "overseg": 0.8499999999999999,
+          "root": 0.5,
+          "seg": 0.7,
+          "sevenths": 0.25,
+          "sevenths_inv": 0.25,
+          "tetrads": 0.25,
+          "tetrads_inv": 0.25,
+          "thirds": 0.5,
+          "thirds_inv": 0.5,
+          "triads": 0.5,
+          "triads_inv": 0.5,
+          "underseg": 0.7
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_C_major": {
+        "confusions": [
+          [
+            "F:maj->F:maj7",
+            2.0
+          ],
+          [
+            "C:maj->C:maj7",
+            1.1999999999999993
+          ],
+          [
+            "C:maj->F:maj7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.8499999999999999,
+          "overseg": 0.7999999999999998,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_D_major": {
+        "confusions": [
+          [
+            "G:maj->G:maj7",
+            2.0
+          ],
+          [
+            "D:maj->D:maj7",
+            1.1999999999999993
+          ],
+          [
+            "D:maj->G:maj7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.8499999999999999,
+          "overseg": 0.7999999999999998,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_E_major": {
+        "confusions": [
+          [
+            "C#:min->C:maj",
+            1.6
+          ],
+          [
+            "A:maj->A:maj7",
+            1.2000000000000002
+          ],
+          [
+            "A:maj->E:maj",
+            0.7999999999999998
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.6,
+          "majmin_inv": 0.6,
+          "mirex": 0.6499999999999999,
+          "overseg": 0.8,
+          "root": 0.6,
+          "seg": 0.8,
+          "sevenths": 0.44999999999999996,
+          "sevenths_inv": 0.44999999999999996,
+          "tetrads": 0.44999999999999996,
+          "tetrads_inv": 0.44999999999999996,
+          "thirds": 0.6,
+          "thirds_inv": 0.6,
+          "triads": 0.6,
+          "triads_inv": 0.6,
+          "underseg": 0.8
+        },
+        "warnings_count": 1
+      },
+      "vi-IV-I-V_F_major": {
+        "confusions": [
+          [
+            "A#:maj->A:maj",
+            1.2000000000000002
+          ],
+          [
+            "F:maj->F:maj7",
+            1.1999999999999993
+          ],
+          [
+            "F:maj->D:min7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 5,
+        "scores": {
+          "majmin": 0.5499999999999998,
+          "majmin_inv": 0.5499999999999998,
+          "mirex": 0.6499999999999999,
+          "overseg": 0.7,
+          "root": 0.5499999999999998,
+          "seg": 0.7,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.5499999999999998,
+          "thirds_inv": 0.5499999999999998,
+          "triads": 0.5499999999999998,
+          "triads_inv": 0.5499999999999998,
+          "underseg": 0.8
+        },
+        "warnings_count": 0
+      },
+      "vi-IV-I-V_G_major": {
+        "confusions": [
+          [
+            "C:maj->C:maj7",
+            2.0
+          ],
+          [
+            "G:maj->G:maj7",
+            1.1999999999999993
+          ],
+          [
+            "G:maj->C:maj7",
+            0.8000000000000007
+          ]
+        ],
+        "events_count": 4,
+        "scores": {
+          "majmin": 0.7999999999999998,
+          "majmin_inv": 0.7999999999999998,
+          "mirex": 0.8499999999999999,
+          "overseg": 0.7999999999999998,
+          "root": 0.7999999999999998,
+          "seg": 0.7999999999999998,
+          "sevenths": 0.39999999999999997,
+          "sevenths_inv": 0.39999999999999997,
+          "tetrads": 0.39999999999999997,
+          "tetrads_inv": 0.39999999999999997,
+          "thirds": 0.7999999999999998,
+          "thirds_inv": 0.7999999999999998,
+          "triads": 0.7999999999999998,
+          "triads_inv": 0.7999999999999998,
+          "underseg": 0.7999999999999998
+        },
+        "warnings_count": 1
+      }
+    }
+  },
+  "schema_version": "jaccard-detector-path-v1",
+  "summary": {
+    "hybrid": {
+      "events_total": 188,
+      "files_failed": 0,
+      "files_ok": 40,
+      "majmin": 0.38875000000000004,
+      "mirex": 0.5199999999999999,
+      "root": 0.4720833333333333,
+      "sevenths": 0.27458333333333335,
+      "warnings_total": 29
+    },
+    "rule_jaccard": {
+      "events_total": 179,
+      "files_failed": 0,
+      "files_ok": 40,
+      "majmin": 0.5287499999999999,
+      "mirex": 0.5587500000000001,
+      "root": 0.5287499999999999,
+      "sevenths": 0.3999999999999999,
+      "warnings_total": 27
+    }
+  },
+  "top_confusions": {
+    "hybrid": [
+      [
+        "G#:maj->C:maj",
+        7.199999999999999
+      ],
+      [
+        "G#:min->B:maj",
+        5.6
+      ],
+      [
+        "D#:min->F#:maj",
+        4.800000000000001
+      ],
+      [
+        "A#:maj->D:maj",
+        4.799999999999999
+      ],
+      [
+        "A#:min->F:maj",
+        3.6
+      ],
+      [
+        "F:min->C:maj",
+        3.5999999999999996
+      ],
+      [
+        "C#:maj->F:maj",
+        3.1999999999999997
+      ],
+      [
+        "D#:maj->G:maj",
+        3.1999999999999997
+      ],
+      [
+        "C:min->C:maj",
+        3.1999999999999997
+      ],
+      [
+        "G:min->D:maj",
+        3.1999999999999997
+      ]
+    ],
+    "rule_jaccard": [
+      [
+        "C#:min->C:maj",
+        7.6
+      ],
+      [
+        "C#:maj->C:maj",
+        6.800000000000001
+      ],
+      [
+        "F#:maj->F:maj",
+        6.0
+      ],
+      [
+        "D#:maj->D:maj",
+        6.0
+      ],
+      [
+        "F#:min->F:maj",
+        5.199999999999999
+      ],
+      [
+        "D#:min->D:maj",
+        4.800000000000001
+      ],
+      [
+        "A#:maj->A:maj",
+        4.4
+      ],
+      [
+        "G#:min->G:maj",
+        4.4
+      ],
+      [
+        "F:maj->F:maj7",
+        4.3999999999999995
+      ],
+      [
+        "G:maj->G:maj7",
+        4.3999999999999995
+      ]
+    ]
+  }
+}

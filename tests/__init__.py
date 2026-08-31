@@ -1,0 +1,1 @@
+"""HorizonJam automated tests."""

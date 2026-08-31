@@ -1,0 +1,1143 @@
+{
+  "achieved": {
+    "cold_process_a_3s_sec": 13.03311289998237,
+    "cold_process_b_3s_sec": 10.479395499976818,
+    "label": "CURRENTLY_ACHIEVED",
+    "warm_repeat_3s_sec": 1.306813900009729,
+    "warm_scaling_sec": {
+      "10": 5.57469310000306,
+      "3": 2.136526100046467,
+      "30": 10.440268100006506
+    }
+  },
+  "command": "python eval/benchmark_audio_path.py",
+  "decision_gate": {
+    "all_equivalence_checks_pass": true,
+    "contributors": [
+      "G. ENVIRONMENT_SPECIFIC: Numba cache validation under user site-packages was pathological",
+      "C. PREPROCESSING_OVERHEAD: audioread backend discovery added about 15 seconds before SoundFile WAV decoding",
+      "A. COLD_START_ONLY: imports and detector initialization are paid once and warm calls reuse model state"
+    ],
+    "default_detector_changed": false,
+    "model_reuse_verified": true,
+    "outcome": "F. MIXED",
+    "real_wav_completed": true
+  },
+  "duration_scaling": [
+    {
+      "events": [
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 1.1890909090909092,
+          "start": 0.5945454545454546
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.7836363636363637,
+          "start": 1.1890909090909092
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 2.3781818181818184,
+          "start": 1.7836363636363637
+        }
+      ],
+      "fixture": {
+        "channels": 1,
+        "duration_sec": 3.0,
+        "file_size_bytes": 132344,
+        "format": "WAV",
+        "frames": 66150,
+        "path": "eval\\data\\runtime_gate_3s.wav",
+        "sample_rate": 22050,
+        "subtype": "PCM_16"
+      },
+      "trace": {
+        "basic_pitch": {
+          "backend": "ONNX",
+          "external_codec_probe_skipped": true,
+          "first_inference_in_process": false,
+          "midi_note_count": 4,
+          "model_output_hashes_sha256": {
+            "contour": "c16bb5fe20b87203d9eed58493f55fe7eb639dd72d6c892bd7e39af007940309",
+            "note": "962de23ff519134ee583f727e77cc05d1c23d9fdd6398054817d16b19dbcaf2c",
+            "onset": "f7766bb82fe03a913d03fe3c0129e2b12b6ca47c55a00ee23d38f2b2a145dd87"
+          },
+          "model_output_shapes": {
+            "contour": [
+              258,
+              264
+            ],
+            "note": [
+              258,
+              88
+            ],
+            "onset": [
+              258,
+              88
+            ]
+          },
+          "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+          "model_reused": true,
+          "model_windows": 2,
+          "note_event_count": 4,
+          "note_event_hash_sha256": "0aac58190ab431e1af76f06da24405a022dcca62a876f87b5474ca1aeaa93679",
+          "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+          "timings_sec": {
+            "audio_decode_resample": 0.16996880003716797,
+            "audio_loader_import": 2.800021320581436e-06,
+            "audio_window_construction": 0.0003823999431915581,
+            "basic_pitch_import": 0.0,
+            "basic_pitch_predict_total": 1.527190699998755,
+            "midi_serialization": 0.0059810999664478,
+            "model_inference": 1.3045514999539591,
+            "model_initialization": 0.0,
+            "note_event_extraction_and_midi_generation": 0.05172829999355599,
+            "trace_hashing": 0.0009777999948710203,
+            "transcription_total": 1.5517560999724083
+          },
+          "transcription_index": 2
+        },
+        "input": {
+          "duration_sec": 3.0,
+          "file_size_bytes": 132344,
+          "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\runtime_gate_3s.wav",
+          "sample_rate": 22050
+        },
+        "schema_version": "single-wav-runtime-v1",
+        "stages_sec": {
+          "candidate_scoring": 0.0016000999603420496,
+          "file_validation": 0.007577300013508648,
+          "harmony_postprocessing": 0.20132280001416802,
+          "harmony_total": 0.20612899999832734,
+          "hybrid_detector_import": 5.200039595365524e-06,
+          "hybrid_detector_initialization": 0.35253209999063984,
+          "midi_parsing": 0.0030521000153385103,
+          "normalization": 0.00011530000483617187,
+          "post_transcription_detector": 0.2065972999553196,
+          "total": 2.129671700007748,
+          "window_construction": 8.330005221068859e-05
+        }
+      },
+      "wall_sec": 2.136526100046467,
+      "warnings": []
+    },
+    {
+      "events": [
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 1.1980419580419581,
+          "start": 0.5990209790209791
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.7970629370629372,
+          "start": 1.1980419580419581
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 2.3960839160839162,
+          "start": 1.7970629370629372
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 3.594125874125875,
+          "start": 2.3960839160839162
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 4.193146853146854,
+          "start": 3.594125874125875
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 4.792167832167833,
+          "start": 4.193146853146854
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 5.391188811188813,
+          "start": 4.792167832167833
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 6.589230769230771,
+          "start": 5.391188811188813
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 7.1882517482517505,
+          "start": 6.589230769230771
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 7.78727272727273,
+          "start": 7.1882517482517505
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 8.386293706293708,
+          "start": 7.78727272727273
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 9.584335664335667,
+          "start": 8.985314685314687
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 9.931818181818182,
+          "start": 9.584335664335667
+        }
+      ],
+      "fixture": {
+        "channels": 1,
+        "duration_sec": 10.0,
+        "file_size_bytes": 441044,
+        "format": "WAV",
+        "frames": 220500,
+        "path": "eval\\data\\runtime_gate_10s.wav",
+        "sample_rate": 22050,
+        "subtype": "PCM_16"
+      },
+      "trace": {
+        "basic_pitch": {
+          "backend": "ONNX",
+          "external_codec_probe_skipped": true,
+          "first_inference_in_process": false,
+          "midi_note_count": 14,
+          "model_output_hashes_sha256": {
+            "contour": "63bc57fa2bf8352e855d9dc07147903d1f5fc5e164126daf58759e506d5e655c",
+            "note": "199683faeada562160d94dc0360448aea8e910b3dab58b521f6e18eea155ebcc",
+            "onset": "c963f95fdd406545b1b1a202b3efcd702ec92a80295cdf3de4d61d893f31a78e"
+          },
+          "model_output_shapes": {
+            "contour": [
+              860,
+              264
+            ],
+            "note": [
+              860,
+              88
+            ],
+            "onset": [
+              860,
+              88
+            ]
+          },
+          "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+          "model_reused": true,
+          "model_windows": 7,
+          "note_event_count": 14,
+          "note_event_hash_sha256": "982ecbf31d455e458d20ff7af2ab316ebc7a20d3fa2c9cf2a17faee3e8ec1bdc",
+          "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+          "timings_sec": {
+            "audio_decode_resample": 0.1274946000194177,
+            "audio_loader_import": 3.1999661587178707e-06,
+            "audio_window_construction": 0.01713629992445931,
+            "basic_pitch_import": 0.0,
+            "basic_pitch_predict_total": 4.423364100046456,
+            "midi_serialization": 0.16466220002621412,
+            "model_inference": 4.073318999959156,
+            "model_initialization": 0.0,
+            "note_event_extraction_and_midi_generation": 0.05171880003763363,
+            "trace_hashing": 0.100037100026384,
+            "transcription_total": 4.690701099985745
+          },
+          "transcription_index": 3
+        },
+        "input": {
+          "duration_sec": 10.0,
+          "file_size_bytes": 441044,
+          "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\runtime_gate_10s.wav",
+          "sample_rate": 22050
+        },
+        "schema_version": "single-wav-runtime-v1",
+        "stages_sec": {
+          "candidate_scoring": 0.03211000008741394,
+          "file_validation": 0.0010179000091738999,
+          "harmony_postprocessing": 0.16574579995358363,
+          "harmony_total": 0.20418790000258014,
+          "hybrid_detector_import": 4.699977580457926e-06,
+          "hybrid_detector_initialization": 0.6680279000429437,
+          "midi_parsing": 0.006012100027874112,
+          "normalization": 8.3099992480129e-05,
+          "post_transcription_detector": 0.2048202000441961,
+          "total": 5.567126899957657,
+          "window_construction": 0.00019619998056441545
+        }
+      },
+      "wall_sec": 5.57469310000306,
+      "warnings": [
+        "merged 2 adjacent identical chords"
+      ]
+    },
+    {
+      "events": [
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 1.1991608391608393,
+          "start": 0.5995804195804196
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.7987412587412588,
+          "start": 1.1991608391608393
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 2.3983216783216785,
+          "start": 1.7987412587412588
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 2.9979020979020983,
+          "start": 2.3983216783216785
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 4.197062937062937,
+          "start": 3.597482517482518
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 4.796643356643357,
+          "start": 4.197062937062937
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 5.396223776223777,
+          "start": 4.796643356643357
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 5.9958041958041965,
+          "start": 5.396223776223777
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 7.194965034965036,
+          "start": 6.595384615384616
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 7.794545454545456,
+          "start": 7.194965034965036
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 8.394125874125875,
+          "start": 7.794545454545456
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 8.993706293706294,
+          "start": 8.394125874125875
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 10.192867132867134,
+          "start": 9.593286713286714
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 10.792447552447554,
+          "start": 10.192867132867134
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 11.392027972027973,
+          "start": 10.792447552447554
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 12.591188811188813,
+          "start": 11.392027972027973
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 13.190769230769233,
+          "start": 12.591188811188813
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 13.790349650349652,
+          "start": 13.190769230769233
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 14.389930069930072,
+          "start": 13.790349650349652
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 15.589090909090912,
+          "start": 14.989510489510492
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 16.18867132867133,
+          "start": 15.589090909090912
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 16.78825174825175,
+          "start": 16.18867132867133
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 17.38783216783217,
+          "start": 16.78825174825175
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 18.58699300699301,
+          "start": 17.38783216783217
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 19.18657342657343,
+          "start": 18.58699300699301
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 19.786153846153848,
+          "start": 19.18657342657343
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 20.385734265734268,
+          "start": 19.786153846153848
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 21.584895104895107,
+          "start": 20.985314685314687
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 22.184475524475527,
+          "start": 21.584895104895107
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 22.784055944055947,
+          "start": 22.184475524475527
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 23.383636363636366,
+          "start": 22.784055944055947
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 24.582797202797206,
+          "start": 23.983216783216786
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 25.182377622377626,
+          "start": 24.582797202797206
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 25.781958041958045,
+          "start": 25.182377622377626
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 26.381538461538465,
+          "start": 25.781958041958045
+        },
+        {
+          "chord": "Dsus4",
+          "confidence": 0.8,
+          "end": 27.580699300699305,
+          "start": 26.981118881118885
+        },
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 28.180279720279724,
+          "start": 27.580699300699305
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 28.779860139860144,
+          "start": 28.180279720279724
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 29.379440559440564,
+          "start": 28.779860139860144
+        }
+      ],
+      "fixture": {
+        "channels": 1,
+        "duration_sec": 30.0,
+        "file_size_bytes": 1323044,
+        "format": "WAV",
+        "frames": 661500,
+        "path": "eval\\data\\runtime_gate_30s.wav",
+        "sample_rate": 22050,
+        "subtype": "PCM_16"
+      },
+      "trace": {
+        "basic_pitch": {
+          "backend": "ONNX",
+          "external_codec_probe_skipped": true,
+          "first_inference_in_process": false,
+          "midi_note_count": 40,
+          "model_output_hashes_sha256": {
+            "contour": "84598305f22791f2cbae12ae090faa6f1f4927d87d1f17909cdee71362a9d1da",
+            "note": "e0ce8e2f29facb2dc3129f16277637eb073d2a55f616a5157d59ad518a845bd3",
+            "onset": "e6d20645900042d300a9f580c0785a67ad397b60072337aced339b2afebc4882"
+          },
+          "model_output_shapes": {
+            "contour": [
+              2580,
+              264
+            ],
+            "note": [
+              2580,
+              88
+            ],
+            "onset": [
+              2580,
+              88
+            ]
+          },
+          "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+          "model_reused": true,
+          "model_windows": 19,
+          "note_event_count": 40,
+          "note_event_hash_sha256": "acae17d88dd8a7831bf8bfb1ebab03ee882e7a602bfbbb64a630c3b62efdb1a7",
+          "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+          "timings_sec": {
+            "audio_decode_resample": 0.004719100019428879,
+            "audio_loader_import": 2.600019797682762e-06,
+            "audio_window_construction": 0.003620899864472449,
+            "basic_pitch_import": 0.0,
+            "basic_pitch_predict_total": 9.514452499977779,
+            "midi_serialization": 0.46202370000537485,
+            "model_inference": 8.894300399988424,
+            "model_initialization": 0.0,
+            "note_event_extraction_and_midi_generation": 0.5766667000134476,
+            "trace_hashing": 0.18006270000478253,
+            "transcription_total": 10.20142559998203
+          },
+          "transcription_index": 4
+        },
+        "input": {
+          "duration_sec": 30.0,
+          "file_size_bytes": 1323044,
+          "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\runtime_gate_30s.wav",
+          "sample_rate": 22050
+        },
+        "schema_version": "single-wav-runtime-v1",
+        "stages_sec": {
+          "candidate_scoring": 0.021880000189412385,
+          "file_validation": 0.0011064999853260815,
+          "harmony_postprocessing": 0.01624600001377985,
+          "harmony_total": 0.18002130003878847,
+          "hybrid_detector_import": 3.700028173625469e-06,
+          "hybrid_detector_initialization": 0.05268119997344911,
+          "midi_parsing": 0.14116430003196,
+          "normalization": 0.0001294999965466559,
+          "post_transcription_detector": 0.18066299997735769,
+          "total": 10.438496800023131,
+          "window_construction": 0.0005160000291652977
+        }
+      },
+      "wall_sec": 10.440268100006506,
+      "warnings": [
+        "merged 2 adjacent identical chords"
+      ]
+    }
+  ],
+  "environment": {
+    "logical_cpu_count": 20,
+    "packages": {
+      "basic-pitch": "0.4.0",
+      "librosa": "0.11.0",
+      "numba": "0.61.2",
+      "onnxruntime": "1.22.0",
+      "pretty-midi": "0.2.10",
+      "soundfile": "0.13.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+    "tensorflow": null
+  },
+  "evidence_level": "L0/L1/L2 runtime; no accuracy claim",
+  "evidence_loss_boundary": {
+    "basic_pitch_returns": [
+      "model_output",
+      "PrettyMIDI",
+      "note_events with amplitude and optional pitch bends"
+    ],
+    "currently_discarded": [
+      "model note/onset/contour arrays",
+      "note-event amplitude",
+      "pitch-bend evidence"
+    ],
+    "currently_preserved_downstream": [
+      "temporary MIDI notes and timing"
+    ],
+    "measured_midi_round_trip": "see midi_serialization and midi_parsing stage timings"
+  },
+  "fixtures": {
+    "primary": {
+      "channels": 1,
+      "duration_sec": 3.0,
+      "file_size_bytes": 132344,
+      "format": "WAV",
+      "frames": 66150,
+      "path": "tests\\audio\\pop.wav",
+      "sample_rate": 22050,
+      "subtype": "PCM_16"
+    },
+    "primary_provenance": "repository test fixture; legal provenance not yet audited",
+    "scaling": "3/10/30-second runtime-only repetitions of the primary fixture",
+    "secondary": {
+      "channels": 1,
+      "duration_sec": 7.0,
+      "file_size_bytes": 308744,
+      "format": "WAV",
+      "frames": 154350,
+      "path": "eval\\data\\synth\\wav\\ii-V-I_C_major.wav",
+      "sample_rate": 22050,
+      "subtype": "PCM_16"
+    }
+  },
+  "legacy_observation": {
+    "chord_events": [
+      {
+        "chord": "Am",
+        "confidence": 0.8,
+        "end": 1.1890909090909092,
+        "start": 0.5945454545454546
+      },
+      {
+        "chord": "C",
+        "confidence": 1.0,
+        "end": 1.7836363636363637,
+        "start": 1.1890909090909092
+      },
+      {
+        "chord": "Em",
+        "confidence": 0.8,
+        "end": 2.3781818181818184,
+        "start": 1.7836363636363637
+      }
+    ],
+    "evidence": "fresh pre-optimization run on 2026-08-30 with only NUMBA_CACHE_DIR redirected",
+    "fixture": "tests/audio/pop.wav",
+    "model_output_hashes_sha256": {
+      "contour": "c16bb5fe20b87203d9eed58493f55fe7eb639dd72d6c892bd7e39af007940309",
+      "note": "962de23ff519134ee583f727e77cc05d1c23d9fdd6398054817d16b19dbcaf2c",
+      "onset": "f7766bb82fe03a913d03fe3c0129e2b12b6ca47c55a00ee23d38f2b2a145dd87"
+    },
+    "note_event_count": 4,
+    "note_event_hash_sha256": "0aac58190ab431e1af76f06da24405a022dcca62a876f87b5474ca1aeaa93679",
+    "wall_sec": 30.964243300026283
+  },
+  "output_equivalence": {
+    "model_outputs_equal": true,
+    "normalized_chord_events_equal": true,
+    "note_events_equal": true
+  },
+  "process_a": {
+    "detector": "rule_jaccard",
+    "parent_observed_process_wall_sec": 19.88763040001504,
+    "process_wall_sec": 18.71197599999141,
+    "runs": [
+      {
+        "events": [
+          {
+            "chord": "Am",
+            "confidence": 0.8,
+            "end": 1.1890909090909092,
+            "start": 0.5945454545454546
+          },
+          {
+            "chord": "C",
+            "confidence": 1.0,
+            "end": 1.7836363636363637,
+            "start": 1.1890909090909092
+          },
+          {
+            "chord": "Em",
+            "confidence": 0.8,
+            "end": 2.3781818181818184,
+            "start": 1.7836363636363637
+          }
+        ],
+        "fixture": {
+          "channels": 1,
+          "duration_sec": 3.0,
+          "file_size_bytes": 132344,
+          "format": "WAV",
+          "frames": 66150,
+          "path": "tests\\audio\\pop.wav",
+          "sample_rate": 22050,
+          "subtype": "PCM_16"
+        },
+        "trace": {
+          "basic_pitch": {
+            "backend": "ONNX",
+            "external_codec_probe_skipped": true,
+            "first_inference_in_process": true,
+            "midi_note_count": 4,
+            "model_output_hashes_sha256": {
+              "contour": "c16bb5fe20b87203d9eed58493f55fe7eb639dd72d6c892bd7e39af007940309",
+              "note": "962de23ff519134ee583f727e77cc05d1c23d9fdd6398054817d16b19dbcaf2c",
+              "onset": "f7766bb82fe03a913d03fe3c0129e2b12b6ca47c55a00ee23d38f2b2a145dd87"
+            },
+            "model_output_shapes": {
+              "contour": [
+                258,
+                264
+              ],
+              "note": [
+                258,
+                88
+              ],
+              "onset": [
+                258,
+                88
+              ]
+            },
+            "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+            "model_reused": false,
+            "model_windows": 2,
+            "note_event_count": 4,
+            "note_event_hash_sha256": "0aac58190ab431e1af76f06da24405a022dcca62a876f87b5474ca1aeaa93679",
+            "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+            "timings_sec": {
+              "audio_decode_resample": 1.8832132000243291,
+              "audio_loader_import": 2.2490810999879614,
+              "audio_window_construction": 0.005611299944575876,
+              "basic_pitch_import": 1.0662630000151694,
+              "basic_pitch_predict_total": 3.8818547999835573,
+              "midi_serialization": 0.19002969999564812,
+              "model_inference": 1.7560799999628216,
+              "model_initialization": 0.78550139995059,
+              "note_event_extraction_and_midi_generation": 0.2042154999799095,
+              "trace_hashing": 0.16658219997771084,
+              "transcription_total": 8.345035400008783
+            },
+            "transcription_index": 1
+          },
+          "input": {
+            "duration_sec": 3.0,
+            "file_size_bytes": 132344,
+            "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\tests\\audio\\pop.wav",
+            "sample_rate": 22050
+          },
+          "schema_version": "single-wav-runtime-v1",
+          "stages_sec": {
+            "candidate_scoring": 0.0015881999861449003,
+            "file_validation": 0.01947269996162504,
+            "harmony_postprocessing": 0.23161509999772534,
+            "harmony_total": 0.27344700001413,
+            "hybrid_detector_import": 3.9900053000310436,
+            "hybrid_detector_initialization": 0.2709941999637522,
+            "midi_parsing": 0.019296100013889372,
+            "normalization": 5.390000296756625e-05,
+            "post_transcription_detector": 0.27819360001012683,
+            "total": 13.028600099962205,
+            "window_construction": 0.00012480001896619797
+          }
+        },
+        "wall_sec": 13.03311289998237,
+        "warnings": []
+      },
+      {
+        "events": [
+          {
+            "chord": "Am",
+            "confidence": 0.8,
+            "end": 1.1890909090909092,
+            "start": 0.5945454545454546
+          },
+          {
+            "chord": "C",
+            "confidence": 1.0,
+            "end": 1.7836363636363637,
+            "start": 1.1890909090909092
+          },
+          {
+            "chord": "Em",
+            "confidence": 0.8,
+            "end": 2.3781818181818184,
+            "start": 1.7836363636363637
+          }
+        ],
+        "fixture": {
+          "channels": 1,
+          "duration_sec": 3.0,
+          "file_size_bytes": 132344,
+          "format": "WAV",
+          "frames": 66150,
+          "path": "tests\\audio\\pop.wav",
+          "sample_rate": 22050,
+          "subtype": "PCM_16"
+        },
+        "trace": {
+          "basic_pitch": {
+            "backend": "ONNX",
+            "external_codec_probe_skipped": true,
+            "first_inference_in_process": false,
+            "midi_note_count": 4,
+            "model_output_hashes_sha256": {
+              "contour": "c16bb5fe20b87203d9eed58493f55fe7eb639dd72d6c892bd7e39af007940309",
+              "note": "962de23ff519134ee583f727e77cc05d1c23d9fdd6398054817d16b19dbcaf2c",
+              "onset": "f7766bb82fe03a913d03fe3c0129e2b12b6ca47c55a00ee23d38f2b2a145dd87"
+            },
+            "model_output_shapes": {
+              "contour": [
+                258,
+                264
+              ],
+              "note": [
+                258,
+                88
+              ],
+              "onset": [
+                258,
+                88
+              ]
+            },
+            "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+            "model_reused": true,
+            "model_windows": 2,
+            "note_event_count": 4,
+            "note_event_hash_sha256": "0aac58190ab431e1af76f06da24405a022dcca62a876f87b5474ca1aeaa93679",
+            "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+            "timings_sec": {
+              "audio_decode_resample": 0.0010271999635733664,
+              "audio_loader_import": 3.200024366378784e-06,
+              "audio_window_construction": 0.0005505000590346754,
+              "basic_pitch_import": 0.0,
+              "basic_pitch_predict_total": 0.8656935999752022,
+              "midi_serialization": 0.005514700023923069,
+              "model_inference": 0.84614059998421,
+              "model_initialization": 0.0,
+              "note_event_extraction_and_midi_generation": 0.017377100011799484,
+              "trace_hashing": 0.0010620999964885414,
+              "transcription_total": 1.0250416999915615
+            },
+            "transcription_index": 2
+          },
+          "input": {
+            "duration_sec": 3.0,
+            "file_size_bytes": 132344,
+            "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\tests\\audio\\pop.wav",
+            "sample_rate": 22050
+          },
+          "schema_version": "single-wav-runtime-v1",
+          "stages_sec": {
+            "candidate_scoring": 0.0014601999428123236,
+            "file_validation": 0.000665400002617389,
+            "harmony_postprocessing": 0.2039824000094086,
+            "harmony_total": 0.216998899995815,
+            "hybrid_detector_import": 6.699992809444666e-06,
+            "hybrid_detector_initialization": 0.06037640001159161,
+            "midi_parsing": 0.011397700000088662,
+            "normalization": 3.6800047382712364e-05,
+            "post_transcription_detector": 0.21754300000611693,
+            "total": 1.3057338999933563,
+            "window_construction": 9.039998985826969e-05
+          }
+        },
+        "wall_sec": 1.306813900009729,
+        "warnings": []
+      },
+      {
+        "events": [
+          {
+            "chord": "Dm7",
+            "confidence": 0.8,
+            "end": 1.9654545454545458,
+            "start": 0.0
+          },
+          {
+            "chord": "G7",
+            "confidence": 0.8,
+            "end": 3.9309090909090916,
+            "start": 1.9654545454545458
+          },
+          {
+            "chord": "Cmaj7",
+            "confidence": 0.8,
+            "end": 5.8963636363636365,
+            "start": 3.9309090909090916
+          },
+          {
+            "chord": "G",
+            "confidence": 0.8,
+            "end": 5.959090909090909,
+            "start": 5.8963636363636365
+          }
+        ],
+        "fixture": {
+          "channels": 1,
+          "duration_sec": 7.0,
+          "file_size_bytes": 308744,
+          "format": "WAV",
+          "frames": 154350,
+          "path": "eval\\data\\synth\\wav\\ii-V-I_C_major.wav",
+          "sample_rate": 22050,
+          "subtype": "PCM_16"
+        },
+        "trace": {
+          "basic_pitch": {
+            "backend": "ONNX",
+            "external_codec_probe_skipped": true,
+            "first_inference_in_process": false,
+            "midi_note_count": 15,
+            "model_output_hashes_sha256": {
+              "contour": "d6469182e56820079ba8933156df9ce72ed5737c533f979856c23f465a460368",
+              "note": "b274bfef4258bdcf297e37f9ea776c39da5b59b9819a43d50c4583ccdedd6609",
+              "onset": "f730d066456350133e50cbe20780fdc2a499444366e2e047703759bf5d5217bf"
+            },
+            "model_output_shapes": {
+              "contour": [
+                602,
+                264
+              ],
+              "note": [
+                602,
+                88
+              ],
+              "onset": [
+                602,
+                88
+              ]
+            },
+            "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+            "model_reused": true,
+            "model_windows": 5,
+            "note_event_count": 15,
+            "note_event_hash_sha256": "078c7699af701cdd93ab5057dbc359d46acec60b03c57e03de92545e16871e9b",
+            "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+            "timings_sec": {
+              "audio_decode_resample": 0.005729399970732629,
+              "audio_loader_import": 2.900022082030773e-06,
+              "audio_window_construction": 0.0017863999819383025,
+              "basic_pitch_import": 0.0,
+              "basic_pitch_predict_total": 3.4721867000334896,
+              "midi_serialization": 0.00962899997830391,
+              "model_inference": 3.4316307000699453,
+              "model_initialization": 0.0,
+              "note_event_extraction_and_midi_generation": 0.019087099994067103,
+              "trace_hashing": 0.0099165000137873,
+              "transcription_total": 3.5106742000207305
+            },
+            "transcription_index": 3
+          },
+          "input": {
+            "duration_sec": 7.0,
+            "file_size_bytes": 308744,
+            "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_C_major.wav",
+            "sample_rate": 22050
+          },
+          "schema_version": "single-wav-runtime-v1",
+          "stages_sec": {
+            "candidate_scoring": 0.03957660013111308,
+            "file_validation": 0.0006849000346846879,
+            "harmony_postprocessing": 0.2205794000183232,
+            "harmony_total": 0.2620843999902718,
+            "hybrid_detector_import": 3.400025889277458e-06,
+            "hybrid_detector_initialization": 0.43708310002693906,
+            "midi_parsing": 0.0012616999447345734,
+            "normalization": 5.500001134350896e-05,
+            "post_transcription_detector": 0.2624789999681525,
+            "total": 4.363556199998129,
+            "window_construction": 0.00012400001287460327
+          }
+        },
+        "wall_sec": 4.364749200001825,
+        "warnings": [
+          "merged 3 adjacent identical chords"
+        ]
+      }
+    ]
+  },
+  "process_b": {
+    "detector": "rule_jaccard",
+    "parent_observed_process_wall_sec": 12.0021155999857,
+    "process_wall_sec": 10.48625150002772,
+    "runs": [
+      {
+        "events": [
+          {
+            "chord": "Am",
+            "confidence": 0.8,
+            "end": 1.1890909090909092,
+            "start": 0.5945454545454546
+          },
+          {
+            "chord": "C",
+            "confidence": 1.0,
+            "end": 1.7836363636363637,
+            "start": 1.1890909090909092
+          },
+          {
+            "chord": "Em",
+            "confidence": 0.8,
+            "end": 2.3781818181818184,
+            "start": 1.7836363636363637
+          }
+        ],
+        "fixture": {
+          "channels": 1,
+          "duration_sec": 3.0,
+          "file_size_bytes": 132344,
+          "format": "WAV",
+          "frames": 66150,
+          "path": "tests\\audio\\pop.wav",
+          "sample_rate": 22050,
+          "subtype": "PCM_16"
+        },
+        "trace": {
+          "basic_pitch": {
+            "backend": "ONNX",
+            "external_codec_probe_skipped": true,
+            "first_inference_in_process": true,
+            "midi_note_count": 4,
+            "model_output_hashes_sha256": {
+              "contour": "c16bb5fe20b87203d9eed58493f55fe7eb639dd72d6c892bd7e39af007940309",
+              "note": "962de23ff519134ee583f727e77cc05d1c23d9fdd6398054817d16b19dbcaf2c",
+              "onset": "f7766bb82fe03a913d03fe3c0129e2b12b6ca47c55a00ee23d38f2b2a145dd87"
+            },
+            "model_output_shapes": {
+              "contour": [
+                258,
+                264
+              ],
+              "note": [
+                258,
+                88
+              ],
+              "onset": [
+                258,
+                88
+              ]
+            },
+            "model_path": "C:\\Users\\abhij\\AppData\\Roaming\\Python\\Python313\\site-packages\\basic_pitch\\saved_models\\icassp_2022\\nmp.onnx",
+            "model_reused": false,
+            "model_windows": 2,
+            "note_event_count": 4,
+            "note_event_hash_sha256": "0aac58190ab431e1af76f06da24405a022dcca62a876f87b5474ca1aeaa93679",
+            "numba_cache_dir": "C:\\Users\\abhij\\AppData\\Local\\Temp\\horizonjam-numba-cache",
+            "timings_sec": {
+              "audio_decode_resample": 1.5805528999771923,
+              "audio_loader_import": 2.574838300002739,
+              "audio_window_construction": 0.0004007000243291259,
+              "basic_pitch_import": 1.0402386000496335,
+              "basic_pitch_predict_total": 2.3051756999921054,
+              "midi_serialization": 0.005730999982915819,
+              "model_inference": 0.5308551999623887,
+              "model_initialization": 0.41743910004151985,
+              "note_event_extraction_and_midi_generation": 0.1924318000092171,
+              "trace_hashing": 0.001084199990145862,
+              "transcription_total": 6.349062100052834
+            },
+            "transcription_index": 1
+          },
+          "input": {
+            "duration_sec": 3.0,
+            "file_size_bytes": 132344,
+            "path": "C:\\Users\\abhij\\Downloads\\HorizonJam\\tests\\audio\\pop.wav",
+            "sample_rate": 22050
+          },
+          "schema_version": "single-wav-runtime-v1",
+          "stages_sec": {
+            "candidate_scoring": 0.0015507000498473644,
+            "file_validation": 0.01865309994900599,
+            "harmony_postprocessing": 0.024019300006330013,
+            "harmony_total": 0.03348270000424236,
+            "hybrid_detector_import": 3.596396900014952,
+            "hybrid_detector_initialization": 0.47719150001648813,
+            "midi_parsing": 0.003486800007522106,
+            "normalization": 6.3000014051795e-05,
+            "post_transcription_detector": 0.03395410004304722,
+            "total": 10.478438299964182,
+            "window_construction": 0.00011259998427703977
+          }
+        },
+        "wall_sec": 10.479395499976818,
+        "warnings": []
+      }
+    ]
+  },
+  "schema_version": "single-wav-analysis-performance-gate-v1",
+  "targets": {
+    "cold_3s_total_sec_max": 15.0,
+    "label": "TARGET",
+    "scope": "local research preview on this measured CPU/ONNX architecture",
+    "warm_10s_total_sec_max": 10.0,
+    "warm_30s_total_sec_max": 25.0,
+    "warm_3s_total_sec_max": 5.0
+  },
+  "warm_repeat_equivalence": {
+    "events_equal": true,
+    "note_event_hash_equal": true
+  }
+}

@@ -1,6 +1,3 @@
-# Environment variables (contains API keys)
-.env
-
 # Python
 __pycache__/
 *.py[cod]
@@ -19,34 +16,97 @@ parts/
 sdist/
 var/
 wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
-# Virtual environments
+# Virtual Environment
+.venv/
 venv/
-env/
 ENV/
+env/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
+# Large audio files (keep only small examples)
+*.wav
+*.mp3
+*.flac
+*.m4a
+!tests/audio/*.wav
+
+# Large MIDI files (keep only small examples) 
+basic-pitch-recording*.mid
+me_transcribed.mid
+*_transcribed.mid
+
 # Temporary files
-temp_analysis/
-output_test/
 *.tmp
+*.temp
+temp/
+
+# Logs
 *.log
 
-# ChromaDB
-RAG/enhanced_chroma_store/
-chroma.sqlite3
-HorizonJam-master/models/
-HorizonJam-master/basicpitch_env/
-*.large_file_extension
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Model files
+*.pkl
+*.h5
+*.pb
+*.onnx
+
+# Audio processing cache
+.librosa_cache/
+node_modules/
+HorizonJam-master/RAG/unified_chroma_store/
+RAG/unified_chroma_store/
+unified_chroma_store/
+
+# Secrets — never commit
+.env
+.env.*
+!.env.example
+.env.local
+.env.*.local
+passwords.txt
+*.pem
+*.key
+secrets/
+
+# Generated TTS output
+audio/*.mp3
+audio/*.wav
+
+# Build artifacts
+.next/
+out/
+
+# Pipeline output
+output/
+output_improved/
+temp_output/
+chord_analysis_output.json
+results.json
+
+# Local release artifacts; Git tags are the distributable source archives
+_archive/releases/*.zip

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tutor Change"
+  short_description: "Change tutor behavior with fixed-case evidence"
+  default_prompt: "Use $tutor-change to modify tutoring behavior and compare fixed evaluation cases."

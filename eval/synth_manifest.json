@@ -1,0 +1,328 @@
+{
+  "count": 40,
+  "renderers": {
+    "pretty_midi-sine": 40
+  },
+  "songs": [
+    {
+      "name": "I-IV-V-I_C_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_C_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_C_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_C_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_C#_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_C#_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_C#_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_C#_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_D_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_D_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_D_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_D_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_D#_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_D#_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_D#_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_D#_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_E_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_E_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_E_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_E_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_F_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_F_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_F_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_F_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_F#_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_F#_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_F#_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_F#_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_G_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_G_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_G_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_G_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_G#_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_G#_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_G#_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_G#_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_A_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_A_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_A_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_A_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_A#_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_A#_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_A#_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_A#_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "I-IV-V-I_B_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\I-IV-V-I_B_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\I-IV-V-I_B_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\I-IV-V-I_B_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_C_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_C_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_C_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_C_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_C#_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_C#_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_C#_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_C#_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_D_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_D_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_D_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_D_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_D#_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_D#_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_D#_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_D#_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_E_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_E_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_E_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_E_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_F_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_F_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_F_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_F_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_F#_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_F#_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_F#_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_F#_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_G_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_G_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_G_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_G_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_G#_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_G#_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_G#_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_G#_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_A_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_A_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_A_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_A_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_A#_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_A#_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_A#_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_A#_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "i-iv-V-i_B_minor",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\i-iv-V-i_B_minor.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\i-iv-V-i_B_minor.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\i-iv-V-i_B_minor.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "ii-V-I_C_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\ii-V-I_C_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_C_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\ii-V-I_C_major.lab",
+      "duration": 6.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "ii-V-I_F_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\ii-V-I_F_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_F_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\ii-V-I_F_major.lab",
+      "duration": 6.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "ii-V-I_Bb_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\ii-V-I_Bb_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_Bb_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\ii-V-I_Bb_major.lab",
+      "duration": 6.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "ii-V-I_G_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\ii-V-I_G_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_G_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\ii-V-I_G_major.lab",
+      "duration": 6.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "ii-V-I_D_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\ii-V-I_D_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_D_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\ii-V-I_D_major.lab",
+      "duration": 6.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "ii-V-I_A_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\ii-V-I_A_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\ii-V-I_A_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\ii-V-I_A_major.lab",
+      "duration": 6.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "vi-IV-I-V_C_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\vi-IV-I-V_C_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\vi-IV-I-V_C_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\vi-IV-I-V_C_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "vi-IV-I-V_G_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\vi-IV-I-V_G_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\vi-IV-I-V_G_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\vi-IV-I-V_G_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "vi-IV-I-V_D_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\vi-IV-I-V_D_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\vi-IV-I-V_D_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\vi-IV-I-V_D_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "vi-IV-I-V_A_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\vi-IV-I-V_A_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\vi-IV-I-V_A_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\vi-IV-I-V_A_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "vi-IV-I-V_E_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\vi-IV-I-V_E_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\vi-IV-I-V_E_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\vi-IV-I-V_E_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "vi-IV-I-V_F_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\vi-IV-I-V_F_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\vi-IV-I-V_F_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\vi-IV-I-V_F_major.lab",
+      "duration": 8.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "blues_E_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\blues_E_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\blues_E_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\blues_E_major.lab",
+      "duration": 18.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "blues_A_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\blues_A_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\blues_A_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\blues_A_major.lab",
+      "duration": 18.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "blues_G_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\blues_G_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\blues_G_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\blues_G_major.lab",
+      "duration": 18.0,
+      "renderer": "pretty_midi-sine"
+    },
+    {
+      "name": "blues_C_major",
+      "midi": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\midi\\blues_C_major.mid",
+      "wav": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\wav\\blues_C_major.wav",
+      "labels": "C:\\Users\\abhij\\Downloads\\HorizonJam\\eval\\data\\synth\\labels\\blues_C_major.lab",
+      "duration": 18.0,
+      "renderer": "pretty_midi-sine"
+    }
+  ]
+}

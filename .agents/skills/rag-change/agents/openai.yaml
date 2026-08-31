@@ -1,0 +1,4 @@
+interface:
+  display_name: "RAG Change"
+  short_description: "Change retrieval with grounding evidence"
+  default_prompt: "Use $rag-change to modify HorizonJam retrieval and evaluate relevance and grounding."

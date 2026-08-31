@@ -1,0 +1,1537 @@
+{
+  "schema_version": "1.0",
+  "total_cases": 13,
+  "passed_cases": 13,
+  "structural_evidence_fields": {
+    "preserved": 5,
+    "total": 5,
+    "fields": [
+      "timing",
+      "confidence",
+      "warnings",
+      "detector_provenance",
+      "estimated_key"
+    ]
+  },
+  "grounded_cases": {
+    "passed": 7,
+    "total": 7
+  },
+  "uncertainty_cases": {
+    "passed": 4,
+    "total": 4
+  },
+  "retrieval_absence_cases": {
+    "passed": 6,
+    "total": 6
+  },
+  "results": [
+    {
+      "id": "grounded_theory",
+      "description": "High-confidence progression with relevant theory retrieval.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "Why does this G to C movement sound stable? | harmonic function | cadence | key context | chords G C | key G Major | guitar",
+        "candidate_count": 1,
+        "evidence": [
+          {
+            "content": "G and C share the note G. Common tones can make harmonic movement sound connected.",
+            "source": "voice-leading.md",
+            "evidence_id": "theory-1",
+            "relevance": 0.86,
+            "rank": 1,
+            "metadata": {
+              "source_file": "voice-leading.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "voice-leading.md",
+            "evidence_id": "theory-1",
+            "rank": 1,
+            "relevance": 0.86,
+            "lexical_overlap": 3,
+            "selected": true,
+            "content_preview": "G and C share the note G. Common tones can make harmonic movement sound connected."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "G moving to C sounds connected because the shared G can remain stable while the other voices move."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "grounded_theory.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.5,
+            "chord": "G",
+            "confidence": 0.93,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.5,
+            "end": 3.0,
+            "chord": "C",
+            "confidence": 0.91,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "low_confidence_chord",
+      "description": "Low-confidence chord identification must remain conditional.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "expected_repair": true
+      },
+      "assessment": {
+        "intent": "chord_identification",
+        "retrieval_focus": [
+          "chord identification",
+          "chord quality"
+        ],
+        "evidence_strength": "low",
+        "requires_uncertainty_language": true,
+        "uncertainty_reasons": [
+          "Low-confidence chord C at 0.00-1.00s (confidence 0.25).",
+          "The estimated key is unknown."
+        ]
+      },
+      "retrieval": {
+        "status": "no_results",
+        "query": "What chord am I playing? | chord identification | chord quality | chords C | guitar",
+        "candidate_count": 0,
+        "evidence": [],
+        "candidates": []
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "no_results"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. You are playing C major."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "low_confidence_chord.wav",
+        "estimated_key": null,
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "C",
+            "confidence": 0.25,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": [
+          "Low-confidence chord C at 0.00-1.00s (confidence 0.25).",
+          "The estimated key is unknown."
+        ]
+      }
+    },
+    {
+      "id": "unknown_confidence",
+      "description": "Missing confidence remains unknown rather than becoming high confidence.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "expected_repair": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "unknown",
+        "requires_uncertainty_language": true,
+        "uncertainty_reasons": [
+          "Chord E7 at 0.00-2.00s has unknown confidence."
+        ]
+      },
+      "retrieval": {
+        "status": "no_results",
+        "query": "Why does this chord sound tense? | harmonic function | cadence | key context | chords E7 | key A Minor | guitar",
+        "candidate_count": 0,
+        "evidence": [],
+        "candidates": []
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "no_results"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. E7 creates tension toward A minor."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "unknown_confidence.wav",
+        "estimated_key": "A Minor",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 2.0,
+            "chord": "E7",
+            "confidence": null,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "E7",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "E7",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": [
+          "Chord E7 at 0.00-2.00s has unknown confidence."
+        ]
+      }
+    },
+    {
+      "id": "detector_warning",
+      "description": "Normalizer warning reaches assessment and response verification.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "expected_repair": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "mixed",
+        "requires_uncertainty_language": true,
+        "uncertainty_reasons": [
+          "Detector warning: clamped 2 overlapping intervals"
+        ]
+      },
+      "retrieval": {
+        "status": "no_results",
+        "query": "Explain this progression. | harmonic function | cadence | key context | chords C G | key C Major | guitar",
+        "candidate_count": 0,
+        "evidence": [],
+        "candidates": []
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "no_results"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. This is a C to G progression."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "detector_warning.wav",
+        "estimated_key": "C Major",
+        "detector": "fixture",
+        "warnings": [
+          "clamped 2 overlapping intervals"
+        ],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "C",
+            "confidence": 0.88,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "G",
+            "confidence": 0.87,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "C - G",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "C",
+              "shape": "fixture"
+            },
+            {
+              "chord": "G",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": [
+          "Detector warning: clamped 2 overlapping intervals"
+        ]
+      }
+    },
+    {
+      "id": "dominant_seventh",
+      "description": "Dominant seventh evidence and knowledge remain explicit.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "What makes G7 want to resolve? | harmonic function | cadence | key context | chords G7 C | key C Major | guitar",
+        "candidate_count": 1,
+        "evidence": [
+          {
+            "content": "The tritone in a dominant seventh chord resolves inward to stable chord tones of the tonic.",
+            "source": "dominant-function.md",
+            "evidence_id": "dom7-1",
+            "relevance": 0.83,
+            "rank": 1,
+            "metadata": {
+              "source_file": "dominant-function.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "dominant-function.md",
+            "evidence_id": "dom7-1",
+            "rank": 1,
+            "relevance": 0.83,
+            "lexical_overlap": 0,
+            "selected": true,
+            "content_preview": "The tritone in a dominant seventh chord resolves inward to stable chord tones of the tonic."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "G7 likely pulls toward C because its tritone resolves into stable tones of the tonic."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "dominant_seventh.wav",
+        "estimated_key": "C Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.5,
+            "chord": "G7",
+            "confidence": 0.78,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.5,
+            "end": 3.0,
+            "chord": "C",
+            "confidence": 0.9,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G7 - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G7",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "transposed_progression",
+      "description": "Transposed progression keeps event order and key.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "How does this progression function? | harmonic function | cadence | key context | chords F Bb C | key F Major | guitar",
+        "candidate_count": 1,
+        "evidence": [
+          {
+            "content": "In a major key, I-IV-V establishes tonic, predominant, and dominant functions.",
+            "source": "functional-harmony.md",
+            "evidence_id": "function-1",
+            "relevance": 0.79,
+            "rank": 1,
+            "metadata": {
+              "source_file": "functional-harmony.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "functional-harmony.md",
+            "evidence_id": "function-1",
+            "rank": 1,
+            "relevance": 0.79,
+            "lexical_overlap": 2,
+            "selected": true,
+            "content_preview": "In a major key, I-IV-V establishes tonic, predominant, and dominant functions."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "In F major, F-Bb-C can outline tonic, predominant, and dominant functions."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "transposed_progression.wav",
+        "estimated_key": "F Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "F",
+            "confidence": 0.91,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "Bb",
+            "confidence": 0.89,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 2.0,
+            "end": 3.0,
+            "chord": "C",
+            "confidence": 0.92,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "F - Bb - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "F",
+              "shape": "fixture"
+            },
+            {
+              "chord": "Bb",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "guitar_technique",
+      "description": "Technique question routes retrieval toward guitar mechanics.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true
+      },
+      "assessment": {
+        "intent": "guitar_technique",
+        "retrieval_focus": [
+          "guitar technique",
+          "fingering",
+          "voice leading"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "How can I make these chord transitions smoother? | guitar technique | fingering | voice leading | chords G C | key G Major | guitar",
+        "candidate_count": 1,
+        "evidence": [
+          {
+            "content": "For smoother guitar chord transitions, identify anchor fingers and move the remaining fingers together.",
+            "source": "guitar-technique.md",
+            "evidence_id": "tech-1",
+            "relevance": 0.84,
+            "rank": 1,
+            "metadata": {
+              "source_file": "guitar-technique.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "guitar-technique.md",
+            "evidence_id": "tech-1",
+            "rank": 1,
+            "relevance": 0.84,
+            "lexical_overlap": 4,
+            "selected": true,
+            "content_preview": "For smoother guitar chord transitions, identify anchor fingers and move the remaining fingers together."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "Use an anchor finger where possible, then move the remaining fingers as one coordinated shape."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "guitar_technique.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "G",
+            "confidence": 0.89,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "C",
+            "confidence": 0.86,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "retrieval_required",
+      "description": "Question requires selected external knowledge content.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true
+      },
+      "assessment": {
+        "intent": "general_tutoring",
+        "retrieval_focus": [
+          "music theory",
+          "practice guidance"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "What is voice leading and how does it apply here? | music theory | practice guidance | chords G C | key G Major | guitar",
+        "candidate_count": 1,
+        "evidence": [
+          {
+            "content": "Voice leading describes how individual notes move between successive chords, favoring common tones and small intervals.",
+            "source": "voice-leading.md",
+            "evidence_id": "voice-2",
+            "relevance": 0.88,
+            "rank": 1,
+            "metadata": {
+              "source_file": "voice-leading.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "voice-leading.md",
+            "evidence_id": "voice-2",
+            "rank": 1,
+            "relevance": 0.88,
+            "lexical_overlap": 3,
+            "selected": true,
+            "content_preview": "Voice leading describes how individual notes move between successive chords, favoring common tones and small intervals."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "Voice leading tracks each note between chords; here, keeping G while nearby tones move can connect the shapes."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "retrieval_required.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "G",
+            "confidence": 0.9,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "C",
+            "confidence": 0.9,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "retrieval_pollution",
+      "description": "Irrelevant high-score candidate must not dominate selected evidence.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true,
+        "rejected_sources": true
+      },
+      "assessment": {
+        "intent": "guitar_technique",
+        "retrieval_focus": [
+          "guitar technique",
+          "fingering",
+          "voice leading"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "How should I practice the G to C guitar change? | guitar technique | fingering | voice leading | chords G C | key G Major | guitar",
+        "candidate_count": 2,
+        "evidence": [
+          {
+            "content": "Practice the G to C guitar change slowly, keeping any anchor finger close to the strings.",
+            "source": "guitar-practice.md",
+            "evidence_id": "practice-1",
+            "relevance": 0.72,
+            "rank": 2,
+            "metadata": {
+              "source_file": "guitar-practice.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "cooking.txt",
+            "evidence_id": "noise-1",
+            "rank": 1,
+            "relevance": 0.96,
+            "lexical_overlap": 0,
+            "selected": false,
+            "content_preview": "Tomato soup should be stored in a sealed container after cooling."
+          },
+          {
+            "source": "guitar-practice.md",
+            "evidence_id": "practice-1",
+            "rank": 2,
+            "relevance": 0.72,
+            "lexical_overlap": 3,
+            "selected": true,
+            "content_preview": "Practice the G to C guitar change slowly, keeping any anchor finger close to the strings."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "Practice the G to C change slowly and keep useful anchor fingers close to the strings."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "retrieval_pollution.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "G",
+            "confidence": 0.9,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "C",
+            "confidence": 0.88,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "retrieval_miss",
+      "description": "No retrieval remains explicit and false grounding is removed.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "expected_repair": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "no_results",
+        "query": "Why does this progression work? | harmonic function | cadence | key context | chords G C | key G Major | guitar",
+        "candidate_count": 0,
+        "evidence": [],
+        "candidates": []
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "no_results"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "removed_false_retrieval_claim"
+        ],
+        "final_response": "You can still practice by listening to the shared tones."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "retrieval_miss.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "G",
+            "confidence": 0.9,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "C",
+            "confidence": 0.9,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "user_contradiction",
+      "description": "User belief remains distinct from detector evidence.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true
+      },
+      "assessment": {
+        "intent": "harmonic_function",
+        "retrieval_focus": [
+          "harmonic function",
+          "cadence",
+          "key context"
+        ],
+        "evidence_strength": "medium",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "no_results",
+        "query": "I know I am playing D major. Why does it sound wrong? | harmonic function | cadence | key context | chords G C | key G Major | guitar",
+        "candidate_count": 0,
+        "evidence": [],
+        "candidates": []
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "no_results"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "The detector suggests G to C, while your D-major expectation may indicate a tuning, fingering, or recognition mismatch."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "user_contradiction.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "G",
+            "confidence": 0.72,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "C",
+            "confidence": 0.7,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "unsupported_request",
+      "description": "Tutor states when requested evidence is absent.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "final_contains": true
+      },
+      "assessment": {
+        "intent": "general_tutoring",
+        "retrieval_focus": [
+          "music theory",
+          "practice guidance"
+        ],
+        "evidence_strength": "high",
+        "requires_uncertainty_language": false,
+        "uncertainty_reasons": []
+      },
+      "retrieval": {
+        "status": "no_results",
+        "query": "What rhythm was the drummer playing? | music theory | practice guidance | chords G C | key G Major | guitar",
+        "candidate_count": 0,
+        "evidence": [],
+        "candidates": []
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": false
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "no_results"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "The available evidence contains chord timing but no drum transcription, so I cannot identify the drummer's rhythm reliably."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "unsupported_request.wav",
+        "estimated_key": "G Major",
+        "detector": "fixture",
+        "warnings": [],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "G",
+            "confidence": 0.87,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "C",
+            "confidence": 0.86,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "G - C",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "G",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": []
+      }
+    },
+    {
+      "id": "ambiguous_progression",
+      "description": "Medium-confidence relative-key evidence stays conditional.",
+      "passed": true,
+      "checks": {
+        "intent": true,
+        "retrieval_status": true,
+        "uncertainty": true,
+        "timing_propagated": true,
+        "confidence_propagated": true,
+        "warnings_propagated": true,
+        "detector_provenance_propagated": true,
+        "estimated_key_propagated": true,
+        "retrieved_content_propagated": true,
+        "verification_passed": true,
+        "selected_sources": true
+      },
+      "assessment": {
+        "intent": "general_tutoring",
+        "retrieval_focus": [
+          "music theory",
+          "practice guidance"
+        ],
+        "evidence_strength": "medium",
+        "requires_uncertainty_language": true,
+        "uncertainty_reasons": [
+          "Detector warning: relative-key ambiguity is not represented by the key estimator"
+        ]
+      },
+      "retrieval": {
+        "status": "available",
+        "query": "Is this C major or A minor? | music theory | practice guidance | chords Am F C G | key C Major | guitar",
+        "candidate_count": 1,
+        "evidence": [
+          {
+            "content": "Relative major and minor keys share the same key signature and many of the same chords; tonal center depends on emphasis and resolution.",
+            "source": "relative-keys.md",
+            "evidence_id": "relative-1",
+            "relevance": 0.81,
+            "rank": 1,
+            "metadata": {
+              "source_file": "relative-keys.md"
+            }
+          }
+        ],
+        "candidates": [
+          {
+            "source": "relative-keys.md",
+            "evidence_id": "relative-1",
+            "rank": 1,
+            "relevance": 0.81,
+            "lexical_overlap": 4,
+            "selected": true,
+            "content_preview": "Relative major and minor keys share the same key signature and many of the same chords; tonal center depends on emphasis and resolution."
+          }
+        ]
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": "available"
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "This may be heard in either relative key; listen for whether phrases settle on C or A minor before making a firm claim."
+      },
+      "performance_evidence": {
+        "schema_version": "1.0",
+        "audio_id": "ambiguous_progression.wav",
+        "estimated_key": "C Major",
+        "detector": "fixture",
+        "warnings": [
+          "relative-key ambiguity is not represented by the key estimator"
+        ],
+        "chord_events": [
+          {
+            "start": 0.0,
+            "end": 1.0,
+            "chord": "Am",
+            "confidence": 0.58,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 1.0,
+            "end": 2.0,
+            "chord": "F",
+            "confidence": 0.6,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 2.0,
+            "end": 3.0,
+            "chord": "C",
+            "confidence": 0.59,
+            "source_detector": "fixture",
+            "alternatives": []
+          },
+          {
+            "start": 3.0,
+            "end": 4.0,
+            "chord": "G",
+            "confidence": 0.57,
+            "source_detector": "fixture",
+            "alternatives": []
+          }
+        ],
+        "progression_summary": "Am - F - C - G",
+        "instrument_context": {
+          "instrument": "guitar",
+          "chord_shapes": [
+            {
+              "chord": "Am",
+              "shape": "fixture"
+            },
+            {
+              "chord": "F",
+              "shape": "fixture"
+            },
+            {
+              "chord": "C",
+              "shape": "fixture"
+            },
+            {
+              "chord": "G",
+              "shape": "fixture"
+            }
+          ]
+        },
+        "available_uncertainty": [
+          "Detector warning: relative-key ambiguity is not represented by the key estimator"
+        ]
+      }
+    }
+  ]
+}

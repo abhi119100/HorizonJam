@@ -1,0 +1,4 @@
+interface:
+  display_name: "HorizonJam Evaluation"
+  short_description: "Run and interpret HorizonJam evaluations"
+  default_prompt: "Use $evaluation to run the relevant HorizonJam evaluation and record evidence."

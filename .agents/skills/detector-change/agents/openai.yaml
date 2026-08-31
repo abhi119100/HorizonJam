@@ -1,0 +1,4 @@
+interface:
+  display_name: "Detector Change"
+  short_description: "Change chord detection with benchmark evidence"
+  default_prompt: "Use $detector-change to modify chord detection and verify the contract and benchmark."
