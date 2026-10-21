@@ -1,0 +1,464 @@
+{
+  "cases": [
+    {
+      "comparison": "both_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "C",
+      "dsp_top3": [
+        {
+          "label": "C",
+          "normalized_support": 0.9868554043189668,
+          "quality": "major",
+          "root": "C",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Cmaj7",
+          "normalized_support": 0.887766767762162,
+          "quality": "major7",
+          "root": "C",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "C7",
+          "normalized_support": 0.8710961577426434,
+          "quality": "dominant7",
+          "root": "C",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": -0.03999999999999998,
+      "expected": "C",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "C",
+      "name": "c_major",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "C",
+      "timings_sec": {
+        "audio_load": 0.0007852999842725694,
+        "candidate_scoring": 0.004904199973680079,
+        "cqt_chroma": 0.06445639999583364,
+        "evidence_conversion": 0.0005161999724805355,
+        "total": 2.518456999969203,
+        "tuning_estimation": 2.4526959999930114
+      }
+    },
+    {
+      "comparison": "both_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "Am",
+      "dsp_top3": [
+        {
+          "label": "Am",
+          "normalized_support": 0.9865757631976398,
+          "quality": "minor",
+          "root": "A",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Fmaj7",
+          "normalized_support": 0.8792336141107335,
+          "quality": "major7",
+          "root": "F",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Am7",
+          "normalized_support": 0.8750900787906546,
+          "quality": "minor7",
+          "root": "A",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": -0.03999999999999998,
+      "expected": "Am",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "Am",
+      "name": "a_minor",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "Am",
+      "timings_sec": {
+        "audio_load": 0.0024190000258386135,
+        "candidate_scoring": 0.026931700005661696,
+        "cqt_chroma": 0.32086370000615716,
+        "evidence_conversion": 0.0055339999962598085,
+        "total": 0.3434720000368543,
+        "tuning_estimation": 0.014645799994468689
+      }
+    },
+    {
+      "comparison": "both_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "G7",
+      "dsp_top3": [
+        {
+          "label": "G7",
+          "normalized_support": 0.9833363569262996,
+          "quality": "dominant7",
+          "root": "G",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "G",
+          "normalized_support": 0.8848620331879732,
+          "quality": "major",
+          "root": "G",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Bdim",
+          "normalized_support": 0.8064382760441381,
+          "quality": "diminished",
+          "root": "B",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": -0.04999999999999999,
+      "expected": "G7",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "G7",
+      "name": "g_dominant7",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "G7",
+      "timings_sec": {
+        "audio_load": 0.0026190000353381038,
+        "candidate_scoring": 0.019824700022581965,
+        "cqt_chroma": 0.2790831999736838,
+        "evidence_conversion": 0.002230999991297722,
+        "total": 0.30371370003558695,
+        "tuning_estimation": 0.01976910000666976
+      }
+    },
+    {
+      "comparison": "both_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "Cmaj7",
+      "dsp_top3": [
+        {
+          "label": "Cmaj7",
+          "normalized_support": 0.9855102213271664,
+          "quality": "major7",
+          "root": "C",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "C",
+          "normalized_support": 0.8864009526853853,
+          "quality": "major",
+          "root": "C",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Em",
+          "normalized_support": 0.8057198011432799,
+          "quality": "minor",
+          "root": "E",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": -0.03999999999999998,
+      "expected": "Cmaj7",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "Cmaj7",
+      "name": "c_major7",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "Cmaj7",
+      "timings_sec": {
+        "audio_load": 0.0009942000033333898,
+        "candidate_scoring": 0.01767829997697845,
+        "cqt_chroma": 0.25191019999329,
+        "evidence_conversion": 0.0017918000230565667,
+        "total": 0.26738119998481125,
+        "tuning_estimation": 0.012678900035098195
+      }
+    },
+    {
+      "comparison": "both_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "Dm7",
+      "dsp_top3": [
+        {
+          "label": "Dm7",
+          "normalized_support": 0.9855858575679401,
+          "quality": "minor7",
+          "root": "D",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Dm",
+          "normalized_support": 0.888519269829022,
+          "quality": "minor",
+          "root": "D",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "F",
+          "normalized_support": 0.8115360369409885,
+          "quality": "major",
+          "root": "F",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": 0.010000000000000009,
+      "expected": "Dm7",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "Dm7",
+      "name": "d_minor7",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "Dm7",
+      "timings_sec": {
+        "audio_load": 0.001470399962272495,
+        "candidate_scoring": 0.021199799957685173,
+        "cqt_chroma": 0.23095150000881404,
+        "evidence_conversion": 0.001555300026666373,
+        "total": 0.24473969999235123,
+        "tuning_estimation": 0.010751600028015673
+      }
+    },
+    {
+      "comparison": "rule_jaccard_only_correct",
+      "dsp_correct": false,
+      "dsp_prediction": "Asus4",
+      "dsp_top3": [
+        {
+          "label": "Asus4",
+          "normalized_support": 0.9876969721416738,
+          "quality": "sus4",
+          "root": "A",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Dsus2",
+          "normalized_support": 0.9876969721416738,
+          "quality": "sus2",
+          "root": "D",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Dm",
+          "normalized_support": 0.6781241158077501,
+          "quality": "minor",
+          "root": "D",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": 0.010000000000000009,
+      "expected": "Dsus2",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "Asus4",
+      "name": "d_sus2",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "Dsus2",
+      "timings_sec": {
+        "audio_load": 0.0012144999927841127,
+        "candidate_scoring": 0.019728100043721497,
+        "cqt_chroma": 0.21509599999990314,
+        "evidence_conversion": 0.001450899988412857,
+        "total": 0.2310562999919057,
+        "tuning_estimation": 0.013284199987538159
+      }
+    },
+    {
+      "comparison": "both_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "Asus4",
+      "dsp_top3": [
+        {
+          "label": "Asus4",
+          "normalized_support": 0.9863616529212424,
+          "quality": "sus4",
+          "root": "A",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Dsus2",
+          "normalized_support": 0.9863616529212424,
+          "quality": "sus2",
+          "root": "D",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Dm",
+          "normalized_support": 0.7139124518514,
+          "quality": "minor",
+          "root": "D",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": -0.02999999999999997,
+      "expected": "Asus4",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "Asus4",
+      "name": "a_sus4",
+      "rule_jaccard_correct": true,
+      "rule_jaccard_prediction": "Asus4",
+      "timings_sec": {
+        "audio_load": 0.0010835000430233777,
+        "candidate_scoring": 0.02224760001990944,
+        "cqt_chroma": 0.20042169996304438,
+        "evidence_conversion": 0.0017288000090047717,
+        "total": 0.21438990003662184,
+        "tuning_estimation": 0.011149800033308566
+      }
+    },
+    {
+      "comparison": "dsp_only_correct",
+      "dsp_correct": true,
+      "dsp_prediction": "Bdim",
+      "dsp_top3": [
+        {
+          "label": "Bdim",
+          "normalized_support": 0.9884190003107264,
+          "quality": "diminished",
+          "root": "B",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "G7",
+          "normalized_support": 0.8754551580323142,
+          "quality": "dominant7",
+          "root": "G",
+          "source": "librosa_chroma"
+        },
+        {
+          "label": "Bm",
+          "normalized_support": 0.7124287760348398,
+          "quality": "minor",
+          "root": "B",
+          "source": "librosa_chroma"
+        }
+      ],
+      "estimated_tuning_bins": 0.010000000000000009,
+      "expected": "Bdim",
+      "fixture_kind": "deterministic synthetic sine block chord",
+      "frame_count": 87,
+      "frame_majority_prediction": "Bdim",
+      "name": "b_diminished",
+      "rule_jaccard_correct": false,
+      "rule_jaccard_prediction": "Bm",
+      "timings_sec": {
+        "audio_load": 0.0013786000199615955,
+        "candidate_scoring": 0.016422299959231168,
+        "cqt_chroma": 0.21655359998112544,
+        "evidence_conversion": 0.0010844999924302101,
+        "total": 0.229899599973578,
+        "tuning_estimation": 0.010877199994865805
+      }
+    }
+  ],
+  "command": "python eval/evaluate_dsp_chroma.py",
+  "comparison": {
+    "both_correct": 6,
+    "both_fail": 0,
+    "case_count": 8,
+    "dsp_exact": 7,
+    "dsp_only_correct": 1,
+    "rule_jaccard_exact": 7,
+    "rule_jaccard_only_correct": 1
+  },
+  "decision_gate": {
+    "activation": "research diagnostic only",
+    "default_detector_changed": false,
+    "outcome": "A DSP_COMPLEMENTARY"
+  },
+  "environment": {
+    "packages": {
+      "librosa": "0.11.0",
+      "numba": "0.61.2",
+      "numpy": "2.2.5",
+      "soundfile": "0.13.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "evidence_level": "L2 deterministic synthetic diagnostic and L6 runtime; no real-performance accuracy claim",
+  "pipeline": {
+    "audio": "soundfile float32 decode, mono mean, Librosa resample to 22050 Hz when needed",
+    "bins_per_octave": 36,
+    "diagnostic": "cosine support against fixed binary chord profiles",
+    "feature": "librosa.feature.chroma_cqt",
+    "harmonic_separation": false,
+    "hop_length": 512,
+    "normalization": "L1 per frame",
+    "score_semantics": "normalized support, not probability or calibrated confidence",
+    "timebase": "frame index * hop_length / sample_rate, clamped to audio duration",
+    "vocabulary": [
+      "major",
+      "minor",
+      "dominant7",
+      "major7",
+      "minor7",
+      "sus2",
+      "sus4",
+      "diminished"
+    ]
+  },
+  "runtime_scaling": [
+    {
+      "duration_sec": 3,
+      "frame_count": 130,
+      "timings_sec": {
+        "audio_load": 0.0014539000112563372,
+        "candidate_scoring": 0.020415699982549995,
+        "cqt_chroma": 0.22367470001336187,
+        "evidence_conversion": 0.0025451999972574413,
+        "total": 0.24925710004754364,
+        "tuning_estimation": 0.02157679997617379
+      }
+    },
+    {
+      "duration_sec": 10,
+      "frame_count": 431,
+      "timings_sec": {
+        "audio_load": 0.0036453999928198755,
+        "candidate_scoring": 0.08127269998658448,
+        "cqt_chroma": 0.3040952999726869,
+        "evidence_conversion": 0.006603199988603592,
+        "total": 0.38554149999981746,
+        "tuning_estimation": 0.07118700002320111
+      }
+    },
+    {
+      "duration_sec": 30,
+      "frame_count": 1292,
+      "timings_sec": {
+        "audio_load": 0.01357900002039969,
+        "candidate_scoring": 0.22255000000586733,
+        "cqt_chroma": 0.49873750004917383,
+        "evidence_conversion": 0.02136600000085309,
+        "total": 0.7569494000053965,
+        "tuning_estimation": 0.22325680003268644
+      }
+    }
+  ],
+  "schema_version": "dsp-chroma-evidence-gate-v1",
+  "tuning_audit": {
+    "cases": [
+      {
+        "estimated_prediction": "C",
+        "estimated_tuning_bins": -0.03999999999999998,
+        "mean_absolute_chroma_difference": 0.0013709504789943504,
+        "name": "c_major",
+        "zero_tuning_prediction": "C",
+        "zero_tuning_total_sec": 0.18945130001520738
+      },
+      {
+        "estimated_prediction": "Am",
+        "estimated_tuning_bins": -0.03999999999999998,
+        "mean_absolute_chroma_difference": 0.001063744682045599,
+        "name": "a_minor",
+        "zero_tuning_prediction": "Am",
+        "zero_tuning_total_sec": 0.25287099997512996
+      }
+    ],
+    "policy": "retain Librosa estimated tuning and record it; no larger tuning machinery",
+    "prediction_changed": false
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "scope": "real frontend/HTTP/WebSocket, deterministic detector/provider stubs, synthetic browser microphone; not live-model or musical accuracy",
+  "browser": "154.0.4258.53",
+  "passed": [
+    "upload",
+    "evidence",
+    "feedback",
+    "success_cleanup",
+    "cancellation",
+    "repeat_analysis",
+    "invalid_audio",
+    "provider_failure",
+    "microphone_wav",
+    "clear_session",
+    "no_page_errors",
+    "responsive_width"
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 1000,
+      "scroll_width": 1424
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scroll_width": 374
+    }
+  ]
+}

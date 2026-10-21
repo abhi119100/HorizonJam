@@ -258,7 +258,11 @@ class ChordAIRAGTutor:
         print(f"🔍 Detection (detector={detector_name}): {wav_file_path}")
 
         try:
-            result = run_detection(wav_file_path)
+            result = run_detection(
+                wav_file_path,
+                include_harmonic_evidence=True,
+                include_dsp_evidence=True,
+            )
         except Exception as e:
             print(f"❌ Detection failed: {e}")
             return {
@@ -317,6 +321,17 @@ class ChordAIRAGTutor:
             "detector_used": used,
             "warnings": warnings,
         }
+
+        from src.evidence_summary import build_evidence_summaries
+
+        chord_data["evidence_summaries"] = [
+            summary.to_dict()
+            for summary in build_evidence_summaries(
+                norm_events,
+                result.get("harmonic_evidence"),
+                warnings,
+            )
+        ]
 
         # KS key detection on normalized events
         detected_key = self._detect_key_from_events(formatted_events)
@@ -1062,10 +1077,9 @@ This analysis is based on your actual audio file with {len(chord_events)} chord 
                     websocket_callback(sentence)
             return verification["final_response"]
         except Exception as exc:
-            error_msg = f"Unable to generate evidence-grounded tutoring: {exc}"
-            if websocket_callback:
-                websocket_callback(error_msg)
-            return error_msg
+            # The relay must emit a failed job, not stream an exception as advice
+            # and then announce successful completion. Keep provider details private.
+            raise RuntimeError("Unable to generate evidence-grounded tutoring") from exc
 
     def stream_rag_tutoring_legacy(self, chord_results: Dict[str, Any], rag_context: Dict[str, Any], websocket_callback=None, user_question: Optional[str] = None):
         """Generate streaming tutoring explanation with real-time TTS via WebSocket."""

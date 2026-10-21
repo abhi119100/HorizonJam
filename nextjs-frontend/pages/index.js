@@ -81,7 +81,15 @@ export default function Home() {
   const [analysis, setAnalysis] = useState("");
   const [analysisData, setAnalysisData] = useState(null);
   const [tutoringText, setTutoringText] = useState("");
+  const [feedbackChoice, setFeedbackChoice] = useState(null);
+  const [evidenceOpen, setEvidenceOpen] = useState(false);
   const wsRef = useRef(null);
+  const sessionTokenRef = useRef(null);
+  const activeJobRef = useRef(null);
+  const runGenerationRef = useRef(0);
+  const uploadAbortRef = useRef(null);
+  const [isAnalyzing, setIsAnalyzing] = useState(false);
+  const currentAnalysisIdRef = useRef(null);
   const audioQueue = useRef([]);
   const [isPlaying, setIsPlaying] = useState(false);
   const isPlayingRef = useRef(false);
@@ -167,61 +175,63 @@ export default function Home() {
     }
   };
 
-  // Connect WebSocket lazily
-  const connectWS = () => {
-    if (wsRef.current && wsRef.current.readyState === 1) return;
+  // A fresh connection owns each analysis. Wait for the server capability,
+  // and ignore every event belonging to an earlier connection/job.
+  const connectWS = (generation) => new Promise((resolve, reject) => {
     const ws = new WebSocket(TUTOR_WS_URL);
-
-    ws.onopen = () => setStatus("🔗 Connected");
-    ws.onerror = () => setStatus("❌ WebSocket error");
-    ws.onclose = () => setStatus("🔌 Disconnected");
-
+    wsRef.current = ws;
+    const current = () => generation === runGenerationRef.current && wsRef.current === ws;
+    const timer = setTimeout(() => {
+      ws.close();
+      reject(new Error("Connection timed out. Please retry."));
+    }, 10000);
+    ws.onerror = () => {
+      clearTimeout(timer);
+      reject(new Error("Could not connect to the tutor."));
+      if (current()) { setIsAnalyzing(false); setStatus("Connection failed. Please retry."); }
+    };
+    ws.onclose = () => {
+      clearTimeout(timer);
+      reject(new Error("Connection closed before the session was ready."));
+      if (current()) { setIsAnalyzing(false); setStatus("Disconnected. Please retry."); }
+    };
     ws.onmessage = (evt) => {
+      if (!current()) return;
       if (evt.data instanceof Blob) {
         evt.data.arrayBuffer().then(audioData => {
-          // If user clicked Stop, don't auto-resume on the next streamed chunk.
-          // A new analysis or a Speak click clears playbackStoppedRef.
-          if (playbackStoppedRef.current) return;
-          if (isPlayingRef.current) {
-            audioQueue.current.push(audioData);
-          } else {
-            playAudioBuffer(audioData);
-          }
+          if (!current() || playbackStoppedRef.current) return;
+          if (isPlayingRef.current) audioQueue.current.push(audioData);
+          else playAudioBuffer(audioData);
         });
         return;
       }
-
-      if (typeof evt.data === 'string') {
-        try {
-          const msg = JSON.parse(evt.data);
-          switch (msg.type) {
-            case "status":
-              setStatus(msg.message);
-              break;
-            case "error":
-              setStatus("❌ " + msg.message);
-              break;
-            case "chord_analysis":
-              setAnalysis(JSON.stringify(msg.data, null, 2));
-              setAnalysisData(msg.data);
-              break;
-            case "text_chunk":
-              setTutoringText((prev) => prev + msg.text);
-              break;
-            case "complete":
-              setStatus("✅ Analysis complete!");
-              break;
-            default:
-              break;
-          }
-        } catch (error) {
-          setTutoringText((prev) => prev + evt.data);
-        }
+      let msg;
+      try { msg = JSON.parse(evt.data); } catch (_) { return; }
+      if (msg.type === "session") {
+        clearTimeout(timer);
+        sessionTokenRef.current = msg.token;
+        resolve({ ws, token: msg.token });
+        return;
+      }
+      if (msg.job_id && msg.job_id !== activeJobRef.current) return;
+      switch (msg.type) {
+        case "status": setStatus(msg.message); break;
+        case "error":
+          setStatus("Analysis error: " + msg.message);
+          setIsAnalyzing(false);
+          break;
+        case "cancelled":
+          setStatus("Analysis cancelled."); setIsAnalyzing(false); break;
+        case "chord_analysis":
+          setAnalysis(JSON.stringify(msg.data, null, 2)); setAnalysisData(msg.data); break;
+        case "text_chunk": setTutoringText(prev => prev + msg.text + " "); break;
+        case "complete":
+          setTutoringText(msg.full_response || "");
+          setStatus("Analysis complete!"); setIsAnalyzing(false); break;
+        default: break;
       }
     };
-
-    wsRef.current = ws;
-  };
+  });
 
   const stopAudio = () => {
     // Invalidate any in-flight TTS fetch so it doesn't start playing after
@@ -247,50 +257,78 @@ export default function Home() {
     setIsPlaying(false);
   };
 
-  // Core analysis runner — accepts a File so both file-upload and mic-recording can reuse.
-  const runAnalysis = async (audioFile) => {
-    if (!audioFile) {
-      setStatus("No audio to analyze.");
-      return;
+  const cancelAnalysis = () => {
+    runGenerationRef.current += 1;
+    uploadAbortRef.current?.abort();
+    wsRef.current?.close();
+    wsRef.current = null;
+    sessionTokenRef.current = null;
+    activeJobRef.current = null;
+    stopAudio();
+    setIsAnalyzing(false);
+    setStatus("Cancelled. Any processing already underway will finish cleanup; no further guidance will be delivered.");
+  };
+
+  const clearSession = () => {
+    cancelAnalysis();
+    const recorder = mediaRecorderRef.current;
+    if (recorder && recorder.state !== "inactive") {
+      recorder.onstop = null;
+      recorder.ondataavailable = null;
+      recorder.stop();
     }
+    mediaRecorderRef.current = null;
+    recordingFinalizedRef.current = true;
+    teardownRecorder();
+    discardRecording();
+    setAnalysis(""); setAnalysisData(null); setTutoringText("");
+    setFile(null); setFeedbackChoice(null); setQuestion("");
+    if (hiddenFileRef.current) hiddenFileRef.current.value = "";
+    localStorage.removeItem("horizonjam_evidence_feedback_v1");
+    setStatus("Session cleared. Server recordings are removed after active processing releases them.");
+  };
 
-    setAnalysis("");
-    setAnalysisData(null);
-    setTutoringText("");
-    audioQueue.current = [];
-    isPlayingRef.current = false;
-    setIsPlaying(false);
-    // Fresh analysis — clear the sticky stop flag so the new run's streamed
-    // audio chunks are allowed to play.
+  // Both browser-recorded WAV and uploaded files use the same owned-ID contract.
+  const runAnalysis = async (audioFile) => {
+    if (!audioFile) { setStatus("No audio to analyze."); return; }
+    cancelAnalysis();
+    const generation = runGenerationRef.current;
+    const current = () => generation === runGenerationRef.current;
+    const controller = new AbortController();
+    uploadAbortRef.current = controller;
+    setIsAnalyzing(true);
+    setAnalysis(""); setAnalysisData(null); setTutoringText("");
+    setFeedbackChoice(null); setEvidenceOpen(false);
+    currentAnalysisIdRef.current = typeof crypto !== "undefined" && crypto.randomUUID
+      ? `session:${crypto.randomUUID()}` : `session:${Date.now()}-${Math.random().toString(16).slice(2)}`;
     playbackStoppedRef.current = false;
-
-    connectWS();
-    const formData = new FormData();
-    formData.append("audio_file", audioFile);
-    if (question.trim()) formData.append("question", question.trim());
-    setStatus("⬆️ Uploading...");
-
+    setStatus("Connecting...");
+    let timer;
     try {
+      const { ws, token } = await connectWS(generation);
+      if (!current()) return;
+      const formData = new FormData();
+      formData.append("audio_file", audioFile);
+      setStatus("Uploading and validating recording...");
+      timer = setTimeout(() => controller.abort(), 30000);
       const res = await fetch(UPLOAD_URL, {
-        method: "POST",
-        body: formData,
+        method: "POST", body: formData, signal: controller.signal,
+        headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
-      if (data.success) {
-        const note = data.converted_from ? ` (converted from ${data.converted_from})` : "";
-        setStatus(`📡 Analyzing${note}...`);
-        wsRef.current?.send(
-          JSON.stringify({
-            type: "analyze",
-            file_path: data.file_path,
-            question: question.trim() || null,
-          })
-        );
-      } else {
-        setStatus("Upload failed: " + data.error);
-      }
+      if (!current()) return;
+      if (!res.ok || !data.success) throw new Error(data.detail || data.error || "Upload failed.");
+      if (ws.readyState !== WebSocket.OPEN) throw new Error("Connection closed. Please retry.");
+      activeJobRef.current = data.upload_id;
+      setStatus("Analyzing...");
+      ws.send(JSON.stringify({type: "analyze", upload_id: data.upload_id, question: question.trim() || null, speech: false}));
     } catch (err) {
-      setStatus("Error: " + err.message);
+      if (current()) {
+        cancelAnalysis();
+        setStatus(err.name === "AbortError" ? "Upload timed out. Please retry." : "Error: " + err.message);
+      }
+    } finally {
+      clearTimeout(timer);
     }
   };
 
@@ -595,10 +633,15 @@ export default function Home() {
 
   // Cleanup on unmount
   useEffect(() => () => {
+    runGenerationRef.current += 1;
+    uploadAbortRef.current?.abort();
     teardownRecorder();
-    if (recordedUrl) URL.revokeObjectURL(recordedUrl);
     wsRef.current?.close();
-  }, [teardownRecorder, recordedUrl]);
+  }, [teardownRecorder]);
+
+  useEffect(() => () => {
+    if (recordedUrl) URL.revokeObjectURL(recordedUrl);
+  }, [recordedUrl]);
 
   // -------------------- Styles --------------------
   const colors = {
@@ -641,7 +684,8 @@ export default function Home() {
         borderRadius: 24,
         padding: '8px 14px',
         color: colors.subtext,
-        minWidth: 280
+        minWidth: 0,
+        width: 'min(280px, 100%)'
       }}>
         Upload audio or record from your mic
       </div>
@@ -788,7 +832,7 @@ export default function Home() {
     <Card title="Studio Canvas" style={{ minHeight: 320 }}>
       <div style={{ marginBottom: 16 }}>{StartButton}</div>
       {ChordPills}
-      <div style={{ display: 'flex', gap: 16, marginTop: 18 }}>
+      <div style={{ display: 'flex', gap: 16, marginTop: 18, flexWrap: 'wrap' }}>
         {(uniqueChords.length ? uniqueChords.slice(0,4) : ["Am","F","C","G"]).map((c,i)=> (
           <div key={i} style={{
             width: 72, height: 96, border: `1px solid ${colors.border}`, borderRadius: 8,
@@ -837,6 +881,90 @@ export default function Home() {
       .filter(c => c !== 'N');
   }, [analysisData]);
 
+  const evidenceStrengthLabel = (value) => ({
+    STRONG_AGREEMENT: 'Strong agreement',
+    PARTIAL_AGREEMENT: 'Partial agreement',
+    MIXED_EVIDENCE: 'Mixed evidence',
+    LIMITED_EVIDENCE: 'Limited evidence',
+  }[value] || 'Evidence unavailable');
+
+  const recordFeedback = (choice) => {
+    if (!analysisData) return;
+    setFeedbackChoice(choice);
+    const summaries = (analysisData.evidence_summaries || []).map((item) => ({
+      chord: item.chord,
+      strength: item.strength,
+      agreement: item.agreement,
+    }));
+    const record = {
+      schema_version: 'horizonjam-local-feedback-v1',
+      audio_identifier: currentAnalysisIdRef.current,
+      predicted_chords: fullProgression || [],
+      evidence_summaries: summaries,
+      user_feedback: choice,
+      user_correction: null,
+      detector: analysisData.detector_used || null,
+      timestamp: new Date().toISOString(),
+    };
+    try {
+      const key = 'horizonjam_evidence_feedback_v1';
+      const existing = JSON.parse(localStorage.getItem(key) || '[]');
+      const bounded = Array.isArray(existing) ? existing.slice(-49) : [];
+      localStorage.setItem(key, JSON.stringify([...bounded, record]));
+    } catch (_) {
+      setStatus('Feedback could not be saved in this browser.');
+    }
+  };
+
+  const EvidenceDetails = analysisData?.evidence_summaries?.length ? (
+    <div style={{ marginTop: 16, borderTop: `1px solid ${colors.border}`, paddingTop: 12 }}>
+      <details open={evidenceOpen} onToggle={(event) => setEvidenceOpen(event.currentTarget.open)}>
+        <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Why this chord?</summary>
+        <div style={{ marginTop: 12, display: 'grid', gap: 12 }}>
+          {analysisData.evidence_summaries.map((item, index) => (
+            <div key={`${item.start}-${item.chord}-${index}`} style={{ borderBottom: `1px solid ${colors.border}`, paddingBottom: 10 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>
+                <strong>{item.chord}</strong>
+                <span style={{ color: colors.subtext }}>{evidenceStrengthLabel(item.strength)}</span>
+              </div>
+              <div style={{ color: colors.subtext, marginTop: 6, lineHeight: 1.5 }}>
+                {item.short_explanation}
+              </div>
+              {!!item.observed_notes?.length && (
+                <div style={{ marginTop: 6 }}>Notes heard: {item.observed_notes.join(' ')}</div>
+              )}
+            </div>
+          ))}
+        </div>
+      </details>
+      <div style={{ marginTop: 14, display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'center' }}>
+        <span style={{ color: colors.subtext, marginRight: 4 }}>Was this detection right?</span>
+        {[
+          ['correct', 'Correct chord'],
+          ['wrong', 'Wrong chord'],
+          ['not_sure', 'Not sure'],
+        ].map(([value, label]) => (
+          <button
+            key={value}
+            type="button"
+            aria-pressed={feedbackChoice === value}
+            onClick={() => recordFeedback(value)}
+            style={{
+              background: feedbackChoice === value ? colors.accentSoft : '#0b1116',
+              border: `1px solid ${feedbackChoice === value ? colors.accent : colors.border}`,
+              color: colors.text,
+              padding: '7px 10px',
+              borderRadius: 6,
+              cursor: 'pointer',
+            }}
+          >
+            {label}
+          </button>
+        ))}
+      </div>
+    </div>
+  ) : null;
+
   const ProgressionCard = (
     <Card title="Chord Progression">
       <div style={{ color: colors.subtext, marginBottom: 8 }}>
@@ -860,6 +988,7 @@ export default function Home() {
           Summary: {analysisData.analysis_summary.chord_progression}
         </div>
       )}
+      {EvidenceDetails}
     </Card>
   );
 
@@ -939,6 +1068,11 @@ export default function Home() {
           50%  { opacity: 0.4; transform: scale(1.4); }
           100% { opacity: 1; transform: scale(1); }
         }
+        @media (max-width: 760px) {
+          .hj-two-column {
+            grid-template-columns: 1fr !important;
+          }
+        }
       `}</style>
 
       <Nav />
@@ -956,14 +1090,19 @@ export default function Home() {
         style={{ display: 'none' }}
       />
 
+      <div style={{maxWidth: 1100, margin: '0 auto', padding: '8px 20px', display: 'flex', gap: 12}}>
+        {isAnalyzing && <button onClick={cancelAnalysis}>Cancel analysis</button>}
+        <button onClick={clearSession}>Clear session</button>
+      </div>
       {/* Controls row (question + status) */}
       <div style={{ maxWidth: 1100, margin: '0 auto', padding: '6px 20px 16px' }}>
         <input
+          maxLength={2000}
           placeholder="Optional question..."
           value={question}
           onChange={(e) => setQuestion(e.target.value)}
           style={{
-            width: '100%', padding: 12, borderRadius: 10, background: colors.panel,
+            width: '100%', boxSizing: 'border-box', padding: 12, borderRadius: 10, background: colors.panel,
             border: `1px solid ${colors.border}`, color: colors.text
           }}
         />
@@ -971,7 +1110,7 @@ export default function Home() {
       </div>
 
       {/* Studio + Recording side by side */}
-      <div style={{
+      <div className="hj-two-column" style={{
         maxWidth: 1100,
         margin: '0 auto',
         display: 'grid',
@@ -985,7 +1124,7 @@ export default function Home() {
 
       {/* Analysis details */}
       <div style={{ maxWidth: 1100, margin: '26px auto 20px', padding: '0 20px' }}>
-        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap: 20 }}>
+        <div className="hj-two-column" style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap: 20 }}>
           {ProgressionCard}
           {TimelineCard}
         </div>

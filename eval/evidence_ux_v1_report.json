@@ -1,0 +1,74 @@
+{
+  "cases": [
+    {
+      "baseline_repairs": [],
+      "case": "strong",
+      "prompt_chars_baseline": 828,
+      "prompt_chars_summary": 1391,
+      "raw_evidence_absent": true,
+      "strength": "STRONG_AGREEMENT",
+      "summary_propagated": true,
+      "summary_repairs": [],
+      "uncertainty_expected": false,
+      "uncertainty_observed": false
+    },
+    {
+      "baseline_repairs": [],
+      "case": "mixed",
+      "prompt_chars_baseline": 828,
+      "prompt_chars_summary": 1453,
+      "raw_evidence_absent": true,
+      "strength": "MIXED_EVIDENCE",
+      "summary_propagated": true,
+      "summary_repairs": [
+        "added_uncertainty_caveat"
+      ],
+      "uncertainty_expected": true,
+      "uncertainty_observed": true
+    },
+    {
+      "baseline_repairs": [],
+      "case": "limited",
+      "prompt_chars_baseline": 828,
+      "prompt_chars_summary": 1447,
+      "raw_evidence_absent": true,
+      "strength": "LIMITED_EVIDENCE",
+      "summary_propagated": true,
+      "summary_repairs": [
+        "added_uncertainty_caveat"
+      ],
+      "uncertainty_expected": true,
+      "uncertainty_observed": true
+    }
+  ],
+  "evidence_level": "fixed deterministic context/verification cases; no teaching or model-quality claim",
+  "limitations": [
+    "No provider model was used; this evaluates deterministic context and verification behavior.",
+    "No learning, pedagogy, accuracy, or calibrated-confidence improvement is claimed.",
+    "EvidenceSummary categories are fixed rules and require real-performance validation."
+  ],
+  "outcomes": {
+    "cases": 3,
+    "mean_prompt_character_delta": 602.3333333333334,
+    "mixed_or_limited_assertions_repaired": 2,
+    "raw_evidence_exposure_cases": 0,
+    "summary_propagation_passed": 3,
+    "uncertainty_behavior_passed": 3
+  },
+  "schema_version": "evidence-ux-v1-evaluation",
+  "summary_rules": {
+    "LIMITED_EVIDENCE": "independent DSP candidate unavailable",
+    "MIXED_EVIDENCE": "symbolic and DSP canonical roots disagree",
+    "PARTIAL_AGREEMENT": "same root, or exact agreement affected by warnings",
+    "STRONG_AGREEMENT": "symbolic and DSP canonical chord agree with no warnings"
+  },
+  "ui": {
+    "affordance": "collapsed Why this chord? details",
+    "feedback": [
+      "correct",
+      "wrong",
+      "not_sure"
+    ],
+    "persistence": "bounded browser localStorage only; no audio, filename, or server submission"
+  }
+}

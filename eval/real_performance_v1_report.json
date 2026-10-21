@@ -1,0 +1,93 @@
+{
+  "baseline_freeze": "eval/phase7_baseline_freeze.json",
+  "command": "python eval/evaluate_real_performance_v1.py",
+  "dataset": {
+    "annotation_status": "NO_ANNOTATIONS",
+    "case_count": 0,
+    "counts": {
+      "chord_isolation": 0,
+      "development": 0,
+      "held_out": 0,
+      "progression": 0
+    },
+    "coverage": {
+      "conditions": [],
+      "harmonic_examples": [],
+      "playing_styles": [],
+      "qualities": []
+    },
+    "coverage_gaps": {
+      "conditions": [
+        "different_dynamics",
+        "moderate_background_noise",
+        "multiple_devices",
+        "quiet_room",
+        "slight_tuning_difference"
+      ],
+      "harmonic_examples": [
+        "I-IV-V-I",
+        "i-iv-V-i",
+        "ii-V-I",
+        "relative_major_minor_ambiguous",
+        "secondary_dominant",
+        "vi-IV-I-V"
+      ],
+      "playing_styles": [
+        "block_chords",
+        "faster_arpeggios",
+        "inversions",
+        "partial_voicings",
+        "repeated_transitions",
+        "slow_arpeggios",
+        "strumming"
+      ],
+      "qualities": [
+        "dominant_seventh",
+        "major",
+        "major_seventh",
+        "minor",
+        "minor_seventh",
+        "sus2",
+        "sus4"
+      ]
+    },
+    "description": "Owned/licensed real-performance pack; collection not yet populated",
+    "independent_annotation_cases": 0,
+    "manifest": "eval/real_performance_demo_pack/manifest.json",
+    "provenance_status": "NO_APPROVED_AUDIO",
+    "split_status": "NOT_FROZEN"
+  },
+  "decision_gate": {
+    "architecture_decision_allowed": false,
+    "basis": "zero approved cases; minimum useful target is 20",
+    "outcome": "F DATASET_TOO_SMALL_OR_AMBIGUOUS"
+  },
+  "detector_execution": {
+    "basic_pitch_direct_evidence": "NOT_CAPTURED_NO_APPROVED_CORPUS",
+    "dsp_chroma": "NOT_CAPTURED_NO_APPROVED_CORPUS",
+    "hybrid": "NOT_RUN_NO_APPROVED_CORPUS",
+    "lv_chordia": "EXCLUDED_BY_PHASE_7_POLICY",
+    "rule_jaccard": "NOT_RUN_NO_APPROVED_CORPUS"
+  },
+  "error_taxonomy": null,
+  "latency": null,
+  "limitations": [
+    "No owned, consented, or clearly licensed real-performance cases are present.",
+    "Repository runtime fixtures have explicitly unaudited legal/performance provenance.",
+    "No real-audio accuracy, complementarity, transcription, segmentation, or latency conclusion is available."
+  ],
+  "metrics": null,
+  "readiness_reasons": [
+    "requires at least 20 approved cases; found 0",
+    "requires both chord-isolation and progression cases",
+    "requires development and held-out cases",
+    "missing qualities: dominant_seventh, major, major_seventh, minor, minor_seventh, sus2, sus4",
+    "missing playing_styles: block_chords, faster_arpeggios, inversions, partial_voicings, repeated_transitions, slow_arpeggios, strumming",
+    "missing conditions: different_dynamics, moderate_background_noise, multiple_devices, quiet_room, slight_tuning_difference",
+    "missing harmonic_examples: I-IV-V-I, i-iv-V-i, ii-V-I, relative_major_minor_ambiguous, secondary_dominant, vi-IV-I-V"
+  ],
+  "schema_version": "real-performance-v1-gate-v1",
+  "slice_metrics": null,
+  "source_disagreement": null,
+  "validation_errors": []
+}

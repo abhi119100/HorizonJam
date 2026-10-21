@@ -1,0 +1,14 @@
+{
+  "schema_version": "verifier-counterexamples-v1",
+  "scope": "Fixed deterministic counterexamples, not live-model or pedagogical evidence.",
+  "cases": [
+    {"id": "unrelated_hedge", "response": "You definitely played D7. You might try practicing slowly.", "forbidden": "definitely played", "preserve": "practicing slowly"},
+    {"id": "caveat_contradiction", "response": "You definitely played D7.", "forbidden": "definitely played"},
+    {"id": "paraphrased_source", "response": "The reference documents confirm you played D7. Practice slowly.", "forbidden": "reference documents confirm", "preserve": "Practice slowly"},
+    {"id": "same_sentence_hedge", "response": "You might practice slowly, but you definitely played D7.", "forbidden": "definitely played"},
+    {"id": "unqualified_observation", "response": "You are playing D7. Try a slower tempo.", "forbidden": "You are playing D7", "preserve": "slower tempo"},
+    {"id": "uncertain_key", "response": "Your recording is in D major. Practice slowly.", "forbidden": "recording is in D major", "preserve": "Practice slowly"},
+    {"id": "useful_conditional", "response": "If the detector is correct, D7 may lead to G. Practice slowly.", "preserve": "D7 may lead to G"},
+    {"id": "general_advice", "response": "Practice slowly and listen for even transitions.", "preserve": "Practice slowly and listen for even transitions"}
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "scope": "deterministic response repair; no model, accuracy, or teaching-effect claim",
+  "source_sha256": "e9b3328c74e64dd71ed2c2cd4532b94ed6df829cb28cd575ab62b1beca7df512",
+  "passed": 2,
+  "total": 8,
+  "cases": [
+    {
+      "id": "unrelated_hedge",
+      "response": "You definitely played D7. You might try practicing slowly.",
+      "forbidden": "definitely played",
+      "preserve": "practicing slowly",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "You definitely played D7. You might try practicing slowly."
+      },
+      "case_passed": false
+    },
+    {
+      "id": "caveat_contradiction",
+      "response": "You definitely played D7.",
+      "forbidden": "definitely played",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. You definitely played D7."
+      },
+      "case_passed": false
+    },
+    {
+      "id": "paraphrased_source",
+      "response": "The reference documents confirm you played D7. Practice slowly.",
+      "forbidden": "reference documents confirm",
+      "preserve": "Practice slowly",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. The reference documents confirm you played D7. Practice slowly."
+      },
+      "case_passed": false
+    },
+    {
+      "id": "same_sentence_hedge",
+      "response": "You might practice slowly, but you definitely played D7.",
+      "forbidden": "definitely played",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "You might practice slowly, but you definitely played D7."
+      },
+      "case_passed": false
+    },
+    {
+      "id": "unqualified_observation",
+      "response": "You are playing D7. Try a slower tempo.",
+      "forbidden": "You are playing D7",
+      "preserve": "slower tempo",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. You are playing D7. Try a slower tempo."
+      },
+      "case_passed": false
+    },
+    {
+      "id": "uncertain_key",
+      "response": "Your recording is in D major. Practice slowly.",
+      "forbidden": "recording is in D major",
+      "preserve": "Practice slowly",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. Your recording is in D major. Practice slowly."
+      },
+      "case_passed": false
+    },
+    {
+      "id": "useful_conditional",
+      "response": "If the detector is correct, D7 may lead to G. Practice slowly.",
+      "preserve": "D7 may lead to G",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [],
+        "final_response": "If the detector is correct, D7 may lead to G. Practice slowly."
+      },
+      "case_passed": true
+    },
+    {
+      "id": "general_advice",
+      "response": "Practice slowly and listen for even transitions.",
+      "preserve": "Practice slowly and listen for even transitions",
+      "context": {
+        "assessment": {
+          "requires_uncertainty_language": true
+        },
+        "performance_evidence": {
+          "chord_events": [
+            {
+              "chord": "D7",
+              "confidence": 0.2
+            }
+          ]
+        },
+        "retrieval": {
+          "evidence": []
+        }
+      },
+      "verification": {
+        "passed": true,
+        "checks": [
+          {
+            "name": "non_empty",
+            "passed": true
+          },
+          {
+            "name": "uncertainty_language",
+            "passed": true,
+            "required": true
+          },
+          {
+            "name": "retrieval_honesty",
+            "passed": true,
+            "retrieval_status": null
+          },
+          {
+            "name": "performance_evidence_present",
+            "passed": true
+          }
+        ],
+        "repairs": [
+          "added_uncertainty_caveat"
+        ],
+        "final_response": "Because parts of the detected harmony are uncertain, treat the chord-specific guidance here as conditional. Practice slowly and listen for even transitions."
+      },
+      "case_passed": true
+    }
+  ]
+}

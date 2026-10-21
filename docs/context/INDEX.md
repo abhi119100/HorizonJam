@@ -7,6 +7,8 @@ This is the canonical entrypoint for project knowledge. Retrieve the smallest re
 | Task | Read first | Then inspect | Workflow |
 |---|---|---|---|
 | Understand product scope or user flow | [PRODUCT.md](PRODUCT.md) | frontend and relay symbols named there | `repo-orientation` |
+| Execute product/research readiness work | [EXECUTION_PLAN.md](EXECUTION_PLAN.md), [STATUS.md](../../STATUS.md) | first unfinished package, baseline, acceptance evidence | matching subsystem workflow |
+| Reproduce readiness checks | [REPRODUCIBILITY.md](REPRODUCIBILITY.md) | contract-test lock, explicit test discovery, browser fixture | `evaluation`, `frontend-e2e` |
 | Change chord detection or normalization | [ARCHITECTURE.md](ARCHITECTURE.md#detection-graph), [EVALUATION.md](EVALUATION.md) | `detection.py`, selected `src/` detector, callers | `detector-change` |
 | Change key or guitar context | [ARCHITECTURE.md](ARCHITECTURE.md#analysis-enrichment) | `ChordAIRAGTutor._detect_key_from_events`, tab generator | `detector-change` |
 | Change retrieval or corpus ingestion | [ARCHITECTURE.md](ARCHITECTURE.md#rag-graph), [HARNESS.md](HARNESS.md#retrieval-context) | `unified_rag_system.py`, relevant `RAG/` ingestion script | `rag-change` |

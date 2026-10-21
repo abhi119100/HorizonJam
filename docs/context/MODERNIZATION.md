@@ -1,5 +1,7 @@
 # Modernization Sequence
 
+For active work, use [EXECUTION_PLAN.md](EXECUTION_PLAN.md) and STATUS. The original sequence below is historical rationale; several repairs now have readiness evidence.
+
 This is a dependency-ordered proposal, not authorization for broad refactoring.
 
 ## Documentation / Code Discrepancies
@@ -8,12 +10,12 @@ This is a dependency-ordered proposal, not authorization for broad refactoring.
 |---|---|---|
 | `.env.example` says `TTS_SERVER_URL` overrides relay configuration | relay hardcodes `http://localhost:5000/tts` | deployment configuration is misleading |
 | historical confidence/min-duration settings imply active control | `_run_horizon_jam()` accepts but does not wire them; detector modes own thresholds | UI/CLI tuning expectations are false |
-| tutor described as RAG-grounded | main prompt receives retrieval metadata, not retrieved document text | grounding/provenance is weaker than the name suggests |
+| RAG grounding | bounded actual text and provenance now reach the prompt | expert relevance/entailment and corpus rights still need evaluation |
 | runtime analysis described as learning by embedding each result | active relay bypasses `analyze_audio()` embedding step | browser path does not perform that mutation |
 | hybrid described as ML + rules | no model artifact exists | hybrid equals rule/Viterbi in current report |
 | README install path implies complete dependencies | requirements omit multiple imported runtime packages | clean setup is not reproducible |
 | `.env.production` suggests production controls such as Redis/workers/upload size | active relay does not read those controls | config creates a false production-readiness signal |
-| tests directory suggests a test suite | it mostly contains media fixtures | core contracts lack automated verification |
+| test discovery | active tests now live in `tests/`; root model demos are optional | use explicit discovery and distinguish local tests from real-musician evidence |
 
 The README's legacy section is intentionally historical and should not be used as active architecture evidence.
 

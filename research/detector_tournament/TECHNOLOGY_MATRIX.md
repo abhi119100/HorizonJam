@@ -12,7 +12,7 @@ Verdicts describe the next research action, not production approval.
 | HorizonJam `rule_jaccard` | v3 opt-in symbolic baseline | repository-owned | controlled 3s warm 1.31s; BasicPitch-backed | `BENCHMARK_NOW` |
 | BasicPitch direct evidence | note events/tensors | Apache-2.0 code; installed 0.4.0 ONNX artifact | local Python 3.13 path works although upstream lists through 3.11 | `BENCHMARK_NOW`, `PRODUCT_CANDIDATE` |
 | Librosa CQT/chroma | owned DSP baseline | permissive library already in v3 environment | no new heavyweight runtime; must profile | `BENCHMARK_NOW`, `PRODUCT_CANDIDATE` |
-| LV-Chordia | direct large-vocabulary chords | repository says MIT and bundles five weights; weight lineage still needs an artifact-level audit | modern PyTorch package; supports local files and URLs; URL mode must be disabled | `BENCHMARK_NOW` in isolation, `PRODUCT_CANDIDATE` pending audit |
+| LV-Chordia | direct large-vocabulary chords | v1.1.0 package says MIT and bundles five hashed weights; checkpoint-specific rights remain unresolved | isolated CPU subprocess; URL path disabled; 0/8 controlled exact and 11.34-12.41s adapter wall time | `RESEARCH_ONLY`, `REDUNDANT_AT_CURRENT_GATE` |
 | BTC-ISMIR19 | canonical direct sequence baseline | MIT source; pretrained checkpoint availability/rights not established by the repository README | PyTorch >=1.0/librosa >=0.6-era stack | `BENCHMARK_LATER`, `RESEARCH_ONLY` initially |
 | CREMA | direct structured chord baseline | repository reports BSD-2-Clause while package metadata says ISC; packaged model rights need resolution | alpha package; Python classifiers stop at 3.9; TensorFlow/Keras/pumpp stack | `BENCHMARK_LATER`, `RESEARCH_ONLY` initially |
 | Chordino/NNLS Chroma | interpretable DSP baseline | GPL-2.0-or-later | native Vamp plugin/Sonic Annotator integration | `RESEARCH_ONLY` unless distribution review changes scope |
@@ -142,7 +142,7 @@ Verdicts describe the next research action, not production approval.
 1. Freeze the v3 `hybrid` and `rule_jaccard` outputs.
 2. Add a research adapter over BasicPitch's existing in-memory note evidence.
 3. Build one Librosa CQT/chroma baseline with fixed, inspectable parameters.
-4. Audit and execute LV-Chordia in its own locked environment.
+4. Completed: LV-Chordia was audited and executed in its own locked environment; the current gate rejects it from active fusion.
 
 Do not add BTC, CREMA, Chordino, beat tracking, source separation, or fusion to
 the first executable wave. That keeps the first comparison small enough to

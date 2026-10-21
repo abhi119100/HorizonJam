@@ -1,5 +1,13 @@
 # Evaluation Context
 
+## Readiness implementation evidence (2026-10-03)
+
+See [the readiness report](../../eval/readiness/README.md) and [reproduction profiles](REPRODUCIBILITY.md). The explicit active suite is `python -m unittest discover -s tests -t . -v`; it excludes optional root-level manual model demos. A clean Windows/Python 3.13 contract environment passes 100 tests (97 passed, three expected musical failures). Real HTTP/WS browser checks use synthetic microphone audio and stubbed perception/providers; they do not establish live-model quality or musical accuracy.
+
+Eight frozen verifier counterexamples improved from 2/8 to 8/8 without rewriting the accepted tutor reports. The verification result now declares its bounded language-check scope. Expert source entailment, musical correctness and pedagogical usefulness remain open.
+
+Real Performance Pack readiness additionally requires a frozen collection, two distinct annotators per case, pseudonymous performer/session/device IDs, performer/session/audio separation across splits, within-duration segments and a recomputed held-out audio/label digest. The pack remains empty. Hashes establish identity, not provenance truth, human independence, or annotation correctness. All 27 accepted research artifacts checked against the implementation baseline remained unchanged.
+
 ## Coverage Hierarchy
 
 | Level | Question | Current coverage | Evidence / gap |
@@ -34,6 +42,94 @@ preserve the recorded note-event, model-output, and normalized-chord hashes.
 Decision: `F. MIXED`, with environment, preprocessing, and cold-start
 contributors. This is execution/equivalence evidence, not note or chord
 accuracy evidence.
+
+## L1 BasicPitch Direct Evidence Gate
+
+`python eval/evaluate_basicpitch_direct_evidence.py` performs one BasicPitch
+inference per case and compares direct note tuples with notes reparsed from the
+same inference's temporary MIDI. Across a block major chord, dominant seventh,
+arpeggio, overlapping notes, and `tests/audio/pop.wav`, 26/26 notes matched,
+with no direct-only or MIDI-only notes and at most 1.10 ms onset/offset drift.
+Direct-note replay through the frozen Jaccard symbolic path reproduced all five
+compatibility chord outputs. Decision: `B DIRECT_BETTER` for internal evidence
+inspection because amplitude, optional pitch bends, and source ordering remain
+available; MIDI remains the active symbolic compatibility path. This is L1
+representation/runtime evidence, not real-performance accuracy.
+
+Reports: `eval/basicpitch_direct_evidence_report.json` and `.md`.
+
+## L2 DSP / Chroma Evidence Gate
+
+`python eval/evaluate_dsp_chroma.py` evaluates the repository-owned
+SoundFile/Librosa CQT path with fixed 22.05 kHz, 512-sample hop, 36 bins per
+octave, and per-frame L1 normalization. On eight deterministic synthetic block
+chords, DSP and `rule_jaccard` each recognized 7/8: DSP uniquely recovered
+`Bdim`, while Jaccard uniquely recovered `Dsus2`. Decision:
+`A DSP_COMPLEMENTARY`. Warm 3/10/30-second DSP extraction measured
+0.249/0.386/0.757 seconds; candidate scoring measured
+0.020/0.081/0.223 seconds. Tuning estimation changed mean chroma slightly on
+two audited cases but did not change their labels. This is synthetic L2 and
+runtime evidence, not licensed real-performance accuracy.
+
+Reports: `eval/dsp_chroma_report.json` and `.md`.
+
+## L2 Direct Chord Model Gate
+
+`python eval/evaluate_direct_chord_model.py` runs the attested LV-Chordia
+1.1.0 wheel in an ignored isolated environment through a local-only JSON
+subprocess. The model was 0/8 exact and never uniquely correct on the paired
+synthetic cases. Adapter wall time was 11.55/11.34/12.41 seconds for repeated
+3/10/30-second repository audio. Decision: `C DIRECT_MODEL_REDUNDANT`; eligible
+fusion weight 0.0. The code package declares MIT, but checkpoint-specific
+rights were not independently established, so this path remains
+`RESEARCH_ONLY` and is not redistributable from HorizonJam.
+
+Reports: `eval/direct_chord_model_report.json` and `.md`.
+
+## L2 Evidence Fusion v1 Gate
+
+`python eval/evaluate_fusion_v1.py` replays the exact Phase 3 cases and actual
+recorded source rankings. Jaccard and Librosa chroma have frozen equal weights;
+LV-Chordia has weight 0.0 based on its Phase 4 result. Expected labels are used
+only after inference for scoring. Jaccard, DSP, and fusion each scored 7/8;
+fusion changed no Jaccard result and produced no unique correct case. Decision:
+`D FUSION_NO_GAIN`. Fusion is not promoted and Phase 6 temporal work is
+prohibited by the gate.
+
+Reports: `eval/fusion_v1_report.json` and `.md`.
+
+## Phase 7 Real Performance Gate
+
+`eval/phase7_baseline_freeze.json` records the commit, dirty-worktree
+fingerprint, dependencies, detector configuration, DSP configuration, source
+hashes, and prior report hashes before label-based evaluation. The Real
+Performance Pack manifest currently has zero approved cases. Its validator
+passes collection-state structure but blocks detector execution until at least
+20 owned/consented/licensed cases, both evaluation categories, development and
+held-out splits, required coverage, annotations, provenance, and a held-out
+label freeze exist.
+
+`python eval/evaluate_real_performance_v1.py` therefore reports `F
+DATASET_TOO_SMALL_OR_AMBIGUOUS`. Hybrid/Jaccard metrics, BasicPitch error
+attribution, DSP disagreement, slices, segmentation, and real-audio latency are
+`null`/unavailable rather than fabricated zero values.
+
+Reports: `eval/real_performance_v1_report.json` and `.md`.
+
+## Phase 7 Evidence UX Gate
+
+`python eval/evaluate_evidence_ux.py` compares hard-label-only context with
+context containing compact deterministic summaries on strong, mixed, and
+limited fixed cases. Summary propagation and expected uncertainty behavior pass
+3/3; mixed/limited hard assertions are repaired 2/2; raw-vector/score exposure
+is 0/3. Mean prompt growth is 602 characters. This is assembly and verification
+evidence, not provider-model quality, pedagogy, or real-audio validation.
+
+The production build passes. Playwright mocked only transport while exercising
+the real UI at desktop and mobile sizes; evidence disclosure, local feedback,
+`aria-pressed`, and no-horizontal-overflow checks pass.
+
+Reports: `eval/evidence_ux_v1_report.json` and `.md`.
 
 ## L2 Synthetic Harness
 

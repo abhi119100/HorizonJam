@@ -1,5 +1,13 @@
 {
-  "schema_version": "real-performance-demo-pack-v1",
-  "status": "scaffold_only",
+  "schema_version": "real-performance-pack-v1",
+  "status": "collecting",
+  "minimum_cases": 20,
+  "held_out_frozen_at": null,
+  "held_out_labels_sha256": null,
+  "split_policy": {
+    "development_fraction": 0.7,
+    "held_out_fraction": 0.3,
+    "assignment_policy": "stratify manually by category, quality, style, condition, performer, and device before labels are inspected by detector developers"
+  },
   "cases": []
 }

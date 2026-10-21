@@ -14,6 +14,8 @@ import re
 from dataclasses import asdict, dataclass, field
 from typing import Any, Optional
 
+from src.evidence_summary import EvidenceSummary, evidence_summary_from_mapping
+
 
 SCHEMA_VERSION = "1.0"
 MAX_RETRIEVED_ITEMS = 3
@@ -89,6 +91,7 @@ class PerformanceEvidence:
     progression_summary: str
     instrument_context: dict[str, Any]
     available_uncertainty: list[str]
+    evidence_summaries: list[EvidenceSummary] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
@@ -232,6 +235,26 @@ def build_performance_evidence(
             "chord_shapes": _json_safe(tabs),
         }
 
+    summaries_raw = chord_results.get("evidence_summaries") or []
+    if not isinstance(summaries_raw, list):
+        raise ValueError("evidence_summaries must be a list")
+    evidence_summaries = []
+    for index, raw in enumerate(summaries_raw[:32]):
+        if not isinstance(raw, dict):
+            raise ValueError(f"evidence_summaries[{index}] must be a dictionary")
+        evidence_summaries.append(evidence_summary_from_mapping(raw))
+    for summary_item in evidence_summaries:
+        if summary_item.strength == "MIXED_EVIDENCE":
+            uncertainty.append(
+                f"Evidence sources disagree for {summary_item.chord} at "
+                f"{summary_item.start:.2f}-{summary_item.end:.2f}s."
+            )
+        elif summary_item.strength == "LIMITED_EVIDENCE":
+            uncertainty.append(
+                f"Independent harmonic evidence is limited for {summary_item.chord} at "
+                f"{summary_item.start:.2f}-{summary_item.end:.2f}s."
+            )
+
     return PerformanceEvidence(
         schema_version=SCHEMA_VERSION,
         audio_id=audio_id,
@@ -242,6 +265,7 @@ def build_performance_evidence(
         progression_summary=progression,
         instrument_context=instrument_context,
         available_uncertainty=_stable_unique(uncertainty),
+        evidence_summaries=evidence_summaries,
     )
 
 
@@ -279,8 +303,17 @@ def assess_tutor_request(
         focus = ["music theory", "practice guidance"]
 
     confidences = performance.confidences
+    summary_strengths = [item.strength for item in performance.evidence_summaries]
     if not performance.chord_events:
         strength = "weak"
+    elif "MIXED_EVIDENCE" in summary_strengths:
+        strength = "mixed"
+    elif "LIMITED_EVIDENCE" in summary_strengths:
+        strength = "low"
+    elif summary_strengths and all(value == "STRONG_AGREEMENT" for value in summary_strengths):
+        strength = "high"
+    elif summary_strengths:
+        strength = "medium"
     elif not confidences:
         strength = "unknown"
     else:
@@ -514,6 +547,38 @@ _FALSE_GROUNDING_MARKERS = (
     "from the knowledge base", "the retrieved knowledge says",
 )
 
+# Bounded language checks, not semantic verification or source entailment.
+_HEDGE_PATTERN = re.compile(r"\b(?:likely|probably|possibly|may|might|seems?|appears?|uncertain|conditional)\b|\bif the detector\b|\bcould be\b", re.I)
+_CERTAINTY_PATTERN = re.compile(r"\b(?:definitely|certainly|unquestionably|undoubtedly|clearly)\b", re.I)
+_OBSERVATION_PATTERN = re.compile(
+    r"\byou(?:'re| are| were| have| played| play| sound)|\byour\s+(?:recording|performance|chords?|progression|key|playing)|"
+    r"\b(?:the|this)\s+(?:recording|performance|progression|key|chord)\s+(?:is|was|contains|uses)|"
+    r"\b(?:playing|played|detected)\s+[A-G](?:[#b]|maj|min|m|\d|\b)", re.I,
+)
+_SOURCE_CLAIM_PATTERN = re.compile(
+    r"\baccording to\b|\b(?:retrieved|reference)\s+(?:sources?|documents?|materials?|knowledge)\b|"
+    r"\b(?:sources?|documents?|references?|knowledge base)\s+(?:confirm|show|say|state|indicate|prove|suggest)|"
+    r"\bfrom the knowledge base\b", re.I,
+)
+
+
+def _unqualified_observation(sentence: str) -> bool:
+    # A hedge in another clause cannot qualify a definite performance assertion.
+    clauses = re.split(r"[;:]|\bbut\b|,\s*(?:and|while)\b", sentence, flags=re.I)
+    return any(
+        _OBSERVATION_PATTERN.search(clause)
+        and (_CERTAINTY_PATTERN.search(clause) or not _HEDGE_PATTERN.search(clause))
+        for clause in clauses
+    )
+
+
+def _uncertain_observation(context: dict[str, Any]) -> str:
+    events = (context.get("performance_evidence") or {}).get("chord_events") or []
+    labels = list(dict.fromkeys(str(e.get("chord")) for e in events if e.get("chord") and e.get("chord") != "N"))[:8]
+    if labels:
+        return "The detector suggests " + " - ".join(labels) + ", but this harmony is uncertain; confirm it by listening before applying chord-specific advice."
+    return "The recording did not produce reliable chord evidence, so I can only offer general or conditional guidance."
+
 
 def _sentences(text: str) -> list[str]:
     return [part.strip() for part in re.split(r"(?<=[.!?])\s+|\n+", text) if part.strip()]
@@ -535,7 +600,31 @@ def verify_and_repair_response(
 
     assessment = context.get("assessment") or {}
     uncertainty_required = bool(assessment.get("requires_uncertainty_language"))
-    has_hedge = any(marker in text.lower() for marker in _HEDGE_MARKERS)
+    # Filter absent-source attribution first, before adding any fallback text.
+    retrieved = (context.get("retrieval") or {}).get("evidence") or []
+    if not retrieved:
+        sentences = _sentences(text)
+        kept = [s for s in sentences if not _SOURCE_CLAIM_PATTERN.search(s)]
+        if len(kept) != len(sentences):
+            text = " ".join(kept) or "No external knowledge was retrieved, so I can only reason from the performance evidence provided."
+            repairs.append("removed_false_retrieval_claim")
+
+    if uncertainty_required:
+        sentences = _sentences(text)
+        repaired = []
+        replaced = False
+        for sentence in sentences:
+            if _unqualified_observation(sentence):
+                if not replaced:
+                    repaired.append(_uncertain_observation(context))
+                replaced = True
+            else:
+                repaired.append(sentence)
+        if replaced:
+            text = " ".join(repaired)
+            repairs.extend(["replaced_unqualified_observation", "added_uncertainty_caveat"])
+
+    has_hedge = bool(_HEDGE_PATTERN.search(text))
     if uncertainty_required and not has_hedge:
         if not (context.get("performance_evidence") or {}).get("chord_events"):
             caveat = (
@@ -552,7 +641,7 @@ def verify_and_repair_response(
         has_hedge = True
     checks.append({
         "name": "uncertainty_language",
-        "passed": (not uncertainty_required) or has_hedge,
+        "passed": (not uncertainty_required) or (has_hedge and not any(_unqualified_observation(s) for s in _sentences(text))),
         "required": uncertainty_required,
     })
 
@@ -582,6 +671,7 @@ def verify_and_repair_response(
     })
     return {
         "passed": all(check["passed"] for check in checks),
+        "scope": "bounded language checks; musical correctness and source entailment are not verified",
         "checks": checks,
         "repairs": repairs,
         "final_response": text,

@@ -1,0 +1,14 @@
+# Research-only environment captured 2026-08-31. Not a product dependency set.
+audioop-lts==0.2.2
+h5py==3.16.0
+joblib==1.5.3
+librosa==1.0.0
+lv-chordia==1.1.0
+numpy==2.5.2
+pretty-midi==0.2.11.post0
+pydub==0.25.1
+torch==2.13.0
+
+# Full transitive environment is recorded in eval/direct_chord_model_report.json.
+# lv-chordia wheel SHA-256 (PyPI):
+# 292241f03e1029e6739ee7a2a91fbe348c25c97b8b3641db76cbef9f9dee0cb0

@@ -1,0 +1,774 @@
+{
+  "aggregate": {
+    "case_count": 5,
+    "direct_only_notes": 0,
+    "downstream_chords_equal_all_cases": true,
+    "exact_note_sets_all_cases": true,
+    "matched_notes": 26,
+    "max_amplitude_difference": 0.003881776426720829,
+    "max_offset_difference_sec": 0.001100432900432935,
+    "max_onset_difference_sec": 0.001100432900432935,
+    "mean_amplitude_difference": 0.0021172532036693,
+    "mean_direct_conversion_sec": 0.00866680002072826,
+    "mean_midi_read_and_parse_sec": 0.0055967999971471725,
+    "mean_midi_serialization_sec": 0.009065480006393045,
+    "mean_offset_difference_sec": 0.0006999064427636101,
+    "mean_onset_difference_sec": 0.0005244216101358984,
+    "midi_only_notes": 0,
+    "ordering_equal_cases": 0
+  },
+  "baseline_hashes_sha256": {
+    "eval\\audio_path_benchmark.json": "35f4bc0ffff5a25934a1d6a0a264adc49c08f624cd62836c7c6defdd35431219",
+    "eval\\jaccard_detector_path_report.json": "cd7d2c253eb879834bdebfee57d95151c4f4df554a204705ba91af7fb48b0eb0",
+    "eval\\oracle_classifier_report.json": "09b71a7a97b03ded124057ad39c544af847d7707c5bceced1c4a429d189994c8",
+    "src\\chord_detector.py": "9aa3d0c8830f9e13e1adf6a4d997ded294d4c316a3ab5a7c3cca3eefca9f61b6"
+  },
+  "cases": [
+    {
+      "comparison": {
+        "amplitude_differences": [
+          0.0008118959862416508,
+          0.0015323030667042659,
+          0.0019201176373038198
+        ],
+        "direct_note_count": 3,
+        "direct_only_indices": [],
+        "matched_note_count": 3,
+        "matches": [
+          {
+            "amplitude_difference": 0.0008118959862416508,
+            "direct_index": 0,
+            "midi_index": 2,
+            "offset_difference_sec": 0.0008348794063079978,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 67,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0015323030667042659,
+            "direct_index": 2,
+            "midi_index": 0,
+            "offset_difference_sec": 0.0009451659451660266,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 60,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0019201176373038198,
+            "direct_index": 1,
+            "midi_index": 1,
+            "offset_difference_sec": 0.0010812203669345877,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 64,
+            "pitch_class_equal": true
+          }
+        ],
+        "matching": {
+          "algorithm": "greedy_minimum_timing_delta",
+          "offset_tolerance_sec": 0.05,
+          "onset_tolerance_sec": 0.05,
+          "pitch_must_match": true
+        },
+        "midi_note_count": 3,
+        "midi_only_indices": [],
+        "offset_differences_sec": [
+          0.0008348794063079978,
+          0.0009451659451660266,
+          0.0010812203669345877
+        ],
+        "onset_differences_sec": [
+          0.0003576582148010765,
+          0.0003576582148010765,
+          0.0003576582148010765
+        ],
+        "ordering_equal": false,
+        "pitch_class_mismatch_count": 0,
+        "pitch_match_rate": 1.0
+      },
+      "compatibility_chord_events": [
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.5681818181818181,
+          "start": 0.0
+        }
+      ],
+      "direct_model_output_shapes": {
+        "contour": [
+          172,
+          264
+        ],
+        "note": [
+          172,
+          88
+        ],
+        "onset": [
+          172,
+          88
+        ]
+      },
+      "direct_pitch_bend_note_count": 3,
+      "direct_replay_chord_events": [
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.5681818181818181,
+          "start": 0.0
+        }
+      ],
+      "downstream_chords_equal": true,
+      "duration_sec": 2.0,
+      "fixture_kind": "generated deterministic sine fixture",
+      "name": "block_c_major",
+      "timings_sec": {
+        "basic_pitch_predict_total": 2.1002260000095703,
+        "direct_evidence_conversion": 0.03953559999354184,
+        "midi_read_and_parse": 0.00341070001013577,
+        "midi_serialization": 0.0037734000361524522,
+        "transcription_total": 5.898838400025852
+      }
+    },
+    {
+      "comparison": {
+        "amplitude_differences": [
+          0.002200337376181527,
+          0.00018011232999365356,
+          0.0024671057077843006,
+          0.003542558884057523
+        ],
+        "direct_note_count": 4,
+        "direct_only_indices": [],
+        "matched_note_count": 4,
+        "matches": [
+          {
+            "amplitude_difference": 0.002200337376181527,
+            "direct_index": 2,
+            "midi_index": 1,
+            "offset_difference_sec": 0.0006988249845394368,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 59,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.00018011232999365356,
+            "direct_index": 3,
+            "midi_index": 0,
+            "offset_difference_sec": 0.0006988249845394368,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 55,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0024671057077843006,
+            "direct_index": 0,
+            "midi_index": 3,
+            "offset_difference_sec": 0.0008348794063079978,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 65,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.003542558884057523,
+            "direct_index": 1,
+            "midi_index": 2,
+            "offset_difference_sec": 0.0010812203669345877,
+            "onset_difference_sec": 0.0003576582148010765,
+            "pitch": 62,
+            "pitch_class_equal": true
+          }
+        ],
+        "matching": {
+          "algorithm": "greedy_minimum_timing_delta",
+          "offset_tolerance_sec": 0.05,
+          "onset_tolerance_sec": 0.05,
+          "pitch_must_match": true
+        },
+        "midi_note_count": 4,
+        "midi_only_indices": [],
+        "offset_differences_sec": [
+          0.0006988249845394368,
+          0.0006988249845394368,
+          0.0008348794063079978,
+          0.0010812203669345877
+        ],
+        "onset_differences_sec": [
+          0.0003576582148010765,
+          0.0003576582148010765,
+          0.0003576582148010765,
+          0.0003576582148010765
+        ],
+        "ordering_equal": false,
+        "pitch_class_mismatch_count": 0,
+        "pitch_match_rate": 1.0
+      },
+      "compatibility_chord_events": [
+        {
+          "chord": "G7",
+          "confidence": 0.8,
+          "end": 1.5681818181818181,
+          "start": 0.0
+        }
+      ],
+      "direct_model_output_shapes": {
+        "contour": [
+          172,
+          264
+        ],
+        "note": [
+          172,
+          88
+        ],
+        "onset": [
+          172,
+          88
+        ]
+      },
+      "direct_pitch_bend_note_count": 4,
+      "direct_replay_chord_events": [
+        {
+          "chord": "G7",
+          "confidence": 0.8,
+          "end": 1.5681818181818181,
+          "start": 0.0
+        }
+      ],
+      "downstream_chords_equal": true,
+      "duration_sec": 2.0,
+      "fixture_kind": "generated deterministic sine fixture",
+      "name": "block_g7",
+      "timings_sec": {
+        "basic_pitch_predict_total": 0.21231269999407232,
+        "direct_evidence_conversion": 0.00011020002420991659,
+        "midi_read_and_parse": 0.0029996000230312347,
+        "midi_serialization": 0.002052700030617416,
+        "transcription_total": 0.21996299998136237
+      }
+    },
+    {
+      "comparison": {
+        "amplitude_differences": [
+          0.0020765535474762675,
+          0.0031657800899715927,
+          0.0010793931840911153,
+          0.0023860283723966536,
+          0.002612137888360233,
+          0.0019940076850530897
+        ],
+        "direct_note_count": 6,
+        "direct_only_indices": [],
+        "matched_note_count": 6,
+        "matches": [
+          {
+            "amplitude_difference": 0.0020765535474762675,
+            "direct_index": 3,
+            "midi_index": 2,
+            "offset_difference_sec": 0.0005009276437848431,
+            "onset_difference_sec": 0.00021438878581736542,
+            "pitch": 64,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0031657800899715927,
+            "direct_index": 0,
+            "midi_index": 5,
+            "offset_difference_sec": 0.00015048443619880558,
+            "onset_difference_sec": 0.0009142444856731213,
+            "pitch": 67,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0010793931840911153,
+            "direct_index": 4,
+            "midi_index": 1,
+            "offset_difference_sec": 0.0009379509379509043,
+            "onset_difference_sec": 0.00021438878581736542,
+            "pitch": 60,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0023860283723966536,
+            "direct_index": 5,
+            "midi_index": 0,
+            "offset_difference_sec": 0.00021438878581736542,
+            "onset_difference_sec": 0.0010966810966810958,
+            "pitch": 60,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.002612137888360233,
+            "direct_index": 2,
+            "midi_index": 3,
+            "offset_difference_sec": 0.0008658008658011251,
+            "onset_difference_sec": 0.0005009276437848431,
+            "pitch": 64,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0019940076850530897,
+            "direct_index": 1,
+            "midi_index": 4,
+            "offset_difference_sec": 0.0009142444856731213,
+            "onset_difference_sec": 0.0005009276437848431,
+            "pitch": 67,
+            "pitch_class_equal": true
+          }
+        ],
+        "matching": {
+          "algorithm": "greedy_minimum_timing_delta",
+          "offset_tolerance_sec": 0.05,
+          "onset_tolerance_sec": 0.05,
+          "pitch_must_match": true
+        },
+        "midi_note_count": 6,
+        "midi_only_indices": [],
+        "offset_differences_sec": [
+          0.0005009276437848431,
+          0.00015048443619880558,
+          0.0009379509379509043,
+          0.00021438878581736542,
+          0.0008658008658011251,
+          0.0009142444856731213
+        ],
+        "onset_differences_sec": [
+          0.00021438878581736542,
+          0.0009142444856731213,
+          0.00021438878581736542,
+          0.0010966810966810958,
+          0.0005009276437848431,
+          0.0005009276437848431
+        ],
+        "ordering_equal": false,
+        "pitch_class_mismatch_count": 0,
+        "pitch_match_rate": 1.0
+      },
+      "compatibility_chord_events": [
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.0,
+          "start": 0.5
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 1.5,
+          "start": 1.0
+        }
+      ],
+      "direct_model_output_shapes": {
+        "contour": [
+          172,
+          264
+        ],
+        "note": [
+          172,
+          88
+        ],
+        "onset": [
+          172,
+          88
+        ]
+      },
+      "direct_pitch_bend_note_count": 6,
+      "direct_replay_chord_events": [
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.0,
+          "start": 0.5
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 1.5,
+          "start": 1.0
+        }
+      ],
+      "downstream_chords_equal": true,
+      "duration_sec": 2.0,
+      "fixture_kind": "generated deterministic sine fixture",
+      "name": "arpeggio_c_major",
+      "timings_sec": {
+        "basic_pitch_predict_total": 0.2189673000248149,
+        "direct_evidence_conversion": 0.0034650000161491334,
+        "midi_read_and_parse": 0.005153300007805228,
+        "midi_serialization": 0.012630100012756884,
+        "transcription_total": 0.23781789996428415
+      }
+    },
+    {
+      "comparison": {
+        "amplitude_differences": [
+          0.002608945050577516,
+          0.0019598692420899066,
+          0.003648275465477191,
+          0.0017787157081243787,
+          0.0032564946046964582,
+          5.93901619198034e-05,
+          0.0017555379492091294,
+          0.003881776426720829,
+          0.003247743047128493
+        ],
+        "direct_note_count": 9,
+        "direct_only_indices": [],
+        "matched_note_count": 9,
+        "matches": [
+          {
+            "amplitude_difference": 0.002608945050577516,
+            "direct_index": 6,
+            "midi_index": 2,
+            "offset_difference_sec": 0.0005009276437848431,
+            "onset_difference_sec": 0.00021438878581736542,
+            "pitch": 64,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0019598692420899066,
+            "direct_index": 7,
+            "midi_index": 1,
+            "offset_difference_sec": 0.0005009276437848431,
+            "onset_difference_sec": 0.00021438878581736542,
+            "pitch": 60,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.003648275465477191,
+            "direct_index": 5,
+            "midi_index": 3,
+            "offset_difference_sec": 0.0003174603174602719,
+            "onset_difference_sec": 0.0005009276437848431,
+            "pitch": 60,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0017787157081243787,
+            "direct_index": 3,
+            "midi_index": 5,
+            "offset_difference_sec": 0.0009699031127601287,
+            "onset_difference_sec": 0.00025458668315814226,
+            "pitch": 67,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0032564946046964582,
+            "direct_index": 8,
+            "midi_index": 0,
+            "offset_difference_sec": 0.00021438878581736542,
+            "onset_difference_sec": 0.0010966810966810958,
+            "pitch": 60,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 5.93901619198034e-05,
+            "direct_index": 2,
+            "midi_index": 6,
+            "offset_difference_sec": 0.0004524840239128469,
+            "onset_difference_sec": 0.0009699031127601287,
+            "pitch": 64,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.0017555379492091294,
+            "direct_index": 4,
+            "midi_index": 4,
+            "offset_difference_sec": 0.0009699031127601287,
+            "onset_difference_sec": 0.0005009276437848431,
+            "pitch": 64,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.003881776426720829,
+            "direct_index": 0,
+            "midi_index": 8,
+            "offset_difference_sec": 0.0008338486909915677,
+            "onset_difference_sec": 0.0009451659451660266,
+            "pitch": 67,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.003247743047128493,
+            "direct_index": 1,
+            "midi_index": 7,
+            "offset_difference_sec": 0.0009451659451660266,
+            "onset_difference_sec": 0.0009699031127601287,
+            "pitch": 67,
+            "pitch_class_equal": true
+          }
+        ],
+        "matching": {
+          "algorithm": "greedy_minimum_timing_delta",
+          "offset_tolerance_sec": 0.05,
+          "onset_tolerance_sec": 0.05,
+          "pitch_must_match": true
+        },
+        "midi_note_count": 9,
+        "midi_only_indices": [],
+        "offset_differences_sec": [
+          0.0005009276437848431,
+          0.0005009276437848431,
+          0.0003174603174602719,
+          0.0009699031127601287,
+          0.00021438878581736542,
+          0.0004524840239128469,
+          0.0009699031127601287,
+          0.0008338486909915677,
+          0.0009451659451660266
+        ],
+        "onset_differences_sec": [
+          0.00021438878581736542,
+          0.00021438878581736542,
+          0.0005009276437848431,
+          0.00025458668315814226,
+          0.0010966810966810958,
+          0.0009699031127601287,
+          0.0005009276437848431,
+          0.0009451659451660266,
+          0.0009699031127601287
+        ],
+        "ordering_equal": false,
+        "pitch_class_mismatch_count": 0,
+        "pitch_match_rate": 1.0
+      },
+      "compatibility_chord_events": [
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.5,
+          "start": 0.5
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 1.7522727272727272,
+          "start": 1.5
+        }
+      ],
+      "direct_model_output_shapes": {
+        "contour": [
+          172,
+          264
+        ],
+        "note": [
+          172,
+          88
+        ],
+        "onset": [
+          172,
+          88
+        ]
+      },
+      "direct_pitch_bend_note_count": 9,
+      "direct_replay_chord_events": [
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.5,
+          "start": 0.5
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 1.7522727272727272,
+          "start": 1.5
+        }
+      ],
+      "downstream_chords_equal": true,
+      "duration_sec": 2.0,
+      "fixture_kind": "generated deterministic sine fixture",
+      "name": "overlapping_notes",
+      "timings_sec": {
+        "basic_pitch_predict_total": 0.21388850000221282,
+        "direct_evidence_conversion": 0.00012600002810359,
+        "midi_read_and_parse": 0.004381899954751134,
+        "midi_serialization": 0.012202699959743768,
+        "transcription_total": 0.22895299998344854
+      }
+    },
+    {
+      "comparison": {
+        "amplitude_differences": [
+          0.0008729644647733625,
+          0.003334953090337267,
+          0.00026154377329068446,
+          0.002414042555441087
+        ],
+        "direct_note_count": 4,
+        "direct_only_indices": [],
+        "matched_note_count": 4,
+        "matches": [
+          {
+            "amplitude_difference": 0.0008729644647733625,
+            "direct_index": 2,
+            "midi_index": 1,
+            "offset_difference_sec": 4.019789734055479e-05,
+            "onset_difference_sec": 0.00014326942898368333,
+            "pitch": 72,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.003334953090337267,
+            "direct_index": 3,
+            "midi_index": 0,
+            "offset_difference_sec": 0.0008822923108637859,
+            "onset_difference_sec": 0.00024634096062667483,
+            "pitch": 69,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.00026154377329068446,
+            "direct_index": 1,
+            "midi_index": 2,
+            "offset_difference_sec": 0.001100432900432935,
+            "onset_difference_sec": 0.0005328798185939565,
+            "pitch": 76,
+            "pitch_class_equal": true
+          },
+          {
+            "amplitude_difference": 0.002414042555441087,
+            "direct_index": 0,
+            "midi_index": 3,
+            "offset_difference_sec": 0.0007108225108223287,
+            "onset_difference_sec": 0.001100432900432935,
+            "pitch": 79,
+            "pitch_class_equal": true
+          }
+        ],
+        "matching": {
+          "algorithm": "greedy_minimum_timing_delta",
+          "offset_tolerance_sec": 0.05,
+          "onset_tolerance_sec": 0.05,
+          "pitch_must_match": true
+        },
+        "midi_note_count": 4,
+        "midi_only_indices": [],
+        "offset_differences_sec": [
+          4.019789734055479e-05,
+          0.0008822923108637859,
+          0.001100432900432935,
+          0.0007108225108223287
+        ],
+        "onset_differences_sec": [
+          0.00014326942898368333,
+          0.00024634096062667483,
+          0.0005328798185939565,
+          0.001100432900432935
+        ],
+        "ordering_equal": false,
+        "pitch_class_mismatch_count": 0,
+        "pitch_match_rate": 1.0
+      },
+      "compatibility_chord_events": [
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 1.1890909090909092,
+          "start": 0.5945454545454546
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.7836363636363637,
+          "start": 1.1890909090909092
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 2.3781818181818184,
+          "start": 1.7836363636363637
+        }
+      ],
+      "direct_model_output_shapes": {
+        "contour": [
+          258,
+          264
+        ],
+        "note": [
+          258,
+          88
+        ],
+        "onset": [
+          258,
+          88
+        ]
+      },
+      "direct_pitch_bend_note_count": 4,
+      "direct_replay_chord_events": [
+        {
+          "chord": "Am",
+          "confidence": 0.8,
+          "end": 1.1890909090909092,
+          "start": 0.5945454545454546
+        },
+        {
+          "chord": "C",
+          "confidence": 1.0,
+          "end": 1.7836363636363637,
+          "start": 1.1890909090909092
+        },
+        {
+          "chord": "Em",
+          "confidence": 0.8,
+          "end": 2.3781818181818184,
+          "start": 1.7836363636363637
+        }
+      ],
+      "downstream_chords_equal": true,
+      "duration_sec": 3.0,
+      "fixture_kind": "repository WAV runtime fixture; legal/performance provenance unverified",
+      "name": "repository_pop_wav",
+      "timings_sec": {
+        "basic_pitch_predict_total": 0.2648891999851912,
+        "direct_evidence_conversion": 9.720004163682461e-05,
+        "midi_read_and_parse": 0.012038499990012497,
+        "midi_serialization": 0.014668499992694706,
+        "transcription_total": 0.29037800000514835
+      }
+    }
+  ],
+  "command": "python eval/evaluate_basicpitch_direct_evidence.py",
+  "decision_gate": {
+    "default_detector_changed": false,
+    "midi_deleted": false,
+    "outcome": "B DIRECT_BETTER",
+    "policy": "direct NoteEvidence is preferred for inspection; MIDI remains the active symbolic compatibility path"
+  },
+  "environment": {
+    "packages": {
+      "basic-pitch": "0.4.0",
+      "librosa": "0.11.0",
+      "numpy": "2.2.5",
+      "onnxruntime": "1.22.0",
+      "pretty-midi": "0.2.10",
+      "soundfile": "0.13.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "evidence_level": "L1 representation equivalence and runtime; synthetic/fixture execution, no real-performance accuracy claim",
+  "information_loss_audit": {
+    "direct_preserves": [
+      "floating-point BasicPitch amplitude",
+      "optional per-note pitch-bend sequence",
+      "original BasicPitch event ordering"
+    ],
+    "midi_compatibility_changes_observed": [
+      "amplitude is quantized to integer MIDI velocity",
+      "note ordering can differ after serialization/parsing",
+      "model output tensors are not represented by parsed MIDI notes"
+    ],
+    "midi_compatibility_preserves_observed": [
+      "note count",
+      "MIDI pitch and pitch class",
+      "onset and offset within measured tolerance",
+      "downstream Jaccard chord output"
+    ],
+    "pitch_bends_observed_in_cases": 26
+  },
+  "matching_policy": {
+    "assignment": "greedy minimum summed onset/offset delta with stable index tie-break",
+    "offset_tolerance_sec": 0.05,
+    "onset_tolerance_sec": 0.05,
+    "pitch": "exact MIDI pitch"
+  },
+  "schema_version": "basicpitch-direct-evidence-gate-v1"
+}

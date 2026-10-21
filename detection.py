@@ -116,16 +116,20 @@ def _run_production(wav_path: str) -> list[dict[str, Any]]:
     return raw
 
 
-def _wav_to_midi(wav_path: str, runtime_trace: Optional[dict[str, Any]] = None) -> str:
+def _wav_to_midi(wav_path: str, runtime_trace: Optional[dict[str, Any]] = None,
+                 direct_evidence_sink: Optional[dict[str, Any]] = None) -> str:
     """basic_pitch transcription. Caller is responsible for unlinking."""
     from basic_pitch_runtime import transcribe_wav_to_midi  # type: ignore
 
-    return transcribe_wav_to_midi(wav_path, runtime_trace)
+    return transcribe_wav_to_midi(
+        wav_path, runtime_trace, direct_evidence_sink
+    )
 
 
 def _run_hybrid(wav_path: str, use_viterbi: bool = True,
                 classifier_mode: str = "simple",
-                runtime_trace: Optional[dict[str, Any]] = None) -> list[dict[str, Any]]:
+                runtime_trace: Optional[dict[str, Any]] = None,
+                evidence_sink: Optional[dict[str, Any]] = None) -> list[dict[str, Any]]:
     """HybridChordDetector on basic_pitch MIDI. Today this == rule_viterbi
     because HybridChordDetector.ml_available is False (no models/*.joblib)."""
     import_started = perf_counter()
@@ -134,8 +138,38 @@ def _run_hybrid(wav_path: str, use_viterbi: bool = True,
         runtime_trace["stages_sec"]["hybrid_detector_import"] = perf_counter() - import_started
 
     transcription_trace = {} if runtime_trace is not None else None
-    midi_path = _wav_to_midi(wav_path, transcription_trace)
+    direct_evidence: Optional[dict[str, Any]] = (
+        {} if evidence_sink is not None else None
+    )
+    if direct_evidence is None:
+        midi_path = _wav_to_midi(wav_path, transcription_trace)
+    else:
+        midi_path = _wav_to_midi(
+            wav_path, transcription_trace, direct_evidence
+        )
     try:
+        if evidence_sink is not None:
+            from src.chord_detector import parse_midi_notes
+            from src.harmonic_evidence import compare_note_evidence, notes_to_evidence
+
+            parse_started = perf_counter()
+            parsed_notes, parsed_duration = _silent(parse_midi_notes, midi_path)
+            if transcription_trace is not None:
+                transcription_trace["timings_sec"]["midi_read_and_parse"] = (
+                    perf_counter() - parse_started
+                )
+            midi_evidence = notes_to_evidence(
+                parsed_notes, source="basic_pitch"
+            )
+            direct_notes = list((direct_evidence or {}).get("notes", []))
+            evidence_sink["notes"] = direct_notes
+            evidence_sink["direct_notes"] = direct_notes
+            evidence_sink["midi_notes"] = midi_evidence
+            evidence_sink["direct_vs_midi"] = compare_note_evidence(
+                direct_notes, midi_evidence
+            )
+            evidence_sink["duration"] = float(parsed_duration)
+
         init_started = perf_counter()
         det = HybridChordDetector(use_viterbi=use_viterbi)
         if runtime_trace is not None:
@@ -281,7 +315,10 @@ def normalize_and_validate(events: list[dict[str, Any]]) -> tuple[list[dict], li
 
 # --------------------------- public API ----------------------------------
 def run_detection(wav_path: str, detector: Optional[str] = None,
-                  include_runtime_trace: bool = False) -> dict[str, Any]:
+                  include_runtime_trace: bool = False,
+                  include_harmonic_evidence: bool = False,
+                  include_dsp_evidence: bool = False,
+                  include_direct_chord_evidence: bool = False) -> dict[str, Any]:
     """Run the selected chord detector on a WAV; return the normalized contract."""
     total_started = perf_counter()
     runtime_trace = {
@@ -324,18 +361,38 @@ def run_detection(wav_path: str, detector: Optional[str] = None,
         sample_rate if sample_rate is not None else "?",
         f"{duration_sec:.2f}" if duration_sec is not None else "?",
     )
+    include_harmonic_evidence = (
+        include_harmonic_evidence
+        or include_dsp_evidence
+        or include_direct_chord_evidence
+    )
+    evidence_sink: Optional[dict[str, Any]] = (
+        {} if include_harmonic_evidence else None
+    )
     try:
         if name == "production":
             raw = _run_production(wav_path)
         elif name in ("hybrid", "rule_viterbi"):
-            raw = _run_hybrid(wav_path, use_viterbi=True, runtime_trace=runtime_trace)
+            if evidence_sink is None:
+                raw = _run_hybrid(
+                    wav_path, use_viterbi=True, runtime_trace=runtime_trace
+                )
+            else:
+                raw = _run_hybrid(
+                    wav_path,
+                    use_viterbi=True,
+                    runtime_trace=runtime_trace,
+                    evidence_sink=evidence_sink,
+                )
         elif name == "rule_jaccard":
-            raw = _run_hybrid(
-                wav_path,
-                use_viterbi=True,
-                classifier_mode="advanced_jaccard",
-                runtime_trace=runtime_trace,
-            )
+            hybrid_kwargs = {
+                "use_viterbi": True,
+                "classifier_mode": "advanced_jaccard",
+                "runtime_trace": runtime_trace,
+            }
+            if evidence_sink is not None:
+                hybrid_kwargs["evidence_sink"] = evidence_sink
+            raw = _run_hybrid(wav_path, **hybrid_kwargs)
         else:
             raise AssertionError(f"unhandled detector: {name}")
     except Exception as e:
@@ -375,6 +432,75 @@ def run_detection(wav_path: str, detector: Optional[str] = None,
         "detector_used": name,
         "warnings": warnings,
     }
+    if include_harmonic_evidence:
+        from src.harmonic_evidence import (
+            HarmonicEvidencePacket,
+            normalized_event_to_hypothesis,
+        )
+
+        packet_duration = duration_sec
+        if packet_duration is None and evidence_sink is not None:
+            packet_duration = evidence_sink.get("duration")
+        pitch_class_evidence = []
+        dsp_metadata = None
+        dsp_warnings: list[str] = []
+        if include_dsp_evidence:
+            try:
+                from src.dsp_chroma import extract_pitch_class_evidence
+
+                pitch_class_evidence, dsp_metadata = (
+                    extract_pitch_class_evidence(wav_path)
+                )
+            except Exception as exc:
+                dsp_warnings.append(
+                    f"librosa_chroma unavailable: {type(exc).__name__}: {exc}"
+                )
+        direct_chord_evidence = []
+        direct_metadata = None
+        direct_warnings: list[str] = []
+        if include_direct_chord_evidence:
+            try:
+                from src.direct_chord_adapter import run_lv_chordia
+
+                direct_result = run_lv_chordia(wav_path)
+                direct_chord_evidence = direct_result["events"]
+                direct_metadata = {
+                    **direct_result["metadata"],
+                    "runtime": direct_result["runtime"],
+                }
+                direct_warnings.extend(direct_result["warnings"])
+            except Exception as exc:
+                direct_warnings.append(
+                    f"lv_chordia unavailable: {type(exc).__name__}: {exc}"
+                )
+        packet = HarmonicEvidencePacket(
+            audio_id=Path(wav_path).name,
+            duration=packet_duration,
+            notes=list((evidence_sink or {}).get("notes", [])),
+            chord_hypotheses=[
+                normalized_event_to_hypothesis(event) for event in events
+            ],
+            pitch_class_evidence=pitch_class_evidence,
+            direct_chord_evidence=direct_chord_evidence,
+            warnings=[*warnings, *dsp_warnings, *direct_warnings],
+            metadata={
+                "detector": name,
+                "representation": "observational",
+                "note_path": (
+                    "basic_pitch_direct_with_midi_compatibility"
+                    if name in ("hybrid", "rule_viterbi", "rule_jaccard")
+                    else "production_compatibility_pipeline"
+                ),
+                "direct_vs_midi": (evidence_sink or {}).get("direct_vs_midi"),
+                "midi_notes": [
+                    note.to_dict()
+                    for note in (evidence_sink or {}).get("midi_notes", [])
+                ],
+                "dsp": dsp_metadata,
+                "direct_chord_model": direct_metadata,
+            },
+        )
+        response["harmonic_evidence"] = packet.to_dict()
     if runtime_trace is not None:
         runtime_trace["stages_sec"]["total"] = perf_counter() - total_started
         response["runtime_trace"] = runtime_trace

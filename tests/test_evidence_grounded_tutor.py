@@ -1,7 +1,7 @@
 import json
 import unittest
 from types import SimpleNamespace
-from unittest.mock import AsyncMock
+from unittest.mock import AsyncMock, Mock
 
 from chordai_gpt_tutor import ChordAIRAGTutor
 from detection import normalize_and_validate
@@ -111,6 +111,31 @@ def bare_tutor(content="G moves to C and creates a clear harmonic change."):
 
 
 class EvidenceGroundedTutorTests(unittest.TestCase):
+    def test_compact_evidence_summary_reaches_tutor_and_controls_uncertainty(self):
+        result = chord_results()
+        result["evidence_summaries"] = [{
+            "start": 0.0,
+            "end": 1.5,
+            "chord": "G",
+            "strength": "MIXED_EVIDENCE",
+            "agreement": "SYMBOLIC_DSP_DISAGREE",
+            "observed_notes": ["G", "B", "D"],
+            "harmonic_candidate": "Em",
+            "supporting_sources": ["hybrid", "basic_pitch", "librosa_chroma"],
+            "warnings": [],
+            "short_explanation": "Detected notes favor G, while the harmonic spectrum favors Em.",
+        }]
+
+        performance = build_performance_evidence(result)
+        context = assemble_tutor_context(
+            performance, select_retrieved_evidence({"results": []}, "G"), None
+        )
+
+        self.assertEqual(performance.evidence_summaries[0].strength, "MIXED_EVIDENCE")
+        self.assertTrue(context["assessment"]["requires_uncertainty_language"])
+        self.assertIn("MIXED_EVIDENCE", context["messages"][1]["content"])
+        self.assertNotIn('"values"', context["messages"][1]["content"])
+
     def test_detector_normalizer_repairs_and_preserves_confidence(self):
         events, warnings = normalize_and_validate([
             {"start": 1.0, "end": 2.0, "chord": "C", "confidence": 0.7},
@@ -270,6 +295,23 @@ class FakeWebSocket:
 
 
 class RelayEvidenceIntegrationTests(unittest.IsolatedAsyncioTestCase):
+    async def test_model_failure_is_error_not_successful_tutoring(self):
+        tutor = bare_tutor()
+        tutor._run_horizon_jam = lambda _path: chord_results()
+        tutor.client.chat.completions.create = Mock(side_effect=RuntimeError("private provider detail"))
+        manager = TutorWebSocketManager()
+        manager.tutor = tutor
+        websocket = FakeWebSocket()
+        manager.active_connections["client"] = websocket
+        manager.send_text_chunk = AsyncMock()
+        await manager.analyze_audio_streaming("client", "fixture.wav", "What did I play?", job_id="test-job")
+        types = [message["type"] for message in websocket.text_messages]
+        self.assertEqual(types[-1], "error")
+        self.assertNotIn("complete", types)
+        self.assertNotIn("text_chunk", types)
+        self.assertNotIn("private provider detail", json.dumps(websocket.text_messages))
+        manager.send_text_chunk.assert_not_awaited()
+
     async def test_active_relay_path_streams_verified_grounded_response(self):
         tutor = bare_tutor("You are definitely playing G then C. Use the shared G tone.")
         tutor._run_horizon_jam = lambda _path: chord_results(

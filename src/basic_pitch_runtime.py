@@ -74,7 +74,11 @@ def _note_event_payload(note_events: list[tuple]) -> list[tuple]:
     ]
 
 
-def transcribe_wav_to_midi(wav_path: str, trace: Optional[dict[str, Any]] = None) -> str:
+def transcribe_wav_to_midi(
+    wav_path: str,
+    trace: Optional[dict[str, Any]] = None,
+    direct_evidence_sink: Optional[dict[str, Any]] = None,
+) -> str:
     """Transcribe one validated WAV and return a caller-owned temporary MIDI."""
     global _TRANSCRIPTION_COUNT
     with _RUNTIME_LOCK:
@@ -169,6 +173,18 @@ def transcribe_wav_to_midi(wav_path: str, trace: Optional[dict[str, Any]] = None
             inference.get_audio_input = original_get_audio_input
             model.predict = original_model_predict
             inference.infer.model_output_to_notes = original_model_output_to_notes
+
+        direct_started = perf_counter()
+        if direct_evidence_sink is not None:
+            from src.harmonic_evidence import basic_pitch_events_to_note_evidence
+
+            direct_evidence_sink["notes"] = basic_pitch_events_to_note_evidence(
+                note_events
+            )
+            direct_evidence_sink["model_output_shapes"] = {
+                name: list(values.shape) for name, values in model_output.items()
+            }
+        timings["direct_evidence_conversion"] = perf_counter() - direct_started
 
         handle, midi_path = tempfile.mkstemp(suffix=".mid", prefix="hj_basic_pitch_")
         os.close(handle)

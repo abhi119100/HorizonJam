@@ -1,0 +1,104 @@
+{
+  "schema_version": "readiness-implementation-v1",
+  "recorded_at": "2026-10-03T23:55:39.245667+00:00",
+  "scope": "local contract/browser engineering evidence; full runtime, hosted alpha and research gates remain open",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "source_sha256": {
+    "AGENTS.md": "87b43cece76db17ea6cfe6289524f046492afc77d3f64ecc05f70230bb1f7c0d",
+    "tutor_ws_relay.py": "32c01f00482788e2617ca6682aa8f8a0e5337c89ec39f8bc7165ae73c2c1f89f",
+    "upload_store.py": "feca2b802bae377be349d3f5ef8155ba0690e4c8f52a600ef76dbdb156e6c292",
+    "nextjs-frontend/pages/index.js": "bc0b85a6eb945be2a249a05dc26702339aff02168d7d6f3ae9084a1090ef8c8b",
+    "tutor_evidence.py": "cae8f5a1fe00080775f0545bd3cb94716d130aa095c96590a93f0920e0399ae0",
+    "chordai_gpt_tutor.py": "4ea5b25fb476d2acbe8a7b217973d7d3e8fa7979fc696dcc683c4d6821619f15",
+    "eval/real_performance_pack.py": "f92f8fdc898f00c84496947a339ab8267ab70a59e9a27384e1fc32c567c94223",
+    "eval/real_performance_demo_pack/manifest.schema.json": "0a7aa44b254b582e55899cdd826ac38ba6b810df469c6c2ac8612beb352b7942",
+    "requirements-ci.txt": "cd4872fe6d79e1fbab87d1bb0940a53046cbbbde0f35e700d519944ceb0809c5",
+    "requirements-ci.lock": "3c4c36634cde5f6dae05945815bd11e03653ab39293dbf88fd51b131d17aa653",
+    ".github/workflows/contract-checks.yml": "bcbac42bfced72c853482416982e6d4533480cebd1e4cd205d172d311d120c2d",
+    "tests/test_upload_boundary.py": "9e9825aaffe3329db733023665033ceb25ad388c9ae747e6ffa357172f5604ce",
+    "tests/test_tutor_counterexamples.py": "454938ce7698f0cd25bb39ce1ec25338ab5bbb18847b8f30d27bd5fd0dec37db",
+    "tests/test_evidence_grounded_tutor.py": "f8a07b8a81c55264e41b0ada4db1025d42744c2f14086758f4ae7ad6c0150a96",
+    "tests/test_real_performance_pack.py": "7ac6dbe6a89f686949167a8d7b8e15e356de63c39439fc49f0d796a32094342d"
+  },
+  "checks": {
+    "contracts": {
+      "command": ".venv-readiness/Scripts/python -m unittest discover -s tests -t . -v",
+      "exit_code": 0,
+      "total": 100,
+      "passed": 97,
+      "expected_musical_failures": 3
+    },
+    "dependency_consistency": {
+      "command": ".venv-readiness/Scripts/python -m pip check",
+      "exit_code": 0,
+      "output": "No broken requirements found."
+    },
+    "frontend_build": {
+      "command": "npm exec --offline next -- build ./nextjs-frontend",
+      "exit_code": 0
+    },
+    "browser": {
+      "status": "passed",
+      "scope": "real frontend/HTTP/WebSocket, deterministic detector/provider stubs, synthetic browser microphone; not live-model or musical accuracy",
+      "browser": "154.0.4258.53",
+      "passed": [
+        "upload",
+        "evidence",
+        "feedback",
+        "success_cleanup",
+        "cancellation",
+        "repeat_analysis",
+        "invalid_audio",
+        "provider_failure",
+        "microphone_wav",
+        "clear_session",
+        "clear_during_recording",
+        "no_page_errors",
+        "responsive_width"
+      ],
+      "viewports": [
+        {
+          "width": 1440,
+          "height": 1000,
+          "scroll_width": 1424
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "scroll_width": 374
+        }
+      ]
+    },
+    "verifier": {
+      "before": 2,
+      "after": 8,
+      "total": 8,
+      "scope": "fixed deterministic cases only"
+    },
+    "tutor_cases": {
+      "passed": 13,
+      "total": 13
+    },
+    "accepted_research_artifacts": {
+      "checked": 27,
+      "changed": []
+    }
+  },
+  "gates": {
+    "local_boundary_checks": "passed_in_tested_scope",
+    "contract_environment": "passed_locally_remote_CI_not_run",
+    "full_detector_environment": "blocked_dependency_profile",
+    "real_performance": "blocked_zero_approved_cases",
+    "expert_tutor_quality": "not_evaluated",
+    "hosted_alpha": "blocked_auth_spend_privacy_runtime_controls",
+    "research_result": "not_ready"
+  },
+  "not_performed": [
+    "live provider calls",
+    "real-musician accuracy evaluation",
+    "expert or user study",
+    "detector promotion",
+    "deployment",
+    "full dependency/secret/corpus audit"
+  ]
+}

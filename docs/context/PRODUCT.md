@@ -19,10 +19,10 @@ understand my performance
 
 ## Runtime User Flow
 
-1. `Home.runAnalysis()` in `nextjs-frontend/pages/index.js` posts `audio_file` and an optional `question` to `/upload-audio`.
-2. The browser sends `{type: "analyze", file_path, question}` to `/ws/tutor`.
+1. `Home.runAnalysis()` in `nextjs-frontend/pages/index.js` opens `/ws/tutor`, waits for its session capability, and uploads `audio_file` with that capability.
+2. The browser sends `{type: "analyze", upload_id, question, speech: false}` on that connection. It never receives or sends a server filesystem path.
 3. `websocket_tutor_endpoint()` delegates to `TutorWebSocketManager.analyze_audio_streaming()`.
-4. The relay streams `status`, `chord_analysis`, `text_chunk`, and `complete` JSON messages plus binary WAV chunks.
+4. The relay sends job-scoped `status`, `chord_analysis`, `text_chunk`, and written `complete` messages. Optional speech follows verified written delivery. Cancel analysis and Clear session suppress subsequent delivery and arrange server cleanup.
 5. The frontend renders analysis/tutor state and queues binary audio for playback.
 
 Microphone capture uses `startRecording()`/`stopRecording()`. `analyzeRecording()` decodes the browser recording, converts it to mono 16-bit WAV at 44.1 kHz through `audioBufferToWav()`, then reuses `runAnalysis()`.
@@ -56,9 +56,9 @@ Do not attribute a product failure to “the model” until the evidence, harnes
 
 ## Product Risks
 
-- Detection uncertainty is collapsed before tutoring, so output can sound more certain than evidence warrants.
-- RAG provenance is not shown to the user and retrieved document text is not currently passed into the main tutor prompt.
+- Evidence/warnings now reach tutoring, but fixed agreement categories and rule confidence are not calibrated probabilities; semantic correctness remains unevaluated.
+- Bounded actual RAG text and provenance reach the prompt; expert relevance/entailment and corpus rights remain unevaluated.
 - No session memory means tutoring cannot reliably adapt across turns.
-- Speech latency serializes sentence delivery in the active relay.
-- Public use is blocked by upload/path, authentication, privacy, and cost-control gaps.
+- Full model output is buffered for verification before written delivery. Optional speech no longer gates text; measured user-facing latency targets remain open.
+- Upload/path isolation has targeted passing checks. Public use remains blocked by account authentication, global quotas/cost controls, privacy, crash recovery, and real-performance quality evidence.
 

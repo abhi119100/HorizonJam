@@ -11,6 +11,10 @@ import json
 import os
 import sys
 import tempfile
+import contextlib
+import secrets
+import threading
+from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Dict, Any, Optional
 
@@ -25,9 +29,8 @@ if sys.platform.startswith('win'):
         pass
 
 import uvicorn
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, Form
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, UploadFile, File, Form, Request, HTTPException
 from fastapi.responses import HTMLResponse, JSONResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 import requests
 
@@ -43,10 +46,33 @@ except ImportError as e:
 # duplicated the RAG/model work and made importing the relay configuration-bound.
 chord_tutor = None
 
-app = FastAPI(title="ChordAI Tutor WebSocket Relay")
+from upload_store import UploadStore, RequestSizeLimit, MAX_UPLOAD_BYTES, normalize_upload
+
+uploads = UploadStore()
+
+@asynccontextmanager
+async def lifespan(app):
+    async def reap():
+        while True:
+            await asyncio.sleep(30)
+            uploads.prune()
+    task = asyncio.create_task(reap())
+    try:
+        yield
+    finally:
+        task.cancel()
+        with contextlib.suppress(asyncio.CancelledError):
+            await task
+        for token in list(uploads.sessions):
+            uploads.close_session(token)
+        if manager.tasks:
+            await asyncio.gather(*list(manager.tasks), return_exceptions=True)
+
+app = FastAPI(title="ChordAI Tutor WebSocket Relay", lifespan=lifespan)
+app.add_middleware(RequestSizeLimit)
 
 # CORS configuration to allow frontend running on localhost:3000
-origins = ["http://localhost:3000"]
+origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -55,182 +81,156 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Serve static files
-app.mount("/static", StaticFiles(directory="."), name="static")
+# No repository or upload directory is served as static content.
 
 # TTS server configuration
 TTS_SERVER_URL = "http://localhost:5000/tts"
 
+
+async def finish_worker(function, *args, **kwargs):
+    """Keep input ownership until a non-interruptible worker actually exits."""
+    worker = asyncio.create_task(asyncio.to_thread(function, *args, **kwargs))
+    try:
+        return await asyncio.shield(worker)
+    except asyncio.CancelledError:
+        with contextlib.suppress(Exception):
+            await worker
+        raise
+
 class TutorWebSocketManager:
-    """Manages WebSocket connections for streaming tutor responses."""
-    
+    """Bounded local sessions. Capability ownership is not account authentication."""
+
     def __init__(self):
-        self.active_connections: Dict[str, WebSocket] = {}
+        self.active_connections = {}
         self.tutor = None
-        
-    async def connect(self, websocket: WebSocket, client_id: str):
-        """Accept WebSocket connection."""
+        self.init_lock = asyncio.Lock()
+        self.capacity = asyncio.Semaphore(2)
+        self.tasks = set()
+
+    async def connect(self, websocket, client_id):
         await websocket.accept()
         self.active_connections[client_id] = websocket
-        print(f"Client {client_id} connected")
-        
-        # Initialize tutor if not already done
-        if not self.tutor:
-            try:
-                self.tutor = ChordAIRAGTutor()
-                print("✅ ChordAI tutor initialized")
-            except Exception as e:
-                print(f"❌ Failed to initialize tutor: {e}")
-                await self.send_error(client_id, f"Failed to initialize tutor: {e}")
-                
-    def disconnect(self, client_id: str):
-        """Remove WebSocket connection."""
-        if client_id in self.active_connections:
-            del self.active_connections[client_id]
-            print(f"Client {client_id} disconnected")
-            
-    async def send_text_chunk(self, client_id: str, text: str):
-        """Generate TTS for a text chunk and send as a single playable WAV blob."""
-        if client_id in self.active_connections:
-            try:
-                import aiohttp
-                async with aiohttp.ClientSession() as session:
-                    async with session.post(
-                        TTS_SERVER_URL,
-                        json={"text": text},
-                        headers={"Accept": "audio/wav"}
-                    ) as resp:
-                        if resp.status != 200:
-                            print(f"TTS server error: {resp.status}")
-                            return
-                        data = bytearray()
-                        async for chunk in resp.content.iter_chunked(65536):
-                            data.extend(chunk)
-                        await self.active_connections[client_id].send_bytes(bytes(data))
-                        print(f"Sent TTS WAV ({len(data)} bytes) for: {text[:50]}...")
-            except Exception as e:
-                print(f"Error sending TTS audio: {e}")
-                
-    async def send_message(self, client_id: str, message: Dict[str, Any]):
-        """Send JSON message to client."""
-        if client_id in self.active_connections:
-            try:
-                await self.active_connections[client_id].send_text(json.dumps(message))
-            except Exception as e:
-                print(f"Error sending message to {client_id}: {e}")
-                
-    async def send_error(self, client_id: str, error: str):
-        """Send error message to client."""
-        await self.send_message(client_id, {
-            "type": "error",
-            "message": error
-        })
-        
-    async def analyze_audio_streaming(self, client_id: str, audio_file_path: str, user_question: Optional[str] = None):
-        """Analyze audio and stream tutoring response with per-sentence TTS."""
+
+    def disconnect(self, client_id):
+        self.active_connections.pop(client_id, None)
+
+    async def ensure_tutor(self):
+        async with self.init_lock:
+            if self.tutor is None:
+                self.tutor = await finish_worker(ChordAIRAGTutor)
+
+    async def send_message(self, client_id, message):
+        websocket = self.active_connections.get(client_id)
+        if websocket:
+            await websocket.send_text(json.dumps(message))
+
+    async def send_error(self, client_id, error, job_id=None):
+        await self.send_message(client_id, {"type": "error", "message": error, "job_id": job_id})
+
+    async def send_text_chunk(self, client_id, text):
+        """Optional speech has bounded latency and never suppresses written text."""
+        websocket = self.active_connections.get(client_id)
+        if not websocket:
+            return
         try:
-            if not self.tutor:
-                await self.send_error(client_id, "Tutor not initialized")
+            import aiohttp
+            async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=10)) as session:
+                async with session.post(TTS_SERVER_URL, json={"text": text}) as response:
+                    if response.status != 200:
+                        return
+                    data = bytearray()
+                    async for chunk in response.content.iter_chunked(65536):
+                        data.extend(chunk)
+                        if len(data) > 8 * 1024 * 1024:
+                            return
+                    await websocket.send_bytes(bytes(data))
+        except Exception:
+            # Speech is optional; do not leak provider errors or user text into logs.
+            return
+
+    async def analyze_audio_streaming(self, client_id, audio_file_path, user_question=None,
+                                      job_id=None, cancelled=None, speech=True):
+        cancelled = cancelled or threading.Event()
+
+        async def send(message):
+            if not cancelled.is_set():
+                if job_id is not None:
+                    message = {**message, "job_id": job_id}
+                await self.send_message(client_id, message)
+
+        try:
+            await send({"type": "status", "message": "Detecting chords..."})
+            chord_results = await finish_worker(self.tutor._run_horizon_jam, audio_file_path)
+            if cancelled.is_set():
                 return
-
-            # Step 1: Chord detection (blocking, run in thread pool)
-            await self.send_message(client_id, {
-                "type": "status",
-                "message": "Detecting chords..."
-            })
-
-            loop = asyncio.get_event_loop()
-            chord_results = await loop.run_in_executor(
-                None, self.tutor._run_horizon_jam, audio_file_path
+            await send({"type": "chord_analysis", "data": chord_results})
+            await send({"type": "status", "message": "Retrieving musical context..."})
+            rag_context = await finish_worker(self.tutor._retrieve_rag_context, chord_results, user_question)
+            if cancelled.is_set():
+                return
+            await send({"type": "status", "message": "Preparing written guidance..."})
+            # The tutor already verifies the whole response before callback delivery.
+            # Deliver all verified text before scheduling optional speech.
+            sentences = []
+            trace = {}
+            def callback(sentence):
+                if not cancelled.is_set():
+                    sentences.append(sentence)
+            result = await finish_worker(
+                self.tutor.stream_rag_tutoring, chord_results=chord_results,
+                rag_context=rag_context, websocket_callback=callback,
+                user_question=user_question, trace_callback=trace.update,
             )
-
-            await self.send_message(client_id, {
-                "type": "chord_analysis",
-                "data": chord_results
-            })
-
-            # Step 2: RAG context retrieval
-            await self.send_message(client_id, {
-                "type": "status",
-                "message": "Retrieving musical context..."
-            })
-
-            rag_context = await loop.run_in_executor(
-                None, self.tutor._retrieve_rag_context, chord_results, user_question
-            )
-
-            # Step 3: Stream GPT-4o text + TTS sentence-by-sentence
-            await self.send_message(client_id, {
-                "type": "status",
-                "message": "Your tutor is speaking..."
-            })
-
-            # Collect sentences from the synchronous GPT stream via a queue
-            sentence_queue = asyncio.Queue()
-            evidence_trace = {}
-
-            def sync_stream_callback(sentence: str):
-                """Called from sync GPT stream for each sentence."""
-                loop.call_soon_threadsafe(sentence_queue.put_nowait, sentence)
-
-            def sync_trace_callback(trace: Dict[str, Any]):
-                """Capture the request-local evidence trace without global state."""
-                evidence_trace.update(trace)
-
-            async def run_gpt_stream():
-                """Run the blocking GPT stream in a thread, feeding sentences to the queue."""
-                result = await loop.run_in_executor(
-                    None,
-                    lambda: self.tutor.stream_rag_tutoring(
-                        chord_results=chord_results,
-                        rag_context=rag_context,
-                        websocket_callback=sync_stream_callback,
-                        user_question=user_question,
-                        trace_callback=sync_trace_callback,
-                    )
-                )
-                # Signal end of stream
-                await sentence_queue.put(None)
-                return result
-
-            # Start GPT stream in background
-            gpt_task = asyncio.create_task(run_gpt_stream())
-
-            # Consume sentences: send text immediately, then TTS audio sequentially
-            full_response = ""
-            while True:
-                sentence = await sentence_queue.get()
-                if sentence is None:
-                    break
-
-                full_response += sentence + " "
-
-                # Send text chunk for immediate display
-                await self.send_message(client_id, {
-                    "type": "text_chunk",
-                    "text": sentence
-                })
-
-                # Send TTS audio for this sentence (awaited = no overlap)
-                await self.send_text_chunk(client_id, sentence)
-
-            # Wait for GPT task to finish
-            gpt_result = await gpt_task
-
-            complete_message = {
-                "type": "complete",
-                "full_response": gpt_result or full_response.strip()
-            }
+            if cancelled.is_set():
+                return
+            for sentence in sentences:
+                await send({"type": "text_chunk", "text": sentence})
+            # Completion describes written analysis; speech is an optional tail.
+            complete = {"type": "complete", "full_response": result or " ".join(sentences)}
             if os.getenv("HORIZONJAM_DEBUG_TRACE", "0").lower() in {"1", "true", "yes"}:
-                complete_message["evidence_trace"] = evidence_trace
-            await self.send_message(client_id, complete_message)
+                complete["evidence_trace"] = trace
+            await send(complete)
+            if speech and not cancelled.is_set() and sentences:
+                # One bounded request avoids a per-sentence timeout multiplier.
+                with contextlib.suppress(Exception):
+                    await self.send_text_chunk(client_id, " ".join(sentences))
+        except Exception:
+            if not cancelled.is_set():
+                await self.send_error(client_id, "Analysis failed; retry with a supported recording.", job_id)
 
-            print(f"Completed streaming analysis for client {client_id}")
-
-        except Exception as e:
-            error_msg = f"Analysis failed: {str(e)}"
-            print(f"Error: {error_msg}")
-            await self.send_error(client_id, error_msg)
+    async def run_upload(self, client_id, token, item, question, speech):
+        acquired = False
+        timer = None
+        try:
+            try:
+                await asyncio.wait_for(self.capacity.acquire(), timeout=2)
+                acquired = True
+            except asyncio.TimeoutError:
+                await self.send_error(client_id, "Analysis capacity reached; retry later.", item.id)
+                return
+            async def deadline():
+                await asyncio.sleep(120)
+                item.cancelled.set()
+                await self.send_error(client_id, "Analysis timed out; current processing is winding down.", item.id)
+            timer = asyncio.create_task(deadline())
+            if not item.cancelled.is_set():
+                await self.ensure_tutor()
+            if not item.cancelled.is_set():
+                await self.analyze_audio_streaming(client_id, str(item.wav), question,
+                    item.id, item.cancelled, speech)
+        except Exception:
+            if not item.cancelled.is_set():
+                with contextlib.suppress(Exception):
+                    await self.send_error(client_id, "Analysis unavailable; retry later.", item.id)
+        finally:
+            if timer:
+                timer.cancel()
+                with contextlib.suppress(asyncio.CancelledError, Exception):
+                    await timer
+            # Do not cancel a thread and delete its input while it is still reading.
+            uploads.release(token, item)
+            if acquired:
+                self.capacity.release()
 
 # Global WebSocket manager
 manager = TutorWebSocketManager()
@@ -1010,117 +1010,99 @@ async def get_tutor_client():
     """
     return JSONResponse(content={"message": "ChordAI Tutor backend running. Use Next.js frontend at / to interact via /upload-audio and /ws/tutor."})
 
+def request_session(request: Request) -> str:
+    value = request.headers.get("authorization", "")
+    if not value.startswith("Bearer "):
+        raise HTTPException(401, "Connect to the tutor before uploading.")
+    token = value[7:]
+    uploads.session(token)
+    return token
+
+
 @app.post("/upload-audio")
-async def upload_audio(audio_file: UploadFile = File(...), question: Optional[str] = Form(None)):
-    """Accept any audio format ffmpeg can decode; normalize to mono 44.1kHz WAV
-    so the downstream pipeline always sees the format it expects."""
+async def upload_audio(request: Request, audio_file: UploadFile = File(...)):
+    token = request_session(request)
+    item = uploads.reserve(token)
     try:
-        temp_dir = Path(tempfile.gettempdir()) / "chordai_tutor"
-        temp_dir.mkdir(exist_ok=True)
+        size = 0
+        with (item.directory / "input").open("xb") as handle:
+            while chunk := await audio_file.read(65536):
+                size += len(chunk)
+                if size > MAX_UPLOAD_BYTES:
+                    raise HTTPException(413, "Recording exceeds the upload limit.")
+                if item.cancelled.is_set():
+                    raise HTTPException(409, "Upload cancelled.")
+                handle.write(chunk)
+        metadata = await finish_worker(normalize_upload, item)
+        uploads.ready(token, item)
+        return {"success": True, "upload_id": item.id, "expires_in": 300, **metadata}
+    except BaseException:
+        uploads.release(token, item)
+        raise
+    finally:
+        await audio_file.close()
 
-        # Sanitize filename — strip any path components a client may have included
-        # (path-traversal hardening + handles browser-recorded blobs with relative names).
-        safe_name = Path(audio_file.filename or "upload").name or "upload"
-        file_path = temp_dir / f"upload_{safe_name}"
 
-        with open(file_path, "wb") as f:
-            content = await audio_file.read()
-            f.write(content)
+@app.delete("/uploads/{upload_id}")
+async def delete_upload(upload_id: str, request: Request):
+    token = request_session(request)
+    uploads.delete(token, upload_id)
+    return {"status": "deleting"}
 
-        original_ext = file_path.suffix.lower()
-        converted = False
-        if original_ext not in (".wav", ".wave"):
-            try:
-                import librosa
-                import soundfile as sf
-                import numpy as np
-
-                # librosa.load goes through audioread → ffmpeg for webm/mp4/mp3/etc.
-                y, sr = librosa.load(str(file_path), sr=44100, mono=True)
-
-                if len(y) < int(sr * 0.5):
-                    return {
-                        "success": False,
-                        "error": "Recording is too short (under 0.5s).",
-                    }
-                rms = float(np.sqrt(np.mean(y ** 2)))
-                if rms < 1e-3:  # ~ -60 dBFS — effectively silent
-                    return {
-                        "success": False,
-                        "error": "Recording is silent — check your microphone input level.",
-                    }
-
-                wav_path = file_path.with_suffix(".wav")
-                sf.write(str(wav_path), y, sr, subtype="PCM_16")
-                # Drop the original (best-effort)
-                try:
-                    file_path.unlink()
-                except Exception:
-                    pass
-                file_path = wav_path
-                converted = True
-            except Exception as e:
-                return {
-                    "success": False,
-                    "error": f"Audio conversion failed ({e}). Confirm ffmpeg is installed.",
-                }
-
-        # Phase 3 logging: surface the audio facts at the upload boundary so
-        # the mic-recording trail is greppable end-to-end.
-        try:
-            final_size = file_path.stat().st_size
-        except OSError:
-            final_size = 0
-        print(
-            f"[upload] filename={safe_name!r} bytes={final_size} "
-            f"converted_from={original_ext if converted else 'native'} "
-            f"final_path={file_path.name}",
-            flush=True,
-        )
-
-        return {
-            "success": True,
-            "file_path": str(file_path),
-            "filename": file_path.name,
-            "converted_from": original_ext if converted else None,
-        }
-
-    except Exception as e:
-        print(f"[upload] FAILED: {e}", flush=True)
-        return {"success": False, "error": str(e)}
 
 @app.websocket("/ws/tutor")
 async def websocket_tutor_endpoint(websocket: WebSocket):
-    """WebSocket endpoint for streaming tutor responses."""
-    client_id = f"client_{id(websocket)}"
-    
-    await manager.connect(websocket, client_id)
-    
+    # Browsers cannot supply arbitrary authorization headers to WebSocket().
+    # Validate origin before issuing a short-lived in-memory upload capability.
+    if websocket.headers.get("origin") not in origins:
+        await websocket.close(code=1008)
+        return
     try:
+        token = uploads.create_session()
+    except HTTPException:
+        await websocket.close(code=1013)
+        return
+    client_id = secrets.token_urlsafe(16)
+    await manager.connect(websocket, client_id)
+    try:
+        await manager.send_message(client_id, {"type": "session", "token": token, "protocol": 1})
         while True:
-            # Receive message from client
             data = await websocket.receive_text()
-            message = json.loads(data)
-            
-            if message.get("type") == "analyze":
-                file_path = message.get("file_path")
-                question = message.get("question")
-                
-                if file_path and os.path.exists(file_path):
-                    # Start streaming analysis
-                    await manager.analyze_audio_streaming(client_id, file_path, question)
+            if len(data) > 8192:
+                await websocket.close(code=1009)
+                break
+            try:
+                message = json.loads(data)
+                if not isinstance(message, dict):
+                    raise HTTPException(400, "Invalid message.")
+                uploads.session(token)
+                if "file_path" in message:
+                    raise HTTPException(400, "Server paths are not accepted; use an upload ID.")
+                upload_id = message.get("upload_id")
+                if not isinstance(upload_id, str) or len(upload_id) > 64:
+                    raise HTTPException(400, "A valid upload ID is required.")
+                if message.get("type") == "cancel":
+                    uploads.delete(token, upload_id)
+                    await manager.send_message(client_id, {"type": "cancelled", "job_id": upload_id})
+                elif message.get("type") == "analyze":
+                    question = message.get("question")
+                    if question is not None and (not isinstance(question, str) or len(question) > 2000):
+                        raise HTTPException(400, "Question must be at most 2000 characters.")
+                    item = uploads.claim(token, upload_id)
+                    task = asyncio.create_task(manager.run_upload(client_id, token, item, question, message.get("speech") is True))
+                    manager.tasks.add(task)
+                    task.add_done_callback(manager.tasks.discard)
                 else:
-                    await manager.send_error(client_id, "Audio file not found")
-                    
+                    raise HTTPException(400, "Unknown message type.")
+            except (HTTPException, ValueError) as exc:
+                await manager.send_error(client_id, exc.detail if isinstance(exc, HTTPException) else "Invalid JSON.")
     except WebSocketDisconnect:
+        pass
+    finally:
         manager.disconnect(client_id)
-    except Exception as e:
-        print(f"WebSocket error for {client_id}: {e}")
-        manager.disconnect(client_id)
+        uploads.close_session(token)
+
 
 if __name__ == "__main__":
-    print("🎸 Starting ChordAI Tutor WebSocket Relay with Streaming TTS")
-    print("📡 Server will be available at: http://localhost:8001")
-    print("🔊 Make sure TTS server is running on port 5000")
-    
-    uvicorn.run(app, host="0.0.0.0", port=8001)
+    # Local development only until account auth and global cost controls pass.
+    uvicorn.run(app, host="127.0.0.1", port=8001, ws_max_size=8192)

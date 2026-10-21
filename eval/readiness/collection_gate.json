@@ -1,0 +1,63 @@
+{
+  "validation_errors": [],
+  "case_count": 0,
+  "counts": {
+    "development": 0,
+    "held_out": 0,
+    "chord_isolation": 0,
+    "progression": 0
+  },
+  "coverage": {
+    "qualities": [],
+    "playing_styles": [],
+    "conditions": [],
+    "harmonic_examples": []
+  },
+  "coverage_gaps": {
+    "qualities": [
+      "dominant_seventh",
+      "major",
+      "major_seventh",
+      "minor",
+      "minor_seventh",
+      "sus2",
+      "sus4"
+    ],
+    "playing_styles": [
+      "block_chords",
+      "faster_arpeggios",
+      "inversions",
+      "partial_voicings",
+      "repeated_transitions",
+      "slow_arpeggios",
+      "strumming"
+    ],
+    "conditions": [
+      "different_dynamics",
+      "moderate_background_noise",
+      "multiple_devices",
+      "quiet_room",
+      "slight_tuning_difference"
+    ],
+    "harmonic_examples": [
+      "I-IV-V-I",
+      "i-iv-V-i",
+      "ii-V-I",
+      "relative_major_minor_ambiguous",
+      "secondary_dominant",
+      "vi-IV-I-V"
+    ]
+  },
+  "independent_annotation_cases": 0,
+  "ready": false,
+  "readiness_reasons": [
+    "requires at least 20 approved cases; found 0",
+    "collection must be frozen before evaluation",
+    "requires both chord-isolation and progression cases",
+    "requires development and held-out cases",
+    "missing qualities: dominant_seventh, major, major_seventh, minor, minor_seventh, sus2, sus4",
+    "missing playing_styles: block_chords, faster_arpeggios, inversions, partial_voicings, repeated_transitions, slow_arpeggios, strumming",
+    "missing conditions: different_dynamics, moderate_background_noise, multiple_devices, quiet_room, slight_tuning_difference",
+    "missing harmonic_examples: I-IV-V-I, i-iv-V-i, ii-V-I, relative_major_minor_ambiguous, secondary_dominant, vi-IV-I-V"
+  ]
+}

@@ -1,6 +1,6 @@
 # HorizonJam Agent Entry Point
 
-HorizonJam v2.0 is a research prototype that turns short musician recordings into timed chord evidence, retrieval-assisted tutoring, and optional speech. It is not production ready.
+HorizonJam v3 is a research prototype that turns short musician recordings into timed chord evidence, retrieval-assisted tutoring, and optional speech. It is not production ready.
 
 ## Start Here
 
@@ -8,6 +8,7 @@ HorizonJam v2.0 is a research prototype that turns short musician recordings int
 2. Use [docs/context/INDEX.md](docs/context/INDEX.md) to retrieve only the context relevant to the task.
 3. Inspect the named source symbols and tests before changing code. Documentation can be stale.
 4. Use the matching workflow in [.agents/skills](.agents/skills) for detector, RAG, tutor, evaluation, frontend, or security work.
+5. For readiness work, resume [the execution plan](docs/context/EXECUTION_PLAN.md) at its first unfinished dependency. Preserve existing dirty/untracked work.
 
 Do not read every context document by default. Follow the router.
 
@@ -49,4 +50,17 @@ Required evidence depends on the change:
 ## Leave Better State
 
 Update `STATUS.md` only when verified project truth, blockers, decisions, benchmark state, or next actions materially change. Put stable architecture in `docs/context`, procedures in skills, rationale in `docs/decisions`, and measurements in tests/reports. Do not use `STATUS.md` as a diary.
+
+## Product and Research Gates
+
+- Before each package, state the concrete failure, affected contracts, baseline, acceptance criteria, and required evidence. Implement a bounded change, run focused checks, verify callers, and inspect outputs.
+- Track implemented, locally verified, real-performance validated, and user-ready states separately. Product readiness and research credibility are independent gates.
+- Deterministic tests and synthetic fixtures do not establish real-audio accuracy, expert correctness, usability, calibrated confidence, or learning outcomes.
+- Preserve accepted reports and failed runs. New evaluations get separate artifacts with source/configuration identity. Never overwrite the frozen research baseline with a changed implementation.
+- Freeze metrics, exclusions, splits, prompts, and decision rules before final evaluation. Do not tune against held-out results or weaken criteria after a failure; use fresh confirmation data after result-informed changes.
+- Negative/null results can pass research-integrity gates. Feature promotion additionally requires the predetermined benefit and product-suitability gates. Existing detector tournament gates remain binding.
+- When a gate fails, diagnose, repair, narrow scope, or reject the approach. Continue independent authorized work while explicitly recording missing recordings, rights, annotation, expert review, or user evidence.
+- Claims of source grounding require actual relevant source content; response-verifier passes are bounded checks, never guarantees of musical truth.
+- Keep services local until access, isolation, resource limits, deletion, and spending controls have targeted evidence. Session capability tokens alone are not account authentication.
+- Mark only the milestone actually demonstrated complete. No release, detector promotion, or research claim follows solely from a successful build.
 

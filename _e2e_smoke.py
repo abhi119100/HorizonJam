@@ -11,20 +11,6 @@ AUDIO = "tests/audio/pop.wav"
 
 
 async def run():
-    # 1. Upload — send just the basename; the relay concatenates filename into a path
-    # without sanitizing, so passing "tests/audio/pop.wav" creates broken subpath.
-    import os
-    basename = os.path.basename(AUDIO)
-    with open(AUDIO, "rb") as f:
-        r = requests.post(UPLOAD, files={"audio_file": (basename, f, "audio/wav")},
-                          data={"question": "What chords are these?"}, timeout=30)
-    r.raise_for_status()
-    data = r.json()
-    print(f"[upload] {data}")
-    if not data.get("success"):
-        print("[upload] FAILED")
-        sys.exit(1)
-
     # 2. WS analyze
     text_chunks = 0
     audio_chunks = 0
@@ -32,10 +18,20 @@ async def run():
     text_total = []
     last_status = None
 
-    async with websockets.connect(WS, max_size=None) as ws:
+    async with websockets.connect(WS, origin="http://localhost:3000", max_size=8 * 1024 * 1024) as ws:
+        session = json.loads(await asyncio.wait_for(ws.recv(), timeout=10))
+        def upload():
+            with open(AUDIO, "rb") as audio:
+                response = requests.post(UPLOAD, files={"audio_file": ("recording.wav", audio, "audio/wav")},
+                    headers={"Authorization": f"Bearer {session['token']}"}, timeout=30)
+            response.raise_for_status()
+            return response.json()
+        data = await asyncio.to_thread(upload)
+        completed = False
         await ws.send(json.dumps({
             "type": "analyze",
-            "file_path": data["file_path"],
+            "upload_id": data["upload_id"],
+            "speech": False,
             "question": "What chords are these?",
         }))
         try:
@@ -66,11 +62,14 @@ async def run():
                         text_chunks += 1
                         text_total.append(m.get("text", ""))
                     elif t == "complete":
+                        completed = True
                         print("[complete]")
                         break
         except asyncio.TimeoutError:
             print("[timeout] no message for 60s")
 
+    if not completed or not text_chunks:
+        raise RuntimeError("Analysis did not complete with written guidance")
     full_text = "".join(text_total)
     print(f"\n--- e2e summary ---")
     print(f"text chunks : {text_chunks}")

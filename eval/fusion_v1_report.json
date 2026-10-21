@@ -1,0 +1,836 @@
+{
+  "cases": [
+    {
+      "agreement": "agreement_high",
+      "candidate_margin": 0.5495443182784023,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9868554043189668,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "C",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              7
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major",
+          "root": "C",
+          "score": 0.9934277021594834,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.887766767762162
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Cmaj7",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              7,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major7",
+          "root": "C",
+          "score": 0.443883383881081,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8710961577426434
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "C7",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              7,
+              10
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "dominant7",
+          "root": "C",
+          "score": 0.4355480788713217,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "C",
+      "expected": "C",
+      "fusion_correct": true,
+      "fusion_prediction": "C",
+      "name": "c_major",
+      "rule_jaccard_prediction": "C",
+      "source_disagreement": false
+    },
+    {
+      "agreement": "agreement_high",
+      "candidate_margin": 0.5536710745434532,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9865757631976398,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "Am",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor",
+          "root": "A",
+          "score": 0.99328788159882,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8792336141107335
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Fmaj7",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              5,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major7",
+          "root": "F",
+          "score": 0.43961680705536677,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8750900787906546
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Am7",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              7,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor7",
+          "root": "A",
+          "score": 0.4375450393953273,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "Am",
+      "expected": "Am",
+      "fusion_correct": true,
+      "fusion_prediction": "Am",
+      "name": "a_minor",
+      "rule_jaccard_prediction": "Am",
+      "source_disagreement": false
+    },
+    {
+      "agreement": "agreement_high",
+      "candidate_margin": 0.5492371618691632,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9833363569262996,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "G7",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              7,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "dominant7",
+          "root": "G",
+          "score": 0.9916681784631498,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8848620331879732
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "G",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              7,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major",
+          "root": "G",
+          "score": 0.4424310165939866,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8064382760441381
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Bdim",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "diminished",
+          "root": "B",
+          "score": 0.40321913802206905,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "G7",
+      "expected": "G7",
+      "fusion_correct": true,
+      "fusion_prediction": "G7",
+      "name": "g_dominant7",
+      "rule_jaccard_prediction": "G7",
+      "source_disagreement": false
+    },
+    {
+      "agreement": "agreement_high",
+      "candidate_margin": 0.5495546343208906,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9855102213271664,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "Cmaj7",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              7,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major7",
+          "root": "C",
+          "score": 0.9927551106635832,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8864009526853853
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "C",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              4,
+              7
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major",
+          "root": "C",
+          "score": 0.44320047634269266,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8057198011432799
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Em",
+          "metadata": {
+            "pitch_class_set": [
+              4,
+              7,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor",
+          "root": "E",
+          "score": 0.40285990057163995,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "Cmaj7",
+      "expected": "Cmaj7",
+      "fusion_correct": true,
+      "fusion_prediction": "Cmaj7",
+      "name": "c_major7",
+      "rule_jaccard_prediction": "Cmaj7",
+      "source_disagreement": false
+    },
+    {
+      "agreement": "agreement_high",
+      "candidate_margin": 0.5485332938694591,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9855858575679401,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "Dm7",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              2,
+              5,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor7",
+          "root": "D",
+          "score": 0.9927929287839701,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.888519269829022
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Dm",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor",
+          "root": "D",
+          "score": 0.444259634914511,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8115360369409885
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "F",
+          "metadata": {
+            "pitch_class_set": [
+              0,
+              5,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "major",
+          "root": "F",
+          "score": 0.40576801847049426,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "Dm7",
+      "expected": "Dm7",
+      "fusion_correct": true,
+      "fusion_prediction": "Dm7",
+      "name": "d_minor7",
+      "rule_jaccard_prediction": "Dm7",
+      "source_disagreement": false
+    },
+    {
+      "agreement": "agreement_mixed",
+      "candidate_margin": 0.5,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9876969721416738,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "Dsus2",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              4,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "sus2",
+          "root": "D",
+          "score": 0.993848486070837,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9876969721416738
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Asus4",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              4,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "sus4",
+          "root": "A",
+          "score": 0.4938484860708369,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.6781241158077501
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Dm",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor",
+          "root": "D",
+          "score": 0.33906205790387506,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "Asus4",
+      "expected": "Dsus2",
+      "fusion_correct": true,
+      "fusion_prediction": "Dsus2",
+      "name": "d_sus2",
+      "rule_jaccard_prediction": "Dsus2",
+      "source_disagreement": true
+    },
+    {
+      "agreement": "agreement_high",
+      "candidate_margin": 0.5,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9863616529212424,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "Asus4",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              4,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "sus4",
+          "root": "A",
+          "score": 0.9931808264606212,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9863616529212424
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Dsus2",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              4,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "sus2",
+          "root": "D",
+          "score": 0.4931808264606212,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.7139124518514
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Dm",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              9
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor",
+          "root": "D",
+          "score": 0.3569562259257,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "Asus4",
+      "expected": "Asus4",
+      "fusion_correct": true,
+      "fusion_prediction": "Asus4",
+      "name": "a_sus4",
+      "rule_jaccard_prediction": "Asus4",
+      "source_disagreement": false
+    },
+    {
+      "agreement": "agreement_mixed",
+      "candidate_margin": 0.3620048878620567,
+      "candidates": [
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.7124287760348398,
+            "rule_jaccard": 1.0
+          },
+          "evidence_sources": [
+            "librosa_chroma",
+            "rule_jaccard"
+          ],
+          "label": "Bm",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              6,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "minor",
+          "root": "B",
+          "score": 0.8562143880174199,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.9884190003107264
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "Bdim",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "diminished",
+          "root": "B",
+          "score": 0.4942095001553632,
+          "start": 0.0,
+          "warnings": []
+        },
+        {
+          "bass": null,
+          "end": 2.0,
+          "evidence_breakdown": {
+            "librosa_chroma": 0.8754551580323142
+          },
+          "evidence_sources": [
+            "librosa_chroma"
+          ],
+          "label": "G7",
+          "metadata": {
+            "pitch_class_set": [
+              2,
+              5,
+              7,
+              11
+            ],
+            "score_semantics": "weighted normalized support; not probability",
+            "source_weights": {
+              "librosa_chroma": 1.0,
+              "rule_jaccard": 1.0
+            }
+          },
+          "quality": "dominant7",
+          "root": "G",
+          "score": 0.4377275790161571,
+          "start": 0.0,
+          "warnings": []
+        }
+      ],
+      "dsp_prediction": "Bdim",
+      "expected": "Bdim",
+      "fusion_correct": false,
+      "fusion_prediction": "Bm",
+      "name": "b_diminished",
+      "rule_jaccard_prediction": "Bm",
+      "source_disagreement": true
+    }
+  ],
+  "command": "python eval/evaluate_fusion_v1.py",
+  "comparison": {
+    "case_count": 8,
+    "dsp_exact": 7,
+    "fusion_changed_from_jaccard": [],
+    "fusion_exact": 7,
+    "fusion_unique_correct": 0,
+    "rule_jaccard_exact": 7,
+    "strongest_individual_exact": 7
+  },
+  "configuration": {
+    "candidate_merge": "canonical root, quality, bass, and pitch-class set",
+    "direct_model_policy": "lv_chordia retained in configuration at weight 0.0 after Phase 4 gate",
+    "formula": "sum(source weight * normalized support) / sum(active source weights)",
+    "score_semantics": "internal weighted normalized support; not probability or calibrated confidence",
+    "source_weights": {
+      "librosa_chroma": 1.0,
+      "lv_chordia": 0.0,
+      "rule_jaccard": 1.0
+    },
+    "tie_break": "descending score then canonical label"
+  },
+  "decision_gate": {
+    "activation": "not promoted",
+    "default_detector_changed": false,
+    "outcome": "D FUSION_NO_GAIN",
+    "phase_6_allowed": false
+  },
+  "evidence_level": "L2 deterministic synthetic paired replay; no real-performance accuracy claim",
+  "label_use_policy": "expected labels score predictions only; they do not set weights, supports, or ties",
+  "schema_version": "evidence-fusion-v1-gate-v1",
+  "source_cases": "eval/dsp_chroma_report.json cases and actual recorded top-3 rankings"
+}

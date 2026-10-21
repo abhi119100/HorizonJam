@@ -1,0 +1,52 @@
+{
+  "behavior": {
+    "default_detector_changed": false,
+    "multi_evidence_detector_created": false,
+    "phase_6_temporal_resolver_created": false,
+    "production_contracts_changed": false
+  },
+  "comparison": {
+    "controlled_case_count": 8,
+    "dsp_exact": 7,
+    "fusion_exact": 7,
+    "lv_chordia_exact": 0,
+    "multi_evidence": null,
+    "rule_jaccard_exact": 7,
+    "scope": "deterministic synthetic diagnostic; not real-performance accuracy"
+  },
+  "final_decision_gate": "E FUSION_NOT_JUSTIFIED",
+  "overall_result": "STOPPED_AFTER_PHASE_5",
+  "phases": {
+    "phase_2": {
+      "decision": "B DIRECT_BETTER",
+      "report": "eval/basicpitch_direct_evidence_report.json",
+      "sha256": "6deed8fd9ec470982aecde56f5b5730395f9cb1c46ad5ca626749e1455963450",
+      "status": "PASS"
+    },
+    "phase_3": {
+      "decision": "A DSP_COMPLEMENTARY",
+      "report": "eval/dsp_chroma_report.json",
+      "sha256": "bc4a8330e80c86c303cc247e5fc18a6b572b733012fb4249fba8a3a823a891eb",
+      "status": "PASS"
+    },
+    "phase_4": {
+      "decision": "C DIRECT_MODEL_REDUNDANT",
+      "report": "eval/direct_chord_model_report.json",
+      "sha256": "693c0d17efb54527fbef36ed9098629eb0ad303088770ce2e7d6510dffbf3ae2",
+      "status": "PASS"
+    },
+    "phase_5": {
+      "decision": "D FUSION_NO_GAIN",
+      "report": "eval/fusion_v1_report.json",
+      "sha256": "82ed38216a7970b375387720fad33f23e11b0853c90ef0e643ef4ebce6c938ca",
+      "status": "STOP_GATE"
+    },
+    "phase_6": {
+      "decision": null,
+      "reason": "Phase 5 D FUSION_NO_GAIN prohibits the temporal activation path",
+      "report": null,
+      "status": "NOT_RUN"
+    }
+  },
+  "schema_version": "multi-evidence-phase2-to-6-partial-v1"
+}

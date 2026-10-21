@@ -5,6 +5,7 @@ from unittest.mock import patch
 
 import detection
 from src import basic_pitch_runtime
+from src.harmonic_evidence import NoteEvidence
 
 
 class BasicPitchRuntimeTests(unittest.TestCase):
@@ -65,6 +66,44 @@ class BasicPitchRuntimeTests(unittest.TestCase):
             with patch("hybrid_chord_detector.HybridChordDetector", FakeDetector):
                 detection._run_hybrid("fixture.wav")
 
+        self.assertFalse(midi_path.exists())
+
+    def test_hybrid_collects_direct_and_midi_evidence_from_one_transcription(self):
+        with tempfile.NamedTemporaryFile(suffix=".mid", delete=False) as midi:
+            midi_path = Path(midi.name)
+        fixture_midi = Path(__file__).with_name("test11.mid")
+        midi_path.write_bytes(fixture_midi.read_bytes())
+        direct_note = NoteEvidence(
+            start=0.0,
+            end=0.5,
+            pitch=60,
+            pitch_class=0,
+            octave=4,
+            velocity_or_amplitude=0.8,
+            confidence=None,
+            source="basic_pitch",
+        )
+
+        def transcribe(_wav, _trace, sink):
+            sink["notes"] = [direct_note]
+            return str(midi_path)
+
+        class FakeDetector:
+            def __init__(self, use_viterbi=True):
+                self.use_viterbi = use_viterbi
+
+            def detect_chords(self, *_args, **_kwargs):
+                return {"chords": []}
+
+        sink = {}
+        with patch("detection._wav_to_midi", side_effect=transcribe) as acquire:
+            with patch("hybrid_chord_detector.HybridChordDetector", FakeDetector):
+                detection._run_hybrid("fixture.wav", evidence_sink=sink)
+
+        self.assertEqual(acquire.call_count, 1)
+        self.assertEqual(sink["direct_notes"], [direct_note])
+        self.assertGreater(len(sink["midi_notes"]), 0)
+        self.assertIn("matched_note_count", sink["direct_vs_midi"])
         self.assertFalse(midi_path.exists())
 
 

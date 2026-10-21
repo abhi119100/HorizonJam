@@ -1,0 +1,109 @@
+{
+  "detectors": {
+    "default": "hybrid",
+    "dsp": {
+      "bins_per_octave": 36,
+      "harmonic_separation": false,
+      "hop_length": 512,
+      "n_chroma": 12,
+      "norm": "l1",
+      "sample_rate": 22050,
+      "tuning": "estimate"
+    },
+    "environment_value": null,
+    "hybrid": {
+      "basic_pitch_midi_compatibility": true,
+      "classifier_mode": "simple",
+      "use_viterbi": true
+    },
+    "resolved": "hybrid",
+    "rule_jaccard": {
+      "basic_pitch_midi_compatibility": true,
+      "classifier_mode": "advanced_jaccard",
+      "use_viterbi": true
+    }
+  },
+  "environment": {
+    "packages": {
+      "basic-pitch": "0.4.0",
+      "librosa": "0.11.0",
+      "mir_eval": "0.8.2",
+      "numpy": "2.2.5",
+      "pretty-midi": "0.2.10",
+      "soundfile": "0.13.1"
+    },
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]"
+  },
+  "freeze_policy": {
+    "detector_tuning_after_freeze": false,
+    "fusion_active": false,
+    "held_out_labels_used_for_tuning": false,
+    "lv_chordia_in_primary_evaluation": false
+  },
+  "git": {
+    "branch": "main",
+    "commit": "8679e37700132b200137e4a8652696354b4a74db",
+    "tracked_diff_sha256": "5d19797157b5c7242cb69238b6f2458e3bfc0aac8a78fb37e58f8d1ea8e892dd",
+    "worktree_status": [
+      "M STATUS.md",
+      " M detection.py",
+      " M docs/context/ARCHITECTURE.md",
+      " M docs/context/EVALUATION.md",
+      " M eval/real_performance_demo_pack/README.md",
+      " M eval/real_performance_demo_pack/manifest.json",
+      " M research/detector_tournament/PROVENANCE.md",
+      " M research/detector_tournament/TECHNOLOGY_MATRIX.md",
+      " M src/basic_pitch_runtime.py",
+      " M tests/test_basic_pitch_runtime.py",
+      "?? eval/basicpitch_direct_evidence_report.json",
+      "?? eval/basicpitch_direct_evidence_report.md",
+      "?? eval/consolidate_multi_evidence_phase2_to_6.py",
+      "?? eval/direct_chord_model_report.json",
+      "?? eval/direct_chord_model_report.md",
+      "?? eval/dsp_chroma_report.json",
+      "?? eval/dsp_chroma_report.md",
+      "?? eval/evaluate_basicpitch_direct_evidence.py",
+      "?? eval/evaluate_direct_chord_model.py",
+      "?? eval/evaluate_dsp_chroma.py",
+      "?? eval/evaluate_fusion_v1.py",
+      "?? eval/evaluate_real_performance_v1.py",
+      "?? eval/freeze_phase7_baseline.py",
+      "?? eval/fusion_v1_report.json",
+      "?? eval/fusion_v1_report.md",
+      "?? eval/multi_evidence_phase2_to_6_report.json",
+      "?? eval/multi_evidence_phase2_to_6_report.md",
+      "?? eval/real_performance_demo_pack/manifest.schema.json",
+      "?? eval/real_performance_pack.py",
+      "?? research/detector_tournament/lv_chordia_requirements.lock",
+      "?? research/detector_tournament/lv_chordia_runner.py",
+      "?? src/chord_labels.py",
+      "?? src/direct_chord_adapter.py",
+      "?? src/dsp_chroma.py",
+      "?? src/evidence_fusion.py",
+      "?? src/harmonic_evidence.py",
+      "?? tests/test_direct_chord_adapter.py",
+      "?? tests/test_dsp_chroma.py",
+      "?? tests/test_evidence_fusion.py",
+      "?? tests/test_harmonic_evidence.py",
+      "?? tests/test_real_performance_pack.py"
+    ]
+  },
+  "report_hashes_sha256": {
+    "eval/audio_path_benchmark.json": "35f4bc0ffff5a25934a1d6a0a264adc49c08f624cd62836c7c6defdd35431219",
+    "eval/basicpitch_direct_evidence_report.json": "6deed8fd9ec470982aecde56f5b5730395f9cb1c46ad5ca626749e1455963450",
+    "eval/direct_chord_model_report.json": "693c0d17efb54527fbef36ed9098629eb0ad303088770ce2e7d6510dffbf3ae2",
+    "eval/dsp_chroma_report.json": "bc4a8330e80c86c303cc247e5fc18a6b572b733012fb4249fba8a3a823a891eb",
+    "eval/fusion_v1_report.json": "82ed38216a7970b375387720fad33f23e11b0853c90ef0e643ef4ebce6c938ca",
+    "eval/jaccard_detector_path_report.json": "cd7d2c253eb879834bdebfee57d95151c4f4df554a204705ba91af7fb48b0eb0",
+    "eval/multi_evidence_phase2_to_6_report.json": "289291e2d1df91e213c949a16bbf7cbd6779c33130a542a2f452733e16e68f3d"
+  },
+  "schema_version": "phase7-baseline-freeze-v1",
+  "source_hashes_sha256": {
+    "detection.py": "3383e98890fa7f0788f07b5e508757dc2d47ede9857e5b0df75bfb2d2b657720",
+    "src/basic_pitch_runtime.py": "ed9341d75ab2cdc7e73f63f6268201eb2d444f35246e2465cb677faa172c284d",
+    "src/chord_detector.py": "9aa3d0c8830f9e13e1adf6a4d997ded294d4c316a3ab5a7c3cca3eefca9f61b6",
+    "src/dsp_chroma.py": "713df93b42d4977514c37d1e161378c882328b0941e20c4d734b5c3e117874ca",
+    "src/harmonic_evidence.py": "8a37ea23a883ef7e5f8f8e9a1bd7f12a84809529b1a48f5b1770a1e34fbffa75"
+  }
+}
